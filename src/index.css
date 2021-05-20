@@ -1,3 +1,17 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --nav-color:hsl(161, 77%, 41%);
+  --button-color:hsl(161, 77%, 41%);
+  --background-color:hsl(189, 79%, 28%);
+  --help-field-color:hsl(66, 75%, 81%);
+  --text-color: hsl(0, 0%, 100%);
+  --test-color-help-field: hsl(0, 0%, 0%)
+}
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
