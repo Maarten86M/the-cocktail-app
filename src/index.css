@@ -9,7 +9,8 @@
   --background-color:hsl(189, 79%, 28%);
   --help-field-color:hsl(66, 75%, 81%);
   --text-color: hsl(0, 0%, 100%);
-  --test-color-help-field: hsl(0, 0%, 0%)
+  --test-color-help-field: hsl(0, 0%, 0%);
+  --text-color-error: hsl(3, 88%, 56%);
 }
 
 body {
