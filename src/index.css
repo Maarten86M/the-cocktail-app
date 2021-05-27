@@ -7,6 +7,7 @@
 
 :root {
   --nav-color:hsl(161, 77%, 41%);
+  --nav-line:hsl(216, 36%, 41%);
   --button-color:hsl(161, 77%, 41%);
   --background-color:hsl(189, 79%, 28%);
   --help-field-color:hsl(66, 75%, 81%);

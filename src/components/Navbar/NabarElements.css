@@ -1,3 +1,5 @@
+@import "NavbarIcon.css";
+
 nav {
     position: fixed;
     top: 0;
@@ -7,7 +9,7 @@ nav {
     box-shadow: 2px 2px 3px 1px #ccc;
 }
 
-.navlist{
+.navlist {
     height: 100%;
     list-style-type: none;
     background-color: var(--nav-color);
@@ -21,8 +23,32 @@ nav {
 .navitems {
     margin-right: 20px;
     font-size: 18px;
+    font-weight: 500;
     color: var(--text-color);
     font-family: 'Quicksand', sans-serif;
 }
 
+@media screen and (max-width: 500px ) {
+    .navlist {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .navitems:nth-child(1) {
+        border-top: 2px solid var(--nav-line);
+        margin-top: 50px;
+    }
+
+    .navitems {
+        width: 100%;
+        border-top: 2px solid var(--nav-line);
+        text-align: center;
+        margin-right: 0px;
+        padding: 15px;
+    }
+
+    .menu-icon-container {
+        display: block;
+    }
+}
 
