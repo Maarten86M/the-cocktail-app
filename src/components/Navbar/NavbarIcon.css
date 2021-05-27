@@ -1,0 +1,70 @@
+
+.menu-icon-container {
+
+    padding: 0;
+    width: 45px;
+    height: 28px;
+}
+
+.nav-menu-icon {
+    top: 11px;
+    position: relative;
+    width: 45px;
+    height: 6px;
+    background-color: var(--icon-color);
+}
+
+.nav-menu-icon::before,
+.nav-menu-icon::after {
+    position: relative;
+    display: block;
+    content: "";
+    width: 45px;
+    height: 6px;
+    background-color: var(--icon-color);
+}
+
+.nav-menu-icon::after {
+    left: 0;
+    top: -16px
+}
+
+.nav-menu-icon::before {
+    left: 0;
+    top: 10px;
+}
+
+.menu-icon-container:hover .nav-menu-icon {
+    background-color: var(--nav-color);
+}
+
+/*Start positie menu icon */
+
+.nav-menu-icon::before {
+    left: 0;
+    top: -16px;
+    transform: rotate(0deg);
+    transform-origin: bottom left;
+    transition: all 0.4s ease-in-out;
+}
+
+.nav-menu-icon::after {
+    left: 0;
+    top: 10px;
+    transform: rotate(0deg);
+    transform-origin: top left;
+    transition: all 0.4s ease-in-out;
+}
+
+/*eind positie menu icon*/
+.menu-icon-container:hover .nav-menu-icon::before {
+    transform: rotate(40deg);
+    transform-origin: bottom left;
+    width: 45px;
+}
+
+.menu-icon-container:hover .nav-menu-icon::after {
+    transform: rotate(-44deg);
+    transform-origin: top left;
+    width: 45px;
+}
