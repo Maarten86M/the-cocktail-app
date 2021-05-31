@@ -1,4 +1,4 @@
-@import "NavbarIcon.css";
+@import "icons/NavbarIcon.css";
 
 nav {
     position: fixed;
@@ -17,18 +17,27 @@ nav {
     justify-content: space-around;
     align-items: center;
     position: relative;
-
 }
 
 .navitems {
     margin-right: 20px;
-    font-size: 18px;
+    font-size: 16px;
     font-weight: 500;
     color: var(--text-color);
     font-family: 'Quicksand', sans-serif;
 }
 
-@media screen and (max-width: 500px ) {
+.inactive {
+    color: white;
+    text-decoration: none;
+}
+
+.active-link {
+    text-decoration: underline red;
+    text-underline-position: under;
+}
+
+@media screen and (max-width: 990px ) {
     .navlist {
         flex-direction: column;
         height: auto;
@@ -51,5 +60,13 @@ nav {
     .menu-icon-container {
         display: block;
     }
+
+    .nav-menu-icon-cross{
+        display: block;
+    }
 }
+
+
+
+
 
