@@ -1,8 +1,16 @@
 import React, {useState, useEffect} from "react";
-import {NavLink} from 'react-router-dom';
 import './Navbar.css';
 import './icons/NavbarIcon.css';
 import NavBarItem from "./NavbarItem";
+import NavBarIcon from "./NavBarIcon";
+import search from './icons/NavLinkIcons/search.png';
+import random from './icons/NavLinkIcons/dice.png';
+import alcohol from './icons/NavLinkIcons/alcohol.png';
+import fruit from './icons/NavLinkIcons/fruit.png';
+import cocktail from './icons/NavLinkIcons/cocktail.png';
+import profile from './icons/NavLinkIcons/profile.png';
+import help from './icons/NavLinkIcons/help.png';
+import logout from './icons/NavLinkIcons/logout.png';
 
 
 function Navbar() {
@@ -29,48 +37,49 @@ function Navbar() {
             {(openMenu || screenWidth > 990) && (
                 <ul className="navlist">
                     <NavBarItem
+                        img={search}
                         tittle="Search Cocktails"
                         to="/searchcocktails"
                         onClick={menuopener}
                     />
-
                     <NavBarItem
+                        img={random}
                         tittle="Random Cocktails"
                         to="/randomcocktails"
                         onClick={menuopener}
                     />
-
                     <NavBarItem
+                        img={alcohol}
                         tittle="Cocktails by Alcohol"
                         to="/cocktailbyalcohol"
                         onClick={menuopener}
                     />
-
                     <NavBarItem
+                        img={fruit}
                         tittle="Cocktails by Ingredient"
                         to="/cocktailbyingredient"
                         onClick={menuopener}
                     />
-
                     <NavBarItem
+                        img={cocktail}
                         tittle="All Cocktails"
                         to="/allcocktails"
                         onClick={menuopener}
                     />
-
                     <NavBarItem
+                        img={profile}
                         tittle="Profile"
                         to="/profile"
                         onClick={menuopener}
                     />
-
                     <NavBarItem
+                        img={help}
                         tittle="Help"
                         to="/help"
                         onClick={menuopener}
                     />
-
                     <NavBarItem
+                        img={logout}
                         tittle="Logout"
                         to="/logout"
                         onClick={menuopener}
@@ -80,14 +89,14 @@ function Navbar() {
 
             <div className="menu-icon-container">
                 {openMenu &&
-                <div onClick={menuopener} className="Menu-icon-click">
-                    <div className="nav-menu-icon"></div>
-                </div>
+                <NavBarIcon
+                    className="nav-menu-icon"
+                    onClick={menuopener}/>
                 }
                 {!openMenu &&
-                <div onClick={menuopener} className="Menu-icon-click">
-                    < div className="nav-menu-icon-close"></div>
-                </div>
+                <NavBarIcon
+                    className="nav-menu-icon-close"
+                    onClick={menuopener}/>
                 }
             </div>
         </nav>

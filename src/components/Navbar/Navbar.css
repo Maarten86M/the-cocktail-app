@@ -33,8 +33,15 @@ nav {
 }
 
 .active-link {
-    text-decoration: underline red;
-    text-underline-position: under;
+    /*text-decoration: underline red;*/
+    /*text-underline-position: under;*/
+    border-bottom: 2px solid var(--nav-line);
+}
+
+img {
+    max-width: 20px;
+    max-height: 20px;
+    padding-right: 5px;
 }
 
 @media screen and (max-width: 990px ) {
