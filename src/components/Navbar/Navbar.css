@@ -33,10 +33,10 @@ nav {
 }
 
 .active-link {
-    /*text-decoration: underline red;*/
-    /*text-underline-position: under;*/
     border-bottom: 2px solid var(--nav-line);
+    transition: 0.5s ease-in;
 }
+
 
 img {
     max-width: 20px;
@@ -68,7 +68,7 @@ img {
         display: block;
     }
 
-    .nav-menu-icon-cross{
+    .nav-menu-icon-cross {
         display: block;
     }
 }
