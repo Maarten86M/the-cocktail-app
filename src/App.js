@@ -21,10 +21,11 @@ import Login from "./pages/Login";
 import Register from "./pages/Register";
 import ForgotPassword from "./pages/ForgotPassword";
 import './App.css';
+import SearchResult from "./pages/SearchResult";
 
 function App() {
-
     const [authenticated, setAuthenticated] = useState(true);
+    const [searchText, setSearchText] = useState("");
 
     return (
         <Router>
@@ -55,7 +56,14 @@ function App() {
                 </Route>
 
                 <Route path="/searchcocktails">
-                    {authenticated ? <SearchCocktails/> : <Redirect to="/login"/>}
+                    {authenticated ? <SearchCocktails
+                        searchText={searchText}
+                        setSearchText={setSearchText}
+                    /> : <Redirect to="/login"/>}
+                </Route>
+
+                <Route exact path="/searchresult/:result">
+                    {authenticated ? <SearchResult/> : <Redirect to="/login"/>}
                 </Route>
 
                 <Route path="/randomcocktails">
