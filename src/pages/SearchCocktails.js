@@ -1,3 +1,5 @@
+import React from "react";
+
 function SearchCocktails() {
     return(
         <div className="pagina">

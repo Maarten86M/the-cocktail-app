@@ -1,3 +1,5 @@
+import React from "react";
+
 function AllCocktails() {
     return(
         <div className="pagina">

@@ -14,7 +14,7 @@ nav {
     list-style-type: none;
     background-color: var(--nav-color);
     display: flex;
-    justify-content: space-around;
+    justify-content: flex-end;
     align-items: center;
     position: relative;
 }

@@ -10,14 +10,20 @@ import fruit from './icons/NavLinkIcons/fruit.png';
 import cocktail from './icons/NavLinkIcons/cocktail.png';
 import profile from './icons/NavLinkIcons/profile.png';
 import help from './icons/NavLinkIcons/help.png';
-import logout from './icons/NavLinkIcons/logout.png';
+import login from './icons/NavLinkIcons/login.png';
+import register from './icons/NavLinkIcons/register.png';
+import signout from './icons/NavLinkIcons/signout.png';
 
-
-function Navbar() {
+function Navbar(props) {
     const [openMenu, setOpenMenu] = useState(false);
     const [screenWidth, setScreenWidth] = useState(window.innerWidth);
 
     function menuopener() {
+        setOpenMenu(!openMenu);
+    }
+
+    function logout() {
+        props.setAuthenticated(false);
         setOpenMenu(!openMenu);
     }
 
@@ -36,54 +42,76 @@ function Navbar() {
         <nav>
             {(openMenu || screenWidth > 990) && (
                 <ul className="navlist">
-                    <NavBarItem
-                        img={search}
-                        tittle="Search Cocktails"
-                        to="/searchcocktails"
-                        onClick={menuopener}
-                    />
-                    <NavBarItem
-                        img={random}
-                        tittle="Random Cocktails"
-                        to="/randomcocktails"
-                        onClick={menuopener}
-                    />
-                    <NavBarItem
-                        img={alcohol}
-                        tittle="Cocktails by Alcohol"
-                        to="/cocktailbyalcohol"
-                        onClick={menuopener}
-                    />
-                    <NavBarItem
-                        img={fruit}
-                        tittle="Cocktails by Ingredient"
-                        to="/cocktailbyingredient"
-                        onClick={menuopener}
-                    />
-                    <NavBarItem
-                        img={cocktail}
-                        tittle="All Cocktails"
-                        to="/allcocktails"
-                        onClick={menuopener}
-                    />
-                    <NavBarItem
-                        img={profile}
-                        tittle="Profile"
-                        to="/profile"
-                        onClick={menuopener}
-                    />
-                    <NavBarItem
-                        img={help}
-                        tittle="Help"
-                        to="/help"
-                        onClick={menuopener}
-                    />
-                    <NavBarItem
-                        img={logout}
-                        tittle="Logout"
-                        to="/logout"
-                        onClick={menuopener}
-                    />
+
+                    {!props.authenticated && (
+                        <>
+                            <NavBarItem
+                                img={register}
+                                tittle="Register"
+                                to="/register"
+                                onClick={menuopener}
+                            />
+
+                            <NavBarItem
+                                img={login}
+                                tittle="Login"
+                                to="/login"
+                                onClick={menuopener}
+                            />
+                        </>
+                    )}
+                    {props.authenticated && (
+                        <>
+                            <NavBarItem
+                                img={search}
+                                tittle="Search Cocktails"
+                                to="/searchcocktails"
+                                onClick={menuopener}
+                            />
+                            <NavBarItem
+                                img={random}
+                                tittle="Random Cocktails"
+                                to="/randomcocktails"
+                                onClick={menuopener}
+                            />
+                            <NavBarItem
+                                img={alcohol}
+                                tittle="Cocktails by Alcohol"
+                                to="/cocktailbyalcohol"
+                                onClick={menuopener}
+                            />
+                            <NavBarItem
+                                img={fruit}
+                                tittle="Cocktails by Ingredient"
+                                to="/cocktailbyingredient"
+                                onClick={menuopener}
+                            />
+                            <NavBarItem
+                                img={cocktail}
+                                tittle="All Cocktails"
+                                to="/allcocktails"
+                                onClick={menuopener}
+                            />
+                            <NavBarItem
+                                img={profile}
+                                tittle="Profile"
+                                to="/profile"
+                                onClick={menuopener}
+                            />
+                            <NavBarItem
+                                img={help}
+                                tittle="Help"
+                                to="/help"
+                                onClick={menuopener}
+                            />
+                            <NavBarItem
+                                img={signout}
+                                tittle="Logout"
+                                to="/login"
+                                onClick={logout}
+                            />
+                        </>
+                    )}
                 </ul>
             )}
 

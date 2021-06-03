@@ -1,10 +1,10 @@
 import React from "react";
 
-function Help() {
+function FourZeroFour() {
     return(
         <div className="pagina">
-            <h1>Help</h1>
+            <h1>404</h1>
         </div>
     )
 }
-export default Help;
+export default FourZeroFour;

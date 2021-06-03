@@ -1,10 +1,10 @@
 import React from "react";
 
-function Help() {
+function Register() {
     return(
         <div className="pagina">
-            <h1>Help</h1>
+            <h1>Register</h1>
         </div>
     )
 }
-export default Help;
+export default Register;
