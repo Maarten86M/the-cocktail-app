@@ -18,3 +18,9 @@
     width: 50%;
     height: 100%;
 }
+
+.imggroote {
+    max-width: 120%;
+    max-height: 120%;
+    border-radius: 50%;
+}

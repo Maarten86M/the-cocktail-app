@@ -55,6 +55,7 @@ function App() {
                     {authenticated ? <Welcome/> : <Redirect to="/login"/>}
                 </Route>
 
+
                 <Route path="/searchcocktails">
                     {authenticated ? <SearchCocktails
                         searchText={searchText}
