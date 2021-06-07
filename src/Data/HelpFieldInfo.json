@@ -1,0 +1,64 @@
+
+[
+  {
+    "helpId": "1",
+    "content1": "1.Fill in your email-adress.",
+    "content2": "2.Fill in your password",
+    "content3": "3.Click on login",
+    "content4": "Lost your password? Click on the forgot your password link.",
+    "content5": "Click on the Register Now Button to create a new account."
+  },
+  {
+    "helpId": "2",
+    "content1": "1.Fill in your firstname.",
+    "content2": "2.Fill in your lastname.",
+    "content3": "3.Fill in your emailadress.",
+    "content4": "4.Fill in a valid password.",
+    "content5": "5.Click on Register Now."
+  },
+  {
+    "helpId": "3",
+    "content1": "Click on a button to go to a page."
+  },
+  {
+    "helpId": "4",
+    "content1": "Search to the cocktail by entering the ingredient or type of alcohol.",
+    "content2": "Click on the Search Button"
+  },
+  {
+    "helpId": "5",
+    "content1": "Click on the name to go to the Cocktail Page",
+    "content2": "Or search again for the right cocktail."
+  },
+  {
+    "helpId": "6",
+    "content1": "Scroll down to see all the ingredients & instructions"
+  },
+  {
+    "helpId": "7",
+    "content1": "Click on the button to generate a Random cocktail.",
+    "content2": "Is it not the right one? Click again on the Generate button."
+  },
+  {
+    "helpId": "8",
+    "content1": "Scroll down to see all the ingredients & instructions."
+  },
+  {
+    "helpId": "9",
+    "content1": "Click on the type of alcohol to go to the page"
+  },
+  {
+    "helpId": "10",
+    "content1": "Click on the Cocktail-name for ingredients & instructions"
+  },
+  {
+    "helpId": "11",
+    "content1": "Click on a ingredient in the list to see all the Cocktails it contains"
+  },
+  {
+    "helpId": "12",
+    "content1": "1. Fill in your emailadress.",
+    "content2": "2. Click on the send button.",
+    "content3": "3. You received a recover e-mail."
+  }
+]

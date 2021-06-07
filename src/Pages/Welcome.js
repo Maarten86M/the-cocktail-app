@@ -1,12 +1,13 @@
 import React from "react";
-import search from '../components/Navbar/icons/NavLinkIcons/search.png';
-import random from '../components/Navbar/icons/NavLinkIcons/dice.png';
-import alcohol from '../components/Navbar/icons/NavLinkIcons/alcohol.png';
-import fruit from '../components/Navbar/icons/NavLinkIcons/fruit.png';
-import cocktail from '../components/Navbar/icons/NavLinkIcons/cocktail.png';
-import profile from '../components/Navbar/icons/NavLinkIcons/profile.png';
-import MainButton from "../components/Buttons/MainButton/MainButton";
-import '../pages/paginatijdelijkaanpassenperpagina.css'
+import search from '../Components/Navbar/icons/NavLinkIcons/search.png';
+import random from '../Components/Navbar/icons/NavLinkIcons/dice.png';
+import alcohol from '../Components/Navbar/icons/NavLinkIcons/alcohol.png';
+import fruit from '../Components/Navbar/icons/NavLinkIcons/fruit.png';
+import cocktail from '../Components/Navbar/icons/NavLinkIcons/cocktail.png';
+import profile from '../Components/Navbar/icons/NavLinkIcons/profile.png';
+import MainButton from "../Components/Buttons/MainButton/MainButton";
+import './/paginatijdelijkaanpassenperpagina.css'
+import HelpButton from "../Components/Buttons/HelpButton/HelpButton";
 
 function Welcome() {
     return (
@@ -20,6 +21,7 @@ function Welcome() {
                 </div>
 
                 <div className='welcomeright'>
+                    <HelpButton content={0}/>
                     <MainButton
                         name="Search Cocktails"
                         img={search}

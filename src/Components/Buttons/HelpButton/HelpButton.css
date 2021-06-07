@@ -1,0 +1,16 @@
+.helpbutton {
+    height: 38px;
+    width: 38px;
+    border-radius: 50%;
+    border: none;
+    background-color: var(--help-field-color);
+    box-shadow: 2px 2px 3px 1px var(--background-color);
+    color: var(--text-color-second);
+    font-size: 28px;
+    font-family: var(--main-font);
+    font-weight: var(--button-font-weight);
+}
+
+.helpbutton:hover{
+    background-color: var(--help-field-border-color);
+}

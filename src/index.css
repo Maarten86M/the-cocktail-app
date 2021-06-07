@@ -12,7 +12,11 @@
     --button-border-color: hsl(170, 77%, 34%);
     --background-color: hsl(189, 79%, 28%);
     --help-field-color: hsl(66, 75%, 81%);
+    --help-field-border-color: hsl(56, 48%, 59%);
+    --help-field-text-size: 16px;
+    --help-field-text-weight: 700;
     --text-color: hsl(0, 0%, 100%);
+    --text-color-second: hsl(0, 0%, 0%);
     --text-color-help-field: hsl(0, 0%, 0%);
     --text-color-disabled: hsl(111, 0%, 69%);
     --text-color-error: hsl(3, 88%, 56%);
@@ -25,6 +29,9 @@
 }
 
 body {
+    background-image: url("/src/Assets/BackgroundImg/background-desktop-bleu.png");
+    background-blend-mode: multiply;
+    position: relative;
 }
 
 code {

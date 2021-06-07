@@ -1,0 +1,19 @@
+.help-field {
+    position: fixed;
+    width: 400px;
+    height: 258px;
+    background-color: var(--help-field-color);
+    border-radius: 10px;
+    box-shadow: 2px 2px 3px 1px var(--background-color);
+    padding: 20px;
+    font-family: var(--main-font);
+    font-size: var(--help-field-text-size);
+    font-weight: var(--help-field-text-weight);
+}
+
+.cross {
+    position: absolute;
+    font-weight: bold;
+    top: 10px;
+    right: 10px;
+}
