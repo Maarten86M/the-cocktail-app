@@ -28,7 +28,7 @@ function App() {
     const [searchText, setSearchText] = useState("");
 
     return (
-        <Router>
+        <>
             <Navbar
                 authenticated={authenticated}
                 setAuthenticated={setAuthenticated}/>
@@ -54,25 +54,25 @@ function App() {
                 <PrivateRoute
                     path="/welcome"
                     authenticated={authenticated}
-                    component={ <Welcome/>}/>
+                    component={<Welcome/>}/>
                 <PrivateRoute
                     path="/searchcocktails"
                     authenticated={authenticated}
-                    component={ <SearchCocktails
+                    component={<SearchCocktails
                         searchText={searchText}
                         setSearchText={setSearchText}/>}/>
                 <PrivateRoute
                     path="/searchresult/:result"
                     authenticated={authenticated}
-                    component={ <SearchResult/>}/>
+                    component={<SearchResult/>}/>
                 <PrivateRoute
                     path="/randomcocktails"
                     authenticated={authenticated}
-                    component={ <RandomCocktails/>}/>
+                    component={<RandomCocktails/>}/>
                 <PrivateRoute
                     path="/cocktailbyalcohol"
                     authenticated={authenticated}
-                    component={ <CocktailByAlcohol/>}/>
+                    component={<CocktailByAlcohol/>}/>
                 <PrivateRoute
                     path="/cocktailbyingredient"
                     authenticated={authenticated}
@@ -92,10 +92,8 @@ function App() {
                 <Route path="/">
                     <FourZeroFour/>
                 </Route>
-
             </Switch>
-
-        </Router>
+        </>
     );
 }
 
