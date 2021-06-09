@@ -2,6 +2,9 @@
 random cocktail genereren verder afmaken. 
 Help field data in een appart bestand?
 
+- try and catch. Stel dat de data niet opgehaald kan worden. 
+- inlog systeem (Firebase?)
+- 
 
 
 Code beslissingen:
