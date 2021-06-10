@@ -1,10 +1,10 @@
 import React from "react";
-import search from '../Components/Navbar/icons/NavLinkIcons/search.png';
-import random from '../Components/Navbar/icons/NavLinkIcons/dice.png';
-import alcohol from '../Components/Navbar/icons/NavLinkIcons/alcohol.png';
-import fruit from '../Components/Navbar/icons/NavLinkIcons/fruit.png';
-import cocktail from '../Components/Navbar/icons/NavLinkIcons/cocktail.png';
-import profile from '../Components/Navbar/icons/NavLinkIcons/profile.png';
+import search from '../Assets/Icons/NavIcons/search.png';
+import random from '../Assets/Icons/NavIcons/dice.png';
+import alcohol from '../Assets/Icons/NavIcons/alcohol.png';
+import fruit from '../Assets/Icons/NavIcons/fruit.png';
+import cocktail from '../Assets/Icons/NavIcons/cocktail.png';
+import profile from '../Assets/Icons/NavIcons/profile.png';
 import MainButton from "../Components/Buttons/MainButton/MainButton";
 import './/paginatijdelijkaanpassenperpagina.css'
 import HelpButton from "../Components/Buttons/HelpButton/HelpButton";

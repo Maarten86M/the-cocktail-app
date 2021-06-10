@@ -1,57 +1,74 @@
-import React, {useState, useEffect} from "react";
+import React, {useEffect, useContext} from "react";
+import {CocktailContext} from "../Context/CocktailContext";
 import axios from "axios";
 import './paginatijdelijkaanpassenperpagina.css';
 import CocktailCard from "../Components/CocktailCard/CocktailCard";
 import CocktailCardHeader from "../Components/CocktailCardHeader/CocktailCardHeader";
-
+import MainButton from "../Components/Buttons/MainButton/MainButton";
+import random from '../Assets/Icons/NavIcons/dice.png';
 
 function RandomCocktails() {
+    const {
+        cocktail,
+        setCocktail,
+        errors,
+        setErrors,
+        randomizeButton,
+        setRandomizeButton,
+        loading,
+        setLoading
+    } = useContext(CocktailContext);
 
-    const [randomCocktail, setRandomCocktail] = useState(null);
-    const [errors, setErrors] = useState('');
-    const [randomButton, setRandomButton] = useState(false)
-    console.log("What are the Errors:", errors)
+    console.log("What are the Errors:", errors);
+    console.log("Dit is de cocktail",cocktail)
 
-useEffect(() => {
-    console.log("on mount")
-
-    async function fetchRandomCocktail() {
-        try {
-            const response = await axios.get(`https://www.thecocktaildb.com/api/json/v1/1/random.php`
-            );
-            console.log(response.data, "Dit is de data die eruit komt")
-            setRandomCocktail(response.data.drinks)
-        }catch (e) {
-            console.error(e);
-            setErrors("Oops, something went wrong")
+    useEffect(() => {
+        async function fetchRandomCocktail() {
+            setErrors(false);
+            setLoading(true);
+            try {
+                const response = await axios.get(`https://www.thecocktaildb.com/api/json/v1/1/random.php`
+                );
+                setCocktail(response.data.drinks);
+            } catch (e) {
+                console.error(e);
+                setErrors(true);
+            }
+            setLoading(false);
         }
-    }
-    fetchRandomCocktail()
+        fetchRandomCocktail()
 
-},[randomButton]);
+    }, [randomizeButton]);
 
     return (
         <div className="pagina">
             <h1>Random Cocktail</h1>
-            <button onClick={(event) => setRandomButton(!randomButton)}>Randomize</button>
+            <MainButton name="Randomize"
+                        img={random}
+            />
+            <button onClick={() => setRandomizeButton(!randomizeButton)}>Randomize</button>
             <div>
+                {/*Hier komt de cocktail logo img loader*/}
+                {loading && <span>Loading</span>}
+                {errors && (<span>Oops, something went wrong</span>)}
+
                 <div>
-                {randomCocktail ? randomCocktail.map((cocktail) => {
-                    return <>
-                    <CocktailCardHeader cocktailImg={cocktail.strDrinkThumb} alt={cocktail.strDrink}/>
-                    <CocktailCard
-                        name={cocktail.strDrink}
-                        ingredientOne={cocktail.strIngredient1}
-                        ingredientTwo={cocktail.strIngredient2}
-                        ingredientThree={cocktail.strIngredient3}
-                        ingredientFour={cocktail.strIngredient4}
-                        ingredientFive={cocktail.strIngredient5}
-                        ingredientSix={cocktail.strIngredient6}
-                        ingredientSeven={cocktail.strIngredient7}
-                        ingredientEight={cocktail.strIngredient8}
-                    />
-                    </>
-                }): <h1>Loading</h1>}
+                    {cocktail && cocktail.map((cocktail) => {
+                        return <>
+                            <CocktailCardHeader cocktailImg={cocktail.strDrinkThumb} alt={cocktail.strDrink}/>
+                            <CocktailCard
+                                name={cocktail.strDrink}
+                                ingredientOne={cocktail.strIngredient1}
+                                ingredientTwo={cocktail.strIngredient2}
+                                ingredientThree={cocktail.strIngredient3}
+                                ingredientFour={cocktail.strIngredient4}
+                                ingredientFive={cocktail.strIngredient5}
+                                ingredientSix={cocktail.strIngredient6}
+                                ingredientSeven={cocktail.strIngredient7}
+                                ingredientEight={cocktail.strIngredient8}
+                            />
+                        </>
+                    })}
                 </div>
             </div>
 

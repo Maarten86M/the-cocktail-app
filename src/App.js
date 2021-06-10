@@ -1,7 +1,6 @@
 import React, {useState} from "react";
 import Navbar from "./Components/Navbar/NavBar";
 import {
-    BrowserRouter as Router,
     Switch,
     Route
 } from 'react-router-dom';

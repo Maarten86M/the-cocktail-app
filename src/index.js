@@ -4,12 +4,15 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import {BrowserRouter as Router} from "react-router-dom";
+import CocktailContextProvider from "./Context/CocktailContext";
 
 ReactDOM.render(
     <React.StrictMode>
-        <Router>
-            <App/>
-        </Router>
+        <CocktailContextProvider>
+            <Router>
+                <App/>
+            </Router>
+        </CocktailContextProvider>
     </React.StrictMode>,
     document.getElementById('root')
 );

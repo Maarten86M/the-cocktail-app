@@ -3,16 +3,16 @@ import './Navbar.css';
 import './icons/NavbarIcon.css';
 import NavBarItem from "./NavbarItem";
 import NavBarIcon from "./NavBarIcon";
-import search from './icons/NavLinkIcons/search.png';
-import random from './icons/NavLinkIcons/dice.png';
-import alcohol from './icons/NavLinkIcons/alcohol.png';
-import fruit from './icons/NavLinkIcons/fruit.png';
-import cocktail from './icons/NavLinkIcons/cocktail.png';
-import profile from './icons/NavLinkIcons/profile.png';
-import help from './icons/NavLinkIcons/help.png';
-import login from './icons/NavLinkIcons/login.png';
-import register from './icons/NavLinkIcons/register.png';
-import signout from './icons/NavLinkIcons/signout.png';
+import search from '../../Assets/Icons/NavIcons/search.png';
+import random from '../../Assets/Icons/NavIcons/dice.png';
+import alcohol from '../../Assets/Icons/NavIcons/alcohol.png';
+import fruit from '../../Assets/Icons/NavIcons/fruit.png';
+import cocktail from '../../Assets/Icons/NavIcons/cocktail.png';
+import profile from '../../Assets/Icons/NavIcons/profile.png';
+import help from '../../Assets/Icons/NavIcons/help.png';
+import login from '../../Assets/Icons/NavIcons/login.png';
+import register from '../../Assets/Icons/NavIcons/register.png';
+import signout from '../../Assets/Icons/NavIcons/signout.png';
 
 function Navbar(props) {
     const [openMenu, setOpenMenu] = useState(false);
