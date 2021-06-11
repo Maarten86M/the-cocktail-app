@@ -22,9 +22,10 @@ import PublicRoute from "./Route/PublicRoute";
 import PrivateRoute from "./Route/PrivateRoute";
 import './App.css';
 import CocktailView from "./Pages/CocktailView";
+import IntroPage from "./Pages/IntroPage/IntroPage";
 
 function App() {
-    const [authenticated, setAuthenticated] = useState(true);
+    const [authenticated, setAuthenticated] = useState(false);
 
     return (
         <>
@@ -32,6 +33,9 @@ function App() {
                 authenticated={authenticated}
                 setAuthenticated={setAuthenticated}/>
             <Switch>
+
+                {/*<IntroPage path="/"/>*/}
+
                 <PublicRoute
                     path="/"
                     exact={true}
@@ -92,6 +96,7 @@ function App() {
                     path="/help"
                     authenticated={authenticated}
                     component={<Help/>}/>
+
                 <Route path="/">
                     <FourZeroFour/>
                 </Route>

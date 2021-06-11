@@ -19,6 +19,7 @@ Help field data in een appart bestand?
 - cocktailcard is vanuit props. Misschien ook via context
 - useHistory toevoegen zodat mensen ook via een terugknop bovenin de browser terug kunnen.
 De ingredienten ophalen doormiddel van de api (afbeeldingen)
+  - een intro die de cocktail loader weergeeft
 
 Code beslissingen:
 - de info voor het help field in een json bestand gezet zodat mijn code niet vervuild met infomatie. 
