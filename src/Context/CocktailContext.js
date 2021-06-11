@@ -5,13 +5,10 @@ export const CocktailContext = createContext(null);
 function CocktailContextProvider({children}) {
     const [cocktail, setCocktail] = useState(null);
     const [errors, setErrors] = useState(false);
-    const [randomizeButton, setRandomizeButton] = useState(true);
+    const [randomizeButton, setRandomizeButton] = useState(false);
     const [loading, setLoading] = useState(false);
-    const[letter, setLetter] = useState('A');
-    const [allCocktails, setAllCocktails] = useState(null);
+    const [letter, setLetter] = useState('a');
     const [searchText, setSearchText] = useState("");
-    const [searchCocktail, setSearchCocktail]=useState(null);
-
 
     return (
         <CocktailContext.Provider
@@ -26,12 +23,8 @@ function CocktailContextProvider({children}) {
                 setLoading,
                 letter,
                 setLetter,
-                allCocktails,
-                setAllCocktails,
                 searchText,
-                setSearchText,
-                searchCocktail,
-                setSearchCocktail
+                setSearchText
             }}
         >
             {children}

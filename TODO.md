@@ -9,15 +9,16 @@ Help field data in een appart bestand?
 - firebase variabele in .env
 - all cocktails , next en back button 
   - Random cocktails moeten pas starten wanneer de button wordt aangeklikt
-
 - Cocktail Loader. De loading h1 ombouwen naar deze
 - intro page. 
 - Uittekenen van de grid!! en een handige (herbruikbare CSS)
 -diable op de buttons instellen als we aan het zoeken zijn.
   disable en foutmlding bij zoeken. Dus wanneer er bijv geen zoekresultaat is.
-  - Bij zoekresultaat functie maken die Eerste letter hoofdletter maakt en de rest kleine letters. 
-  
+  - Bij zoekresultaat functie maken die Eerste letter hoofdletter maakt en de rest kleine letters.
 - op dit moment zoeken we alleen nog op ingredient (OOk op naam toevoegen)SEARCH
+- cocktailcard is vanuit props. Misschien ook via context
+- useHistory toevoegen zodat mensen ook via een terugknop bovenin de browser terug kunnen.
+De ingredienten ophalen doormiddel van de api (afbeeldingen)
 
 Code beslissingen:
 - de info voor het help field in een json bestand gezet zodat mijn code niet vervuild met infomatie. 

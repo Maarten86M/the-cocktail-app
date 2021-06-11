@@ -1,12 +1,12 @@
 import React, {useEffect, useContext} from "react";
-import {CocktailContext} from "../Context/CocktailContext";
+import {CocktailContext} from "../../Context/CocktailContext";
 import axios from "axios";
-import './paginatijdelijkaanpassenperpagina.css';
-import CocktailCard from "../Components/CocktailCard/CocktailCard";
-import CocktailCardHeader from "../Components/CocktailCardHeader/CocktailCardHeader";
-import MainButton from "../Components/Buttons/MainButton/MainButton";
-import random from '../Assets/Icons/NavIcons/dice.png';
-import RandomizeButton from "../Components/Buttons/RandomizeButton/RandomizeButton";
+import '../paginatijdelijkaanpassenperpagina.css';
+import CocktailCard from "../../Components/CocktailCard/CocktailCard";
+import CocktailCardHeader from "../../Components/CocktailCardHeader/CocktailCardHeader";
+import MainButton from "../../Components/Buttons/MainButton/MainButton";
+import random from '../../Assets/Icons/NavIcons/dice.png';
+import RandomizeButton from "../../Components/Buttons/RandomizeButton/RandomizeButton";
 
 function RandomCocktails() {
     const {
@@ -25,6 +25,7 @@ function RandomCocktails() {
 
     useEffect(() => {
         async function fetchRandomCocktail() {
+
             setErrors(false);
             setLoading(true);
             try {
@@ -36,8 +37,10 @@ function RandomCocktails() {
                 setErrors(true);
             }
             setLoading(false);
+
         }
         fetchRandomCocktail()
+
 
     }, [randomizeButton]);
 

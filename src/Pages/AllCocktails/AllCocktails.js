@@ -10,22 +10,25 @@ import './AllCocktails.css';
 import {Link} from "react-router-dom";
 
 function AllCocktails() {
-    const {letter, allCocktails, setAllCocktails} = useContext(CocktailContext);
+    const {letter, cocktail, setCocktail, setLetter} = useContext(CocktailContext);
 
     useEffect(() => {
+
         async function fetchData() {
             try {
                 const result = await axios.get(`https://www.thecocktaildb.com/api/json/v1/1/search.php?f=${letter}`);
-                setAllCocktails(result.data.drinks);
+                setCocktail(result.data.drinks);
+
             } catch (e) {
                 console.error(e);
             }
+
         }
 
         fetchData()
     }, [letter]);
 
-    console.log("Wat zijn alle cocktails?:", allCocktails)
+    console.log("Wat zijn alle cocktails?:", cocktail)
 
     return (
         <div className="pagina">
@@ -36,9 +39,9 @@ function AllCocktails() {
                 <SelectButton/>
                 <NextBackButton icon={nextIcon} name="next"/>
             </div>
-            {allCocktails ? (
+            {cocktail ? (
                 <div className="Cocktaillist">
-                    {allCocktails.map(cocktail => <Link to={`/cocktailpage/${cocktail.idDrink}`}>
+                    {cocktail.map(cocktail => <Link to={`/cocktailpage/${cocktail.idDrink}`}>
                         <p>{cocktail.strDrink}</p></Link>)}
                 </div>
             ) : (<h1>Loading</h1>)}

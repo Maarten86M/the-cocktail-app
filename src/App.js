@@ -2,9 +2,9 @@ import React, {useState} from "react";
 import Navbar from "./Components/Navbar/NavBar";
 import {
     Switch,
-    Route
+    Route,
 } from 'react-router-dom';
-import RandomCocktails from "./Pages/RandomCocktails";
+import RandomCocktails from "./Pages/RandomCocktails/RandomCocktails";
 import SearchCocktails from "./Pages/SearchCocktails/SearchCocktails";
 import CocktailByAlcohol from "./Pages/CocktailByAlcohol";
 import CocktailByIngredient from "./Pages/CocktailByIngredient";
