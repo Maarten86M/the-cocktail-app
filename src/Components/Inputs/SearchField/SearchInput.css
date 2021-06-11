@@ -1,0 +1,10 @@
+input{
+    width: var(--button-width);
+    height: var(--button-height);
+    border-radius: var(--button-border-radius);
+    border: 1px solid var(--button-border-color);
+    text-align: center;
+    font-size: var(--button-font-size);
+    font-weight: var(--button-font-weight);
+    font-family: var(--main-font);
+}

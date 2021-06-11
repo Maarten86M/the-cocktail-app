@@ -1,0 +1,25 @@
+import React,{useContext} from "react";
+import {CocktailContext} from "../../Context/CocktailContext";
+import {useHistory} from "react-router-dom";
+import SearchInput from "../../Components/Inputs/SearchField/SearchInput";
+import SearchButton from "../../Components/Buttons/SearchButton/SearchButton";
+import search from '../../Assets/Icons/NavIcons/search.png';
+
+function SearchCocktails() {
+    const history = useHistory();
+    const { searchText} = useContext(CocktailContext);
+
+    function searchHandle() {
+        history.push(`/searchresult/${searchText}`)
+    }
+
+    return (
+        <div className="pagina">
+            <h1>Search Cocktails</h1>
+            <SearchInput placeholder="Search Cocktails"/>
+            <SearchButton name="Search" icon={search} onClick={searchHandle} />
+        </div>
+    )
+}
+
+export default SearchCocktails;

@@ -13,7 +13,7 @@ function SelectButton() {
 
     return (
         <div>
-            <select name="letter" id="letter" onChange={(event) => setLetter(event.target.value)}>
+            <select className="selectbutton" name="letter" id="letter" onChange={(event) => setLetter(event.target.value)}>
                 <option value="a">A</option>
                 <option value="b">B</option>
                 <option value="c">C</option>

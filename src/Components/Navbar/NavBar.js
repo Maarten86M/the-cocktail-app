@@ -46,14 +46,14 @@ function Navbar(props) {
                     {!props.authenticated && (
                         <>
                             <NavBarItem
-                                img={register}
+                                icon={register}
                                 tittle="Register"
                                 to="/register"
                                 onClick={menuopener}
                             />
 
                             <NavBarItem
-                                img={login}
+                                icon={login}
                                 tittle="Login"
                                 to="/login"
                                 onClick={menuopener}
@@ -63,49 +63,49 @@ function Navbar(props) {
                     {props.authenticated && (
                         <>
                             <NavBarItem
-                                img={search}
+                                icon={search}
                                 tittle="Search Cocktails"
                                 to="/searchcocktails"
                                 onClick={menuopener}
                             />
                             <NavBarItem
-                                img={random}
+                                icon={random}
                                 tittle="Random Cocktails"
                                 to="/randomcocktails"
                                 onClick={menuopener}
                             />
                             <NavBarItem
-                                img={alcohol}
+                                icon={alcohol}
                                 tittle="Cocktails by Alcohol"
                                 to="/cocktailbyalcohol"
                                 onClick={menuopener}
                             />
                             <NavBarItem
-                                img={fruit}
+                                icon={fruit}
                                 tittle="Cocktails by Ingredient"
                                 to="/cocktailbyingredient"
                                 onClick={menuopener}
                             />
                             <NavBarItem
-                                img={cocktail}
+                                icon={cocktail}
                                 tittle="All Cocktails"
                                 to="/allcocktails"
                                 onClick={menuopener}
                             />
                             <NavBarItem
-                                img={profile}
+                                icon={profile}
                                 tittle="Profile"
                                 to="/profile"
                                 onClick={menuopener}
                             />
                             <NavBarItem
-                                img={help}
+                                icon={help}
                                 tittle="Help"
                                 to="/help"
                                 onClick={menuopener}
                             />
                             <NavBarItem
-                                img={signout}
+                                icon={signout}
                                 tittle="Logout"
                                 to="/login"
                                 onClick={logout}

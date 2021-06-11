@@ -1,10 +1,10 @@
-.mainbutton {
+.nextbackbutton{
     background-color: var(--button-color);
     color: var(--text-color);
     border: 1px solid var(--button-border-color);
     border-radius: var(--button-border-radius);
-    width: var(--button-width);
-    height: var(--button-height);
+    width: 45px;
+    height: 45px;
     font-size: var(--button-font-size);
     font-weight: var(--button-font-weight);
     font-family: var(--main-font);
@@ -12,10 +12,15 @@
     box-shadow: var(--button-shadow);
 }
 
-.mainbutton:disabled {
+.nextbackbutton:disabled {
     color: var(--text-color-disabled);
 }
 
-.mainbutton:hover {
+.nextbackbutton:hover {
     background-color: var(--button-border-color);
+}
+
+.nextbackicon {
+    max-width: 30px;
+    max-height: 30px;
 }

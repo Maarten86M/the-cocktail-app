@@ -6,6 +6,7 @@ import CocktailCard from "../Components/CocktailCard/CocktailCard";
 import CocktailCardHeader from "../Components/CocktailCardHeader/CocktailCardHeader";
 import MainButton from "../Components/Buttons/MainButton/MainButton";
 import random from '../Assets/Icons/NavIcons/dice.png';
+import RandomizeButton from "../Components/Buttons/RandomizeButton/RandomizeButton";
 
 function RandomCocktails() {
     const {
@@ -43,10 +44,13 @@ function RandomCocktails() {
     return (
         <div className="pagina">
             <h1>Random Cocktail</h1>
-            <MainButton name="Randomize"
-                        img={random}
+
+            <RandomizeButton
+                loading={loading}
+                randomizeButton={randomizeButton}
+                setRandomizeButton={setRandomizeButton}
             />
-            <button onClick={() => setRandomizeButton(!randomizeButton)}>Randomize</button>
+
             <div>
                 {/*Hier komt de cocktail logo img loader*/}
                 {loading && <span>Loading</span>}

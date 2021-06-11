@@ -26,6 +26,10 @@
     --nav-font-weight: 500;
     --button-font-size: 16px;
     --button-font-weight: 500;
+    --button-width: 400px;
+    --button-height: 45px;
+    --button-border-radius:10px;
+    --button-shadow: 2px 2px 3px 1px var(--background-color);
 }
 
 body {

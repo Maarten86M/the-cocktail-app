@@ -5,8 +5,8 @@ import './MainButton.css';
 function MainButton(props) {
     return (
             <Link to={props.link}>
-                <button className="mainbutton" disabled={props.disable}>
-                    <img src={props.img} alt={props.name}/>
+                <button className="mainbutton" disabled={props.disable} onClick={props.onclick}>
+                    <img src={props.icon} alt={props.name}/>
                     {props.name}
                 </button>
             </Link>

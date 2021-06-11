@@ -5,10 +5,10 @@ import {
     Route
 } from 'react-router-dom';
 import RandomCocktails from "./Pages/RandomCocktails";
-import SearchCocktails from "./Pages/SearchCocktails";
+import SearchCocktails from "./Pages/SearchCocktails/SearchCocktails";
 import CocktailByAlcohol from "./Pages/CocktailByAlcohol";
 import CocktailByIngredient from "./Pages/CocktailByIngredient";
-import AllCocktails from "./Pages/AllCocktails";
+import AllCocktails from "./Pages/AllCocktails/AllCocktails";
 import Profile from "./Pages/Profile";
 import Help from "./Pages/Help";
 import Home from "./Pages/Home";
@@ -17,14 +17,14 @@ import Welcome from "./Pages/Welcome";
 import Login from "./Pages/Login";
 import Register from "./Pages/Register";
 import ForgotPassword from "./Pages/ForgotPassword";
-import SearchResult from "./Pages/SearchResult";
+import SearchResult from "./Pages/SearchCocktails/SearchResult";
 import PublicRoute from "./Route/PublicRoute";
 import PrivateRoute from "./Route/PrivateRoute";
 import './App.css';
+import CocktailView from "./Pages/CocktailView";
 
 function App() {
     const [authenticated, setAuthenticated] = useState(true);
-    const [searchText, setSearchText] = useState("");
 
     return (
         <>
@@ -57,13 +57,17 @@ function App() {
                 <PrivateRoute
                     path="/searchcocktails"
                     authenticated={authenticated}
-                    component={<SearchCocktails
-                        searchText={searchText}
-                        setSearchText={setSearchText}/>}/>
+                    component={<SearchCocktails/>}/>
                 <PrivateRoute
                     path="/searchresult/:result"
                     authenticated={authenticated}
                     component={<SearchResult/>}/>
+
+                <PrivateRoute
+                    path="/cocktailpage/:id"
+                    authenticated={authenticated}
+                    component={<CocktailView/>}/>
+
                 <PrivateRoute
                     path="/randomcocktails"
                     authenticated={authenticated}
@@ -93,7 +97,7 @@ function App() {
                 </Route>
             </Switch>
         </>
-    );
-}
+    )
+};
 
 export default App;

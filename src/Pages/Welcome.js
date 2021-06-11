@@ -24,32 +24,32 @@ function Welcome() {
                     <HelpButton content={0}/>
                     <MainButton
                         name="Search Cocktails"
-                        img={search}
+                        icon={search}
                         link={"/searchcocktails"}/>
 
                     <MainButton
                         name="Random Cocktails"
-                        img={random}
+                        icon={random}
                         link={"/randomcocktails"}/>
 
                     <MainButton
                         name="Cocktails By Alcohol"
-                        img={alcohol}
+                        icon={alcohol}
                         link={"/cocktailbyalcohol"}/>
 
                     <MainButton
                         name="Cocktails By Ingredient"
-                        img={fruit}
+                        icon={fruit}
                         link={"/cocktailbyingredient"}/>
 
                     <MainButton
                         name="All Cocktails"
-                        img={cocktail}
+                        icon={cocktail}
                         link={"/allcocktails"}/>
 
                     <MainButton
                         name="Your Profile"
-                        img={profile}
+                        icon={profile}
                         link={"/profile"}
                     />
                 </div>

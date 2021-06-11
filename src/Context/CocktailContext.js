@@ -9,6 +9,9 @@ function CocktailContextProvider({children}) {
     const [loading, setLoading] = useState(false);
     const[letter, setLetter] = useState('A');
     const [allCocktails, setAllCocktails] = useState(null);
+    const [searchText, setSearchText] = useState("");
+    const [searchCocktail, setSearchCocktail]=useState(null);
+
 
     return (
         <CocktailContext.Provider
@@ -24,7 +27,11 @@ function CocktailContextProvider({children}) {
                 letter,
                 setLetter,
                 allCocktails,
-                setAllCocktails
+                setAllCocktails,
+                searchText,
+                setSearchText,
+                searchCocktail,
+                setSearchCocktail
             }}
         >
             {children}
@@ -33,5 +40,3 @@ function CocktailContextProvider({children}) {
 }
 
 export default CocktailContextProvider
-
-// value={}

@@ -1,0 +1,17 @@
+.selectbutton{
+    background-color: var(--button-color);
+    color: var(--text-color);
+    border: 1px solid var(--button-border-color);
+    border-radius: var(--button-border-radius);
+    width: 100px;
+    height: var(--button-height);
+    font-size: var(--button-font-size);
+    font-weight: var(--button-font-weight);
+    font-family: var(--main-font);
+    margin-bottom: 45px;
+    box-shadow: var(--button-shadow);
+    padding-left: 30%;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
