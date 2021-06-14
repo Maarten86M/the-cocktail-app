@@ -27,7 +27,6 @@ function RandomCocktails() {
 
     useEffect(() => {
         async function fetchRandomCocktail() {
-
             setErrors(false);
             setLoading(true);
             try {

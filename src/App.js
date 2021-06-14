@@ -6,8 +6,8 @@ import {
 } from 'react-router-dom';
 import RandomCocktails from "./Pages/RandomCocktails/RandomCocktails";
 import SearchCocktails from "./Pages/SearchCocktails/SearchCocktails";
-import CocktailByAlcohol from "./Pages/CocktailByAlcohol";
-import CocktailByIngredient from "./Pages/CocktailByIngredient";
+import CocktailByAlcohol from "./Pages/CocktailByAlcohol/CocktailByAlcohol";
+import CocktailByIngredient from "./Pages/CocktailByIngredient/CocktailByIngredient";
 import AllCocktails from "./Pages/AllCocktails/AllCocktails";
 import Profile from "./Pages/Profile";
 import Help from "./Pages/Help";
@@ -22,7 +22,8 @@ import PublicRoute from "./Route/PublicRoute";
 import PrivateRoute from "./Route/PrivateRoute";
 import './App.css';
 import CocktailView from "./Pages/CocktailView";
-import CocktailByAlcoholList from "./Pages/CocktailByAlcoholList";
+import CocktailByAlcoholList from "./Pages/CocktailByAlcohol/CocktailByAlcoholList";
+import CocktailByIngredientList from "./Pages/CocktailByIngredient/CocktailByIngredientList";
 
 const apiKey = '9973533';
 
@@ -90,6 +91,12 @@ function App() {
                     path="/cocktailbyingredient"
                     authenticated={authenticated}
                     component={<CocktailByIngredient/>}/>
+
+                <PrivateRoute
+                    path="/cocktailbyingredientlist/:result"
+                    authenticated={authenticated}
+                    component={<CocktailByIngredientList/>}/>
+
                 <PrivateRoute
                     path="/allcocktails"
                     authenticated={authenticated}

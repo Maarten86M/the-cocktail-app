@@ -20,9 +20,13 @@ Help field data in een appart bestand?
 - useHistory toevoegen zodat mensen ook via een terugknop bovenin de browser terug kunnen.
 De ingredienten ophalen doormiddel van de api (afbeeldingen)
   - een intro die de cocktail loader weergeeft
+  - de cocktail (useState moet weer op 0 gezet worden. Zodat oude resultaten niet weergegeven worden)
   
 - inputfield lock icon en envelop aanpassen. 
 - form en register verder afronden. 
+
+- alles nalopen en kijken of het nog verder omgebouwd kan worden tot een component. Bijvoorbeeld de Cocktailby Alcohollist page & Cocktail by ingredient List page!! 
+- de link van het resultaat van cocktail by alcohol en cocktail bij ingredient verwijst nu naar Wiskey#20Bla dit moet nog omgebouw worde .replace(" ","+") naar een moooie link
 
 
 
@@ -34,7 +38,7 @@ Op deze manier kan ik het ook mogelijk aanpassen als er wijzingen zijn.
     Ook kan ik het vanuit hier makkelijk op alfabetische volgorge zetten.
     - de Api heeft alleen een endpoint voor alle cocktails per letter. Daarom heb ik ervoor gekozen om in het design een Selectbox en next/back button toe te voegen. 
     Die naar de uiteindelijke endpoint verwijst met een ${}
-      
+      - doormiddel van params de gegevens opgehaald om ze te verwerken in axios.
 
 
 Adobe XD: 

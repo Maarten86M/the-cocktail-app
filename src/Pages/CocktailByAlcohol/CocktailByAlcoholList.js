@@ -1,4 +1,4 @@
-import React, { useEffect, useState} from "react";
+import React, {useEffect, useState} from "react";
 
 import {Link, useParams} from "react-router-dom";
 import axios from "axios";
@@ -9,8 +9,8 @@ function CocktailByAlcoholList() {
     const params = useParams();
     const [alcohollist, setAlcohollist] = useState(null)
 
-    const refactorParams = params.result.replace(" ","_");
-    console.log("Wat is de uitkomst refactor:",refactorParams);
+
+    // const refactorParams = params.result.replace(" ", "_");
 
     useEffect(() => {
         async function fetchAlcoholCocktail() {
@@ -25,21 +25,20 @@ function CocktailByAlcoholList() {
         fetchAlcoholCocktail()
     }, []);
 
-    console.log(alcohollist,"zit hier iets in?")
 
     return (
         <>
             <div className="pagina">
                 <div className="Cocktaillist">
-                    <h1>Cocktails with {params.result.replace("+"," ")} </h1>
+                    <h1>Cocktails with {params.result} </h1>
 
                     <div>
-                    {alcohollist ? (
-                        <div className="Cocktaillist">
-                            {alcohollist.map(cocktail => <Link to={`/cocktailpage/${cocktail.idDrink}`}>
-                                <p>{cocktail.strDrink}</p></Link>)}
-                        </div>
-                    ) : (<h1>Loading</h1>)}
+                        {alcohollist ? (
+                            <div className="Cocktaillist">
+                                {alcohollist.map(cocktail => <Link to={`/cocktailpage/${cocktail.idDrink}`}>
+                                    <p>{cocktail.strDrink}</p></Link>)}
+                            </div>
+                        ) : (<h1>Loading</h1>)}
                     </div>
 
                 </div>
