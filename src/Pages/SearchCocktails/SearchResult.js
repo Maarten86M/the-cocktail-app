@@ -6,8 +6,6 @@ import {CocktailContext} from "../../Context/CocktailContext";
 import axios from "axios";
 import {Link} from 'react-router-dom';
 
-
-
 function SearchResult() {
     const params = useParams();
     const {
@@ -20,8 +18,6 @@ function SearchResult() {
     console.log(cocktail);
 
     useEffect(() => {
-
-
         async function fetchSearchData() {
             try {
                 const searchResult = await axios.get(`https://www.thecocktaildb.com/api/json/v1/1/filter.php?i=${searchText}`);
