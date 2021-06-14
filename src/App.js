@@ -14,18 +14,20 @@ import Help from "./Pages/Help";
 import Home from "./Pages/Home";
 import FourZeroFour from "./Pages/FourZeroFour";
 import Welcome from "./Pages/Welcome";
-import Login from "./Pages/Login";
-import Register from "./Pages/Register";
+import Login from "./Pages/Login/Login";
+import Register from "./Pages/Register/Register";
 import ForgotPassword from "./Pages/ForgotPassword";
 import SearchResult from "./Pages/SearchCocktails/SearchResult";
 import PublicRoute from "./Route/PublicRoute";
 import PrivateRoute from "./Route/PrivateRoute";
 import './App.css';
 import CocktailView from "./Pages/CocktailView";
-import IntroPage from "./Pages/IntroPage/IntroPage";
+import CocktailByAlcoholList from "./Pages/CocktailByAlcoholList";
+
+const apiKey = '9973533';
 
 function App() {
-    const [authenticated, setAuthenticated] = useState(false);
+    const [authenticated, setAuthenticated] = useState(true);
 
     return (
         <>
@@ -33,8 +35,6 @@ function App() {
                 authenticated={authenticated}
                 setAuthenticated={setAuthenticated}/>
             <Switch>
-
-                {/*<IntroPage path="/"/>*/}
 
                 <PublicRoute
                     path="/"
@@ -80,6 +80,12 @@ function App() {
                     path="/cocktailbyalcohol"
                     authenticated={authenticated}
                     component={<CocktailByAlcohol/>}/>
+
+                <PrivateRoute
+                    path="/cocktailbyalcohollist/:result"
+                    authenticated={authenticated}
+                    component={<CocktailByAlcoholList />}/>
+
                 <PrivateRoute
                     path="/cocktailbyingredient"
                     authenticated={authenticated}
@@ -103,6 +109,6 @@ function App() {
             </Switch>
         </>
     )
-};
+}
 
 export default App;

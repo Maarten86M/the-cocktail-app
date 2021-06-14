@@ -20,6 +20,11 @@ Help field data in een appart bestand?
 - useHistory toevoegen zodat mensen ook via een terugknop bovenin de browser terug kunnen.
 De ingredienten ophalen doormiddel van de api (afbeeldingen)
   - een intro die de cocktail loader weergeeft
+  
+- inputfield lock icon en envelop aanpassen. 
+- form en register verder afronden. 
+
+
 
 Code beslissingen:
 - de info voor het help field in een json bestand gezet zodat mijn code niet vervuild met infomatie. 
@@ -30,3 +35,7 @@ Op deze manier kan ik het ook mogelijk aanpassen als er wijzingen zijn.
     - de Api heeft alleen een endpoint voor alle cocktails per letter. Daarom heb ik ervoor gekozen om in het design een Selectbox en next/back button toe te voegen. 
     Die naar de uiteindelijke endpoint verwijst met een ${}
       
+
+
+Adobe XD: 
+- lettertype nog aanpassen.

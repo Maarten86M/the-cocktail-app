@@ -4,6 +4,7 @@ export const CocktailContext = createContext(null);
 
 function CocktailContextProvider({children}) {
     const [cocktail, setCocktail] = useState(null);
+    const [alcohol, setAlchohol] = useState(null);
     const [errors, setErrors] = useState(false);
     const [randomizeButton, setRandomizeButton] = useState(false);
     const [loading, setLoading] = useState(false);
@@ -24,7 +25,9 @@ function CocktailContextProvider({children}) {
                 letter,
                 setLetter,
                 searchText,
-                setSearchText
+                setSearchText,
+                alcohol,
+                setAlchohol
             }}
         >
             {children}

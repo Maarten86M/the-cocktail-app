@@ -8,6 +8,8 @@ import MainButton from "../../Components/Buttons/MainButton/MainButton";
 import random from '../../Assets/Icons/NavIcons/dice.png';
 import RandomizeButton from "../../Components/Buttons/RandomizeButton/RandomizeButton";
 
+const apiKey = '9973533';
+
 function RandomCocktails() {
     const {
         cocktail,
@@ -29,7 +31,7 @@ function RandomCocktails() {
             setErrors(false);
             setLoading(true);
             try {
-                const response = await axios.get(`https://www.thecocktaildb.com/api/json/v1/1/random.php`
+                const response = await axios.get(`https://www.thecocktaildb.com/api/json/v2/${apiKey}/random.php`
                 );
                 setCocktail(response.data.drinks);
             } catch (e) {

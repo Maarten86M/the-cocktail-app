@@ -9,14 +9,17 @@ import backIcon from '../../Assets/Icons/ButtonIcons/Back.png';
 import './AllCocktails.css';
 import {Link} from "react-router-dom";
 
+const apiKey = '9973533';
+
 function AllCocktails() {
     const {letter, cocktail, setCocktail, setLetter} = useContext(CocktailContext);
+
 
     useEffect(() => {
 
         async function fetchData() {
             try {
-                const result = await axios.get(`https://www.thecocktaildb.com/api/json/v1/1/search.php?f=${letter}`);
+                const result = await axios.get(`https://www.thecocktaildb.com/api/json/v2/${apiKey}/search.php?f=${letter}`);
                 setCocktail(result.data.drinks);
 
             } catch (e) {
