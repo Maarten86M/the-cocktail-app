@@ -5,13 +5,11 @@ import CocktailCard from "../Components/CocktailCard/CocktailCard";
 import MainButton from "../Components/Buttons/MainButton/MainButton";
 import CocktailCardHeader from "../Components/CocktailCardHeader/CocktailCardHeader";
 import {useParams} from 'react-router-dom';
-import { browserHistory
-} from 'react-router-dom';
-
+import {useCocktailContext} from "../Context/CocktailContext";
 
 function CocktailView() {
     const params = useParams();
-    const {cocktail, setCocktail} = useContext(CocktailContext);
+    const {cocktail, setCocktail} = useCocktailContext();
 
     useEffect(() => {
         async function fetchCocktailView() {

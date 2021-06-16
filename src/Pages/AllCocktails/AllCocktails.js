@@ -1,6 +1,5 @@
-import React, {useEffect, useContext} from "react";
+import React, {useEffect} from "react";
 import axios from "axios";
-import {CocktailContext} from "../../Context/CocktailContext";
 import SelectButton from "../../Components/Buttons/SelectButton/SelectButton";
 import HelpButton from "../../Components/Buttons/HelpButton/HelpButton";
 import NextBackButton from "../../Components/Buttons/NextBackButton/NextBackButton";
@@ -8,11 +7,12 @@ import nextIcon from '../../Assets/Icons/ButtonIcons/Next.png';
 import backIcon from '../../Assets/Icons/ButtonIcons/Back.png';
 import './AllCocktails.css';
 import {Link} from "react-router-dom";
+import {useCocktailContext} from "../../Context/CocktailContext";
 
 const apiKey = '9973533';
 
 function AllCocktails() {
-    const {letter, cocktail, setCocktail, setLetter} = useContext(CocktailContext);
+    const {letter, cocktail, setCocktail, setLetter} = useCocktailContext();
 
 
     useEffect(() => {

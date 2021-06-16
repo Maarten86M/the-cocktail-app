@@ -1,9 +1,9 @@
-import React, {useContext} from "react";
+import React from "react";
 import './CocktailCard.css';
-import {CocktailContext} from "../../Context/CocktailContext";
+import {useCocktailContext} from "../../Context/CocktailContext";
 
 function CocktailCard(props) {
-    const {cocktail, setCocktail} = useContext(CocktailContext);
+    const {cocktail, setCocktail} = useCocktailContext();
 
     return (
         <div>

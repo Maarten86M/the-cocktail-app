@@ -1,8 +1,12 @@
-import React, {createContext, useState} from 'react';
+import React, {createContext, useState, useContext} from 'react';
 
-export const CocktailContext = createContext(null);
+export const cocktailContext = createContext({});
 
-function CocktailContextProvider({children}) {
+export function useCocktailContext(){
+    return useContext(cocktailContext);
+}
+
+export default function CocktailContextProvider(props) {
     const [cocktail, setCocktail] = useState(null);
     const [alcohol, setAlchohol] = useState(null);
     const [errors, setErrors] = useState(false);
@@ -12,8 +16,7 @@ function CocktailContextProvider({children}) {
     const [searchText, setSearchText] = useState("");
     const [cocktailList, setCocktailList] = useState('');
 
-    return (
-        <CocktailContext.Provider
+    return ( <cocktailContext.Provider
             value={{
                 cocktail,
                 setCocktail,
@@ -31,12 +34,10 @@ function CocktailContextProvider({children}) {
                 setAlchohol,
                 cocktailList,
                 setCocktailList
-
             }}
         >
-            {children}
-        </CocktailContext.Provider>
-    )
+            {props.children}
+        </cocktailContext.Provider>
+    );
 }
 
-export default CocktailContextProvider

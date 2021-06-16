@@ -1,10 +1,10 @@
 import React,{useContext} from "react";
 import './SearchInput.css';
-import {CocktailContext} from "../../../Context/CocktailContext";
+import{useCocktailContext} from "../../../Context/CocktailContext";
 
 function SearchInput(props) {
 
-    const { setSearchText} = useContext(CocktailContext);
+    const { setSearchText} = useCocktailContext();
 
     return (
         <div className='searchInput'>

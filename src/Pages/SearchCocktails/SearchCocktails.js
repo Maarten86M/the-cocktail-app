@@ -4,10 +4,11 @@ import {useHistory} from "react-router-dom";
 import SearchInput from "../../Components/Inputs/SearchField/SearchInput";
 import SearchButton from "../../Components/Buttons/SearchButton/SearchButton";
 import search from '../../Assets/Icons/NavIcons/search.png';
+import {useCocktailContext} from "../../Context/CocktailContext";
 
 function SearchCocktails() {
     const history = useHistory();
-    const { searchText} = useContext(CocktailContext);
+    const { searchText} = useCocktailContext();
 
     function searchHandle() {
         history.push(`/searchresult/${searchText}`)

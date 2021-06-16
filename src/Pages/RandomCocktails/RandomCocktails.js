@@ -1,5 +1,4 @@
-import React, {useEffect, useContext} from "react";
-import {CocktailContext} from "../../Context/CocktailContext";
+import React, {useEffect} from "react";
 import axios from "axios";
 import '../paginatijdelijkaanpassenperpagina.css';
 import CocktailCard from "../../Components/CocktailCard/CocktailCard";
@@ -7,6 +6,7 @@ import CocktailCardHeader from "../../Components/CocktailCardHeader/CocktailCard
 import MainButton from "../../Components/Buttons/MainButton/MainButton";
 import random from '../../Assets/Icons/NavIcons/dice.png';
 import RandomizeButton from "../../Components/Buttons/RandomizeButton/RandomizeButton";
+import {useCocktailContext} from "../../Context/CocktailContext";
 
 const apiKey = '9973533';
 
@@ -20,7 +20,7 @@ function RandomCocktails() {
         setRandomizeButton,
         loading,
         setLoading
-    } = useContext(CocktailContext);
+    } = useCocktailContext();
 
     console.log("What are the Errors:", errors);
     console.log("Dit is de cocktail",cocktail)

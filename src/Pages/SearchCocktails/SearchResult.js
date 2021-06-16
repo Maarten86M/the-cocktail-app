@@ -1,10 +1,10 @@
-import React, {useContext, useEffect} from "react";
+import React, {useEffect} from "react";
 import {useParams} from 'react-router-dom';
 import MainButton from "../../Components/Buttons/MainButton/MainButton";
 import search from '../../Assets/Icons/NavIcons/search.png';
-import {CocktailContext} from "../../Context/CocktailContext";
 import axios from "axios";
 import {Link} from 'react-router-dom';
+import {useCocktailContext} from "../../Context/CocktailContext";
 
 function SearchResult() {
     const params = useParams();
@@ -13,7 +13,7 @@ function SearchResult() {
         cocktail,
         setCocktail,
         setSearchText
-    } = useContext(CocktailContext);
+    } = useCocktailContext();
 
     console.log(cocktail);
 

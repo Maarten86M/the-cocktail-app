@@ -1,13 +1,14 @@
-import React,{useContext} from "react";
+import React from "react";
 import './SelectButton.css';
-import {CocktailContext} from "../../../Context/CocktailContext";
+
+import {useCocktailContext} from "../../../Context/CocktailContext";
 
 function SelectButton() {
 
         const {
             letter,
             setLetter
-        } = useContext(CocktailContext);
+        } = useCocktailContext();
 
         console.log("Welke letter is er aangeklikt", letter)
 

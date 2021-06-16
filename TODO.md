@@ -34,6 +34,8 @@ De ingredienten ophalen doormiddel van de api (afbeeldingen)
 -Nalopen of Params wel handig is en niet gewoon useState met useContext.
       - Voorbeeld rein gebruiken met de stappen.Dus bij cocktail by ingredient & cocktail by alcohol.
         hierdoor minder pagina's.
+  
+- 2 context maken. 1 voor user en 1 voor cocktail info. Goed bekijken waar deze omheen gezet dienen te worden. !!Zie voorbeeld rein les.
 
 Code beslissingen:
 - de info voor het help field in een json bestand gezet zodat mijn code niet vervuild met infomatie. 
