@@ -7,10 +7,7 @@ const apiKey = '9973533';
 
 function CocktailByAlcoholList() {
     const params = useParams();
-    const [alcohollist, setAlcohollist] = useState(null)
-
-
-    // const refactorParams = params.result.replace(" ", "_");
+    const [alcohollist, setAlcohollist] = useState([])
 
     useEffect(() => {
         async function fetchAlcoholCocktail() {
@@ -25,22 +22,20 @@ function CocktailByAlcoholList() {
         fetchAlcoholCocktail()
     }, []);
 
-
     return (
         <>
             <div className="pagina">
                 <div className="Cocktaillist">
                     <h1>Cocktails with {params.result} </h1>
-
                     <div>
-                        {alcohollist ? (
+                        {alcohollist === "None Found" ? (
+                            <h1>sorry, nothing found</h1>
+                        ) : (
                             <div className="Cocktaillist">
                                 {alcohollist.map(cocktail => <Link to={`/cocktailpage/${cocktail.idDrink}`}>
                                     <p>{cocktail.strDrink}</p></Link>)}
-                            </div>
-                        ) : (<h1>Loading</h1>)}
+                            </div>)}
                     </div>
-
                 </div>
             </div>
         </>

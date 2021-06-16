@@ -10,6 +10,7 @@ function CocktailContextProvider({children}) {
     const [loading, setLoading] = useState(false);
     const [letter, setLetter] = useState('a');
     const [searchText, setSearchText] = useState("");
+    const [cocktailList, setCocktailList] = useState('');
 
     return (
         <CocktailContext.Provider
@@ -27,7 +28,10 @@ function CocktailContextProvider({children}) {
                 searchText,
                 setSearchText,
                 alcohol,
-                setAlchohol
+                setAlchohol,
+                cocktailList,
+                setCocktailList
+
             }}
         >
             {children}

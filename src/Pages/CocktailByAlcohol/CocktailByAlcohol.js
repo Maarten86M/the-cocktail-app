@@ -3,7 +3,6 @@ import {Link} from "react-router-dom";
 import alcoholData from '../../Data/SortByAlcohol.json';
 
 function CocktailByAlcohol() {
-
     return(
         <div className="pagina">
             <h1>Cocktail By Alcohol</h1>

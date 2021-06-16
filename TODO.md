@@ -21,14 +21,19 @@ Help field data in een appart bestand?
 De ingredienten ophalen doormiddel van de api (afbeeldingen)
   - een intro die de cocktail loader weergeeft
   - de cocktail (useState moet weer op 0 gezet worden. Zodat oude resultaten niet weergegeven worden)
+  - Loading bij Cocktail bij ingredient en alchol bij ingrdient (2de lijst)nu alleen foutmelding
+  - ombouwen naar context. Dus de useStates verplaatsen.
   
 - inputfield lock icon en envelop aanpassen. 
 - form en register verder afronden. 
 
 - alles nalopen en kijken of het nog verder omgebouwd kan worden tot een component. Bijvoorbeeld de Cocktailby Alcohollist page & Cocktail by ingredient List page!! 
 - de link van het resultaat van cocktail by alcohol en cocktail bij ingredient verwijst nu naar Wiskey#20Bla dit moet nog omgebouw worde .replace(" ","+") naar een moooie link
-
-
+-  De data die binnenkomst via de api ombouwen naar { } zoals de tip uit de pokemon opdracht die is binnengekomen.
+- alle tips die ik heb gehad van het nakijkwerk erbij pakken en doorlopen. 
+-Nalopen of Params wel handig is en niet gewoon useState met useContext.
+      - Voorbeeld rein gebruiken met de stappen.Dus bij cocktail by ingredient & cocktail by alcohol.
+        hierdoor minder pagina's.
 
 Code beslissingen:
 - de info voor het help field in een json bestand gezet zodat mijn code niet vervuild met infomatie. 
@@ -39,7 +44,9 @@ Op deze manier kan ik het ook mogelijk aanpassen als er wijzingen zijn.
     - de Api heeft alleen een endpoint voor alle cocktails per letter. Daarom heb ik ervoor gekozen om in het design een Selectbox en next/back button toe te voegen. 
     Die naar de uiteindelijke endpoint verwijst met een ${}
       - doormiddel van params de gegevens opgehaald om ze te verwerken in axios.
-
+  
+- Bij de cocktail bij ingredient list & alcoholby ingredient list een errormelding ingebouw "Nothing Fount" omdat er in het database oook lege ingredienten staan.
+- De keuze gemaakt om de paginas door te verwijzen met useparams. Dit zodat de gebruiker makkelijk naar de vorige pagina kan gaan.
 
 Adobe XD: 
 - lettertype nog aanpassen.

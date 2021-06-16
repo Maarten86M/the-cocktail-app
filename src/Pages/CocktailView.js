@@ -5,6 +5,8 @@ import CocktailCard from "../Components/CocktailCard/CocktailCard";
 import MainButton from "../Components/Buttons/MainButton/MainButton";
 import CocktailCardHeader from "../Components/CocktailCardHeader/CocktailCardHeader";
 import {useParams} from 'react-router-dom';
+import { browserHistory
+} from 'react-router-dom';
 
 
 function CocktailView() {
@@ -50,7 +52,7 @@ function CocktailView() {
                 </>
             })}
             </div>
-
+            <button ></button>
             {/*<MainButton/>*/}
         </div>
     )

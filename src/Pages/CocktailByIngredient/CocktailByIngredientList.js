@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from "react";
+import React, {useEffect, useState, useContext} from "react";
 import {Link, useParams} from "react-router-dom";
 import axios from "axios";
 
@@ -6,38 +6,35 @@ const apiKey = '9973533';
 
 function CocktailByIngredientList() {
     const params = useParams();
-    const [ingredientlist, setIngredientlist] = useState(null)
-
-    // const refactorParams = params.result.replace(" ","_");
+    const [ingredientlist, setIngredientlist] = useState([])
 
     useEffect(() => {
-        async function fetchAlcoholCocktail() {
+        async function fetchIngredientCocktail() {
             try {
-                const alcoholResult = await axios.get(`https://www.thecocktaildb.com/api/json/v2/${apiKey}/filter.php?i=${params.result}`);
-                setIngredientlist(alcoholResult.data.drinks);
+                const ingredientResult = await axios.get(`https://www.thecocktaildb.com/api/json/v2/${apiKey}/filter.php?i=${params.result}`);
+                setIngredientlist(ingredientResult.data.drinks);
             } catch (e) {
                 console.error(e)
             }
         }
-
-        fetchAlcoholCocktail()
+        fetchIngredientCocktail()
     }, []);
+
 
     return (
         <>
             <div className="pagina">
                 <div className="Cocktaillist">
-                    <h1>Cocktails with {params.result} </h1>
-
+                    <h1>Cocktails with: {params.result} </h1>
                     <div>
-                        {ingredientlist ? (
+                        {ingredientlist === "None Found" ? (
+                            <h1>Sorry, nothing Found</h1>
+                        ) : (
                             <div className="Cocktaillist">
                                 {ingredientlist.map(cocktail => <Link to={`/cocktailpage/${cocktail.idDrink}`}>
                                     <p>{cocktail.strDrink}</p></Link>)}
-                            </div>
-                        ) : (<h1>Loading</h1>)}
+                            </div>)}
                     </div>
-
                 </div>
             </div>
         </>

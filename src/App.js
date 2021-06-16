@@ -20,10 +20,10 @@ import ForgotPassword from "./Pages/ForgotPassword";
 import SearchResult from "./Pages/SearchCocktails/SearchResult";
 import PublicRoute from "./Route/PublicRoute";
 import PrivateRoute from "./Route/PrivateRoute";
-import './App.css';
 import CocktailView from "./Pages/CocktailView";
 import CocktailByAlcoholList from "./Pages/CocktailByAlcohol/CocktailByAlcoholList";
 import CocktailByIngredientList from "./Pages/CocktailByIngredient/CocktailByIngredientList";
+import './App.css';
 
 const apiKey = '9973533';
 
@@ -42,14 +42,17 @@ function App() {
                     exact={true}
                     authenticated={authenticated}
                     component={<Home/>}/>
+
                 <PublicRoute
                     path="/login"
                     authenticated={authenticated}
                     component={<Login/>}/>
+
                 <PublicRoute
                     path="/register"
                     authenticated={authenticated}
                     component={<Register/>}/>
+
                 <PublicRoute
                     path="/forgotpassword"
                     authenticated={authenticated}
@@ -59,10 +62,12 @@ function App() {
                     path="/welcome"
                     authenticated={authenticated}
                     component={<Welcome/>}/>
+
                 <PrivateRoute
                     path="/searchcocktails"
                     authenticated={authenticated}
                     component={<SearchCocktails/>}/>
+
                 <PrivateRoute
                     path="/searchresult/:result"
                     authenticated={authenticated}
@@ -77,6 +82,7 @@ function App() {
                     path="/randomcocktails"
                     authenticated={authenticated}
                     component={<RandomCocktails/>}/>
+
                 <PrivateRoute
                     path="/cocktailbyalcohol"
                     authenticated={authenticated}
@@ -85,7 +91,7 @@ function App() {
                 <PrivateRoute
                     path="/cocktailbyalcohollist/:result"
                     authenticated={authenticated}
-                    component={<CocktailByAlcoholList />}/>
+                    component={<CocktailByAlcoholList/>}/>
 
                 <PrivateRoute
                     path="/cocktailbyingredient"
