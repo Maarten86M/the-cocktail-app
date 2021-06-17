@@ -1,6 +1,7 @@
 import React from "react";
 import './CocktailCard.css';
 import {useCocktailContext} from "../../Context/CocktailContext";
+import IngredientView from "./IngredientView/IngredientView";
 
 function CocktailCard() {
     const {cocktail} = useCocktailContext();
@@ -15,16 +16,16 @@ function CocktailCard() {
                 <h2>{id.strDrink}</h2>
                 <div>
                     <b>Ingredients</b>
-                    <p>{id.strIngredient1}</p>
-                    <p>{id.strIngredient2}</p>
-                    <p>{id.strIngredient3}</p>
-                    <p>{id.strIngredient4}</p>
-                    <p>{id.strIngredient5}</p>
-                    <p>{id.strIngredient6}</p>
-                    <p>{id.strIngredient7}</p>
-                    <p>{id.strIngredient8}</p>
-                    <p>{id.strIngredient9}</p>
-                    <p>{id.strIngredient10}</p>
+                    <IngredientView IngredientName={id.strIngredient1}/>
+                    <IngredientView IngredientName={id.strIngredient2}/>
+                    <IngredientView IngredientName={id.strIngredient3}/>
+                    <IngredientView IngredientName={id.strIngredient4}/>
+                    <IngredientView IngredientName={id.strIngredient5}/>
+                    <IngredientView IngredientName={id.strIngredient6}/>
+                    <IngredientView IngredientName={id.strIngredient7}/>
+                    <IngredientView IngredientName={id.strIngredient8}/>
+                    <IngredientView IngredientName={id.strIngredient9}/>
+                    <IngredientView IngredientName={id.strIngredient10}/>
                 </div>
                     </div>
                     ):(<h1> Loading </h1>)}
