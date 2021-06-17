@@ -7,6 +7,7 @@ import {Link} from "react-router-dom";
 import {useCocktailContext} from "../../Context/CocktailContext";
 import BackButton from "../../Components/Buttons/NextBackButton/BackButton/BackButton";
 import LetterView from "../../Components/Titles/LetterView/LetterView";
+import MainBackButton from "../../Components/Buttons/MainBackButton/MainBackButton";
 
 
 function AllCocktails() {
@@ -42,11 +43,13 @@ function AllCocktails() {
                 <NextButton />
             </div>
             {cocktail ? (
-                <div className="Cocktaillist">
+                <div className="overflow-list">
                     {cocktail.map(cocktail => <Link to={`/cocktailpage/${cocktail.idDrink}`}>
                         <p>{cocktail.strDrink}</p></Link>)}
                 </div>
             ) : (<h1>Oeps, Something went wrong,Click again on the Next or Back Button</h1>)}
+
+            <MainBackButton/>
         </div>
     )
 }
