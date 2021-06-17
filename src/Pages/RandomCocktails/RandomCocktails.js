@@ -48,38 +48,15 @@ function RandomCocktails() {
     return (
         <div className="pagina">
             <h1>Random Cocktail</h1>
-
-            <RandomizeButton
-                loading={loading}
-                randomizeButton={randomizeButton}
-                setRandomizeButton={setRandomizeButton}
-            />
-
+            <RandomizeButton/>
             <div>
+
                 {/*Hier komt de cocktail logo img loader*/}
                 {loading && <span>Loading</span>}
                 {errors && (<span>Oops, something went wrong</span>)}
-
-                <div>
-                    {cocktail && cocktail.map((cocktail) => {
-                        return <>
-                            <CocktailCardHeader cocktailImg={cocktail.strDrinkThumb} alt={cocktail.strDrink}/>
-                            <CocktailCard
-                                name={cocktail.strDrink}
-                                ingredientOne={cocktail.strIngredient1}
-                                ingredientTwo={cocktail.strIngredient2}
-                                ingredientThree={cocktail.strIngredient3}
-                                ingredientFour={cocktail.strIngredient4}
-                                ingredientFive={cocktail.strIngredient5}
-                                ingredientSix={cocktail.strIngredient6}
-                                ingredientSeven={cocktail.strIngredient7}
-                                ingredientEight={cocktail.strIngredient8}
-                            />
-                        </>
-                    })}
-                </div>
+                            <CocktailCardHeader/>
+                            <CocktailCard/>
             </div>
-
         </div>
     )
 }

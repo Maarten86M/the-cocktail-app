@@ -9,9 +9,9 @@ import CocktailContextProvider from "./Context/CocktailContext";
 ReactDOM.render(
     <React.StrictMode>
         <CocktailContextProvider>
-            <Router>
-                <App/>
-            </Router>
+                <Router>
+                    <App/>
+                </Router>
         </CocktailContextProvider>
     </React.StrictMode>,
     document.getElementById('root')

@@ -7,7 +7,7 @@ Help field data in een appart bestand?
 - error meldingen (laden api) zie random cocktail
 - loading meldingen (laden api) zie random cocktail
 - firebase variabele in .env
-- all cocktails , next en back button 
+- Search Cocktail nu alleen mogelijk op cocktail naam maar ook ingredienten moet mogelijk zijn.
   - Random cocktails moeten pas starten wanneer de button wordt aangeklikt
 - Cocktail Loader. De loading h1 ombouwen naar deze
 - intro page. 
@@ -43,12 +43,20 @@ Op deze manier kan ik het ook mogelijk aanpassen als er wijzingen zijn.
   - De Api zelft heeft niet de juiste endpoints om een sortering te maken in een categorie op basis van alcohol(vadka, wiskey, rum etc), en op basis van inredienten(appel, banaan , aardbei etc). In de Api zelf staat alles door elkaar. 
     Zoals in mijn ontwerp heb ik besloten om dit uit te specificeren. Voor beide categorien heb ik een lijst(json array) samengesteld in data. Vanuit hier kunnen we mappen naar de juiste cocktail. Ik heb dit express in een json bestand gedaan zodat we dit ook makkelijk weer kunnen toevoegen op een later tijdstip als er veranderingen zijn. 
     Ook kan ik het vanuit hier makkelijk op alfabetische volgorge zetten.
-    - de Api heeft alleen een endpoint voor alle cocktails per letter. Daarom heb ik ervoor gekozen om in het design een Selectbox en next/back button toe te voegen. 
-    Die naar de uiteindelijke endpoint verwijst met een ${}
+    
+- de Api heeft alleen een endpoint voor alle cocktails per letter. Daarom heb ik ervoor gekozen om in het design een Selectbox en next/back button toe te voegen. 
+    Die naar de uiteindelijke endpoint verwijst met een ${}. Ik heb een array aangemaakt op basis van letters. De U is niet weergegeven. Omdat er geen cocktails zijn met een U. 
+      Doormiddel van de positie in de array verwijs ik naar de juiste endpoint. 
+      
+
       - doormiddel van params de gegevens opgehaald om ze te verwerken in axios.
   
 - Bij de cocktail bij ingredient list & alcoholby ingredient list een errormelding ingebouw "Nothing Fount" omdat er in het database oook lege ingredienten staan.
 - De keuze gemaakt om de paginas door te verwijzen met useparams. Dit zodat de gebruiker makkelijk naar de vorige pagina kan gaan.
+
+Wat kan er nog doorontwikkeld worden?
+
+
 
 Adobe XD: 
 - lettertype nog aanpassen.

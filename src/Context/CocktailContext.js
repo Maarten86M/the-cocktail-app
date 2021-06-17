@@ -12,9 +12,15 @@ export default function CocktailContextProvider(props) {
     const [errors, setErrors] = useState(false);
     const [randomizeButton, setRandomizeButton] = useState(false);
     const [loading, setLoading] = useState(false);
-    const [letter, setLetter] = useState('a');
+    const [letter, setLetter] = useState('A');
+    const [numberToLetter, setNumberToLetter] = useState(1);
     const [searchText, setSearchText] = useState("");
     const [cocktailList, setCocktailList] = useState('');
+
+    const numberToLetterArray = ["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","V","W","Y","Z",];
+
+    const convertNumberToLetter = numberToLetterArray[numberToLetter];
+    console.log("Wat is de uitkomst number x Cijfer", convertNumberToLetter)
 
     return ( <cocktailContext.Provider
             value={{
@@ -33,7 +39,11 @@ export default function CocktailContextProvider(props) {
                 alcohol,
                 setAlchohol,
                 cocktailList,
-                setCocktailList
+                setCocktailList,
+                numberToLetter,
+                setNumberToLetter,
+                numberToLetterArray,
+                convertNumberToLetter
             }}
         >
             {props.children}

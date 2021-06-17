@@ -17,7 +17,6 @@ function Register() {
         console.log(data)
 
     }
-
     return(
         <div className="pagina">
             <h1>Register</h1>

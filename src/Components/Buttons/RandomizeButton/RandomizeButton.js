@@ -1,14 +1,16 @@
 import React from "react";
 import './RandomizeButton.css';
 import random from '../../../Assets/Icons/NavIcons/dice.png'
+import {useCocktailContext} from "../../../Context/CocktailContext";
 
-function RandomizeButton(props) {
+function RandomizeButton() {
+    const {loading, setRandomizeButton,randomizeButton } = useCocktailContext()
     return(
         <div>
             <button
                 className="randomizebutton"
-                    disabled={props.loading}
-                onClick={() => props.setRandomizeButton(!props.randomizeButton)}
+                    disabled={loading}
+                onClick={() => setRandomizeButton(!randomizeButton)}
             >
                 <img src={random} alt="Randomize"/> Randomize
             </button>

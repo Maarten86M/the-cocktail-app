@@ -1,0 +1,21 @@
+.letterViewContainer {
+    background-color: var(--button-color);
+    margin-left: 20px;
+    margin-right: 20px;
+    border: 1px solid var(--button-border-color);
+    border-radius: var(--button-border-radius);
+    width: 43px;
+    height: 43px;
+    margin-bottom: 45px;
+    box-shadow: var(--button-shadow);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.letterViewContainer p {
+    color: var(--text-color);
+    font-size: var(--button-font-size);
+    font-weight: var(--button-font-weight);
+    font-family: var(--main-font);
+}

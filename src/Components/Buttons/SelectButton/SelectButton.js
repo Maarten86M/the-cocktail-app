@@ -7,14 +7,18 @@ function SelectButton() {
 
         const {
             letter,
-            setLetter
+            setLetter,
+            numberToLetterArray
         } = useCocktailContext();
 
         console.log("Welke letter is er aangeklikt", letter)
 
+
     return (
         <div>
-            <select className="selectbutton" name="letter" id="letter" onChange={(event) => setLetter(event.target.value)}>
+            <select className="selectbutton" name="letter" id="letter" onChange={
+                (event) => setLetter(event.target.value)}
+            >
                 <option value="a">A</option>
                 <option value="b">B</option>
                 <option value="c">C</option>

@@ -1,10 +1,15 @@
 import React from "react";
 import './CocktailCardHeader.css';
+import {useCocktailContext} from "../../Context/CocktailContext";
 
-function CocktailCardHeader(props) {
+function CocktailCardHeader() {
+    const {cocktail} = useCocktailContext();
+    const [id] = cocktail;
     return (
         <div>
-            <img className="cocktailIMG" src={props.cocktailImg} alt={props.alt}/>
+            {cocktail ? (
+            <img className="cocktailIMG" src={id.strDrinkThumb} alt={id.strDrink}/>
+            ):(<h1>Loading</h1>)}
         </div>
     )
 }
