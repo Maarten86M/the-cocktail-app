@@ -1,6 +1,5 @@
 import React, {useEffect} from "react";
 import axios from "axios";
-import SelectButton from "../../Components/Buttons/SelectButton/SelectButton";
 import HelpButton from "../../Components/Buttons/HelpButton/HelpButton";
 import NextButton from "../../Components/Buttons/NextBackButton/NextButton/NextButton";
 import './AllCocktails.css';
@@ -9,7 +8,6 @@ import {useCocktailContext} from "../../Context/CocktailContext";
 import BackButton from "../../Components/Buttons/NextBackButton/BackButton/BackButton";
 import LetterView from "../../Components/Titles/LetterView/LetterView";
 
-const apiKey = '9973533';
 
 function AllCocktails() {
     const {letter, cocktail, setCocktail} = useCocktailContext();
@@ -20,7 +18,7 @@ function AllCocktails() {
 
         async function fetchData() {
             try {
-                const result = await axios.get(`https://www.thecocktaildb.com/api/json/v2/${apiKey}/search.php?f=${letter}`);
+                const result = await axios.get(`https://www.thecocktaildb.com/api/json/v2/${process.env.REACT_APP_API_KEY}/search.php?f=${letter}`);
                 console.log(result,"wat is result?")
                 setCocktail(result.data.drinks);
 

@@ -3,12 +3,8 @@ import axios from "axios";
 import '../paginatijdelijkaanpassenperpagina.css';
 import CocktailCard from "../../Components/CocktailCard/CocktailCard";
 import CocktailCardHeader from "../../Components/CocktailCardHeader/CocktailCardHeader";
-import MainButton from "../../Components/Buttons/MainButton/MainButton";
-import random from '../../Assets/Icons/NavIcons/dice.png';
 import RandomizeButton from "../../Components/Buttons/RandomizeButton/RandomizeButton";
 import {useCocktailContext} from "../../Context/CocktailContext";
-
-const apiKey = '9973533';
 
 function RandomCocktails() {
     const {
@@ -17,7 +13,6 @@ function RandomCocktails() {
         errors,
         setErrors,
         randomizeButton,
-        setRandomizeButton,
         loading,
         setLoading
     } = useCocktailContext();
@@ -30,7 +25,7 @@ function RandomCocktails() {
             setErrors(false);
             setLoading(true);
             try {
-                const response = await axios.get(`https://www.thecocktaildb.com/api/json/v2/${apiKey}/random.php`
+                const response = await axios.get(`https://www.thecocktaildb.com/api/json/v2/${process.env.REACT_APP_API_KEY}/random.php`
                 );
                 setCocktail(response.data.drinks);
             } catch (e) {

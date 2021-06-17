@@ -20,7 +20,7 @@ function SearchResult() {
     useEffect(() => {
         async function fetchSearchData() {
             try {
-                const searchResult = await axios.get(`https://www.thecocktaildb.com/api/json/v1/1/filter.php?i=${searchText}`);
+                const searchResult = await axios.get(`https://www.thecocktaildb.com/api/json/v2/${process.env.REACT_APP_API_KEY}/filter.php?i=${searchText}`);
                 setCocktail(searchResult.data.drinks);
             } catch (e) {
                 console.error(e);

@@ -1,11 +1,11 @@
 
-random cocktail genereren verder afmaken. 
-Help field data in een appart bestand?
+random cocktail genereren verder afmaken.
 
 - try and catch. Stel dat de data niet opgehaald kan worden. 
 - inlog systeem (Firebase?)
 - error meldingen (laden api) zie random cocktail
 - loading meldingen (laden api) zie random cocktail
+  
 - firebase variabele in .env
 - Search Cocktail nu alleen mogelijk op cocktail naam maar ook ingredienten moet mogelijk zijn.
   - Random cocktails moeten pas starten wanneer de button wordt aangeklikt
@@ -60,3 +60,7 @@ Wat kan er nog doorontwikkeld worden?
 
 Adobe XD: 
 - lettertype nog aanpassen.
+
+TO DO VOOR EINDOPDTRACHT
+
+BELANGRIJK: IN README.MD BENOEMEN HOE DEVELOPERS DEZE WAARDES KAN AANKOMEN (API KEY) DUS DUIDELIJK AANGEVEN. KEY= 9973533

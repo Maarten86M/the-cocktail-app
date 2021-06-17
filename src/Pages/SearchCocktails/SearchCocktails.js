@@ -1,5 +1,4 @@
-import React,{useContext} from "react";
-import {CocktailContext} from "../../Context/CocktailContext";
+import React from "react";
 import {useHistory} from "react-router-dom";
 import SearchInput from "../../Components/Inputs/SearchField/SearchInput";
 import SearchButton from "../../Components/Buttons/SearchButton/SearchButton";

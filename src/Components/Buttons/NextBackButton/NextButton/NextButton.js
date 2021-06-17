@@ -13,11 +13,9 @@ function NextButton() {
     }
 
     return(
-        <div>
         <button className="nextbackbutton" onClick={NextButtonFunction} disabled={letter === "Z"}>
             <img src={nextIcon} alt="Next Button"/>
         </button>
-        </div>
     )
 }
 export default NextButton;

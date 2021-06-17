@@ -5,7 +5,7 @@ import {useCocktailContext} from "../../../../Context/CocktailContext";
 
 function BackButton() {
 
-    const {numberToLetter, setNumberToLetter,setLetter,numberToLetterArray, letter}= useCocktailContext();
+    const {numberToLetter, setNumberToLetter, setLetter, numberToLetterArray, letter} = useCocktailContext();
 
     function BackButtonFunction() {
         setNumberToLetter(numberToLetter - 1)
@@ -13,11 +13,9 @@ function BackButton() {
     }
 
     return (
-        <div>
-            <button className="nextbackbutton" onClick={BackButtonFunction} disabled={letter === "A"}>
-                <img src={backIcon} alt="Back button"/>
-            </button>
-        </div>
+        <button className="nextbackbutton" onClick={BackButtonFunction} disabled={letter === "A"}>
+            <img src={backIcon} alt="Back button"/>
+        </button>
     )
 }
 

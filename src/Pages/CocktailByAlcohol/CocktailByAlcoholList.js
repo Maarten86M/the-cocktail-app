@@ -2,8 +2,6 @@ import React, {useEffect, useState} from "react";
 import {Link, useParams} from "react-router-dom";
 import axios from "axios";
 
-const apiKey = '9973533';
-
 function CocktailByAlcoholList() {
     const params = useParams();
     const [alcohollist, setAlcohollist] = useState([])
@@ -11,7 +9,7 @@ function CocktailByAlcoholList() {
     useEffect(() => {
         async function fetchAlcoholCocktail() {
             try {
-                const alcoholResult = await axios.get(`https://www.thecocktaildb.com/api/json/v2/${apiKey}/filter.php?i=${params.result}`);
+                const alcoholResult = await axios.get(`https://www.thecocktaildb.com/api/json/v2/${process.env.REACT_APP_API_KEY}/filter.php?i=${params.result}`);
                 setAlcohollist(alcoholResult.data.drinks);
             } catch (e) {
                 console.error(e)
