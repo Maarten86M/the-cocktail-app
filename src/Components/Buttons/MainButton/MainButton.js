@@ -1,6 +1,7 @@
 import React from "react";
 import {Link} from "react-router-dom";
 import './MainButton.css';
+import {useHistory} from "react-router-dom";
 
 function MainButton(props) {
     return (

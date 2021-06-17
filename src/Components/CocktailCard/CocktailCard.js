@@ -2,6 +2,9 @@ import React from "react";
 import './CocktailCard.css';
 import {useCocktailContext} from "../../Context/CocktailContext";
 import IngredientView from "./IngredientView/IngredientView";
+import InstructionView from "./InstructionView/InstructionView";
+
+import MainBackButton from "../Buttons/MainBackButton/MainBackButton";
 
 function CocktailCard() {
     const {cocktail} = useCocktailContext();
@@ -18,14 +21,20 @@ function CocktailCard() {
                     <b>Ingredients</b>
                     <IngredientView IngredientName={id.strIngredient1}/>
                     <IngredientView IngredientName={id.strIngredient2}/>
-                    <IngredientView IngredientName={id.strIngredient3}/>
-                    <IngredientView IngredientName={id.strIngredient4}/>
-                    <IngredientView IngredientName={id.strIngredient5}/>
-                    <IngredientView IngredientName={id.strIngredient6}/>
-                    <IngredientView IngredientName={id.strIngredient7}/>
-                    <IngredientView IngredientName={id.strIngredient8}/>
-                    <IngredientView IngredientName={id.strIngredient9}/>
-                    <IngredientView IngredientName={id.strIngredient10}/>
+                    {id.strIngredient3 && ( <IngredientView IngredientName={id.strIngredient3}/>)}
+                    {id.strIngredient4 && (<IngredientView IngredientName={id.strIngredient4}/>)}
+                    {id.strIngredient5 && (<IngredientView IngredientName={id.strIngredient5}/>)}
+                    {id.strIngredient6 && (<IngredientView IngredientName={id.strIngredient6}/>)}
+                    {id.strIngredient7 &&  (<IngredientView IngredientName={id.strIngredient7}/>)}
+                    {id.strIngredient8 && (<IngredientView IngredientName={id.strIngredient8}/>)}
+                    {id.strIngredient9 && (<IngredientView IngredientName={id.strIngredient9}/>)}
+                    {id.strIngredient10 && (<IngredientView IngredientName={id.strIngredient10}/>)}
+
+                    <InstructionView Instruction={id.strInstructions} />
+
+                    <MainBackButton />
+
+
                 </div>
                     </div>
                     ):(<h1> Loading </h1>)}

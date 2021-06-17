@@ -1,0 +1,21 @@
+.backbutton{
+    background-color: var(--button-color);
+    color: var(--text-color);
+    border: 1px solid var(--button-border-color);
+    border-radius: var(--button-border-radius);
+    width: var(--button-width);
+    height: var(--button-height);
+    font-size: var(--button-font-size);
+    font-weight: var(--button-font-weight);
+    font-family: var(--main-font);
+    margin-bottom: 45px;
+    box-shadow: var(--button-shadow);
+}
+
+.backbutton:disabled {
+    color: var(--text-color-disabled);
+}
+
+.backbutton:hover {
+    background-color: var(--button-border-color);
+}

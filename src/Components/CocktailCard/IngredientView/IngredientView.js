@@ -1,10 +1,10 @@
 import React from "react";
 
-function IngredientView(props) {
+function IngredientView({IngredientName}) {
     return(
         <div>
-            <img className="ingredient-img" src={`https:www.thecocktaildb.com/images/ingredients/${props.IngredientName}-Small.png`} alt=""/>
-            <p>{props.IngredientName}</p>
+            <img className="ingredient-img" src={`https:www.thecocktaildb.com/images/ingredients/${IngredientName}-Small.png`} alt=""/>
+            <p>{IngredientName}</p>
         </div>
     )
 }

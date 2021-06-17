@@ -1,6 +1,7 @@
 import React, {useEffect, useState} from "react";
 import {Link, useParams} from "react-router-dom";
 import axios from "axios";
+import MainBackButton from "../../Components/Buttons/MainBackButton/MainBackButton";
 
 
 function CocktailByIngredientList() {
@@ -34,6 +35,7 @@ function CocktailByIngredientList() {
                                     <p>{cocktail.strDrink}</p></Link>)}
                             </div>)}
                     </div>
+                    <MainBackButton />
                 </div>
             </div>
         </>
