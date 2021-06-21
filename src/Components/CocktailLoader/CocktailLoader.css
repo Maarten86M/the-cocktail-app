@@ -10,26 +10,8 @@
     justify-content: center;
 }
 
-.logo-container{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 150px;
-    width: 150px;
+.loader-img {
+    max-width: 200px;
+    max-height: 200px;
+    border-radius: 50%;
 }
-
-.glass-leg{
-    top: 50px;
-    width: 5px;
-    height: 40px;
-    background-color: var(--logo-color);
-}
-
-.glass-feet{
-    width: 30px;
-    height: 30px;
-    background-color: yellow;
-    left: 10px;
-}
-
-
