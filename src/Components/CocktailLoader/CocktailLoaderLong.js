@@ -1,18 +1,19 @@
 import React from "react";
 import './CocktailLoader.css';
-import shortloader from '../../Assets/Loader/Short-loader.gif';
+import longLoader from '../../Assets/Loader/Long-loader.gif';
 import './CocktailLoader.css';
 
-function CocktailLoader() {
+function CocktailLoaderLong() {
     return (
         <>
             <div className="loader-border">
                 <div className="logo-container">
-                    <img className="loader-img" src={shortloader} alt="loader"/>
+                    <img className="loader-img" src={longLoader} alt="loader"/>
                 </div>
+
             </div>
         </>
     )
 }
 
-export default CocktailLoader;
+export default CocktailLoaderLong;

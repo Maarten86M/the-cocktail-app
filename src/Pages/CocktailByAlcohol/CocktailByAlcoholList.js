@@ -3,6 +3,7 @@ import {Link, useParams} from "react-router-dom";
 import axios from "axios";
 import MainBackButton from "../../Components/Buttons/MainBackButton/MainBackButton";
 import './CocktailByAlcohol.css';
+import CocktailLoaderOops from "../../Components/CocktailLoader/CocktailLoaderOops";
 
 function CocktailByAlcoholList() {
     const params = useParams();
@@ -28,14 +29,16 @@ function CocktailByAlcoholList() {
                     <h1>Cocktails with {params.result} </h1>
                     <div>
                         {alcohollist === "None Found" ? (
-                            <h1>sorry, nothing found</h1>
+                            <div><CocktailLoaderOops/>
+                                <h1>sorry, nothing found</h1>
+                            </div>
                         ) : (
                             <div className="alcohol-scrollbar">
                                 {alcohollist.map(cocktail => <Link to={`/cocktailpage/${cocktail.idDrink}`}>
                                     <p>{cocktail.strDrink}</p></Link>)}
                             </div>)}
                     </div>
-                    <MainBackButton />
+                    <MainBackButton/>
                 </div>
             </div>
         </>

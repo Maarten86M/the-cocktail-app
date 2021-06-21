@@ -5,6 +5,7 @@ import CocktailCard from "../../Components/CocktailCard/CocktailCard";
 import CocktailCardHeader from "../../Components/CocktailCardHeader/CocktailCardHeader";
 import RandomizeButton from "../../Components/Buttons/RandomizeButton/RandomizeButton";
 import {useCocktailContext} from "../../Context/CocktailContext";
+import CocktailLoader from "../../Components/CocktailLoader/CocktailLoader";
 
 function RandomCocktails() {
     const {
@@ -47,7 +48,7 @@ function RandomCocktails() {
             <div>
 
                 {/*Hier komt de cocktail logo img loader*/}
-                {loading && <span>Loading</span>}
+                {loading && <CocktailLoader/>}
                 {errors && (<span>Oops, something went wrong</span>)}
                             <CocktailCardHeader/>
                             <CocktailCard/>

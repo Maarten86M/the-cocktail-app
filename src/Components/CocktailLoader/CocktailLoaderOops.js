@@ -1,18 +1,19 @@
 import React from "react";
 import './CocktailLoader.css';
-import shortloader from '../../Assets/Loader/Short-loader.gif';
+import failed from '../../Assets/Loader/oops.png';
 import './CocktailLoader.css';
 
-function CocktailLoader() {
+function CocktailLoaderOops() {
     return (
         <>
             <div className="loader-border">
                 <div className="logo-container">
-                    <img className="loader-img" src={shortloader} alt="loader"/>
+                    <img className="loader-img" src={failed} alt="loader"/>
                 </div>
+
             </div>
         </>
     )
 }
 
-export default CocktailLoader;
+export default CocktailLoaderOops;

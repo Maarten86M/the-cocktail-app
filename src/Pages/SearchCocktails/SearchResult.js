@@ -5,24 +5,26 @@ import search from '../../Assets/Icons/NavIcons/search.png';
 import axios from "axios";
 import {Link} from 'react-router-dom';
 import {useCocktailContext} from "../../Context/CocktailContext";
+import CocktailLoaderOops from "../../Components/CocktailLoader/CocktailLoaderOops";
 
 function SearchResult() {
     const params = useParams();
     const {
         searchText,
-        cocktail,
-        setCocktail,
-        setSearchText
-    } = useCocktailContext();
+        setSearchText,
+        setErrors,
+        searchResult,
+        setSearchResult
 
-    console.log(cocktail);
+    } = useCocktailContext();
 
     useEffect(() => {
         async function fetchSearchData() {
             try {
                 const searchResult = await axios.get(`https://www.thecocktaildb.com/api/json/v2/${process.env.REACT_APP_API_KEY}/filter.php?i=${searchText}`);
-                setCocktail(searchResult.data.drinks);
+                setSearchResult(searchResult.data.drinks);
             } catch (e) {
+                setErrors(true)
                 console.error(e);
             }
         }
@@ -36,12 +38,17 @@ function SearchResult() {
             <MainButton name="Search Again" icon={search} link="/searchcocktails"
                         onClick={setSearchText("Search Cocktails")}/>
             <div>
-                {cocktail ? (
-                    <div className="Cocktaillist">
-                        {cocktail.map(cocktail => <Link to={`/cocktailpage/${cocktail.idDrink}`}>
-                            <p>{cocktail.strDrink}</p></Link>)}
-                    </div>
-                ) : (<h1>Wrong Search Term</h1>)}
+                {searchResult === "None Found" ? (
+                        <div>
+                            <CocktailLoaderOops/>
+                            <h1>Nothing Found</h1>
+                        </div>
+
+                    ) : (<div className="Cocktaillist">
+                {searchResult.map((cocktail) =>
+                    <Link to={`/cocktailpage/${cocktail.idDrink}`}>
+                    <p>{cocktail.strDrink}</p></Link>)}
+                    </div>)}
             </div>
         </div>
     )

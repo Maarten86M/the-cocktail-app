@@ -8,6 +8,7 @@ random cocktail genereren verder afmaken.
   
 - firebase variabele in .env
 - Search Cocktail nu alleen mogelijk op cocktail naam maar ook ingredienten moet mogelijk zijn.
+  - search cocktail WERKT NOG NIET GOED GENOEG. AF EN TOE FOUTMELDINGEN COCKTAIL.MAP. DUS EVEN OMBOUWEN
   - Random cocktails moeten pas starten wanneer de button wordt aangeklikt
 - Cocktail Loader. De loading h1 ombouwen naar deze
 - intro page. 
@@ -24,6 +25,8 @@ De ingredienten ophalen doormiddel van de api (afbeeldingen)
   - Loading bij Cocktail bij ingredient en alchol bij ingrdient (2de lijst)nu alleen foutmelding
   - ombouwen naar context. Dus de useStates verplaatsen.
   - cocktailview / cocktail card goed uitlijnen in het mideen. 
+  -consequent overal de error en loading gebruiken. Dus setError (en deze weergeven op de pagina. )
+  
   
 - inputfield lock icon en envelop aanpassen. 
 - form en register verder afronden. 
@@ -61,6 +64,7 @@ Wat kan er nog doorontwikkeld worden?
 
 Adobe XD: 
 - lettertype nog aanpassen.
+- FOUMELDINGEN IN HET DESIGN
 
 TO DO VOOR EINDOPDTRACHT
 

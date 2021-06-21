@@ -11,6 +11,7 @@ export default function CocktailContextProvider(props) {
     const [cocktailList, setCocktailList] = useState('');
     const [randomizeButton, setRandomizeButton] = useState(false);
     const [searchText, setSearchText] = useState('');
+    const [searchResult, setSearchResult] = useState([])
 
     const [alcohol, setAlchohol] = useState(null);
 
@@ -43,7 +44,9 @@ export default function CocktailContextProvider(props) {
                 numberToLetter,
                 setNumberToLetter,
                 numberToLetterArray,
-                convertNumberToLetter
+                convertNumberToLetter,
+                searchResult,
+                setSearchResult
             }}
         >
             {props.children}
