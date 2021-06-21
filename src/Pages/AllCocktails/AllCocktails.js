@@ -43,7 +43,7 @@ function AllCocktails() {
                 <NextButton />
             </div>
             {cocktail ? (
-                <div className="overflow-list">
+                <div className="list-scrollbar">
                     {cocktail.map(cocktail => <Link to={`/cocktailpage/${cocktail.idDrink}`}>
                         <p>{cocktail.strDrink}</p></Link>)}
                 </div>

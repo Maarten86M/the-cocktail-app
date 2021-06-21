@@ -1,0 +1,14 @@
+.instruction-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 320px;
+}
+
+.instruction-view{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    width: 250px;
+    text-align: center;
+}
+

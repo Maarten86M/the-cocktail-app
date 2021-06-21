@@ -1,24 +1,19 @@
-.button-header {
-    display: flex;
-}
-
-
-.list-scrollbar {
+.alcohol-scrollbar {
     max-height: 600px;
     max-width: 400px;
     overflow: auto;
     border: none;
 }
 
-.list-scrollbar::-webkit-scrollbar {
+.alcohol-scrollbar::-webkit-scrollbar {
     width: 8px;
 }
 
-.list-scrollbar::-webkit-scrollbar-track {
+.alcohol-scrollbar::-webkit-scrollbar-track {
     background: none;
 }
 
-.list-scrollbar::-webkit-scrollbar-thumb {
+.alcohol-scrollbar::-webkit-scrollbar-thumb {
     background-color: var(--text-color);
     border-radius: 20px;
     border: 3px solid var(--text-color);

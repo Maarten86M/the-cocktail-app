@@ -2,6 +2,7 @@ import React, {useEffect, useState} from "react";
 import {Link, useParams} from "react-router-dom";
 import axios from "axios";
 import MainBackButton from "../../Components/Buttons/MainBackButton/MainBackButton";
+import './CocktailByAlcohol.css';
 
 function CocktailByAlcoholList() {
     const params = useParams();
@@ -29,7 +30,7 @@ function CocktailByAlcoholList() {
                         {alcohollist === "None Found" ? (
                             <h1>sorry, nothing found</h1>
                         ) : (
-                            <div className="Cocktaillist">
+                            <div className="alcohol-scrollbar">
                                 {alcohollist.map(cocktail => <Link to={`/cocktailpage/${cocktail.idDrink}`}>
                                     <p>{cocktail.strDrink}</p></Link>)}
                             </div>)}

@@ -19,24 +19,8 @@
     height: 100%;
 }
 
-.imggroote {
-    max-width: 120%;
-    max-height: 120%;
-    border-radius: 50%;
-}
-
 
 Link{
     text-decoration: none;
     color: red;
-}
-
-.overflow-list{
-    overflow: scroll;
-    color: white;
-    padding: 15px;
-    width: 350px;
-    height: 400px;
-    background-color: transparent;
-
 }

@@ -30,7 +30,6 @@ function CocktailView() {
                     <CocktailCardHeader/>
                     <CocktailCard/>
             </div>
-            <button >Terug</button>
         </div>
     )
 }

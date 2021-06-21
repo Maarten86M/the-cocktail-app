@@ -13,31 +13,29 @@ function CocktailCard() {
     return (
         <div>
             <div className="cocktailcard-container">
-
                 {cocktail ? (
                     <div>
-                <h2>{id.strDrink}</h2>
-                <div>
-                    <b>Ingredients</b>
-                    <IngredientView IngredientName={id.strIngredient1}/>
-                    <IngredientView IngredientName={id.strIngredient2}/>
-                    {id.strIngredient3 && ( <IngredientView IngredientName={id.strIngredient3}/>)}
-                    {id.strIngredient4 && (<IngredientView IngredientName={id.strIngredient4}/>)}
-                    {id.strIngredient5 && (<IngredientView IngredientName={id.strIngredient5}/>)}
-                    {id.strIngredient6 && (<IngredientView IngredientName={id.strIngredient6}/>)}
-                    {id.strIngredient7 &&  (<IngredientView IngredientName={id.strIngredient7}/>)}
-                    {id.strIngredient8 && (<IngredientView IngredientName={id.strIngredient8}/>)}
-                    {id.strIngredient9 && (<IngredientView IngredientName={id.strIngredient9}/>)}
-                    {id.strIngredient10 && (<IngredientView IngredientName={id.strIngredient10}/>)}
+                        <h2>{id.strDrink}</h2>
+                        <div className="ingredient-scrollbar">
 
-                    <InstructionView Instruction={id.strInstructions} />
-
-                    <MainBackButton />
-
-
-                </div>
+                            <b>Ingredients</b>
+                            <section className="ingredient-container">
+                                {id.strIngredient1 && (<IngredientView IngredientName={id.strIngredient1}/>)}
+                                {id.strIngredient2 && (<IngredientView IngredientName={id.strIngredient2}/>)}
+                                {id.strIngredient3 && (<IngredientView IngredientName={id.strIngredient3}/>)}
+                                {id.strIngredient4 && (<IngredientView IngredientName={id.strIngredient4}/>)}
+                                {id.strIngredient5 && (<IngredientView IngredientName={id.strIngredient5}/>)}
+                                {id.strIngredient6 && (<IngredientView IngredientName={id.strIngredient6}/>)}
+                                {id.strIngredient7 && (<IngredientView IngredientName={id.strIngredient7}/>)}
+                                {id.strIngredient8 && (<IngredientView IngredientName={id.strIngredient8}/>)}
+                                {id.strIngredient9 && (<IngredientView IngredientName={id.strIngredient9}/>)}
+                                {id.strIngredient10 && (<IngredientView IngredientName={id.strIngredient10}/>)}
+                            </section>
+                            <InstructionView Instruction={id.strInstructions}/>
+                        </div>
                     </div>
-                    ):(<h1> Loading </h1>)}
+                ) : (<h1> Loading </h1>)}
+                <MainBackButton/>
             </div>
         </div>
     )
