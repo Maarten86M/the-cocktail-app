@@ -23,6 +23,7 @@ De ingredienten ophalen doormiddel van de api (afbeeldingen)
   - de cocktail (useState moet weer op 0 gezet worden. Zodat oude resultaten niet weergegeven worden)
   - Loading bij Cocktail bij ingredient en alchol bij ingrdient (2de lijst)nu alleen foutmelding
   - ombouwen naar context. Dus de useStates verplaatsen.
+  - cocktailview / cocktail card goed uitlijnen in het mideen. 
   
 - inputfield lock icon en envelop aanpassen. 
 - form en register verder afronden. 
