@@ -6,6 +6,7 @@ import axios from "axios";
 import {Link} from 'react-router-dom';
 import {useCocktailContext} from "../../Context/CocktailContext";
 import CocktailLoaderOops from "../../Components/CocktailLoader/CocktailLoaderOops";
+import cocktailIcon from '../../Assets/Icons/ListIcons/cocktail-icon.png';
 
 function SearchResult() {
     const params = useParams();
@@ -47,7 +48,7 @@ function SearchResult() {
                     ) : (<div className="Cocktaillist">
                 {searchResult.map((cocktail) =>
                     <Link to={`/cocktailpage/${cocktail.idDrink}`}>
-                    <p>{cocktail.strDrink}</p></Link>)}
+                    <p><img src={cocktailIcon} alt="Cocktail Icon"/>{cocktail.strDrink}</p></Link>)}
                     </div>)}
             </div>
         </div>

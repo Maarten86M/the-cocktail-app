@@ -4,6 +4,7 @@ import axios from "axios";
 import MainBackButton from "../../Components/Buttons/MainBackButton/MainBackButton";
 import './CocktailByAlcohol.css';
 import CocktailLoaderOops from "../../Components/CocktailLoader/CocktailLoaderOops";
+import cocktailIcon from '../../Assets/Icons/ListIcons/cocktail-icon.png';
 
 function CocktailByAlcoholList() {
     const params = useParams();
@@ -18,7 +19,6 @@ function CocktailByAlcoholList() {
                 console.error(e)
             }
         }
-
         fetchAlcoholCocktail()
     }, []);
 
@@ -35,7 +35,7 @@ function CocktailByAlcoholList() {
                         ) : (
                             <div className="alcohol-scrollbar">
                                 {alcohollist.map(cocktail => <Link to={`/cocktailpage/${cocktail.idDrink}`}>
-                                    <p>{cocktail.strDrink}</p></Link>)}
+                                    <p><img src={cocktailIcon} alt="Cocktail Icon"/>{cocktail.strDrink}</p></Link>)}
                             </div>)}
                     </div>
                     <MainBackButton/>

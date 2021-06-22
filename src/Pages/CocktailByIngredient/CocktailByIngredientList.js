@@ -3,6 +3,7 @@ import {Link, useParams} from "react-router-dom";
 import axios from "axios";
 import MainBackButton from "../../Components/Buttons/MainBackButton/MainBackButton";
 import CocktailLoaderOops from "../../Components/CocktailLoader/CocktailLoaderOops";
+import cocktailIcon from '../../Assets/Icons/ListIcons/cocktail-icon.png';
 
 
 function CocktailByIngredientList() {
@@ -37,7 +38,7 @@ function CocktailByIngredientList() {
                         ) : (
                             <div className="Cocktaillist">
                                 {ingredientlist.map(cocktail => <Link to={`/cocktailpage/${cocktail.idDrink}`}>
-                                    <p>{cocktail.strDrink}</p></Link>)}
+                                    <p><img src={cocktailIcon} alt="Cocktail Icon"/>{cocktail.strDrink}</p></Link>)}
                             </div>)}
                     </div>
                     <MainBackButton/>

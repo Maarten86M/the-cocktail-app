@@ -5,32 +5,30 @@ random cocktail genereren verder afmaken.
 - inlog systeem (Firebase?)
 - error meldingen (laden api) zie random cocktail
 - loading meldingen (laden api) zie random cocktail
-  
 - firebase variabele in .env
 - Search Cocktail nu alleen mogelijk op cocktail naam maar ook ingredienten moet mogelijk zijn.
   - search cocktail WERKT NOG NIET GOED GENOEG. AF EN TOE FOUTMELDINGEN COCKTAIL.MAP. DUS EVEN OMBOUWEN
   - Random cocktails moeten pas starten wanneer de button wordt aangeklikt
 - Cocktail Loader. De loading h1 ombouwen naar deze
 - intro page. 
-- Uittekenen van de grid!! en een handige (herbruikbare CSS)
+  
+- Uittekenen van de grid!! en een handige (herbruikbare CSS) Dus 1 css voor de pagina's zodat het overal hetzelfde is.
+
+
 -diable op de buttons instellen als we aan het zoeken zijn.
   disable en foutmlding bij zoeken. Dus wanneer er bijv geen zoekresultaat is.
-  - Bij zoekresultaat functie maken die Eerste letter hoofdletter maakt en de rest kleine letters.
 - op dit moment zoeken we alleen nog op ingredient (OOk op naam toevoegen)SEARCH
 - cocktailcard is vanuit props. Misschien ook via context
 - useHistory toevoegen zodat mensen ook via een terugknop bovenin de browser terug kunnen.
-De ingredienten ophalen doormiddel van de api (afbeeldingen)
   - een intro die de cocktail loader weergeeft
   - de cocktail (useState moet weer op 0 gezet worden. Zodat oude resultaten niet weergegeven worden)
   - Loading bij Cocktail bij ingredient en alchol bij ingrdient (2de lijst)nu alleen foutmelding
   - ombouwen naar context. Dus de useStates verplaatsen.
   - cocktailview / cocktail card goed uitlijnen in het mideen. 
   -consequent overal de error en loading gebruiken. Dus setError (en deze weergeven op de pagina. )
-  
-  
+    - Navbar checken of hij open blijft staan.
 - inputfield lock icon en envelop aanpassen. 
-- form en register verder afronden. 
-
+- form en register verder afronden.
 - alles nalopen en kijken of het nog verder omgebouwd kan worden tot een component. Bijvoorbeeld de Cocktailby Alcohollist page & Cocktail by ingredient List page!! 
 - de link van het resultaat van cocktail by alcohol en cocktail bij ingredient verwijst nu naar Wiskey#20Bla dit moet nog omgebouw worde .replace(" ","+") naar een moooie link
 -  De data die binnenkomst via de api ombouwen naar { } zoals de tip uit de pokemon opdracht die is binnengekomen.
@@ -38,7 +36,7 @@ De ingredienten ophalen doormiddel van de api (afbeeldingen)
 -Nalopen of Params wel handig is en niet gewoon useState met useContext.
       - Voorbeeld rein gebruiken met de stappen.Dus bij cocktail by ingredient & cocktail by alcohol.
         hierdoor minder pagina's.
-  
+  - all cocktails, de next en back button controleren.
 - 2 context maken. 1 voor user en 1 voor cocktail info. Goed bekijken waar deze omheen gezet dienen te worden. !!Zie voorbeeld rein les.
 
 Code beslissingen:
@@ -50,13 +48,14 @@ Op deze manier kan ik het ook mogelijk aanpassen als er wijzingen zijn.
     
 - de Api heeft alleen een endpoint voor alle cocktails per letter. Daarom heb ik ervoor gekozen om in het design een Selectbox en next/back button toe te voegen. 
     Die naar de uiteindelijke endpoint verwijst met een ${}. Ik heb een array aangemaakt op basis van letters. De U is niet weergegeven. Omdat er geen cocktails zijn met een U. 
-      Doormiddel van de positie in de array verwijs ik naar de juiste endpoint. 
-      
-
-      - doormiddel van params de gegevens opgehaald om ze te verwerken in axios.
+      Doormiddel van de positie in de array verwijs ik naar de juiste endpoint.
+- doormiddel van params de gegevens opgehaald om ze te verwerken in axios.
   
 - Bij de cocktail bij ingredient list & alcoholby ingredient list een errormelding ingebouw "Nothing Fount" omdat er in het database oook lege ingredienten staan.
 - De keuze gemaakt om de paginas door te verwijzen met useparams. Dit zodat de gebruiker makkelijk naar de vorige pagina kan gaan.
+
+- De useStates die door de app op meerdere plaatsen gebruikt worden. Zoals de cocktail info staan in de CocktailContext.
+
 
 Wat kan er nog doorontwikkeld worden?
 

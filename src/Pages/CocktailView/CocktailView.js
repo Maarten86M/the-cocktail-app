@@ -1,9 +1,9 @@
 import React, { useEffect} from "react";
 import axios from "axios";
-import CocktailCard from "../Components/CocktailCard/CocktailCard";
-import CocktailCardHeader from "../Components/CocktailCardHeader/CocktailCardHeader";
+import CocktailCard from "../../Components/CocktailCard/CocktailCard";
+import CocktailCardHeader from "../../Components/CocktailCardHeader/CocktailCardHeader";
 import {useParams} from 'react-router-dom';
-import {useCocktailContext} from "../Context/CocktailContext";
+import {useCocktailContext} from "../../Context/CocktailContext";
 
 function CocktailView() {
 

@@ -9,7 +9,6 @@ import CocktailLoader from "../../Components/CocktailLoader/CocktailLoader";
 
 function RandomCocktails() {
     const {
-        cocktail,
         setCocktail,
         errors,
         setErrors,
@@ -17,9 +16,6 @@ function RandomCocktails() {
         loading,
         setLoading
     } = useCocktailContext();
-
-    console.log("What are the Errors:", errors);
-    console.log("Dit is de cocktail",cocktail)
 
     useEffect(() => {
         async function fetchRandomCocktail() {

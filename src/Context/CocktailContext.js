@@ -7,13 +7,15 @@ export function useCocktailContext(){
 }
 
 export default function CocktailContextProvider(props) {
-    const [cocktail, setCocktail] = useState([]);
+    const [cocktail, setCocktail] = useState('');
     const [cocktailList, setCocktailList] = useState([]);
     const [searchResult, setSearchResult] = useState([])
     const [alcohol, setAlchohol] = useState([]);
 
     const [randomizeButton, setRandomizeButton] = useState(false);
     const [searchText, setSearchText] = useState('');
+
+
 
     const [errors, setErrors] = useState(false);
     const [loading, setLoading] = useState(false);

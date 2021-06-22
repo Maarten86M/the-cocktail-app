@@ -9,8 +9,7 @@ function RandomizeButton() {
         <button
             className="randomizebutton"
             disabled={loading}
-            onClick={() => setRandomizeButton(!randomizeButton)}
-        >
+            onClick={() => setRandomizeButton(!randomizeButton)}>
             <img src={random} alt="Randomize"/> Randomize
         </button>
     )

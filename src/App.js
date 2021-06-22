@@ -20,7 +20,7 @@ import ForgotPassword from "./Pages/ForgotPassword";
 import SearchResult from "./Pages/SearchCocktails/SearchResult";
 import PublicRoute from "./Route/PublicRoute";
 import PrivateRoute from "./Route/PrivateRoute";
-import CocktailView from "./Pages/CocktailView";
+import CocktailView from "./Pages/CocktailView/CocktailView";
 import CocktailByAlcoholList from "./Pages/CocktailByAlcohol/CocktailByAlcoholList";
 import CocktailByIngredientList from "./Pages/CocktailByIngredient/CocktailByIngredientList";
 import './App.css';
