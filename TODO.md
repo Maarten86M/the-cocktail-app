@@ -1,9 +1,10 @@
 
 TO DO LIST: 
 - try and catch. Stel dat de data niet opgehaald kan worden. 
-- inlog systeem (Firebase?)
+- inlog systeem (Firebase?) & misschien firestore voor de namen.
   - de authencitaded uit app.js bij de Public en private route ombouwen met context. (is straks overbodig)
   - firebase variabele in .env
+    - succesvol geregistreerd melding aanmaken.
   
 - error meldingen (laden api) zie random cocktail
 - loading meldingen (laden api) zie random cocktail

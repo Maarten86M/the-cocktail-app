@@ -5,14 +5,17 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import {BrowserRouter as Router} from "react-router-dom";
 import CocktailContextProvider from "./Context/CocktailContext";
+import AuthContextProvider from "./Context/AuthContext";
 
 ReactDOM.render(
     <React.StrictMode>
-        <CocktailContextProvider>
+        <AuthContextProvider>
+            <CocktailContextProvider>
                 <Router>
                     <App/>
                 </Router>
-        </CocktailContextProvider>
+            </CocktailContextProvider>
+        </AuthContextProvider>
     </React.StrictMode>,
     document.getElementById('root')
 );

@@ -7,19 +7,26 @@ function Register() {
 
     const {register, getValues, handleSubmit, formState: {errors}} = useForm();
     const [formError, setFormError] = useState();
-    const [loading, setLoading] = useState();
+    const [loading, setLoading] = useState(false);
     const history = useHistory();
+    const [succesMessage, setSuccesMessage]= useState(false)
 
     function Register(data){
+        setLoading(true)
         // if(getValues('password') !== getValues('passwordconfirm')){
         //     return setFormError('Passwords do Not Match')
         // }
+        setSuccesMessage(true)
+        setLoading(false)
+        setTimeout(() => history.push('./welcome'),2000)
         console.log(data)
 
     }
     return(
         <div className="pagina">
             <h1>Register</h1>
+            {succesMessage && (<h1> Thank you for your account.</h1>)}
+            {loading && (<h1>Moment geduld</h1>)}
             <form className="Form-container" onSubmit={handleSubmit(Register)}>
 
                 <label htmlFor="email">
