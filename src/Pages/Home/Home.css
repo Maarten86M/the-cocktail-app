@@ -8,7 +8,7 @@
     align-items: center;
 }
 
-h1{
+h1 {
     font-family: var(--main-font);
 }
 
@@ -24,25 +24,23 @@ h1{
     0%{opacity: 1; }
     5%{opacity: 0; }
     10%{opacity: 1;}
-    15%{opacity: 0; }
+    15%{opacity: 0;}
     20%{opacity: 1;}
-    25%{opacity: 0; }
+    25%{opacity: 0;}
     30%{opacity: 1;}
-    35%{opacity: 0; }
+    35%{opacity: 0;}
     40%{opacity: 1;}
-    45%{opacity: 0; }
+    45%{opacity: 0;}
     50%{opacity: 1;}
-    55%{opacity: 0; }
+    55%{opacity: 0;}
     60%{opacity: 1;}
-    65%{opacity: 0; }
+    65%{opacity: 0;}
     70%{opacity: 1;}
-    75%{opacity: 0; }
+    75%{opacity: 0;}
     80%{opacity: 1;}
     90%{opacity: 0;}
-    100%{opacity: 1;content: "Ready";}
+    100%{opacity: 1;content:"Ready";}
 }
-
-
 
 .move-container {
     display: flex;
@@ -58,16 +56,17 @@ h1{
     background: var(--text-loading-color);
     margin: 4px;
     transition: all 0.3s;
+    margin-left: 10px;
 }
 
-.cv-b-1 {
+.b-1 {
     -webkit-animation: cv-fader 1.5s infinite;
     -moz-animation: cv-fader 1.5s infinite;
     -o-animation: cv-fader 1.5s infinite;
     animation: cv-fader 1.5s infinite;
 }
 
-.cv-b-2 {
+.b-2 {
     -webkit-animation: cv-fader 1.5s infinite;
     -moz-animation: cv-fader 1.5s infinite;
     -o-animation: cv-fader 1.5s infinite;
@@ -75,7 +74,7 @@ h1{
     animation-delay: 0.4s;
 }
 
-.cv-b-3 {
+.b-3 {
     -webkit-animation: cv-fader 1.5s infinite;
     -moz-animation: cv-fader 1.5s infinite;
     -o-animation: cv-fader 1.5s infinite;
@@ -83,7 +82,7 @@ h1{
     animation-delay: 0.6s;
 }
 
-.cv-b-4 {
+.b-4 {
     -webkit-animation: cv-fader 1.5s infinite;
     -moz-animation: cv-fader 1.5s infinite;
     -o-animation: cv-fader 1.5s infinite;

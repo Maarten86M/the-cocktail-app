@@ -26,7 +26,7 @@ import CocktailByIngredientList from "./Pages/CocktailByIngredient/CocktailByIng
 import './App.css';
 
 function App() {
-    const [authenticated, setAuthenticated] = useState(false);
+    const [authenticated, setAuthenticated] = useState(true);
 
     return (
         <>

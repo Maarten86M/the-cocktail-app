@@ -25,15 +25,15 @@ function Home() {
                     <h1>Welcome</h1>
                     <h1>The Cocktail App </h1>
                     <div className="move-container">
-                        <p className="loading-text"></p>
-                        <div className="loader-bullets cv-b-1"></div>
-                        <div className="loader-bullets cv-b-2"></div>
-                        <div className="loader-bullets cv-b-3"></div>
-                        <div className="loader-bullets cv-b-4"></div>
+                        <p className="loading-text"/>
+                        <div className="loader-bullets b-1"/>
+                        <div className="loader-bullets b-2"/>
+                        <div className="loader-bullets b-3"/>
+                        <div className="loader-bullets b-4"/>
                     </div>
                 </div>
             ) : (<h1>doorverwijzen naar login</h1>)}
         </div>
     )
-};
+}
 export default Home;

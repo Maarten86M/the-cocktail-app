@@ -10,11 +10,10 @@ TO DO LIST:
   - Cocktail Loader. De loading h1 ombouwen naar deze
 
 - Search Cocktail nu alleen mogelijk op cocktail naam maar ook ingredienten moet mogelijk zijn. En ook wanneer enter is ingedrukt
+          - Wanneer je niets invuld krijg je nu 404. Diet moeten we ook aanpassen.
+ 
   - Random cocktails moeten pas starten wanneer de button wordt aangeklikt
-  - Loading bij Cocktail bij ingredient en alchol bij ingrdient (2de lijst)nu alleen foutmelding
-  
-- intro page. 
-  - een intro die de cocktail loader weergeeft
+
   
 - Uittekenen van de grid!! en een handige (herbruikbare CSS) Dus 1 css voor de pagina's zodat het overal hetzelfde is.
 
