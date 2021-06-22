@@ -4,7 +4,7 @@ import {useForm} from "react-hook-form";
 import registerIcon from "../../Assets/Icons/NavIcons/register.png";
 import FormButton from "../../Components/Buttons/FormButton/FormButton";
 import './Login.css';
-import {useHistory} from "react-router-dom";
+import {Link, useHistory} from "react-router-dom";
 
 
 function Login() {
@@ -48,7 +48,7 @@ function Login() {
 
                 <FormButton disabled={errors.email || errors.password}/>
 
-                <p>Forgot your password?</p>
+                <Link to="/forgotpassword"><p>Forgot your password?</p></Link>
 
                 <MainButton
                     name="Register Now"

@@ -8,9 +8,9 @@
 :root {
     --nav-color: hsl(161, 77%, 41%);
     --nav-line: hsl(216, 36%, 41%);
-    --button-color: hsl(161, 77%, 41%);
-    --button-border-color: hsl(170, 77%, 34%);
+
     --background-color: hsl(189, 79%, 28%);
+    --main-font: Quicksand;
     --help-field-color: hsl(66, 75%, 81%);
     --help-field-border-color: hsl(56, 48%, 59%);
     --help-field-text-size: 16px;
@@ -20,10 +20,12 @@
     --text-color-help-field: hsl(0, 0%, 0%);
     --text-color-disabled: hsl(111, 0%, 69%);
     --text-color-error: hsl(3, 88%, 56%);
+    --text-loading-color:hsl(66, 75%, 81%);
     --icon-color: hsl(0, 0%, 100%);
-    --main-font: Quicksand;
     --nav-font-size: 16px;
     --nav-font-weight: 500;
+    --button-color: hsl(161, 77%, 41%);
+    --button-border-color: hsl(170, 77%, 34%);
     --button-font-size: 16px;
     --button-font-weight: 500;
     --button-width: 400px;

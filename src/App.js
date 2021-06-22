@@ -11,7 +11,7 @@ import CocktailByIngredient from "./Pages/CocktailByIngredient/CocktailByIngredi
 import AllCocktails from "./Pages/AllCocktails/AllCocktails";
 import Profile from "./Pages/Profile";
 import Help from "./Pages/Help";
-import Home from "./Pages/Home";
+import Home from "./Pages/Home/Home";
 import FourZeroFour from "./Pages/FourZeroFour";
 import Welcome from "./Pages/Welcome";
 import Login from "./Pages/Login/Login";
@@ -25,10 +25,8 @@ import CocktailByAlcoholList from "./Pages/CocktailByAlcohol/CocktailByAlcoholLi
 import CocktailByIngredientList from "./Pages/CocktailByIngredient/CocktailByIngredientList";
 import './App.css';
 
-const apiKey = '9973533';
-
 function App() {
-    const [authenticated, setAuthenticated] = useState(true);
+    const [authenticated, setAuthenticated] = useState(false);
 
     return (
         <>

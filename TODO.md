@@ -1,16 +1,20 @@
 
-random cocktail genereren verder afmaken.
-
+TO DO LIST: 
 - try and catch. Stel dat de data niet opgehaald kan worden. 
 - inlog systeem (Firebase?)
+  - de authencitaded uit app.js bij de Public en private route ombouwen met context. (is straks overbodig)
+  - firebase variabele in .env
+  
 - error meldingen (laden api) zie random cocktail
 - loading meldingen (laden api) zie random cocktail
-- firebase variabele in .env
-- Search Cocktail nu alleen mogelijk op cocktail naam maar ook ingredienten moet mogelijk zijn.
-  - search cocktail WERKT NOG NIET GOED GENOEG. AF EN TOE FOUTMELDINGEN COCKTAIL.MAP. DUS EVEN OMBOUWEN
+  - Cocktail Loader. De loading h1 ombouwen naar deze
+
+- Search Cocktail nu alleen mogelijk op cocktail naam maar ook ingredienten moet mogelijk zijn. En ook wanneer enter is ingedrukt
   - Random cocktails moeten pas starten wanneer de button wordt aangeklikt
-- Cocktail Loader. De loading h1 ombouwen naar deze
+  - Loading bij Cocktail bij ingredient en alchol bij ingrdient (2de lijst)nu alleen foutmelding
+  
 - intro page. 
+  - een intro die de cocktail loader weergeeft
   
 - Uittekenen van de grid!! en een handige (herbruikbare CSS) Dus 1 css voor de pagina's zodat het overal hetzelfde is.
 
@@ -18,11 +22,9 @@ random cocktail genereren verder afmaken.
 -diable op de buttons instellen als we aan het zoeken zijn.
   disable en foutmlding bij zoeken. Dus wanneer er bijv geen zoekresultaat is.
 - op dit moment zoeken we alleen nog op ingredient (OOk op naam toevoegen)SEARCH
-- cocktailcard is vanuit props. Misschien ook via context
-- useHistory toevoegen zodat mensen ook via een terugknop bovenin de browser terug kunnen.
-  - een intro die de cocktail loader weergeeft
+
   - de cocktail (useState moet weer op 0 gezet worden. Zodat oude resultaten niet weergegeven worden)
-  - Loading bij Cocktail bij ingredient en alchol bij ingrdient (2de lijst)nu alleen foutmelding
+
   - ombouwen naar context. Dus de useStates verplaatsen.
   - cocktailview / cocktail card goed uitlijnen in het mideen. 
   -consequent overal de error en loading gebruiken. Dus setError (en deze weergeven op de pagina. )
@@ -32,12 +34,13 @@ random cocktail genereren verder afmaken.
 - alles nalopen en kijken of het nog verder omgebouwd kan worden tot een component. Bijvoorbeeld de Cocktailby Alcohollist page & Cocktail by ingredient List page!! 
 - de link van het resultaat van cocktail by alcohol en cocktail bij ingredient verwijst nu naar Wiskey#20Bla dit moet nog omgebouw worde .replace(" ","+") naar een moooie link
 -  De data die binnenkomst via de api ombouwen naar { } zoals de tip uit de pokemon opdracht die is binnengekomen.
-- alle tips die ik heb gehad van het nakijkwerk erbij pakken en doorlopen. 
--Nalopen of Params wel handig is en niet gewoon useState met useContext.
-      - Voorbeeld rein gebruiken met de stappen.Dus bij cocktail by ingredient & cocktail by alcohol.
-        hierdoor minder pagina's.
+- alle tips die ik heb gehad van het nakijkwerk erbij pakken en doorlopen.
+
   - all cocktails, de next en back button controleren.
 - 2 context maken. 1 voor user en 1 voor cocktail info. Goed bekijken waar deze omheen gezet dienen te worden. !!Zie voorbeeld rein les.
+
+
+
 
 Code beslissingen:
 - de info voor het help field in een json bestand gezet zodat mijn code niet vervuild met infomatie. 

@@ -10,7 +10,6 @@ function CocktailLoaderLong() {
                 <div className="logo-container">
                     <img className="loader-img" src={longLoader} alt="loader"/>
                 </div>
-
             </div>
         </>
     )
