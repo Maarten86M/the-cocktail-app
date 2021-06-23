@@ -11,7 +11,7 @@ import HelpButton from "../Components/Buttons/HelpButton/HelpButton";
 
 function Welcome() {
     return (
-        <div className="pagina">
+        <main className="pagina">
 
             <div className='welcomepage'>
                 <div className="welcomeLeft">
@@ -54,7 +54,7 @@ function Welcome() {
                     />
                 </div>
             </div>
-        </div>
+        </main>
     )
 }
 

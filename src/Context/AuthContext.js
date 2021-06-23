@@ -1,14 +1,50 @@
-import {createContext} from "react";
+import React, {useContext, createContext, useState, useEffect} from "react"
+import app from "../Modules/Firebase";
 
 export const authContext = createContext({});
 
-function AuthContextProvider({children}){
+export function useAuth() {
+    return useContext(authContext);
+}
 
-    const data ={};
+function AuthContextProvider({children}) {
 
-    return <authContext.Provider value={data}>
-        {children}
-    </authContext.Provider>
+    const [user, setUser] = useState()
+    const [email, setEmail] = useState('')
+    const [password, setPassword] = useState('')
+    const [formError, setFormError] = useState('');
+
+    function signUp(email, password) {
+        return app.auth().createUserWithEmailAndPassword(email, password);
+    }
+
+    function logIn(email, password){
+        return app.auth().signInWithEmailAndPassword(email, password);
+    }
+
+    function logOut(){
+        return app.auth().signOut();
+    }
+
+    function lostPassword(email){
+        return app.auth().sendPasswordResetEmail(email);
+    }
+
+    useEffect(() => {
+    const unsubscribe = app.auth().onAuthStateChanged(user => {
+        setUser(user)
+    })
+        return unsubscribe;
+    },[]);
+
+
+    const data = {user, setUser, email, setEmail, password, setPassword, formError, setFormError, signUp , logIn, logOut,lostPassword};
+
+    return (
+        <authContext.Provider value={data}>
+            {children}
+        </authContext.Provider>
+    )
 }
 
 export default AuthContextProvider;

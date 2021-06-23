@@ -61,7 +61,10 @@ Op deze manier kan ik het ook mogelijk aanpassen als er wijzingen zijn.
 
 
 Wat kan er nog doorontwikkeld worden?
-
+- delete account. 
+- meer profiel info. 
+- dat iemand een cocktail kan toevoegen. 
+- Een update op de frontpage(ingelogd) met nieuwe cocktails. 
 
 
 Adobe XD: 
@@ -71,3 +74,4 @@ Adobe XD:
 TO DO VOOR EINDOPDTRACHT
 
 BELANGRIJK: IN README.MD BENOEMEN HOE DEVELOPERS DEZE WAARDES KAN AANKOMEN (API KEY) DUS DUIDELIJK AANGEVEN. KEY= 9973533
+navragen waar de .env codes te vermelden in de eindopdracht.

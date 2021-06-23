@@ -1,70 +1,59 @@
-import React, {useState} from "react";
-import {useForm} from "react-hook-form";
-import FormButton from "../../Components/Buttons/FormButton/FormButton";
+import React from "react";
 import {useHistory} from "react-router-dom";
+import {useAuth} from "../../Context/AuthContext";
+
 
 function Register() {
 
-    const {register, getValues, handleSubmit, formState: {errors}} = useForm();
-    const [formError, setFormError] = useState();
-    const [loading, setLoading] = useState(false);
     const history = useHistory();
-    const [succesMessage, setSuccesMessage]= useState(false)
+    const {user, setUser, email, setEmail, password, setPassword,formError, setFormError , signUp} = useAuth();
 
-    function Register(data){
-        setLoading(true)
-        // if(getValues('password') !== getValues('passwordconfirm')){
-        //     return setFormError('Passwords do Not Match')
-        // }
-        setSuccesMessage(true)
-        setLoading(false)
-        setTimeout(() => history.push('./welcome'),2000)
-        console.log(data)
+    async function onSubmit(event) {
+        event.preventDefault();
 
+        try{
+            const userCredential = await signUp(email, password);
+            console.log("registered", userCredential);
+            setUser( userCredential.user );
+            history.push('./welcome')
+        } catch (event){
+            console.error('Firebase Fail', event);
+            setFormError(event.message);
+        }
     }
-    return(
+
+    console.log("Wat is de formError uit Register", formError)
+    console.log(user,"iemand is ingelogd")
+
+    return (
         <div className="pagina">
             <h1>Register</h1>
-            {succesMessage && (<h1> Thank you for your account.</h1>)}
-            {loading && (<h1>Moment geduld</h1>)}
-            <form className="Form-container" onSubmit={handleSubmit(Register)}>
+            {/*{succesMessage && (<h1> Thank you for your account.</h1>)}*/}
+            {/*{loading && (<h1>Moment geduld</h1>)}*/}
+            <h2>{formError}</h2>
+            <form onSubmit={ onSubmit }>
+                <input
+                    type="email"
+                    name="email"
+                    placeholder="Email adress"
+                    value={ email }
+                    onChange={event => setEmail(event.target.value)}
+                />
 
-                <label htmlFor="email">
-                    <input
-                        id="email"
-                        type="email"
-                        placeholder="&#x2709; Email Adress"
-                        {...register('email', {required: {value: true, message: "This field is required."}})}
-                    />
-                    {errors.email && <p>{errors.email.message}{formError} </p>}
+                <input
+                    type="password"
+                    name="password"
+                    placeholder="Password"
+                    value={ password }
+                    onChange={event => setPassword(event.target.value)}
+                />
 
-                </label>
-
-                <label htmlFor="password" className="forminput">
-                    <input
-                        id="password"
-                        type="password"
-                        placeholder="&#128274; Password"
-                        {...register('password', {required: {value: true, message: "Please fill in your password."}})}
-                    />
-                    {errors.password && <p>{errors.password.message}</p>}
-                </label>
-
-                <label htmlFor="passwordconfirm" className="forminput">
-                    <input
-                        id="passwordconfirm"
-                        type="password"
-                        placeholder="&#128274; Password Confirm"
-                        {...register('passwordconfirm', {required: {value: true, message: "Please fill in your password."}})}
-                    />
-                    {errors.passwordconfirm && <p>{errors.password.message}</p>}
-                </label>
-
-                <FormButton disabled={errors.email || errors.password}/>
-
+                <input type="submit" value="login"/>
             </form>
+
         </div>
 
     );
 }
+
 export default Register;

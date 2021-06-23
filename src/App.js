@@ -24,94 +24,94 @@ import CocktailView from "./Pages/CocktailView/CocktailView";
 import CocktailByAlcoholList from "./Pages/CocktailByAlcohol/CocktailByAlcoholList";
 import CocktailByIngredientList from "./Pages/CocktailByIngredient/CocktailByIngredientList";
 import './App.css';
+import {useAuth} from "./Context/AuthContext";
+
 
 function App() {
-    const [authenticated, setAuthenticated] = useState(true);
-
+    const {user} = useAuth();
     return (
         <>
             <Navbar
-                authenticated={authenticated}
-                setAuthenticated={setAuthenticated}/>
+                authenticated={user}/>
             <Switch>
 
                 <PublicRoute
                     path="/"
                     exact={true}
-                    authenticated={authenticated}
+                    authenticated={user}
                     component={<Home/>}/>
 
                 <PublicRoute
                     path="/login"
-                    authenticated={authenticated}
+                    authenticated={user}
                     component={<Login/>}/>
 
                 <PublicRoute
                     path="/register"
-                    authenticated={authenticated}
+                    authenticated={user}
                     component={<Register/>}/>
 
                 <PublicRoute
                     path="/forgotpassword"
-                    authenticated={authenticated}
+                    authenticated={user}
                     component={<ForgotPassword/>}/>
 
                 <PrivateRoute
                     path="/welcome"
-                    authenticated={authenticated}
+                    authenticated={user}
                     component={<Welcome/>}/>
 
                 <PrivateRoute
                     path="/searchcocktails"
-                    authenticated={authenticated}
+                    authenticated={user}
                     component={<SearchCocktails/>}/>
 
                 <PrivateRoute
                     path="/searchresult/:result"
-                    authenticated={authenticated}
+                    authenticated={user}
                     component={<SearchResult/>}/>
 
                 <PrivateRoute
                     path="/cocktailpage/:id"
-                    authenticated={authenticated}
+                    authenticated={user}
                     component={<CocktailView/>}/>
 
                 <PrivateRoute
                     path="/randomcocktails"
-                    authenticated={authenticated}
+                    authenticated={user}
                     component={<RandomCocktails/>}/>
 
                 <PrivateRoute
                     path="/cocktailbyalcohol"
-                    authenticated={authenticated}
+                    authenticated={user}
                     component={<CocktailByAlcohol/>}/>
 
                 <PrivateRoute
                     path="/cocktailbyalcohollist/:result"
-                    authenticated={authenticated}
+                    authenticated={user}
                     component={<CocktailByAlcoholList/>}/>
 
                 <PrivateRoute
                     path="/cocktailbyingredient"
-                    authenticated={authenticated}
+                    authenticated={user}
                     component={<CocktailByIngredient/>}/>
 
                 <PrivateRoute
                     path="/cocktailbyingredientlist/:result"
-                    authenticated={authenticated}
+                    authenticated={user}
                     component={<CocktailByIngredientList/>}/>
 
                 <PrivateRoute
                     path="/allcocktails"
-                    authenticated={authenticated}
+                    authenticated={user}
                     component={<AllCocktails/>}/>
                 <PrivateRoute
                     path="/profile"
-                    authenticated={authenticated}
+                    authenticated={user}
                     component={<Profile/>}/>
                 <PrivateRoute
                     path="/help"
-                    authenticated={authenticated}
+                    authenticated={user}
                     component={<Help/>}/>
 
                 <Route path="/">

@@ -3,11 +3,14 @@ import {
     Route,
     Redirect
 } from 'react-router-dom';
+import {useAuth} from "../Context/AuthContext";
 
 function PublicRoute(props) {
+    const{user} = useAuth();
+
     return(
         <Route exact={props.exact} path={props.path}>
-            {!props.authenticated ? props.component : <Redirect to="/welcome"/>}
+            {!user ? props.component : <Redirect to="/welcome"/>}
         </Route>
     )
 }

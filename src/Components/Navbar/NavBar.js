@@ -13,17 +13,20 @@ import help from '../../Assets/Icons/NavIcons/help.png';
 import login from '../../Assets/Icons/NavIcons/login.png';
 import register from '../../Assets/Icons/NavIcons/register.png';
 import signout from '../../Assets/Icons/NavIcons/signout.png';
+import {useAuth} from "../../Context/AuthContext";
 
 function Navbar(props) {
+    const {logOut} = useAuth()
     const [openMenu, setOpenMenu] = useState(false);
     const [screenWidth, setScreenWidth] = useState(window.innerWidth);
+
 
     function menuopener() {
         setOpenMenu(!openMenu);
     }
 
     function logout() {
-        props.setAuthenticated(false);
+        logOut();
         setOpenMenu(!openMenu);
     }
 
