@@ -8,8 +8,10 @@ import profile from '../Assets/Icons/NavIcons/profile.png';
 import MainButton from "../Components/Buttons/MainButton/MainButton";
 import './/paginatijdelijkaanpassenperpagina.css'
 import HelpButton from "../Components/Buttons/HelpButton/HelpButton";
+import app from "../Modules/Firebase";
 
 function Welcome() {
+
     return (
         <main className="pagina">
 

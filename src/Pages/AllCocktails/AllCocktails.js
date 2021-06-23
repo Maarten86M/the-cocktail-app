@@ -38,6 +38,7 @@ function AllCocktails() {
                 <LetterView/>
                 <NextButton />
             </div>
+
             {cocktail ? (
                 <div className="list-scrollbar">
                     {cocktail.map(cocktail => <Link to={`/cocktailpage/${cocktail.idDrink}`}>

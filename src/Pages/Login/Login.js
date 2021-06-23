@@ -7,7 +7,7 @@ import app from "../../Modules/Firebase";
 function Login() {
 
     const history = useHistory();
-    const {user, setUser, email, setEmail, password, setPassword,formError, setFormError, logIn } = useAuth();
+    const { setUser, email, setEmail, password, setPassword,formError, setFormError, logIn } = useAuth();
     // const {succes, setSucces} = useState(false);
 
     async function onSubmit(event) {
@@ -23,9 +23,6 @@ function Login() {
         }
 
     }
-
-    console.log(formError,"wat is de foutmelding");
-    console.log(user,"iemand is ingelogd")
 
     return (
         <div className="pagina">

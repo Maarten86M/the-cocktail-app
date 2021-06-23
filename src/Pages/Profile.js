@@ -7,7 +7,8 @@ function Profile() {
     return(
         <div className="pagina">
             <h1>Profile</h1>
-            <h3>{user}</h3>
+            <h3>{user.uid}</h3>
+            <h3>{user.email}</h3>
             <CocktailLoader />
         </div>
     )

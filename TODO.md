@@ -9,8 +9,8 @@ TO DO LIST:
 - error meldingen (laden api) zie random cocktail
 - loading meldingen (laden api) zie random cocktail
   - Cocktail Loader. De loading h1 ombouwen naar deze
-
-- Search Cocktail nu alleen mogelijk op cocktail naam maar ook ingredienten moet mogelijk zijn. En ook wanneer enter is ingedrukt
+  
+Search
           - Wanneer je niets invuld krijg je nu 404. Diet moeten we ook aanpassen.
  
   - Random cocktails moeten pas starten wanneer de button wordt aangeklikt
@@ -27,7 +27,7 @@ TO DO LIST:
 
   - ombouwen naar context. Dus de useStates verplaatsen.
   - cocktailview / cocktail card goed uitlijnen in het mideen. 
-  -consequent overal de error en loading gebruiken. Dus setError (en deze weergeven op de pagina. )
+  -consequent overal de error en loading gebruiken. Dus setError (en deze weergeven op de pagina. ) Zie voorbeeld bij search. Niets ingevuld
     - Navbar checken of hij open blijft staan.
 - inputfield lock icon en envelop aanpassen. 
 - form en register verder afronden.
@@ -48,7 +48,8 @@ Op deze manier kan ik het ook mogelijk aanpassen als er wijzingen zijn.
   - De Api zelft heeft niet de juiste endpoints om een sortering te maken in een categorie op basis van alcohol(vadka, wiskey, rum etc), en op basis van inredienten(appel, banaan , aardbei etc). In de Api zelf staat alles door elkaar. 
     Zoals in mijn ontwerp heb ik besloten om dit uit te specificeren. Voor beide categorien heb ik een lijst(json array) samengesteld in data. Vanuit hier kunnen we mappen naar de juiste cocktail. Ik heb dit express in een json bestand gedaan zodat we dit ook makkelijk weer kunnen toevoegen op een later tijdstip als er veranderingen zijn. 
     Ook kan ik het vanuit hier makkelijk op alfabetische volgorge zetten.
-    
+    - DE AUTHENTICATIE OF ER IEMAND INGELOGD IS OMBOUWEN NAAR app.auth().currentUser.uid?
+  
 - de Api heeft alleen een endpoint voor alle cocktails per letter. Daarom heb ik ervoor gekozen om in het design een Selectbox en next/back button toe te voegen. 
     Die naar de uiteindelijke endpoint verwijst met een ${}. Ik heb een array aangemaakt op basis van letters. De U is niet weergegeven. Omdat er geen cocktails zijn met een U. 
       Doormiddel van de positie in de array verwijs ik naar de juiste endpoint.
@@ -65,6 +66,7 @@ Wat kan er nog doorontwikkeld worden?
 - meer profiel info. 
 - dat iemand een cocktail kan toevoegen. 
 - Een update op de frontpage(ingelogd) met nieuwe cocktails. 
+
 
 
 Adobe XD: 
