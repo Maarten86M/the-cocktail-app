@@ -11,7 +11,7 @@ TO DO LIST:
   - Cocktail Loader. De loading h1 ombouwen naar deze
   
 Search
-          - Wanneer je niets invuld krijg je nu 404. Diet moeten we ook aanpassen.
+
  
   - Random cocktails moeten pas starten wanneer de button wordt aangeklikt
 
