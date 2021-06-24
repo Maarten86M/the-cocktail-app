@@ -4,10 +4,9 @@ import axios from "axios";
 import MainBackButton from "../../Components/Buttons/MainBackButton/MainBackButton";
 import CocktailLoaderOops from "../../Components/CocktailLoader/CocktailLoaderOops";
 import cocktailIcon from '../../Assets/Icons/ListIcons/cocktail-icon.png';
-import '../pageStyling.css';
 import CocktailCardLogo from "../../Components/CocktailCardLogo/CocktailCardLogo";
 import HelpButton from "../../Components/Buttons/HelpButton/HelpButton";
-
+import '../pageStyling.css';
 
 function CocktailByIngredientList() {
     const params = useParams();
@@ -52,7 +51,7 @@ function CocktailByIngredientList() {
                                         <h1>Sorry, nothing Found</h1>
                                     </div>
                                 ) : (
-                                    <div className="Cocktaillist">
+                                    <div className="scrollbar">
                                         {ingredientlist.map(cocktail => <Link to={`/cocktailpage/${cocktail.idDrink}`}>
                                             <p><img src={cocktailIcon} alt="Cocktail Icon"/>{cocktail.strDrink}</p>
                                         </Link>)}

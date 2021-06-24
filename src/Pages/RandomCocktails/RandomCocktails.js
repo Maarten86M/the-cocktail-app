@@ -9,6 +9,7 @@ import '../pageStyling.css';
 import CocktailCardLogo from "../../Components/CocktailCardLogo/CocktailCardLogo";
 import CocktailLoaderOops from "../../Components/CocktailLoader/CocktailLoaderOops";
 import HelpButton from "../../Components/Buttons/HelpButton/HelpButton";
+import CocktailName from "../../Components/Titles/CocktailName/CocktailName";
 
 function RandomCocktails() {
     const {
@@ -60,6 +61,7 @@ function RandomCocktails() {
                     <HelpButton content={6}/>
                     </div>
                     <RandomizeButton/>
+                    <CocktailName />
                     <div>
                         <CocktailCard/>
                     </div>

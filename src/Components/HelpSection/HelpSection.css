@@ -1,0 +1,22 @@
+article {
+    padding-top: 80px;
+}
+
+.help-img{
+    max-width: 200px;
+    max-height: 200px;
+    border-radius: 50%;
+}
+
+.leftalign {
+    left: 0px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.rightalign {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+}

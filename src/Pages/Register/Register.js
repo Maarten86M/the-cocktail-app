@@ -1,13 +1,12 @@
 import React from "react";
 import {useHistory} from "react-router-dom";
 import {useAuth} from "../../Context/AuthContext";
-import firebase from "firebase";
+import '../pageStyling.css'
+import CocktailCardLogo from "../../Components/CocktailCardLogo/CocktailCardLogo";
+import HelpButton from "../../Components/Buttons/HelpButton/HelpButton";
 
 function Register() {
-
     const history = useHistory();
-    const db = firebase.firestore();
-
     const {
         setUser,
         firstname,
@@ -38,50 +37,64 @@ function Register() {
     }
 
     return (
-        <div className="pagina">
-            <h1>Register</h1>
-            {/*{succesMessage && (<h1> Thank you for your account.</h1>)}*/}
-            {/*{loading && (<h1>Moment geduld</h1>)}*/}
-            <h2>{formError}</h2>
-            <form onSubmit={onSubmit}>
+        <div className="fullpage-container">
+            <div className="left-section-container">
+                <div className="CocktailCard-container">
+                    <CocktailCardLogo/>
+                </div>
+            </div>
 
-                {/*REQUIREMENTS INBOUWEN!! */}
-                {/*firstname & lastname werkend maken met databadse*/}
-                <input
-                    type="text"
-                    name='firstname'
-                    placeholder='Firstname'
-                    value={firstname}
-                    onChange={event => setFirstname(event.target.value)}
-                />
+            <div className="right-section-container">
+                <div className="right-box-container">
+                <h1>Register</h1>
+                {/*{succesMessage && (<h1> Thank you for your account.</h1>)}*/}
+                {/*{loading && (<h1>Moment geduld</h1>)}*/}
+                <h2>{formError}</h2>
+                    <div className="input-container">
+                        <div>
+                            <HelpButton content={1}/>
+                        </div>
+                <form onSubmit={onSubmit}>
 
-                <input
-                    type="text"
-                    name='lastname'
-                    placeholder='Lastname'
-                    value={lastname}
-                    onChange={event => setLastname(event.target.value)}
-                />
+                    {/*REQUIREMENTS INBOUWEN!! */}
+                    {/*firstname & lastname werkend maken met databadse*/}
+                    <input
+                        type="text"
+                        name='firstname'
+                        placeholder='Firstname'
+                        value={firstname}
+                        onChange={event => setFirstname(event.target.value)}
+                    />
 
-                <input
-                    type="email"
-                    name="email"
-                    placeholder="Email adress"
-                    value={email}
-                    onChange={event => setEmail(event.target.value)}
-                />
+                    <input
+                        type="text"
+                        name='lastname'
+                        placeholder='Lastname'
+                        value={lastname}
+                        onChange={event => setLastname(event.target.value)}
+                    />
 
-                <input
-                    type="password"
-                    name="password"
-                    placeholder="Password"
-                    value={password}
-                    onChange={event => setPassword(event.target.value)}
-                />
+                    <input
+                        type="email"
+                        name="email"
+                        placeholder="Email adress"
+                        value={email}
+                        onChange={event => setEmail(event.target.value)}
+                    />
 
-                <input type="submit" value="login"/>
-            </form>
+                    <input
+                        type="password"
+                        name="password"
+                        placeholder="Password"
+                        value={password}
+                        onChange={event => setPassword(event.target.value)}
+                    />
 
+                    <input type="submit" value="login"/>
+                </form>
+                    </div>
+                </div>
+            </div>
         </div>
 
     );

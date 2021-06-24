@@ -15,9 +15,7 @@ function CocktailCard() {
             <div className="cocktailcard-container">
                 {cocktail ? (
                     <div>
-                        <h2>{id.strDrink}</h2>
                         <div className="ingredient-scrollbar">
-
                             <b>Ingredients</b>
                             <section className="ingredient-container">
                                 {id.strIngredient1 && (<IngredientView IngredientName={id.strIngredient1}/>)}

@@ -2,12 +2,11 @@ import React, {useEffect, useState} from "react";
 import {Link, useParams} from "react-router-dom";
 import axios from "axios";
 import MainBackButton from "../../Components/Buttons/MainBackButton/MainBackButton";
-import './CocktailByAlcohol.css';
 import CocktailLoaderOops from "../../Components/CocktailLoader/CocktailLoaderOops";
-import cocktailIcon from '../../Assets/Icons/ListIcons/cocktail-icon.png';
-import '../pageStyling.css';
 import CocktailCardLogo from "../../Components/CocktailCardLogo/CocktailCardLogo";
 import HelpButton from "../../Components/Buttons/HelpButton/HelpButton";
+import cocktailIcon from '../../Assets/Icons/ListIcons/cocktail-icon.png';
+import '../pageStyling.css';
 
 function CocktailByAlcoholList() {
     const params = useParams();
@@ -50,7 +49,7 @@ function CocktailByAlcoholList() {
                                         <h1>sorry, nothing found</h1>
                                     </div>
                                 ) : (
-                                    <div className="alcohol-scrollbar">
+                                    <div className="scrollbar">
                                         {alcohollist.map(cocktail => <Link to={`/cocktailpage/${cocktail.idDrink}`}>
                                             <p><img src={cocktailIcon} alt="Cocktail Icon"/>{cocktail.strDrink}</p>
                                         </Link>)}

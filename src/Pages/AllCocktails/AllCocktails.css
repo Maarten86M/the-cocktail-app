@@ -2,23 +2,23 @@
     display: flex;
 }
 
-
-.list-scrollbar {
-    max-height: 600px;
+.scrollbar-all{
+    max-height: 360px;
     max-width: 400px;
     overflow: auto;
     border: none;
+    margin-bottom: 100px;
 }
 
-.list-scrollbar::-webkit-scrollbar {
+.scrollbar-all::-webkit-scrollbar {
     width: 8px;
 }
 
-.list-scrollbar::-webkit-scrollbar-track {
+.scrollbar-all::-webkit-scrollbar-track {
     background: none;
 }
 
-.list-scrollbar::-webkit-scrollbar-thumb {
+.scrollbar-all::-webkit-scrollbar-thumb {
     background-color: var(--text-color);
     border-radius: 20px;
     border: 3px solid var(--text-color);

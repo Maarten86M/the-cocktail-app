@@ -5,7 +5,6 @@ import alcoholIcon from '../../Assets/Icons/ListIcons/alcohol-icon.png';
 import MainBackButton from "../../Components/Buttons/MainBackButton/MainBackButton";
 import CocktailCardLogo from "../../Components/CocktailCardLogo/CocktailCardLogo";
 import HelpButton from "../../Components/Buttons/HelpButton/HelpButton";
-import './CocktailByAlcohol.css';
 import '../pageStyling.css';
 
 function CocktailByAlcohol() {
@@ -23,7 +22,7 @@ function CocktailByAlcohol() {
                     <div>
                         <HelpButton content={8}/>
                     </div>
-                    <div className="alcohol-scrollbar">
+                    <div className="scrollbar">
                         {alcoholData.map(item => <Link to={`/cocktailbyalcohollist/${item.strIngredient1}`}>
                             <p><img
                                 src={alcoholIcon}

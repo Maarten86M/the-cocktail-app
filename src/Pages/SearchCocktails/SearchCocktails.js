@@ -23,6 +23,7 @@ function SearchCocktails() {
 
     return (
         <div className="fullpage-container">
+            <div></div>
             <div className="left-section-container">
                 <div className="CocktailCard-container">
                     <CocktailCardLogo/>

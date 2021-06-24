@@ -1,0 +1,6 @@
+.cocktailname{
+    width: 400px;
+    text-align: center;
+    font-family: var(--main-font);
+    padding-bottom: 40px;
+}
