@@ -1,10 +1,12 @@
 import React, {useState} from "react";
 import './Login.css';
-import {useHistory} from "react-router-dom";
+import {Link, useHistory} from "react-router-dom";
 import {useAuth} from "../../Context/AuthContext";
 import '../pageStyling.css';
 import CocktailCardLogo from "../../Components/CocktailCardLogo/CocktailCardLogo";
 import HelpButton from "../../Components/Buttons/HelpButton/HelpButton";
+import MainButton from "../../Components/Buttons/MainButton/MainButton";
+import register from "../../Assets/Icons/NavIcons/register.png";
 
 function Login() {
 
@@ -62,6 +64,12 @@ function Login() {
 
                             <input type="submit" value="login"/>
                         </form>
+                        <Link to="/forgotpassword"><p>Forgot your password?</p></Link>
+                        <MainButton
+                            name="Register Now"
+                            icon={register}
+                            link={"/register"}
+                        />
                     </div>
                 </div>
             </div>

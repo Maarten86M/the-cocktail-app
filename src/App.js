@@ -16,7 +16,7 @@ import FourZeroFour from "./Pages/FourZeroFour";
 import Welcome from "./Pages/Welcome/Welcome";
 import Login from "./Pages/Login/Login";
 import Register from "./Pages/Register/Register";
-import ForgotPassword from "./Pages/ForgotPassword";
+import ForgotPassword from "./Pages/ForgotPassword/ForgotPassword";
 import SearchResult from "./Pages/SearchCocktails/SearchResult";
 import PublicRoute from "./Route/PublicRoute";
 import PrivateRoute from "./Route/PrivateRoute";

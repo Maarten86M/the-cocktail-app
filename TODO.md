@@ -16,7 +16,8 @@ Search
 - helpfield bij welcome aanpssen. Staat net te hoog.
 - img groote van het gebroken glass aanpassen is te klein i.v.m. de andere
 - search text error aanpssen in styling
- 
+ - pageStylin ombouwen naar app.css 
+   
   - Random cocktails moeten pas starten wanneer de button wordt aangeklikt
 
   
@@ -52,7 +53,6 @@ Op deze manier kan ik het ook mogelijk aanpassen als er wijzingen zijn.
   - De Api zelft heeft niet de juiste endpoints om een sortering te maken in een categorie op basis van alcohol(vadka, wiskey, rum etc), en op basis van inredienten(appel, banaan , aardbei etc). In de Api zelf staat alles door elkaar. 
     Zoals in mijn ontwerp heb ik besloten om dit uit te specificeren. Voor beide categorien heb ik een lijst(json array) samengesteld in data. Vanuit hier kunnen we mappen naar de juiste cocktail. Ik heb dit express in een json bestand gedaan zodat we dit ook makkelijk weer kunnen toevoegen op een later tijdstip als er veranderingen zijn. 
     Ook kan ik het vanuit hier makkelijk op alfabetische volgorge zetten.
-    - DE AUTHENTICATIE OF ER IEMAND INGELOGD IS OMBOUWEN NAAR app.auth().currentUser.uid?
   
 - de Api heeft alleen een endpoint voor alle cocktails per letter. Daarom heb ik ervoor gekozen om in het design een Selectbox en next/back button toe te voegen. 
     Die naar de uiteindelijke endpoint verwijst met een ${}. Ik heb een array aangemaakt op basis van letters. De U is niet weergegeven. Omdat er geen cocktails zijn met een U. 
