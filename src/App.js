@@ -13,7 +13,7 @@ import Profile from "./Pages/Profile";
 import Help from "./Pages/Help";
 import Home from "./Pages/Home/Home";
 import FourZeroFour from "./Pages/FourZeroFour";
-import Welcome from "./Pages/Welcome";
+import Welcome from "./Pages/Welcome/Welcome";
 import Login from "./Pages/Login/Login";
 import Register from "./Pages/Register/Register";
 import ForgotPassword from "./Pages/ForgotPassword";

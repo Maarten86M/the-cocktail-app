@@ -1,11 +1,4 @@
-.header-container{
-    display: flex;
-    padding-bottom: 20px;
-    justify-content: center;
-    width: 400px;
-}
-
-.cocktailIMG {
+.cocktailcardLogo{
     border-radius: 50% ;
     border: 2px solid var(--background-color);
     max-width: 374px;

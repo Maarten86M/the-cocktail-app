@@ -20,7 +20,7 @@ function Register() {
         setPassword,
         formError,
         setFormError,
-        signUp,
+        signUp
     } = useAuth();
 
     async function onSubmit(event) {
@@ -36,7 +36,6 @@ function Register() {
             setFormError(event.message);
         }
     }
-
 
     return (
         <div className="pagina">

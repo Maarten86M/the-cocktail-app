@@ -1,28 +1,33 @@
 import React from "react";
-import search from '../Assets/Icons/NavIcons/search.png';
-import random from '../Assets/Icons/NavIcons/dice.png';
-import alcohol from '../Assets/Icons/NavIcons/alcohol.png';
-import fruit from '../Assets/Icons/NavIcons/fruit.png';
-import cocktail from '../Assets/Icons/NavIcons/cocktail.png';
-import profile from '../Assets/Icons/NavIcons/profile.png';
-import MainButton from "../Components/Buttons/MainButton/MainButton";
-import './/paginatijdelijkaanpassenperpagina.css'
-import HelpButton from "../Components/Buttons/HelpButton/HelpButton";
-import app from "../Modules/Firebase";
+import search from '../../Assets/Icons/NavIcons/search.png';
+import random from '../../Assets/Icons/NavIcons/dice.png';
+import alcohol from '../../Assets/Icons/NavIcons/alcohol.png';
+import fruit from '../../Assets/Icons/NavIcons/fruit.png';
+import cocktail from '../../Assets/Icons/NavIcons/cocktail.png';
+import profile from '../../Assets/Icons/NavIcons/profile.png';
+import MainButton from "../../Components/Buttons/MainButton/MainButton";
+import HelpButton from "../../Components/Buttons/HelpButton/HelpButton";
+import {useAuth} from "../../Context/AuthContext";
+import '../pageStyling.css';
+import './Welcome.css';
+import CocktailCardLogo from "../../Components/CocktailCardLogo/CocktailCardLogo";
+
 
 function Welcome() {
+    const {user} = useAuth();
 
     return (
-        <main className="pagina">
+        <main className="fullpage-container">
 
-            <div className='welcomepage'>
-                <div className="welcomeLeft">
-                    <h1>Welcome</h1>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab delectus eaque facilis, fugiat
-                        incidunt iusto officiis sapiente soluta veritatis voluptate.</p>
+            <div className='left-section-container'>
+                <div className="CocktailCard-container">
+                    <CocktailCardLogo/>
                 </div>
+            </div>
 
-                <div className='welcomeright'>
+            <div className='right-section-container'>
+
+                <div className="button-container">
                     <HelpButton content={0}/>
                     <MainButton
                         name="Search Cocktails"
@@ -56,6 +61,7 @@ function Welcome() {
                     />
                 </div>
             </div>
+
         </main>
     )
 }

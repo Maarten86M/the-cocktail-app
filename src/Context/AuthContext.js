@@ -10,7 +10,6 @@ export function useAuth() {
 function AuthContextProvider({children}) {
 
     const [user, setUser] = useState()
-
     const [firstname, setFirstname] = useState('');
     const [lastname, setLastname] = useState('');
     const [email, setEmail] = useState('');
@@ -60,7 +59,7 @@ function AuthContextProvider({children}) {
         signUp,
         logIn,
         logOut,
-        lostPassword,
+        lostPassword
     };
 
     return (

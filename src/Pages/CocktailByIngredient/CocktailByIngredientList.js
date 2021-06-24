@@ -4,6 +4,9 @@ import axios from "axios";
 import MainBackButton from "../../Components/Buttons/MainBackButton/MainBackButton";
 import CocktailLoaderOops from "../../Components/CocktailLoader/CocktailLoaderOops";
 import cocktailIcon from '../../Assets/Icons/ListIcons/cocktail-icon.png';
+import '../pageStyling.css';
+import CocktailCardLogo from "../../Components/CocktailCardLogo/CocktailCardLogo";
+import HelpButton from "../../Components/Buttons/HelpButton/HelpButton";
 
 
 function CocktailByIngredientList() {
@@ -26,22 +29,38 @@ function CocktailByIngredientList() {
 
     return (
         <>
-            <div className="pagina">
-                <div className="Cocktaillist">
-                    <h1>Cocktails with: {params.result} </h1>
-                    <div>
-                        {ingredientlist === "None Found" ? (
-                            <div>
+            <div className="fullpage-container">
+
+                    <div className="left-section-container">
+                        <div className="CocktailCard-container">
+                            {ingredientlist === "None Found" ? (
                                 <CocktailLoaderOops/>
-                                <h1>Sorry, nothing Found</h1>
-                            </div>
-                        ) : (
-                            <div className="Cocktaillist">
-                                {ingredientlist.map(cocktail => <Link to={`/cocktailpage/${cocktail.idDrink}`}>
-                                    <p><img src={cocktailIcon} alt="Cocktail Icon"/>{cocktail.strDrink}</p></Link>)}
-                            </div>)}
+                            ) : (<CocktailCardLogo/>)}
+                        </div>
                     </div>
-                    <MainBackButton/>
+
+                <div className="right-section-container">
+                    <div className="right-box-container">
+                        <div className="Cocktaillist">
+                            <h1>Cocktails with: {params.result} </h1>
+                            <div>
+                                <HelpButton content={9}/>
+                            </div>
+                            <div>
+                                {ingredientlist === "None Found" ? (
+                                    <div>
+                                        <h1>Sorry, nothing Found</h1>
+                                    </div>
+                                ) : (
+                                    <div className="Cocktaillist">
+                                        {ingredientlist.map(cocktail => <Link to={`/cocktailpage/${cocktail.idDrink}`}>
+                                            <p><img src={cocktailIcon} alt="Cocktail Icon"/>{cocktail.strDrink}</p>
+                                        </Link>)}
+                                    </div>)}
+                            </div>
+                            <MainBackButton/>
+                        </div>
+                    </div>
                 </div>
             </div>
         </>

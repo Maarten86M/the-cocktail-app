@@ -1,0 +1,27 @@
+.fullpage-container {
+    padding-top: 60px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    min-height: 100vh;
+}
+
+.left-section-container{
+    display: flex;
+    justify-content: center;
+    width: 50%;
+}
+
+.right-section-container{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+}
+.right-box-container{
+    padding-top: 60px;
+}
+
+.CocktailCard-container{
+    padding-top:100px;
+}
+

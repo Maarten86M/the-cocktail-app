@@ -1,6 +1,5 @@
 import React, {useEffect} from "react";
 import axios from "axios";
-import HelpButton from "../../Components/Buttons/HelpButton/HelpButton";
 import NextButton from "../../Components/Buttons/NextBackButton/NextButton/NextButton";
 import './AllCocktails.css';
 import {Link} from "react-router-dom";
@@ -9,6 +8,7 @@ import BackButton from "../../Components/Buttons/NextBackButton/BackButton/BackB
 import LetterView from "../../Components/Titles/LetterView/LetterView";
 import MainBackButton from "../../Components/Buttons/MainBackButton/MainBackButton";
 import cocktailIcon from '../../Assets/Icons/ListIcons/cocktail-icon.png';
+import '../pageStyling.css';
 
 
 function AllCocktails() {

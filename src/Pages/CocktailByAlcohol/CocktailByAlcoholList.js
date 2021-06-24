@@ -5,6 +5,9 @@ import MainBackButton from "../../Components/Buttons/MainBackButton/MainBackButt
 import './CocktailByAlcohol.css';
 import CocktailLoaderOops from "../../Components/CocktailLoader/CocktailLoaderOops";
 import cocktailIcon from '../../Assets/Icons/ListIcons/cocktail-icon.png';
+import '../pageStyling.css';
+import CocktailCardLogo from "../../Components/CocktailCardLogo/CocktailCardLogo";
+import HelpButton from "../../Components/Buttons/HelpButton/HelpButton";
 
 function CocktailByAlcoholList() {
     const params = useParams();
@@ -19,26 +22,43 @@ function CocktailByAlcoholList() {
                 console.error(e)
             }
         }
+
         fetchAlcoholCocktail()
     }, []);
 
     return (
         <>
-            <div className="pagina">
-                <div className="Cocktaillist">
-                    <h1>Cocktails with {params.result} </h1>
-                    <div>
+            <div className="fullpage-container">
+                <div className="left-section-container">
+                    <div className="CocktailCard-container">
                         {alcohollist === "None Found" ? (
-                            <div><CocktailLoaderOops/>
-                                <h1>sorry, nothing found</h1>
-                            </div>
-                        ) : (
-                            <div className="alcohol-scrollbar">
-                                {alcohollist.map(cocktail => <Link to={`/cocktailpage/${cocktail.idDrink}`}>
-                                    <p><img src={cocktailIcon} alt="Cocktail Icon"/>{cocktail.strDrink}</p></Link>)}
-                            </div>)}
+                            <CocktailLoaderOops/>
+                        ) : (<CocktailCardLogo/>)}
                     </div>
-                    <MainBackButton/>
+                </div>
+
+                <div className="right-section-container">
+                    <div className="right-box-container">
+                        <div className="Cocktaillist">
+                            <h1>Cocktails with {params.result} </h1>
+                            <div>
+                                <HelpButton content={9}/>
+                            </div>
+                            <div>
+                                {alcohollist === "None Found" ? (
+                                    <div>
+                                        <h1>sorry, nothing found</h1>
+                                    </div>
+                                ) : (
+                                    <div className="alcohol-scrollbar">
+                                        {alcohollist.map(cocktail => <Link to={`/cocktailpage/${cocktail.idDrink}`}>
+                                            <p><img src={cocktailIcon} alt="Cocktail Icon"/>{cocktail.strDrink}</p>
+                                        </Link>)}
+                                    </div>)}
+                            </div>
+                            <MainBackButton/>
+                        </div>
+                    </div>
                 </div>
             </div>
         </>

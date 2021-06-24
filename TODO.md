@@ -12,6 +12,10 @@ TO DO LIST:
   
 Search
 
+
+- helpfield bij welcome aanpssen. Staat net te hoog.
+- img groote van het gebroken glass aanpassen is te klein i.v.m. de andere
+- search text error aanpssen in styling
  
   - Random cocktails moeten pas starten wanneer de button wordt aangeklikt
 

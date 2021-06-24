@@ -7,6 +7,9 @@ import {Link} from 'react-router-dom';
 import {useCocktailContext} from "../../Context/CocktailContext";
 import CocktailLoaderOops from "../../Components/CocktailLoader/CocktailLoaderOops";
 import cocktailIcon from '../../Assets/Icons/ListIcons/cocktail-icon.png';
+import '../pageStyling.css';
+import CocktailCardLogo from "../../Components/CocktailCardLogo/CocktailCardLogo";
+import HelpButton from "../../Components/Buttons/HelpButton/HelpButton";
 
 function SearchResult() {
     const params = useParams();
@@ -34,22 +37,38 @@ function SearchResult() {
     }, []);
 
     return (
-        <div className="pagina">
-            <h1>{params.result}</h1>
-            <MainButton name="Search Again" icon={search} link="/searchcocktails"
-                        onClick={setSearchText("Search Cocktails")}/>
-            <div>
-                {searchResult === "None Found" ? (
-                        <div>
-                            <CocktailLoaderOops/>
-                            <h1>Nothing Found</h1>
-                        </div>
+        <div className="fullpage-container">
 
-                    ) : (<div className="Cocktaillist">
-                {searchResult.map((cocktail) =>
-                    <Link to={`/cocktailpage/${cocktail.idDrink}`}>
-                    <p><img src={cocktailIcon} alt="Cocktail Icon"/>{cocktail.strDrink}</p></Link>)}
-                    </div>)}
+            <div className="left-section-container">
+                <div className="CocktailCard-container">
+                    {searchResult === "None Found" ? (
+                        <CocktailLoaderOops/>
+                    ) : (<CocktailCardLogo/>)}
+                </div>
+            </div>
+
+
+            <div className="right-section-container">
+                <div className="right-box-container">
+                    <h1>{params.result}</h1>
+                    <div>
+                    <HelpButton content={3}/>
+                    </div>
+                    <MainButton name="Search Again" icon={search} link="/searchcocktails"
+                                onClick={setSearchText("Search Cocktails")}/>
+                    <div>
+                        {searchResult === "None Found" ? (
+                            <div>
+                                <h1>Nothing Found</h1>
+                            </div>
+
+                        ) : (<div className="Cocktaillist">
+                            {searchResult.map((cocktail) =>
+                                <Link to={`/cocktailpage/${cocktail.idDrink}`}>
+                                    <p><img src={cocktailIcon} alt="Cocktail Icon"/>{cocktail.strDrink}</p></Link>)}
+                        </div>)}
+                    </div>
+                </div>
             </div>
         </div>
     )

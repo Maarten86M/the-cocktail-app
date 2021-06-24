@@ -1,11 +1,14 @@
 import React, {useEffect} from "react";
 import axios from "axios";
-import '../paginatijdelijkaanpassenperpagina.css';
 import CocktailCard from "../../Components/CocktailCard/CocktailCard";
 import CocktailCardHeader from "../../Components/CocktailCardHeader/CocktailCardHeader";
 import RandomizeButton from "../../Components/Buttons/RandomizeButton/RandomizeButton";
 import {useCocktailContext} from "../../Context/CocktailContext";
 import CocktailLoader from "../../Components/CocktailLoader/CocktailLoader";
+import '../pageStyling.css';
+import CocktailCardLogo from "../../Components/CocktailCardLogo/CocktailCardLogo";
+import CocktailLoaderOops from "../../Components/CocktailLoader/CocktailLoaderOops";
+import HelpButton from "../../Components/Buttons/HelpButton/HelpButton";
 
 function RandomCocktails() {
     const {
@@ -32,22 +35,35 @@ function RandomCocktails() {
             setLoading(false);
 
         }
+
         fetchRandomCocktail()
 
 
     }, [randomizeButton]);
 
     return (
-        <div className="pagina">
-            <h1>Random Cocktail</h1>
-            <RandomizeButton/>
-            <div>
+        <div className="fullpage-container">
+            <div className="left-section-container">
+                <div className="CocktailCard-container">
+                    {errors && (<CocktailLoaderOops />)}
+                    {loading ? (
+                        <CocktailLoader />
+                    ):(<CocktailCardHeader/>)}
 
-                {/*Hier komt de cocktail logo img loader*/}
-                {loading && <CocktailLoader/>}
-                {errors && (<span>Oops, something went wrong</span>)}
-                            <CocktailCardHeader/>
-                            <CocktailCard/>
+                </div>
+            </div>
+
+            <div className="right-section-container">
+                <div className="right-box-container">
+                    <h1>Random Cocktail</h1>
+                    <div>
+                    <HelpButton content={6}/>
+                    </div>
+                    <RandomizeButton/>
+                    <div>
+                        <CocktailCard/>
+                    </div>
+                </div>
             </div>
         </div>
     )

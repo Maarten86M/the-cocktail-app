@@ -9,6 +9,9 @@
     font-size: 28px;
     font-family: var(--main-font);
     font-weight: var(--button-font-weight);
+    position: relative;
+    left: 400px;
+    top: -10px;
 }
 
 .helpbutton:hover{
