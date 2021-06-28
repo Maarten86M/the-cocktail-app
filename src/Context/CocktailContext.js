@@ -19,6 +19,7 @@ export default function CocktailContextProvider(props) {
 
     const [errors, setErrors] = useState(false);
     const [loading, setLoading] = useState(false);
+    const [pageTitle, setPageTitle] = useState('')
 
     const [letter, setLetter] = useState('A');
     const [numberToLetter, setNumberToLetter] = useState(1);
@@ -48,7 +49,9 @@ export default function CocktailContextProvider(props) {
                 numberToLetterArray,
                 convertNumberToLetter,
                 searchResult,
-                setSearchResult
+                setSearchResult,
+                pageTitle,
+                setPageTitle
             }}
         >
             {props.children}

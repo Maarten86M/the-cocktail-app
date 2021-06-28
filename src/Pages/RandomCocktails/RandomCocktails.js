@@ -42,6 +42,7 @@ function RandomCocktails() {
 
     }, [randomizeButton]);
 
+
     return (
         <div className="fullpage-container">
             <div className="left-section-container">

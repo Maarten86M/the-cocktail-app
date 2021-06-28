@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React, {useEffect, useState} from "react";
 import {useHistory} from "react-router-dom";
 import SearchInput from "../../Components/Inputs/SearchField/SearchInput";
 import SearchButton from "../../Components/Buttons/SearchButton/SearchButton";
@@ -10,7 +10,7 @@ import '../../App.css';
 
 function SearchCocktails() {
     const history = useHistory();
-    const {searchText} = useCocktailContext();
+    const {searchText, setPageTitle} = useCocktailContext();
     const [searchErrors, setSearchErrors] = useState('');
 
     function searchHandle() {
@@ -20,6 +20,11 @@ function SearchCocktails() {
             history.push(`/searchresult/${searchText}`)
         }
     }
+
+    useEffect(() =>{
+        setPageTitle('Search Cocktails');
+    },[])
+
 
     return (
         <div className="fullpage-container">

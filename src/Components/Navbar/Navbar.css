@@ -73,6 +73,22 @@ img {
     }
 }
 
+.mobile-title{
+    display: none;
+}
+@media screen and (max-width: 990px){
+    .mobile-title{
+        display: inline;
+    }
+
+    .mobile-title-container{
+        width: 100%;
+        height: 50px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}
 
 
 

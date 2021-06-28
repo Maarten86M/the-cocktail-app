@@ -1,5 +1,6 @@
-import React from "react";
+import React,{useEffect} from "react";
 import {useAuth} from "../../Context/AuthContext";
+import {useCocktailContext} from "../../Context/CocktailContext";
 import MainButton from "../../Components/Buttons/MainButton/MainButton";
 import HelpButton from "../../Components/Buttons/HelpButton/HelpButton";
 import CocktailCardLogo from "../../Components/CocktailCardLogo/CocktailCardLogo";
@@ -14,10 +15,14 @@ import './Welcome.css';
 
 function Welcome() {
     const {user} = useAuth();
+    const {setPageTitle} = useCocktailContext();
+
+    useEffect(() =>{
+        setPageTitle('Welcome');
+    },[])
 
     return (
         <main className="fullpage-container">
-
             <div className='left-section-container'>
                 <div className="CocktailCard-container">
                     <CocktailCardLogo/>

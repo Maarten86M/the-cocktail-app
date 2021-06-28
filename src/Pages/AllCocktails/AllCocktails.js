@@ -15,7 +15,7 @@ import './AllCocktails.css';
 
 
 function AllCocktails() {
-    const {letter, cocktail, setCocktail} = useCocktailContext();
+    const {letter, cocktail, setCocktail , setPageTitle} = useCocktailContext();
 
     useEffect(() => {
 
@@ -28,9 +28,12 @@ function AllCocktails() {
                 console.error(e);
             }
         }
-
         fetchData()
     }, [letter]);
+
+    useEffect(() =>{
+        setPageTitle('All Cocktails');
+    },[])
 
     return (
         <div className="fullpage-container">

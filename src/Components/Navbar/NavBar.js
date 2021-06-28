@@ -14,12 +14,13 @@ import login from '../../Assets/Icons/NavIcons/login.png';
 import register from '../../Assets/Icons/NavIcons/register.png';
 import signout from '../../Assets/Icons/NavIcons/signout.png';
 import {useAuth} from "../../Context/AuthContext";
+import {useCocktailContext} from "../../Context/CocktailContext";
 
 function Navbar(props) {
     const {logOut} = useAuth()
     const [openMenu, setOpenMenu] = useState(false);
     const [screenWidth, setScreenWidth] = useState(window.innerWidth);
-
+    const {pageTitle, cocktail} = useCocktailContext();
 
     function menuopener() {
         setOpenMenu(!openMenu);
@@ -43,6 +44,10 @@ function Navbar(props) {
 
     return (
         <nav>
+            <div className="mobile-title-container">
+                {!openMenu && (<h1 className="mobile-title">{pageTitle}</h1>)}
+            </div>
+
             {(openMenu || screenWidth > 990) && (
                 <ul className="navlist">
 

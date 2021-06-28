@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useEffect} from "react";
 import {Link} from "react-router-dom";
 import ingredientData from "../../Data/SortByIngredient.json";
 import ingredientIcon from '../../Assets/Icons/ListIcons/ingredient-icon.png';
@@ -6,8 +6,16 @@ import MainBackButton from "../../Components/Buttons/MainBackButton/MainBackButt
 import CocktailCardLogo from "../../Components/CocktailCardLogo/CocktailCardLogo";
 import HelpButton from "../../Components/Buttons/HelpButton/HelpButton";
 import '../../App.css';
+import {useCocktailContext} from "../../Context/CocktailContext";
 
 function CocktailByIngredient() {
+
+    const {setPageTitle} = useCocktailContext();
+
+    useEffect(() =>{
+        setPageTitle('Cocktail By Ingredient');
+    },[])
+
     return (
         <div className="fullpage-container">
             <div className="left-section-container">

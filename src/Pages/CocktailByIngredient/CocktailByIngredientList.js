@@ -7,8 +7,10 @@ import cocktailIcon from '../../Assets/Icons/ListIcons/cocktail-icon.png';
 import CocktailCardLogo from "../../Components/CocktailCardLogo/CocktailCardLogo";
 import HelpButton from "../../Components/Buttons/HelpButton/HelpButton";
 import '../../App.css';
+import {useCocktailContext} from "../../Context/CocktailContext";
 
 function CocktailByIngredientList() {
+    const {setPageTitle} = useCocktailContext();
     const params = useParams();
     const [ingredientlist, setIngredientlist] = useState([])
 
@@ -25,6 +27,9 @@ function CocktailByIngredientList() {
         fetchIngredientCocktail()
     }, []);
 
+    useEffect(() =>{
+        setPageTitle(params.result + ' Cocktails');
+    },[])
 
     return (
         <>

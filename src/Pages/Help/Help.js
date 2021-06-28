@@ -1,10 +1,17 @@
-import React from "react";
+import React, {useEffect} from "react";
 import '../../App.css';
 import './Help.css';
 import HelpSection from "../../Components/HelpSection/HelpSection";
 import helpImg from '../../Assets/Logo/App-Logo-color.png';
+import {useCocktailContext} from "../../Context/CocktailContext";
 
 function Help() {
+    const {setPageTitle} = useCocktailContext();
+
+    useEffect(() =>{
+        setPageTitle("Help");
+    },[])
+
     return (
         <div className="fullpage-container">
             <div className="help-box">

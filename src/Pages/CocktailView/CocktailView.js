@@ -13,7 +13,7 @@ import CocktailName from "../../Components/Titles/CocktailName/CocktailName";
 function CocktailView() {
 
     const params = useParams();
-    const {cocktail, setCocktail} = useCocktailContext();
+    const {cocktail, setCocktail, setPageTitle} = useCocktailContext();
 
     useEffect(() => {
         async function fetchCocktailView() {
@@ -23,6 +23,7 @@ function CocktailView() {
             } catch (e) {
                 console.error(e);
             }
+            setPageTitle('cocktailname')
         }
 
         fetchCocktailView();

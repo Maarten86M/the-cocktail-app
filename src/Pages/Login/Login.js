@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React, {useEffect, useState} from "react";
 import {Link, useHistory} from "react-router-dom";
 import {useAuth} from "../../Context/AuthContext";
 import CocktailCardLogo from "../../Components/CocktailCardLogo/CocktailCardLogo";
@@ -7,9 +7,10 @@ import MainButton from "../../Components/Buttons/MainButton/MainButton";
 import './Login.css';
 import '../../App.css';
 import register from "../../Assets/Icons/NavIcons/register.png";
+import {useCocktailContext} from "../../Context/CocktailContext";
 
 function Login() {
-
+    const {setPageTitle} = useCocktailContext();
     const history = useHistory();
     const {
         setUser,
@@ -40,6 +41,11 @@ function Login() {
         }
 
     }
+
+    useEffect(() =>{
+        setPageTitle("Login");
+    },[])
+
 
     return (
         <div className="fullpage-container">

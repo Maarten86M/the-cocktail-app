@@ -1,11 +1,13 @@
-import React from "react";
+import React, {useEffect} from "react";
 import {useHistory} from "react-router-dom";
 import {useAuth} from "../../Context/AuthContext";
 import CocktailCardLogo from "../../Components/CocktailCardLogo/CocktailCardLogo";
 import HelpButton from "../../Components/Buttons/HelpButton/HelpButton";
 import '../../App.css';
+import {useCocktailContext} from "../../Context/CocktailContext";
 
 function Register() {
+    const {setPageTitle} = useCocktailContext();
     const history = useHistory();
     const {
         setUser,
@@ -35,6 +37,10 @@ function Register() {
             setFormError(event.message);
         }
     }
+
+    useEffect(() =>{
+        setPageTitle("Register");
+    },[])
 
     return (
         <div className="fullpage-container">

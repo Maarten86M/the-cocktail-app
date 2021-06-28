@@ -7,8 +7,10 @@ import CocktailCardLogo from "../../Components/CocktailCardLogo/CocktailCardLogo
 import HelpButton from "../../Components/Buttons/HelpButton/HelpButton";
 import cocktailIcon from '../../Assets/Icons/ListIcons/cocktail-icon.png';
 import '../../App.css';
+import {useCocktailContext} from "../../Context/CocktailContext";
 
 function CocktailByAlcoholList() {
+    const {setPageTitle} = useCocktailContext();
     const params = useParams();
     const [alcohollist, setAlcohollist] = useState([])
 
@@ -24,6 +26,10 @@ function CocktailByAlcoholList() {
 
         fetchAlcoholCocktail()
     }, []);
+
+    useEffect(() =>{
+        setPageTitle(params.result + ' Cocktails');
+    },[])
 
     return (
         <>

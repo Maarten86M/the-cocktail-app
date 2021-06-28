@@ -1,12 +1,19 @@
-import React from "react";
+import React, {useEffect} from "react";
 import CocktailLoader from "../../Components/CocktailLoader/CocktailLoader";
 import {useAuth} from "../../Context/AuthContext";
 import CocktailCardLogo from "../../Components/CocktailCardLogo/CocktailCardLogo";
 import '../../App.css';
+import {useCocktailContext} from "../../Context/CocktailContext";
 
 function Profile() {
 
     const {user} = useAuth();
+    const {setPageTitle} = useCocktailContext();
+
+    useEffect(() =>{
+        setPageTitle("Your Profile");
+    },[])
+
 
     return (
         <div className="fullpage-container">

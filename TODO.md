@@ -13,6 +13,9 @@ TO DO LIST:
   - Cocktail Loader. De loading h1 ombouwen naar deze
   
 - mobile responsive (header met titel van de pagina of cocktail. Dus hier moet een setter functie voor komen.)
+- cocktail naam bij mobiele weergave nog niet correct  
+
+
 - login en register en forgot wachtwoord uitlijnen. 
 
 -forgotpasword .
