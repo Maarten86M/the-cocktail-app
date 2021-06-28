@@ -1,8 +1,8 @@
 .loader-border {
     border-radius: 50% ;
     border: 2px solid var(--background-color);
-    width: 374px;
-    height: 374px;
+    width: var(--logo-width-desktop);
+    height: var(--logo-height-desktop);
     box-shadow: 1px 1px 2px 1px var(--background-color);
     background-color: var(--logo-background);
     display: flex;
@@ -11,7 +11,20 @@
 }
 
 .loader-img {
-    max-width: 374px;
-    max-height: 374px;
+    max-width: var(--logo-width-desktop);;
+    max-height: var(--logo-height-desktop);
     border-radius: 50%;
+}
+
+@media screen and (max-width: 990px){
+
+    .loader-border{
+        width: var(--logo-width-mobile);
+        height: var(--logo-height-mobile);
+    }
+
+    .loader-img{
+        max-width: 241px;
+        max-height: 241px;
+    }
 }

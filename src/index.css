@@ -8,7 +8,6 @@
 :root {
     --nav-color: hsl(161, 77%, 41%);
     --nav-line: hsl(216, 36%, 41%);
-
     --background-color: hsl(189, 79%, 28%);
     --main-font: Quicksand;
     --help-field-color: hsl(66, 75%, 81%);
@@ -34,6 +33,10 @@
     --button-shadow: 2px 2px 3px 1px var(--background-color);
     --logo-background: hsl(190, 78%, 68%);
     --logo-color: hsl(0, 0%, 0%);
+    --logo-height-desktop: 374px;
+    --logo-width-desktop: 374px;
+    --logo-height-mobile: 241px;
+    --logo-width-mobile: 241px;
 }
 
 body {

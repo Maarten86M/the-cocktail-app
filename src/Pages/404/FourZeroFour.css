@@ -6,7 +6,18 @@
     justify-content: center;
 }
 
+.oops-text {
+    text-align: center;
+}
+
 .fourzerofour {
     max-width: 550px;
     max-height: 550px;
+}
+
+@media screen and (max-width: 990px){
+    .fourzerofour {
+        max-width: 350px;
+        max-height: 350px;
+    }
 }

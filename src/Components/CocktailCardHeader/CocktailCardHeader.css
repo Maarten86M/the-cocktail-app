@@ -12,3 +12,10 @@
     max-height: 374px;
     box-shadow: 5px 4px 9px 2px var(--background-color);
 }
+
+@media screen and (max-width: 990px){
+    .cocktailIMG {
+        max-width: 241px;
+        max-height: 241px;
+    }
+}
