@@ -3,15 +3,17 @@ TO DO LIST:
 - try and catch. Stel dat de data niet opgehaald kan worden. 
 - inlog systeem (Firebase?) & misschien firestore voor de namen.
   - de authencitaded uit app.js bij de Public en private route ombouwen met context. (is straks overbodig)
-  - firebase variabele in .env
     - succesvol geregistreerd melding aanmaken.
   
   - pagina hoogte algemeen aanpassen. Nu zie je nog een scrollbar
   
-- error meldingen (laden api) zie random cocktail
+- error meldingen (laden api) zie random cocktail, ook setErrors vanuit de catch.
 - loading meldingen (laden api) zie random cocktail
+  - zorgen dat de foutmeldingen bij het inloggen niet meegaan vanuit vorige paginas
   - Cocktail Loader. De loading h1 ombouwen naar deze
   
+-forgotpasword .
+
 Search
 
 - helpfield bij welcome aanpssen. Staat net te hoog.
@@ -67,7 +69,7 @@ Wat kan er nog doorontwikkeld worden?
 
 Adobe XD: 
 - lettertype nog aanpassen.
-- FOUMELDINGEN IN HET DESIGN
+- FOUMELDINGEN IN HET DESIGN toevoegen!
 
 TO DO VOOR EINDOPDTRACHT
 

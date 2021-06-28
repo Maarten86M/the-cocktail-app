@@ -1,13 +1,12 @@
 import firebase from "firebase";
 
 const app = firebase.initializeApp({
-    apiKey: "AIzaSyC5eEBS6U_WGhCFY3n8vPDO9Ixnp1kgrLY",
-    authDomain: "the-cocktail-app-1d147.firebaseapp.com",
-    databaseURL: "https://the-cocktail-app-1d147.firebaseio.com",
-    projectId: "the-cocktail-app-1d147",
-    storageBucket: "the-cocktail-app-1d147.appspot.com",
-    messagingSenderId: "384859297849",
-    appId: "1:384859297849:web:6068c729a73cf88c0555e8"
+    apiKey: process.env.REACT_APP_FIREBASE_API_KEY,
+    authDomain: process.env.REACT_APP_AUTH_DOMAIN,
+    projectId: process.env.REACT_APP_PROJECT_ID,
+    storageBucket: process.env.REACT_APP_STORAGE_BUCKET,
+    messagingSenderId: process.env.REACT_APP_MESSAGING_SENDER_ID,
+    appId: process.env.REACT_APP_APP_ID
 })
 
 export default app;

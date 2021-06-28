@@ -11,12 +11,13 @@ import register from "../../Assets/Icons/NavIcons/register.png";
 function Login() {
 
     const history = useHistory();
-    const {setUser, email, setEmail, password, setPassword, formError, setFormError, logIn} = useAuth();
-
-    // const {succes, setSucces} = useState(false);
+    const {setUser, email, setEmail, password, setPassword, formError, setFormError, logIn,succes, setSucces} = useAuth();
 
     async function onSubmit(event) {
         event.preventDefault();
+        setSucces('');
+        setFormError('')
+
         try {
             const userCredential = await logIn(email, password);
             console.log("Logged in:", userCredential);
