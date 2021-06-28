@@ -6,27 +6,21 @@ TO DO LIST:
   - firebase variabele in .env
     - succesvol geregistreerd melding aanmaken.
   
+  - pagina hoogte algemeen aanpassen. Nu zie je nog een scrollbar
+  
 - error meldingen (laden api) zie random cocktail
 - loading meldingen (laden api) zie random cocktail
   - Cocktail Loader. De loading h1 ombouwen naar deze
   
 Search
 
-
 - helpfield bij welcome aanpssen. Staat net te hoog.
 - img groote van het gebroken glass aanpassen is te klein i.v.m. de andere
 - search text error aanpssen in styling
- - pageStylin ombouwen naar app.css 
-   
   - Random cocktails moeten pas starten wanneer de button wordt aangeklikt
-
   
-- Uittekenen van de grid!! en een handige (herbruikbare CSS) Dus 1 css voor de pagina's zodat het overal hetzelfde is.
-
-
 -diable op de buttons instellen als we aan het zoeken zijn.
   disable en foutmlding bij zoeken. Dus wanneer er bijv geen zoekresultaat is.
-- op dit moment zoeken we alleen nog op ingredient (OOk op naam toevoegen)SEARCH
 
   - de cocktail (useState moet weer op 0 gezet worden. Zodat oude resultaten niet weergegeven worden)
 
@@ -43,9 +37,7 @@ Search
 
   - all cocktails, de next en back button controleren.
 - 2 context maken. 1 voor user en 1 voor cocktail info. Goed bekijken waar deze omheen gezet dienen te worden. !!Zie voorbeeld rein les.
-
-
-
+ALLES GOED NALOPEN OF ER NOG COMPONENTEN OMGEBOUWD KUNNEN WRODEN. 
 
 Code beslissingen:
 - de info voor het help field in een json bestand gezet zodat mijn code niet vervuild met infomatie. 
