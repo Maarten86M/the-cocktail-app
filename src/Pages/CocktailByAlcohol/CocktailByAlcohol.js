@@ -5,7 +5,7 @@ import alcoholIcon from '../../Assets/Icons/ListIcons/alcohol-icon.png';
 import MainBackButton from "../../Components/Buttons/MainBackButton/MainBackButton";
 import CocktailCardLogo from "../../Components/CocktailCardLogo/CocktailCardLogo";
 import HelpButton from "../../Components/Buttons/HelpButton/HelpButton";
-import '../pageStyling.css';
+import '../../App.css';
 
 function CocktailByAlcohol() {
     return (

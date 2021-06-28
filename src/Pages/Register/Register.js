@@ -1,9 +1,9 @@
 import React from "react";
 import {useHistory} from "react-router-dom";
 import {useAuth} from "../../Context/AuthContext";
-import '../pageStyling.css'
 import CocktailCardLogo from "../../Components/CocktailCardLogo/CocktailCardLogo";
 import HelpButton from "../../Components/Buttons/HelpButton/HelpButton";
+import '../../App.css';
 
 function Register() {
     const history = useHistory();

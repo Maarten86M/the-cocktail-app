@@ -6,7 +6,7 @@ import {useCocktailContext} from "../../Context/CocktailContext";
 import CocktailCardLogo from "../../Components/CocktailCardLogo/CocktailCardLogo";
 import HelpButton from "../../Components/Buttons/HelpButton/HelpButton";
 import search from '../../Assets/Icons/NavIcons/search.png';
-import '../pageStyling.css';
+import '../../App.css';
 
 function SearchCocktails() {
     const history = useHistory();

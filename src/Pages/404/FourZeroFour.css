@@ -1,0 +1,12 @@
+.fourzerofour-page {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.fourzerofour {
+    max-width: 550px;
+    max-height: 550px;
+}

@@ -12,7 +12,7 @@ import AllCocktails from "./Pages/AllCocktails/AllCocktails";
 import Profile from "./Pages/Profile/Profile";
 import Help from "./Pages/Help/Help";
 import Home from "./Pages/Home/Home";
-import FourZeroFour from "./Pages/FourZeroFour";
+import FourZeroFour from "./Pages/404/FourZeroFour";
 import Welcome from "./Pages/Welcome/Welcome";
 import Login from "./Pages/Login/Login";
 import Register from "./Pages/Register/Register";

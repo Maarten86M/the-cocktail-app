@@ -5,11 +5,11 @@ import CocktailCardHeader from "../../Components/CocktailCardHeader/CocktailCard
 import RandomizeButton from "../../Components/Buttons/RandomizeButton/RandomizeButton";
 import {useCocktailContext} from "../../Context/CocktailContext";
 import CocktailLoader from "../../Components/CocktailLoader/CocktailLoader";
-import '../pageStyling.css';
 import CocktailCardLogo from "../../Components/CocktailCardLogo/CocktailCardLogo";
 import CocktailLoaderOops from "../../Components/CocktailLoader/CocktailLoaderOops";
 import HelpButton from "../../Components/Buttons/HelpButton/HelpButton";
 import CocktailName from "../../Components/Titles/CocktailName/CocktailName";
+import '../../App.css';
 
 function RandomCocktails() {
     const {

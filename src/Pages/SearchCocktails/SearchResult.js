@@ -1,15 +1,14 @@
 import React, {useEffect} from "react";
-import {useParams} from 'react-router-dom';
-import MainButton from "../../Components/Buttons/MainButton/MainButton";
-import search from '../../Assets/Icons/NavIcons/search.png';
 import axios from "axios";
-import {Link} from 'react-router-dom';
+import {useParams, Link} from 'react-router-dom';
+import MainButton from "../../Components/Buttons/MainButton/MainButton";
 import {useCocktailContext} from "../../Context/CocktailContext";
 import CocktailLoaderOops from "../../Components/CocktailLoader/CocktailLoaderOops";
-import cocktailIcon from '../../Assets/Icons/ListIcons/cocktail-icon.png';
-import '../pageStyling.css';
 import CocktailCardLogo from "../../Components/CocktailCardLogo/CocktailCardLogo";
 import HelpButton from "../../Components/Buttons/HelpButton/HelpButton";
+import cocktailIcon from '../../Assets/Icons/ListIcons/cocktail-icon.png';
+import search from '../../Assets/Icons/NavIcons/search.png';
+import '../../App.css';
 
 function SearchResult() {
     const params = useParams();

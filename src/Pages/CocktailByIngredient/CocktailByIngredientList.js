@@ -6,7 +6,7 @@ import CocktailLoaderOops from "../../Components/CocktailLoader/CocktailLoaderOo
 import cocktailIcon from '../../Assets/Icons/ListIcons/cocktail-icon.png';
 import CocktailCardLogo from "../../Components/CocktailCardLogo/CocktailCardLogo";
 import HelpButton from "../../Components/Buttons/HelpButton/HelpButton";
-import '../pageStyling.css';
+import '../../App.css';
 
 function CocktailByIngredientList() {
     const params = useParams();

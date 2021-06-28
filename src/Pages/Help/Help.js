@@ -1,5 +1,5 @@
 import React from "react";
-import '../pageStyling.css';
+import '../../App.css';
 import './Help.css';
 import HelpSection from "../../Components/HelpSection/HelpSection";
 import helpImg from '../../Assets/Logo/App-Logo-color.png';

@@ -1,8 +1,8 @@
 import React from "react";
 import CocktailLoader from "../../Components/CocktailLoader/CocktailLoader";
 import {useAuth} from "../../Context/AuthContext";
-import '../pageStyling.css';
 import CocktailCardLogo from "../../Components/CocktailCardLogo/CocktailCardLogo";
+import '../../App.css';
 
 function Profile() {
 

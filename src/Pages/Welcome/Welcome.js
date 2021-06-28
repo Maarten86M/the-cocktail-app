@@ -1,17 +1,16 @@
 import React from "react";
+import {useAuth} from "../../Context/AuthContext";
+import MainButton from "../../Components/Buttons/MainButton/MainButton";
+import HelpButton from "../../Components/Buttons/HelpButton/HelpButton";
+import CocktailCardLogo from "../../Components/CocktailCardLogo/CocktailCardLogo";
 import search from '../../Assets/Icons/NavIcons/search.png';
 import random from '../../Assets/Icons/NavIcons/dice.png';
 import alcohol from '../../Assets/Icons/NavIcons/alcohol.png';
 import fruit from '../../Assets/Icons/NavIcons/fruit.png';
 import cocktail from '../../Assets/Icons/NavIcons/cocktail.png';
 import profile from '../../Assets/Icons/NavIcons/profile.png';
-import MainButton from "../../Components/Buttons/MainButton/MainButton";
-import HelpButton from "../../Components/Buttons/HelpButton/HelpButton";
-import {useAuth} from "../../Context/AuthContext";
-import '../pageStyling.css';
+import '../../App.css';
 import './Welcome.css';
-import CocktailCardLogo from "../../Components/CocktailCardLogo/CocktailCardLogo";
-
 
 function Welcome() {
     const {user} = useAuth();

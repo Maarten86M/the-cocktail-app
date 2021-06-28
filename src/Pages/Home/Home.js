@@ -1,5 +1,5 @@
 import React, {useState, useEffect} from "react";
-import '../paginatijdelijkaanpassenperpagina.css';
+import '../../App.css';
 import CocktailLoaderLong from "../../Components/CocktailLoader/CocktailLoaderLong";
 import {useHistory} from "react-router-dom";
 import './Home.css';

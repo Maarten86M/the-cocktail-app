@@ -1,11 +1,11 @@
 import React, {useState} from "react";
-import './Login.css';
 import {Link, useHistory} from "react-router-dom";
 import {useAuth} from "../../Context/AuthContext";
-import '../pageStyling.css';
 import CocktailCardLogo from "../../Components/CocktailCardLogo/CocktailCardLogo";
 import HelpButton from "../../Components/Buttons/HelpButton/HelpButton";
 import MainButton from "../../Components/Buttons/MainButton/MainButton";
+import './Login.css';
+import '../../App.css';
 import register from "../../Assets/Icons/NavIcons/register.png";
 
 function Login() {

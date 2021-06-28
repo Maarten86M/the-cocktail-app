@@ -4,7 +4,7 @@ import CocktailCard from "../../Components/CocktailCard/CocktailCard";
 import CocktailCardHeader from "../../Components/CocktailCardHeader/CocktailCardHeader";
 import {useParams} from 'react-router-dom';
 import {useCocktailContext} from "../../Context/CocktailContext";
-import '../pageStyling.css';
+import '../../App.css';
 import CocktailCardLogo from "../../Components/CocktailCardLogo/CocktailCardLogo";
 import HelpButton from "../../Components/Buttons/HelpButton/HelpButton";
 import CocktailLoaderOops from "../../Components/CocktailLoader/CocktailLoaderOops";
