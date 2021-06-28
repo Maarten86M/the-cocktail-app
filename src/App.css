@@ -2,9 +2,8 @@ h1 {
     color: var(--text-color);
 }
 
-
 .fullpage-container {
-    padding-top: 60px;
+    padding-top: 50px;
     width: 100%;
     display: flex;
     flex-direction: row;
@@ -69,15 +68,22 @@ h1 {
         height: 260px;
     }
 
-    .right-section-container{
+    .right-section-container {
         display: flex;
         flex-direction: column;
         align-items: center;
         width: 100%;
     }
 
+    .right-box-container {
+        padding-top: 0px;
+    }
+
     .CocktailCard-container {
         padding-top: 20px;
     }
 
+    .scrollbar {
+        max-height: 345px;
+    }
 }

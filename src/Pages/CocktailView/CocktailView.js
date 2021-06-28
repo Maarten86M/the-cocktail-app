@@ -40,7 +40,6 @@ function CocktailView() {
 
             <div className="right-section-container">
                 <div className="right-box-container">
-                    <h1>bla bla</h1>
                     <div>
                         <HelpButton content={9}/>
                     </div>

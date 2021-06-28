@@ -12,6 +12,9 @@ TO DO LIST:
   - zorgen dat de foutmeldingen bij het inloggen niet meegaan vanuit vorige paginas
   - Cocktail Loader. De loading h1 ombouwen naar deze
   
+- mobile responsive (header met titel van de pagina of cocktail. Dus hier moet een setter functie voor komen.)
+- login en register en forgot wachtwoord uitlijnen. 
+
 -forgotpasword .
 
 Search

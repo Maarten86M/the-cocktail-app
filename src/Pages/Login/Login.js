@@ -11,7 +11,18 @@ import register from "../../Assets/Icons/NavIcons/register.png";
 function Login() {
 
     const history = useHistory();
-    const {setUser, email, setEmail, password, setPassword, formError, setFormError, logIn,succes, setSucces} = useAuth();
+    const {
+        setUser,
+        email,
+        setEmail,
+        password,
+        setPassword,
+        formError,
+        setFormError,
+        logIn,
+        succes,
+        setSucces
+    } = useAuth();
 
     async function onSubmit(event) {
         event.preventDefault();
@@ -45,8 +56,9 @@ function Login() {
                     <h3>{formError}</h3>
 
                     <div className="input-container">
-                        <div><HelpButton content={0}/></div>
+
                         <form onSubmit={onSubmit}>
+                            <div><HelpButton content={0}/></div>
                             <input
                                 type="email"
                                 name="email"
@@ -62,15 +74,17 @@ function Login() {
                                 value={password}
                                 onChange={event => setPassword(event.target.value)}
                             />
-
                             <input type="submit" value="login"/>
+                            <Link to="/forgotpassword"><p>Forgot your password?</p></Link>
+
+                            <MainButton
+                                name="Register Now"
+                                icon={register}
+                                link={"/register"}
+                            />
                         </form>
-                        <Link to="/forgotpassword"><p>Forgot your password?</p></Link>
-                        <MainButton
-                            name="Register Now"
-                            icon={register}
-                            link={"/register"}
-                        />
+
+
                     </div>
                 </div>
             </div>

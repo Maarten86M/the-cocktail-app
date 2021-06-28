@@ -19,3 +19,9 @@
 .randomizebutton:hover {
     background-color: var(--button-border-color);
 }
+
+@media screen and (max-width: 990px){
+    .randomizebutton{
+        margin-bottom: 10px;
+    }
+}

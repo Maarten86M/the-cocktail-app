@@ -2,9 +2,10 @@ p {
     color: white;
 }
 
-.input-container{
+.input-container {
     width: 300px;
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
 }
+

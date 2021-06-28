@@ -56,7 +56,6 @@ function RandomCocktails() {
 
             <div className="right-section-container">
                 <div className="right-box-container">
-                    <h1>Random Cocktail</h1>
                     <div>
                     <HelpButton content={6}/>
                     </div>

@@ -4,3 +4,9 @@
     font-family: var(--main-font);
     padding-bottom: 40px;
 }
+
+@media screen and (max-width: 990px){
+    .cocktailname{
+        padding-bottom: 10px;
+    }
+}
