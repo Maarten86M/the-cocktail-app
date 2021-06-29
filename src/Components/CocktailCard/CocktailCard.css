@@ -41,6 +41,10 @@
 
 @media screen and (max-width: 990px){
     .ingredient-container{
-        width: 300px;
+        width: 280px;
     }
+    .ingredient-scrollbar{
+        max-height: 320px;
+    }
+
 }

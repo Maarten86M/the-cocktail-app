@@ -44,7 +44,7 @@ function CocktailByAlcoholList() {
 
                 <div className="right-section-container">
                     <div className="right-box-container">
-
+                        <div className="cocktaillist">
                             <div>
                                 <HelpButton content={9}/>
                             </div>
@@ -61,6 +61,7 @@ function CocktailByAlcoholList() {
                                         </Link>)}
                                     </div>)}
                             </div>
+                        </div>
                             <MainBackButton/>
 
                     </div>

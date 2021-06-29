@@ -60,6 +60,9 @@ h1 {
     text-align: center;
 }
 
+.cocktaillist{
+    height: 648px;
+}
 
 /*MOBILE RESPONSIVE*/
 @media screen and (max-width: 990px) {
@@ -92,10 +95,13 @@ h1 {
     }
 
     .scrollbar {
-        max-height: 305px;
+        max-height: 220px;
     }
 
     .list-title {
         width: 340px;
+    }
+    .cocktaillist{
+        height: 420px;
     }
 }

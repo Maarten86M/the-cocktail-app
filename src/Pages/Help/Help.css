@@ -4,6 +4,13 @@
     margin-right: 150px;
 }
 
+.help-footer-button{
+    padding-top: 40px;
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+}
+
 @media screen and (max-width: 990px) {
     .help-box {
         margin-left: 20px;

@@ -3,16 +3,18 @@ import CocktailLoader from "../../Components/CocktailLoader/CocktailLoader";
 import {useAuth} from "../../Context/AuthContext";
 import CocktailCardLogo from "../../Components/CocktailCardLogo/CocktailCardLogo";
 import '../../App.css';
+import './Profile.css';
 import {useCocktailContext} from "../../Context/CocktailContext";
+import MainBackButton from "../../Components/Buttons/MainBackButton/MainBackButton";
 
 function Profile() {
 
     const {user} = useAuth();
     const {setPageTitle} = useCocktailContext();
 
-    useEffect(() =>{
+    useEffect(() => {
         setPageTitle("Your Profile");
-    },[])
+    }, [])
 
 
     return (
@@ -24,9 +26,11 @@ function Profile() {
             </div>
             <div className="right-section-container">
                 <div className="right-box-container">
-                    <h1>Profile</h1>
-                    <h3>{user.uid}</h3>
-                    <h3>{user.email}</h3>
+                    <div className="profile-info">
+                        <h1>Profile</h1>
+                        <h3>{user.email}</h3>
+                        <MainBackButton/>
+                    </div>
                 </div>
             </div>
         </div>

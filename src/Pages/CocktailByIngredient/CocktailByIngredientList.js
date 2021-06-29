@@ -27,34 +27,34 @@ function CocktailByIngredientList() {
         fetchIngredientCocktail()
     }, []);
 
-    useEffect(() =>{
+    useEffect(() => {
         setPageTitle(params.result + ' Cocktails');
-    },[])
+    }, [])
 
     return (
         <>
             <div className="fullpage-container">
 
-                    <div className="left-section-container">
-                        <div className="CocktailCard-container">
-                            {ingredientlist === "None Found" ? (
-                                <CocktailLoaderOops/>
-                            ) : (<CocktailCardLogo/>)}
-                        </div>
+                <div className="left-section-container">
+                    <div className="CocktailCard-container">
+                        {ingredientlist === "None Found" ? (
+                            <CocktailLoaderOops/>
+                        ) : (<CocktailCardLogo/>)}
                     </div>
+                </div>
 
                 <div className="right-section-container">
                     <div className="right-box-container">
-                        <div className="Cocktaillist">
+                        <div className="cocktaillist">
                             <div>
                                 <HelpButton content={9}/>
                             </div>
                             <h1 className="list-title">Cocktails with: {params.result} </h1>
                             <div>
                                 {ingredientlist === "None Found" ? (
-                                    <div>
+                                    <>
                                         <h1>Sorry, nothing Found</h1>
-                                    </div>
+                                    </>
                                 ) : (
                                     <div className="scrollbar">
                                         {ingredientlist.map(cocktail => <Link to={`/cocktailpage/${cocktail.idDrink}`}>
@@ -62,8 +62,8 @@ function CocktailByIngredientList() {
                                         </Link>)}
                                     </div>)}
                             </div>
-                            <MainBackButton/>
                         </div>
+                        <MainBackButton/>
                     </div>
                 </div>
             </div>

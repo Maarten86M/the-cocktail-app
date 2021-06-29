@@ -16,8 +16,7 @@ TO DO LIST:
 - alle buttons nalopen op ze mobiel schaalbaar zijn!
 - mobiele titels nalopen op grote
 -2de font erbij zoeken en aanpassen op de site en adobe xd
-  - button toevoegen op de help pagina.
-    - button toevoegen aan profile pagina
+
     
   - alles nalopen vanuit de edhub
   - navbar nakijken, blijft soms mobiel open staan als er vanuit desktop
@@ -55,6 +54,11 @@ Search
   - all cocktails, de next en back button controleren.
 - 2 context maken. 1 voor user en 1 voor cocktail info. Goed bekijken waar deze omheen gezet dienen te worden. !!Zie voorbeeld rein les.
 ALLES GOED NALOPEN OF ER NOG COMPONENTEN OMGEBOUWD KUNNEN WRODEN. 
+-alle gele foutmeldingen ui developerstools doorlopen
+
+-mobil nalopen.op basis van een iphone x
+
+
 
 Code beslissingen:
 - de info voor het help field in een json bestand gezet zodat mijn code niet vervuild met infomatie. 

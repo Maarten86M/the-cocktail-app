@@ -1,0 +1,10 @@
+.cocktail-view{
+    width: 400px;
+    height: 590px;
+}
+
+@media screen and (max-width: 990px){
+    .cocktail-view {
+      height: 380px;
+    }
+}
