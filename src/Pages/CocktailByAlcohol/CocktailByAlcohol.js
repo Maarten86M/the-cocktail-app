@@ -25,10 +25,11 @@ const {setPageTitle} = useCocktailContext();
 
             <div className="right-section-container">
                 <div className="right-box-container">
-                    <h1>Cocktail By Alcohol</h1>
                     <div>
                         <HelpButton content={8}/>
                     </div>
+                    <h1>Cocktail By Alcohol</h1>
+
                     <div className="scrollbar">
                         {alcoholData.map(item => <Link to={`/cocktailbyalcohollist/${item.strIngredient1}`}>
                             <p><img

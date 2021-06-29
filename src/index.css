@@ -29,6 +29,7 @@
     --button-font-weight: 500;
     --button-width: 400px;
     --button-height: 45px;
+    --button-width-mobile: 325px;
     --button-border-radius:10px;
     --button-shadow: 2px 2px 3px 1px var(--background-color);
     --logo-background: hsl(190, 78%, 68%);

@@ -52,6 +52,11 @@ h1 {
     border: 3px solid var(--text-color);
 }
 
+.list-title {
+    width: 400px;
+    text-align: center;
+}
+
 
 /*MOBILE RESPONSIVE*/
 @media screen and (max-width: 990px) {
@@ -85,5 +90,9 @@ h1 {
 
     .scrollbar {
         max-height: 345px;
+    }
+
+    .list-title {
+        width: 340px;
     }
 }

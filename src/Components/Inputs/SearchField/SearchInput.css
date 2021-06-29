@@ -9,3 +9,9 @@ input{
     font-family: var(--main-font);
     margin-bottom: 45px;
 }
+
+@media screen and (max-width: 990px){
+    input {
+        width: var(--button-width-mobile);
+    }
+}

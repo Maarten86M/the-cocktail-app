@@ -1,5 +1,8 @@
 .button-header {
     display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 20px;
 }
 
 .scrollbar-all{
@@ -25,7 +28,11 @@
 }
 
 @media screen and (max-height: 990px){
+    .button-header {
+        width: 320px;
+    }
     .scrollbar-all{
+        margin-bottom: 60px;
         max-height: 255px;
     }
 }

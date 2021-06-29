@@ -14,8 +14,16 @@ TO DO LIST:
   
 - mobile responsive (header met titel van de pagina of cocktail. Dus hier moet een setter functie voor komen.)
 - cocktail naam bij mobiele weergave nog niet correct  
-
-
+- alle buttons nalopen op ze mobiel schaalbaar zijn!
+- ingredient icoon naar 93 mobiel
+- mobiele titels nalopen op grote
+-2de font erbij zoeken en aanpassen op de site en adobe xd
+  - button toevoegen op de help pagina.
+  - alles nalopen vanuit de edhub
+  - navbar nakijken, blijft soms mobiel open staan als er vanuit desktop
+- button bij search result toevoegen.
+- random cocktail button uitlijnen
+  
 - login en register en forgot wachtwoord uitlijnen. 
 
 -forgotpasword .

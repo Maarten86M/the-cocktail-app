@@ -10,6 +10,7 @@ import CocktailLoaderOops from "../../Components/CocktailLoader/CocktailLoaderOo
 import HelpButton from "../../Components/Buttons/HelpButton/HelpButton";
 import CocktailName from "../../Components/Titles/CocktailName/CocktailName";
 import '../../App.css';
+import './RandomCocktails.css';
 
 function RandomCocktails() {
     const {
@@ -47,23 +48,26 @@ function RandomCocktails() {
         <div className="fullpage-container">
             <div className="left-section-container">
                 <div className="CocktailCard-container">
-                    {errors && (<CocktailLoaderOops />)}
+                    {errors && (<CocktailLoaderOops/>)}
                     {loading ? (
-                        <CocktailLoader />
-                    ):(<CocktailCardHeader/>)}
+                        <CocktailLoader/>
+                    ) : (<CocktailCardHeader/>)}
 
                 </div>
             </div>
 
             <div className="right-section-container">
                 <div className="right-box-container">
-                    <div>
-                    <HelpButton content={6}/>
+                    <div className="help-container">
+                        <HelpButton content={6}/>
                     </div>
                     <RandomizeButton/>
-                    <CocktailName />
                     <div>
-                        <CocktailCard/>
+
+                        <CocktailName/>
+                        <div>
+                            <CocktailCard/>
+                        </div>
                     </div>
                 </div>
             </div>

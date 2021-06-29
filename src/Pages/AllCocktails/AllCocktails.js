@@ -44,15 +44,17 @@ function AllCocktails() {
             </div>
             <div className="right-section-container">
                 <div className="right-box-container">
-                    <h1>All Cocktails</h1>
                     <div>
                         <HelpButton content={9}/>
                     </div>
+                    <h1>All Cocktails</h1>
+
                     <div className="button-header">
                         <BackButton/>
                         <LetterView/>
                         <NextButton/>
                     </div>
+
                     {cocktail ? (
                         <div className="scrollbar-all">
                             {cocktail.map(cocktail => <Link to={`/cocktailpage/${cocktail.idDrink}`}>

@@ -26,10 +26,10 @@ function CocktailByIngredient() {
 
             <div className="right-section-container">
                 <div className="right-box-container">
-                    <h1>Cocktail By Ingredient</h1>
                     <div>
                         <HelpButton content={10}/>
                     </div>
+                    <h1>Cocktail By Ingredient</h1>
                     <div className="scrollbar">
                         {ingredientData.map(item => <Link to={`/cocktailbyingredientlist/${item.strIngredient1}`}>
                             <p><img src={ingredientIcon} alt="Ingredient Icon"/>{item.strIngredient1}</p></Link>)}

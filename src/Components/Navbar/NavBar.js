@@ -7,7 +7,7 @@ import search from '../../Assets/Icons/NavIcons/search.png';
 import random from '../../Assets/Icons/NavIcons/dice.png';
 import alcohol from '../../Assets/Icons/NavIcons/alcohol.png';
 import fruit from '../../Assets/Icons/NavIcons/fruit.png';
-import cocktail from '../../Assets/Icons/NavIcons/cocktail.png';
+import cocktails from '../../Assets/Icons/NavIcons/cocktail.png';
 import profile from '../../Assets/Icons/NavIcons/profile.png';
 import help from '../../Assets/Icons/NavIcons/help.png';
 import login from '../../Assets/Icons/NavIcons/login.png';
@@ -95,7 +95,7 @@ function Navbar(props) {
                                 onClick={menuopener}
                             />
                             <NavBarItem
-                                icon={cocktail}
+                                icon={cocktails}
                                 tittle="All Cocktails"
                                 to="/allcocktails"
                                 onClick={menuopener}

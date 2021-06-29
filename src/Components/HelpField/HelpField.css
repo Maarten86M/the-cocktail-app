@@ -24,5 +24,7 @@
 }
 
 @media screen and (max-width: 990px){
-
+    .help-field {
+        width: 325px;
+    }
 }

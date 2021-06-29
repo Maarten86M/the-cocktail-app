@@ -16,3 +16,14 @@
     max-width: 100px;
     max-height: 100px;
 }
+
+@media screen and (max-width: 990px){
+    .ingredient-view {
+        display: flex;
+        flex-direction: column;
+    }
+    .ingredient-img {
+        max-width: 80px;
+        max-height: 80px;
+    }
+}

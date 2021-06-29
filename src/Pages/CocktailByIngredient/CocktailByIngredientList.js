@@ -46,10 +46,10 @@ function CocktailByIngredientList() {
                 <div className="right-section-container">
                     <div className="right-box-container">
                         <div className="Cocktaillist">
-                            <h1>Cocktails with: {params.result} </h1>
                             <div>
                                 <HelpButton content={9}/>
                             </div>
+                            <h1 className="list-title">Cocktails with: {params.result} </h1>
                             <div>
                                 {ingredientlist === "None Found" ? (
                                     <div>

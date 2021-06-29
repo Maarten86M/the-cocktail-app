@@ -19,3 +19,9 @@
 .backbutton:hover {
     background-color: var(--button-border-color);
 }
+
+@media screen and (max-width: 990px){
+    .backbutton {
+        width: var(--button-width-mobile);
+    }
+}

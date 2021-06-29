@@ -17,3 +17,9 @@
 .helpbutton:hover{
     background-color: var(--help-field-border-color);
 }
+
+@media screen and (max-width: 990px){
+    .helpbutton {
+        left: 300px;
+    }
+}

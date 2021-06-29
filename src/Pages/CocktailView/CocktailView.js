@@ -35,16 +35,16 @@ function CocktailView() {
                 <div className="CocktailCard-container">
                     {cocktail ? (
                         <CocktailCardHeader/>
-                    ):(<CocktailLoaderOops/>)}
+                    ) : (<CocktailLoaderOops/>)}
                 </div>
             </div>
 
             <div className="right-section-container">
                 <div className="right-box-container">
-                    <div>
-                        <HelpButton content={9}/>
+                    <div className="help-container">
+                    <HelpButton content={9}/>
                     </div>
-                    <CocktailName />
+                    <CocktailName/>
                     <CocktailCard/>
                 </div>
             </div>
