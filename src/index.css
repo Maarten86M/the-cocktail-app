@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Mukta:wght@200;300;400;500;600;700&display=swap');
 
 * {
     margin: 0;
@@ -10,6 +11,8 @@
     --nav-line: hsl(216, 36%, 41%);
     --background-color: hsl(189, 79%, 28%);
     --main-font: Quicksand;
+    --second-font:'Mukta', sans-serif;
+    --second-font-line-height: 20px;
     --help-field-color: hsl(66, 75%, 81%);
     --help-field-border-color: hsl(56, 48%, 59%);
     --help-field-text-size: 16px;

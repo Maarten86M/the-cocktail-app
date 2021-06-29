@@ -5,7 +5,6 @@ TO DO LIST:
   - de authencitaded uit app.js bij de Public en private route ombouwen met context. (is straks overbodig)
     - succesvol geregistreerd melding aanmaken.
   
-  - pagina hoogte algemeen aanpassen. Nu zie je nog een scrollbar
   
 - error meldingen (laden api) zie random cocktail, ook setErrors vanuit de catch.
 - loading meldingen (laden api) zie random cocktail
@@ -15,14 +14,16 @@ TO DO LIST:
 - mobile responsive (header met titel van de pagina of cocktail. Dus hier moet een setter functie voor komen.)
 - cocktail naam bij mobiele weergave nog niet correct  
 - alle buttons nalopen op ze mobiel schaalbaar zijn!
-- ingredient icoon naar 93 mobiel
 - mobiele titels nalopen op grote
 -2de font erbij zoeken en aanpassen op de site en adobe xd
   - button toevoegen op de help pagina.
+    - button toevoegen aan profile pagina
+    
   - alles nalopen vanuit de edhub
   - navbar nakijken, blijft soms mobiel open staan als er vanuit desktop
-- button bij search result toevoegen.
-- random cocktail button uitlijnen
+
+
+- foutmelding bij A-Z buttons verkleinen mobiel
   
 - login en register en forgot wachtwoord uitlijnen. 
 
@@ -71,6 +72,11 @@ Op deze manier kan ik het ook mogelijk aanpassen als er wijzingen zijn.
 - De keuze gemaakt om de paginas door te verwijzen met useparams. Dit zodat de gebruiker makkelijk naar de vorige pagina kan gaan.
 
 - De useStates die door de app op meerdere plaatsen gebruikt worden. Zoals de cocktail info staan in de CocktailContext.
+- Bij het search gedeelte wanneer er een zoekterm is ingevoerd komt het resultaat naar boven. Hier heb ik de keuze gemaakt om een de search again button bovenaan te zetten. Dit voor extra gebruiktgemak. Daarnaast heb ik een back button toegevoegd.
+- Ik heb er voor gekozen om met 2 contexten te werken. 1 context voor de auth en 1 context voor de cocktail-informatie. Op deze manier houdt ik de info overzichtelijk gescheiden. 
+
+
+
 
 
 Wat kan er nog doorontwikkeld worden?

@@ -9,6 +9,7 @@ import CocktailCardLogo from "../../Components/CocktailCardLogo/CocktailCardLogo
 import HelpButton from "../../Components/Buttons/HelpButton/HelpButton";
 import CocktailLoaderOops from "../../Components/CocktailLoader/CocktailLoaderOops";
 import CocktailName from "../../Components/Titles/CocktailName/CocktailName";
+import MainBackButton from "../../Components/Buttons/MainBackButton/MainBackButton";
 
 function CocktailView() {
 
@@ -47,6 +48,7 @@ function CocktailView() {
                     <CocktailName/>
                     <CocktailCard/>
                 </div>
+                <MainBackButton/>
             </div>
         </div>
     )

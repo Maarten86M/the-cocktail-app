@@ -11,6 +11,7 @@ import HelpButton from "../../Components/Buttons/HelpButton/HelpButton";
 import CocktailName from "../../Components/Titles/CocktailName/CocktailName";
 import '../../App.css';
 import './RandomCocktails.css';
+import MainBackButton from "../../Components/Buttons/MainBackButton/MainBackButton";
 
 function RandomCocktails() {
     const {
@@ -62,14 +63,12 @@ function RandomCocktails() {
                         <HelpButton content={6}/>
                     </div>
                     <RandomizeButton/>
-                    <div>
-
+                    <div className="name-and-ingredient-container">
                         <CocktailName/>
-                        <div>
-                            <CocktailCard/>
-                        </div>
+                        <CocktailCard/>
                     </div>
                 </div>
+                <MainBackButton/>
             </div>
         </div>
     )

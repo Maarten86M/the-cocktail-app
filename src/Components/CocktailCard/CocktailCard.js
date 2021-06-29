@@ -3,7 +3,6 @@ import './CocktailCard.css';
 import {useCocktailContext} from "../../Context/CocktailContext";
 import IngredientView from "./IngredientView/IngredientView";
 import InstructionView from "./InstructionView/InstructionView";
-
 import MainBackButton from "../Buttons/MainBackButton/MainBackButton";
 
 function CocktailCard() {
@@ -16,7 +15,7 @@ function CocktailCard() {
                 {cocktail ? (
                     <div>
                         <div className="ingredient-scrollbar">
-                            <b>Ingredients</b>
+                            <b className="header">Ingredients</b>
                             <section className="ingredient-container">
                                 {id.strIngredient1 && (<IngredientView IngredientName={id.strIngredient1}/>)}
                                 {id.strIngredient2 && (<IngredientView IngredientName={id.strIngredient2}/>)}
@@ -33,7 +32,6 @@ function CocktailCard() {
                         </div>
                     </div>
                 ) : (<h1> Loading </h1>)}
-                <MainBackButton/>
             </div>
         </div>
     )

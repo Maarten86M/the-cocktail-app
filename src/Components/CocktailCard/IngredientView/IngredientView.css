@@ -1,4 +1,5 @@
 .ingredient-view {
+    font-family: var(--second-font);
     display: flex;
     flex-direction: column;
     align-items: center;

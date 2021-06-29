@@ -12,8 +12,6 @@ import cocktailIcon from '../../Assets/Icons/ListIcons/cocktail-icon.png';
 import '../../App.css';
 import './AllCocktails.css';
 
-
-
 function AllCocktails() {
     const {letter, cocktail, setCocktail , setPageTitle} = useCocktailContext();
 

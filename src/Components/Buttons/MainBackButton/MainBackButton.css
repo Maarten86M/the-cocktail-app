@@ -10,6 +10,7 @@
     font-family: var(--main-font);
     margin-bottom: 45px;
     box-shadow: var(--button-shadow);
+    z-index: 1;
 }
 
 .backbutton:disabled {

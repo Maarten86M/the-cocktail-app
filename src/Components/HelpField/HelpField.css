@@ -7,9 +7,9 @@
     border-radius: 10px;
     box-shadow: 2px 2px 3px 1px var(--background-color);
     padding: 20px;
-    font-family: var(--main-font);
+    font-family: var(--second-font);
+    font-weight: 500;
     font-size: var(--help-field-text-size);
-    font-weight: var(--help-field-text-weight);
 }
 
 .help-field p {

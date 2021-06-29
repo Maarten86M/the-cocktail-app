@@ -1,13 +1,25 @@
-.instruction-container{
+.instruction-container {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-.instruction-view{
+.instruction-view {
+    font-family: var(--second-font);
+    line-height: var(--second-font-line-height);
     margin-top: 10px;
-    margin-bottom: 20px;
+    margin-bottom: 40px;
     width: 250px;
     text-align: center;
 }
 
+.instruction-view ,b{
+    color: var(--text-color);
+    font-family: var(--second-font);
+}
+
+.header {
+    font-family: var(--main-font);
+    font-weight: 500;
+    text-decoration: underline;
+}

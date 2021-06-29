@@ -1,5 +1,17 @@
+
+.name-and-ingredient-container {
+    width: 400px;
+    height: 500px;
+}
+
 @media screen and (max-width: 990px){
+
+    .name-and-ingredient-container {
+        height: 400px;
+    }
+
     .help-container{
         padding-left: 40px;
     }
 }
+
