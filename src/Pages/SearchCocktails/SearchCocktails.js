@@ -38,7 +38,7 @@ function SearchCocktails() {
                 <div className="right-box-container">
                 <h1>Search Cocktails</h1>
                     <HelpButton content={3}/>
-                <SearchInput placeholder="Search Cocktails"/>
+                <SearchInput placeholder="Search Cocktails" icon={search}/>
                 <SearchButton name="Search" icon={search} onClick={searchHandle}/>
                     <p>{searchErrors}</p>
                 </div>
