@@ -60,7 +60,8 @@ h1 {
     text-align: center;
 }
 
-.cocktaillist{
+.cocktaillist {
+    font-family: var(--second-font);
     height: 648px;
 }
 
@@ -101,7 +102,8 @@ h1 {
     .list-title {
         width: 340px;
     }
-    .cocktaillist{
+
+    .cocktaillist {
         height: 420px;
     }
 }

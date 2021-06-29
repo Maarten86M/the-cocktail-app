@@ -6,10 +6,11 @@ import {useCocktailContext} from "../../Context/CocktailContext";
 import CocktailLoaderOops from "../../Components/CocktailLoader/CocktailLoaderOops";
 import CocktailCardLogo from "../../Components/CocktailCardLogo/CocktailCardLogo";
 import HelpButton from "../../Components/Buttons/HelpButton/HelpButton";
+import ErrorMessage from "../../Components/ErrorMessage/ErrorMessage";
 import cocktailIcon from '../../Assets/Icons/ListIcons/cocktail-icon.png';
 import search from '../../Assets/Icons/NavIcons/search.png';
 import '../../App.css';
-import ErrorMessage from "../../Components/ErrorMessage/ErrorMessage";
+
 
 function SearchResult() {
     const params = useParams();
@@ -62,7 +63,7 @@ function SearchResult() {
                                 <ErrorMessage />
                             </div>
 
-                        ) : (<div className="Cocktaillist">
+                        ) : (<div className="cocktaillist">
                             {searchResult.map((cocktail) =>
                                 <Link to={`/cocktailpage/${cocktail.idDrink}`}>
                                     <p><img src={cocktailIcon} alt="Cocktail Icon"/>{cocktail.strDrink}</p></Link>)}

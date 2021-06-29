@@ -18,8 +18,6 @@ export default function CocktailContextProvider(props) {
     const [searchText, setSearchText] = useState('');
     const [errorMessage, setErrorMessage] = useState('');
 
-    const [errors, setErrors] = useState(false);
-
     const [loading, setLoading] = useState(false);
     const [pageTitle, setPageTitle] = useState('')
 
@@ -32,8 +30,6 @@ export default function CocktailContextProvider(props) {
             value={{
                 cocktail,
                 setCocktail,
-                errors,
-                setErrors,
                 randomizeButton,
                 setRandomizeButton,
                 loading,
