@@ -8,7 +8,7 @@ import '../../App.css';
 import CocktailCardLogo from "../../Components/CocktailCardLogo/CocktailCardLogo";
 import HelpButton from "../../Components/Buttons/HelpButton/HelpButton";
 import CocktailLoaderOops from "../../Components/CocktailLoader/CocktailLoaderOops";
-import CocktailName from "../../Components/Titles/CocktailName/CocktailName";
+import CocktailName from "../../Components/CocktailName/CocktailName";
 import MainBackButton from "../../Components/Buttons/MainBackButton/MainBackButton";
 import './CocktailView.css';
 

@@ -8,11 +8,11 @@ import CocktailCardLogo from "../../Components/CocktailCardLogo/CocktailCardLogo
 import HelpButton from "../../Components/Buttons/HelpButton/HelpButton";
 import '../../App.css';
 import {useCocktailContext} from "../../Context/CocktailContext";
+import ErrorMessage from "../../Components/ErrorMessage/ErrorMessage";
 
 function CocktailByIngredientList() {
-    const {setPageTitle} = useCocktailContext();
+    const {setPageTitle,ingredientlist, setIngredientlist} = useCocktailContext();
     const params = useParams();
-    const [ingredientlist, setIngredientlist] = useState([])
 
     useEffect(() => {
         async function fetchIngredientCocktail() {
@@ -53,7 +53,7 @@ function CocktailByIngredientList() {
                             <div>
                                 {ingredientlist === "None Found" ? (
                                     <>
-                                        <h1>Sorry, nothing Found</h1>
+                                        <ErrorMessage />
                                     </>
                                 ) : (
                                     <div className="scrollbar">

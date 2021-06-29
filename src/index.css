@@ -21,7 +21,7 @@
     --text-color-second: hsl(0, 0%, 0%);
     --text-color-help-field: hsl(0, 0%, 0%);
     --text-color-disabled: hsl(111, 0%, 69%);
-    --text-color-error: hsl(3, 88%, 56%);
+    --text-color-error: hsl(9, 89%, 59%);
     --text-loading-color:hsl(66, 75%, 81%);
     --icon-color: hsl(0, 0%, 100%);
     --nav-font-size: 16px;
@@ -47,7 +47,4 @@ body {
     background-image: url("/src/Assets/BackgroundImg/background-desktop-bleu.png");
     background-blend-mode: multiply;
     position: relative;
-}
-
-code {
 }

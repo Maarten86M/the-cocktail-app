@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React from "react";
 import Navbar from "./Components/Navbar/NavBar";
 import {
     Switch,
@@ -24,94 +24,76 @@ import CocktailView from "./Pages/CocktailView/CocktailView";
 import CocktailByAlcoholList from "./Pages/CocktailByAlcohol/CocktailByAlcoholList";
 import CocktailByIngredientList from "./Pages/CocktailByIngredient/CocktailByIngredientList";
 import './App.css';
-import {useAuth} from "./Context/AuthContext";
 
 
 function App() {
-    const {user} = useAuth();
     return (
         <>
-            <Navbar
-                authenticated={user}/>
+            <Navbar/>
             <Switch>
 
                 <PublicRoute
                     path="/"
                     exact={true}
-                    authenticated={user}
                     component={<Home/>}/>
 
                 <PublicRoute
                     path="/login"
-                    authenticated={user}
                     component={<Login/>}/>
 
                 <PublicRoute
                     path="/register"
-                    authenticated={user}
                     component={<Register/>}/>
 
                 <PublicRoute
                     path="/forgotpassword"
-                    authenticated={user}
                     component={<ForgotPassword/>}/>
 
                 <PrivateRoute
                     path="/welcome"
-                    authenticated={user}
                     component={<Welcome/>}/>
 
                 <PrivateRoute
                     path="/searchcocktails"
-                    authenticated={user}
                     component={<SearchCocktails/>}/>
 
                 <PrivateRoute
                     path="/searchresult/:result"
-                    authenticated={user}
                     component={<SearchResult/>}/>
 
                 <PrivateRoute
                     path="/cocktailpage/:id"
-                    authenticated={user}
                     component={<CocktailView/>}/>
 
                 <PrivateRoute
                     path="/randomcocktails"
-                    authenticated={user}
                     component={<RandomCocktails/>}/>
 
                 <PrivateRoute
                     path="/cocktailbyalcohol"
-                    authenticated={user}
                     component={<CocktailByAlcohol/>}/>
 
                 <PrivateRoute
                     path="/cocktailbyalcohollist/:result"
-                    authenticated={user}
                     component={<CocktailByAlcoholList/>}/>
 
                 <PrivateRoute
                     path="/cocktailbyingredient"
-                    authenticated={user}
                     component={<CocktailByIngredient/>}/>
 
                 <PrivateRoute
                     path="/cocktailbyingredientlist/:result"
-                    authenticated={user}
                     component={<CocktailByIngredientList/>}/>
 
                 <PrivateRoute
                     path="/allcocktails"
-                    authenticated={user}
                     component={<AllCocktails/>}/>
+
                 <PrivateRoute
                     path="/profile"
-                    authenticated={user}
                     component={<Profile/>}/>
                 <PrivateRoute
                     path="/help"
-                    authenticated={user}
                     component={<Help/>}/>
 
                 <Route path="/">

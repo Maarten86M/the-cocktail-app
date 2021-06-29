@@ -4,19 +4,19 @@ import NextButton from "../../Components/Buttons/NextBackButton/NextButton/NextB
 import {Link} from "react-router-dom";
 import {useCocktailContext} from "../../Context/CocktailContext";
 import BackButton from "../../Components/Buttons/NextBackButton/BackButton/BackButton";
-import LetterView from "../../Components/Titles/LetterView/LetterView";
+import LetterView from "../../Components/Buttons/NextBackButton/LetterView/LetterView";
 import MainBackButton from "../../Components/Buttons/MainBackButton/MainBackButton";
 import CocktailCardLogo from "../../Components/CocktailCardLogo/CocktailCardLogo";
 import HelpButton from "../../Components/Buttons/HelpButton/HelpButton";
 import cocktailIcon from '../../Assets/Icons/ListIcons/cocktail-icon.png';
 import '../../App.css';
 import './AllCocktails.css';
+import ErrorMessage from "../../Components/ErrorMessage/ErrorMessage";
 
 function AllCocktails() {
     const {letter, cocktail, setCocktail , setPageTitle} = useCocktailContext();
 
     useEffect(() => {
-
         async function fetchData() {
             try {
                 const result = await axios.get(`https://www.thecocktaildb.com/api/json/v2/${process.env.REACT_APP_API_KEY}/search.php?f=${letter}`);
@@ -58,7 +58,7 @@ function AllCocktails() {
                             {cocktail.map(cocktail => <Link to={`/cocktailpage/${cocktail.idDrink}`}>
                                 <p><img src={cocktailIcon} alt="Cocktail Icon"/>{cocktail.strDrink}</p></Link>)}
                         </div>
-                    ) : (<h1>Oeps, Something went wrong,Click again on the Next or Back Button</h1>)}
+                    ) : (<ErrorMessage/>)}
 
                     <MainBackButton/>
                 </div>

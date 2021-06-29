@@ -1,18 +1,18 @@
-import React, {useEffect, useState} from "react";
+import React, {useEffect} from "react";
 import {Link, useParams} from "react-router-dom";
 import axios from "axios";
 import MainBackButton from "../../Components/Buttons/MainBackButton/MainBackButton";
 import CocktailLoaderOops from "../../Components/CocktailLoader/CocktailLoaderOops";
 import CocktailCardLogo from "../../Components/CocktailCardLogo/CocktailCardLogo";
 import HelpButton from "../../Components/Buttons/HelpButton/HelpButton";
+import {useCocktailContext} from "../../Context/CocktailContext";
+import ErrorMessage from "../../Components/ErrorMessage/ErrorMessage";
 import cocktailIcon from '../../Assets/Icons/ListIcons/cocktail-icon.png';
 import '../../App.css';
-import {useCocktailContext} from "../../Context/CocktailContext";
 
 function CocktailByAlcoholList() {
-    const {setPageTitle} = useCocktailContext();
+    const {setPageTitle,alcohollist, setAlcohollist} = useCocktailContext();
     const params = useParams();
-    const [alcohollist, setAlcohollist] = useState([])
 
     useEffect(() => {
         async function fetchAlcoholCocktail() {
@@ -51,9 +51,7 @@ function CocktailByAlcoholList() {
                             <h1 className="list-title">Cocktails with {params.result} </h1>
                             <div>
                                 {alcohollist === "None Found" ? (
-                                    <div>
-                                        <h1>sorry, nothing found</h1>
-                                    </div>
+                                    <><ErrorMessage /></>
                                 ) : (
                                     <div className="scrollbar">
                                         {alcohollist.map(cocktail => <Link to={`/cocktailpage/${cocktail.idDrink}`}>

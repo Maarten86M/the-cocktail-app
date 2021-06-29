@@ -2,9 +2,8 @@
 TO DO LIST: 
 - try and catch. Stel dat de data niet opgehaald kan worden. 
 - inlog systeem (Firebase?) & misschien firestore voor de namen.
-  - de authencitaded uit app.js bij de Public en private route ombouwen met context. (is straks overbodig)
     - succesvol geregistreerd melding aanmaken.
-  
+  - welcome pagina mobiel omhoog
   
 - error meldingen (laden api) zie random cocktail, ook setErrors vanuit de catch.
 - loading meldingen (laden api) zie random cocktail
@@ -12,23 +11,20 @@ TO DO LIST:
   - Cocktail Loader. De loading h1 ombouwen naar deze
   
 - mobile responsive (header met titel van de pagina of cocktail. Dus hier moet een setter functie voor komen.)
-- cocktail naam bij mobiele weergave nog niet correct  
+- cocktail naam bij mobiele weergave nog niet correct 
+  
 - alle buttons nalopen op ze mobiel schaalbaar zijn!
 - mobiele titels nalopen op grote
+
 -2de font erbij zoeken en aanpassen op de site en adobe xd
 
-    
   - alles nalopen vanuit de edhub
   - navbar nakijken, blijft soms mobiel open staan als er vanuit desktop
-
-
 - foutmelding bij A-Z buttons verkleinen mobiel
   
 - login en register en forgot wachtwoord uitlijnen. 
 
--forgotpasword .
-
-Search
+-forgotpasword maken.
 
 - helpfield bij welcome aanpssen. Staat net te hoog.
 - img groote van het gebroken glass aanpassen is te klein i.v.m. de andere
@@ -41,7 +37,6 @@ Search
   - de cocktail (useState moet weer op 0 gezet worden. Zodat oude resultaten niet weergegeven worden)
 
   - ombouwen naar context. Dus de useStates verplaatsen.
-  - cocktailview / cocktail card goed uitlijnen in het mideen. 
   -consequent overal de error en loading gebruiken. Dus setError (en deze weergeven op de pagina. ) Zie voorbeeld bij search. Niets ingevuld
     - Navbar checken of hij open blijft staan.
 - inputfield lock icon en envelop aanpassen. 
@@ -55,8 +50,15 @@ Search
 - 2 context maken. 1 voor user en 1 voor cocktail info. Goed bekijken waar deze omheen gezet dienen te worden. !!Zie voorbeeld rein les.
 ALLES GOED NALOPEN OF ER NOG COMPONENTEN OMGEBOUWD KUNNEN WRODEN. 
 -alle gele foutmeldingen ui developerstools doorlopen
-
 -mobil nalopen.op basis van een iphone x
+
+FOUTMELDINGEN GEDAAN:
+  -Search
+  -randomcocktail
+
+
+setErrors mag weg?
+
 
 
 

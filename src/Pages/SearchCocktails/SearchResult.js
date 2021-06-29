@@ -9,6 +9,7 @@ import HelpButton from "../../Components/Buttons/HelpButton/HelpButton";
 import cocktailIcon from '../../Assets/Icons/ListIcons/cocktail-icon.png';
 import search from '../../Assets/Icons/NavIcons/search.png';
 import '../../App.css';
+import ErrorMessage from "../../Components/ErrorMessage/ErrorMessage";
 
 function SearchResult() {
     const params = useParams();
@@ -58,7 +59,7 @@ function SearchResult() {
                     <div>
                         {searchResult === "None Found" ? (
                             <div>
-                                <h1>Nothing Found</h1>
+                                <ErrorMessage />
                             </div>
 
                         ) : (<div className="Cocktaillist">

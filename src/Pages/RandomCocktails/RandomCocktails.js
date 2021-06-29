@@ -8,14 +8,17 @@ import CocktailLoader from "../../Components/CocktailLoader/CocktailLoader";
 import CocktailCardLogo from "../../Components/CocktailCardLogo/CocktailCardLogo";
 import CocktailLoaderOops from "../../Components/CocktailLoader/CocktailLoaderOops";
 import HelpButton from "../../Components/Buttons/HelpButton/HelpButton";
-import CocktailName from "../../Components/Titles/CocktailName/CocktailName";
+import CocktailName from "../../Components/CocktailName/CocktailName";
 import '../../App.css';
 import './RandomCocktails.css';
 import MainBackButton from "../../Components/Buttons/MainBackButton/MainBackButton";
+import ErrorMessage from "../../Components/ErrorMessage/ErrorMessage";
 
 function RandomCocktails() {
     const {
         setCocktail,
+        errorMessage,
+        setErrorMessage,
         errors,
         setErrors,
         randomizeButton,
@@ -25,7 +28,7 @@ function RandomCocktails() {
 
     useEffect(() => {
         async function fetchRandomCocktail() {
-            setErrors(false);
+            setErrorMessage("")
             setLoading(true);
             try {
                 const response = await axios.get(`https://www.thecocktaildb.com/api/json/v2/${process.env.REACT_APP_API_KEY}/random.php`
@@ -33,7 +36,7 @@ function RandomCocktails() {
                 setCocktail(response.data.drinks);
             } catch (e) {
                 console.error(e);
-                setErrors(true);
+                setErrorMessage("Oops! Something went Wrong")
             }
             setLoading(false);
 
@@ -63,6 +66,7 @@ function RandomCocktails() {
                         <HelpButton content={6}/>
                     </div>
                     <RandomizeButton/>
+                    <ErrorMessage />
                     <div className="name-and-ingredient-container">
                         <CocktailName/>
                         <CocktailCard/>

@@ -1,5 +1,5 @@
 import './CocktailName.css';
-import {useCocktailContext} from "../../../Context/CocktailContext";
+import {useCocktailContext} from "../../Context/CocktailContext";
 
 function CocktailName() {
 

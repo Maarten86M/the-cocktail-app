@@ -16,8 +16,8 @@ import signout from '../../Assets/Icons/NavIcons/signout.png';
 import {useAuth} from "../../Context/AuthContext";
 import {useCocktailContext} from "../../Context/CocktailContext";
 
-function Navbar(props) {
-    const {logOut} = useAuth()
+function Navbar() {
+    const {logOut, user} = useAuth()
     const [openMenu, setOpenMenu] = useState(false);
     const [screenWidth, setScreenWidth] = useState(window.innerWidth);
     const {pageTitle, cocktail} = useCocktailContext();
@@ -51,7 +51,7 @@ function Navbar(props) {
             {(openMenu || screenWidth > 990) && (
                 <ul className="navlist">
 
-                    {!props.authenticated && (
+                    {!user && (
                         <>
                             <NavBarItem
                                 icon={register}
@@ -68,7 +68,7 @@ function Navbar(props) {
                             />
                         </>
                     )}
-                    {props.authenticated && (
+                    {user && (
                         <>
                             <NavBarItem
                                 icon={search}
