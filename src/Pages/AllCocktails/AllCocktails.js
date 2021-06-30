@@ -8,13 +8,14 @@ import LetterView from "../../Components/Buttons/NextBackButton/LetterView/Lette
 import MainBackButton from "../../Components/Buttons/MainBackButton/MainBackButton";
 import CocktailCardLogo from "../../Components/CocktailCardLogo/CocktailCardLogo";
 import HelpButton from "../../Components/Buttons/HelpButton/HelpButton";
+import ErrorMessage from "../../Components/ErrorMessage/ErrorMessage";
+import PageTitle from "../../Components/PageTitle/PageTitle";
 import cocktailIcon from '../../Assets/Icons/ListIcons/cocktail-icon.png';
 import '../../App.css';
 import './AllCocktails.css';
-import ErrorMessage from "../../Components/ErrorMessage/ErrorMessage";
 
 function AllCocktails() {
-    const {letter, cocktail, setCocktail , setPageTitle} = useCocktailContext();
+    const {letter, cocktail, setCocktail, setPageTitle, setErrorMessage} = useCocktailContext();
 
     useEffect(() => {
         async function fetchData() {
@@ -24,14 +25,16 @@ function AllCocktails() {
                 setCocktail(result.data.drinks);
             } catch (e) {
                 console.error(e);
+                setErrorMessage("Oops, something went wrong!")
             }
         }
+
         fetchData()
     }, [letter]);
 
-    useEffect(() =>{
+    useEffect(() => {
         setPageTitle('All Cocktails');
-    },[])
+    }, [])
 
     return (
         <div className="fullpage-container">
@@ -42,11 +45,8 @@ function AllCocktails() {
             </div>
             <div className="right-section-container">
                 <div className="right-box-container">
-                    <div>
-                        <HelpButton content={9}/>
-                    </div>
-                    <h1>All Cocktails</h1>
-
+                    <HelpButton content={9}/>
+                    <PageTitle title="All Cocktails"/>
                     <div className="button-header">
                         <BackButton/>
                         <LetterView/>
@@ -59,7 +59,6 @@ function AllCocktails() {
                                 <p><img src={cocktailIcon} alt="Cocktail Icon"/>{cocktail.strDrink}</p></Link>)}
                         </div>
                     ) : (<ErrorMessage/>)}
-
                     <MainBackButton/>
                 </div>
             </div>

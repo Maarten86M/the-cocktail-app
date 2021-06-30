@@ -1,15 +1,11 @@
 import React from "react";
-import {useCocktailContext} from "../../../Context/CocktailContext";
 import './SearchButton.css';
 
-
-function SearchButton(props) {
-
-    const { searchText} = useCocktailContext();
+function SearchButton({onClick, icon, name}) {
 
     return(
-        <button className="searchButton" onClick={props.onClick}>
-            <img src={props.icon} alt={props.name}/>{props.name}
+        <button className="searchButton" onClick={onClick}>
+            <img src={icon} alt={name}/>{name}
         </button>
     )
 }

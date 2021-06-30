@@ -5,25 +5,22 @@ import CocktailCardHeader from "../../Components/CocktailCardHeader/CocktailCard
 import RandomizeButton from "../../Components/Buttons/RandomizeButton/RandomizeButton";
 import {useCocktailContext} from "../../Context/CocktailContext";
 import CocktailLoader from "../../Components/CocktailLoader/CocktailLoader";
-import CocktailCardLogo from "../../Components/CocktailCardLogo/CocktailCardLogo";
 import CocktailLoaderOops from "../../Components/CocktailLoader/CocktailLoaderOops";
 import HelpButton from "../../Components/Buttons/HelpButton/HelpButton";
 import CocktailName from "../../Components/CocktailName/CocktailName";
-import '../../App.css';
-import './RandomCocktails.css';
 import MainBackButton from "../../Components/Buttons/MainBackButton/MainBackButton";
 import ErrorMessage from "../../Components/ErrorMessage/ErrorMessage";
+import '../../App.css';
+import './RandomCocktails.css';
 
 function RandomCocktails() {
     const {
         setCocktail,
-        errorMessage,
         setErrorMessage,
         errors,
-        setErrors,
         randomizeButton,
         loading,
-        setLoading
+        setLoading,
     } = useCocktailContext();
 
     useEffect(() => {
@@ -36,14 +33,11 @@ function RandomCocktails() {
                 setCocktail(response.data.drinks);
             } catch (e) {
                 console.error(e);
-                setErrorMessage("Oops! Something went Wrong")
+                setErrorMessage("Oops! Something went Wrong");
             }
             setLoading(false);
-
         }
-
         fetchRandomCocktail()
-
 
     }, [randomizeButton]);
 
@@ -56,7 +50,6 @@ function RandomCocktails() {
                     {loading ? (
                         <CocktailLoader/>
                     ) : (<CocktailCardHeader/>)}
-
                 </div>
             </div>
 

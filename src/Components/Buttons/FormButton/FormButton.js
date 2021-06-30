@@ -1,10 +1,10 @@
 import React from "react";
 import './FormButton.css';
 
-function FormButton(props) {
+function FormButton({disabled}) {
     return (
         <>
-            <input className="formbutton" type="submit" disabled={props.disabled}/>
+            <input className="formbutton" type="submit" disabled={disabled}/>
         </>
     )
 }

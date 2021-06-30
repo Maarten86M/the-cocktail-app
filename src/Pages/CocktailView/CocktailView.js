@@ -1,15 +1,14 @@
 import React, {useEffect} from "react";
 import axios from "axios";
+import {useCocktailContext} from "../../Context/CocktailContext";
+import {useParams} from 'react-router-dom';
 import CocktailCard from "../../Components/CocktailCard/CocktailCard";
 import CocktailCardHeader from "../../Components/CocktailCardHeader/CocktailCardHeader";
-import {useParams} from 'react-router-dom';
-import {useCocktailContext} from "../../Context/CocktailContext";
-import '../../App.css';
-import CocktailCardLogo from "../../Components/CocktailCardLogo/CocktailCardLogo";
 import HelpButton from "../../Components/Buttons/HelpButton/HelpButton";
 import CocktailLoaderOops from "../../Components/CocktailLoader/CocktailLoaderOops";
 import CocktailName from "../../Components/CocktailName/CocktailName";
 import MainBackButton from "../../Components/Buttons/MainBackButton/MainBackButton";
+import '../../App.css';
 import './CocktailView.css';
 
 function CocktailView() {
@@ -25,7 +24,7 @@ function CocktailView() {
             } catch (e) {
                 console.error(e);
             }
-            setPageTitle('cocktailname')
+            setPageTitle('cocktailname');
         }
 
         fetchCocktailView();
@@ -44,11 +43,11 @@ function CocktailView() {
             <div className="right-section-container">
                 <div className="right-box-container">
                     <div className="help-container">
-                    <HelpButton content={9}/>
+                        <HelpButton content={9}/>
                     </div>
                     <div className="cocktail-view">
-                    <CocktailName/>
-                    <CocktailCard/>
+                        <CocktailName/>
+                        <CocktailCard/>
                     </div>
                 </div>
                 <MainBackButton/>

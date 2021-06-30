@@ -1,10 +1,12 @@
 import React, {useEffect} from "react";
 import {useHistory} from "react-router-dom";
 import {useAuth} from "../../Context/AuthContext";
+import {useCocktailContext} from "../../Context/CocktailContext";
 import CocktailCardLogo from "../../Components/CocktailCardLogo/CocktailCardLogo";
 import HelpButton from "../../Components/Buttons/HelpButton/HelpButton";
+import ErrorMessage from "../../Components/ErrorMessage/ErrorMessage";
+import PageTitle from "../../Components/PageTitle/PageTitle";
 import '../../App.css';
-import {useCocktailContext} from "../../Context/CocktailContext";
 
 function Register() {
     const {setPageTitle} = useCocktailContext();
@@ -31,16 +33,16 @@ function Register() {
             const userCredential = await signUp(email, password);
             console.log("registered", userCredential);
             setUser(userCredential.user);
-            history.push('./welcome')
+            history.push('./welcome');
         } catch (event) {
             console.error('Firebase Fail', event);
             setFormError(event.message);
         }
     }
 
-    useEffect(() =>{
+    useEffect(() => {
         setPageTitle("Register");
-    },[])
+    }, [])
 
     return (
         <div className="fullpage-container">
@@ -52,52 +54,53 @@ function Register() {
 
             <div className="right-section-container">
                 <div className="right-box-container">
-                <h1>Register</h1>
-                {/*{succesMessage && (<h1> Thank you for your account.</h1>)}*/}
-                {/*{loading && (<h1>Moment geduld</h1>)}*/}
-                <h2>{formError}</h2>
+                    <PageTitle title="Register"/>
+                    {/*{succesMessage && (<h1> Thank you for your account.</h1>)}*/}
+                    {/*{loading && (<h1>Moment geduld</h1>)}*/}
+                    <ErrorMessage/>
+                    {/*<h2>{formError}</h2>*/}
                     <div className="input-container">
                         <div>
                             <HelpButton content={1}/>
                         </div>
-                <form onSubmit={onSubmit}>
+                        <form onSubmit={onSubmit}>
 
-                    {/*REQUIREMENTS INBOUWEN!! */}
-                    {/*firstname & lastname werkend maken met databadse*/}
-                    <input
-                        type="text"
-                        name='firstname'
-                        placeholder='Firstname'
-                        value={firstname}
-                        onChange={event => setFirstname(event.target.value)}
-                    />
+                            {/*REQUIREMENTS INBOUWEN!! */}
+                            {/*firstname & lastname werkend maken met databadse*/}
+                            <input
+                                type="text"
+                                name='firstname'
+                                placeholder='Firstname'
+                                value={firstname}
+                                onChange={event => setFirstname(event.target.value)}
+                            />
 
-                    <input
-                        type="text"
-                        name='lastname'
-                        placeholder='Lastname'
-                        value={lastname}
-                        onChange={event => setLastname(event.target.value)}
-                    />
+                            <input
+                                type="text"
+                                name='lastname'
+                                placeholder='Lastname'
+                                value={lastname}
+                                onChange={event => setLastname(event.target.value)}
+                            />
 
-                    <input
-                        type="email"
-                        name="email"
-                        placeholder="Email adress"
-                        value={email}
-                        onChange={event => setEmail(event.target.value)}
-                    />
+                            <input
+                                type="email"
+                                name="email"
+                                placeholder="Email adress"
+                                value={email}
+                                onChange={event => setEmail(event.target.value)}
+                            />
 
-                    <input
-                        type="password"
-                        name="password"
-                        placeholder="Password"
-                        value={password}
-                        onChange={event => setPassword(event.target.value)}
-                    />
+                            <input
+                                type="password"
+                                name="password"
+                                placeholder="Password"
+                                value={password}
+                                onChange={event => setPassword(event.target.value)}
+                            />
 
-                    <input type="submit" value="login"/>
-                </form>
+                            <input type="submit" value="login"/>
+                        </form>
                     </div>
                 </div>
             </div>

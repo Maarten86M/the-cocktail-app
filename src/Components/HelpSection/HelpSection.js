@@ -1,11 +1,11 @@
 import './HelpSection.css';
 
-function HelpSection(props) {
+function HelpSection({styling,helpimg,helpText}) {
     return (
         <>
-            <article className={props.styling}>
-                <img className="help-img" src={props.helpimg} alt=""/>
-                <p>{props.helpText}</p>
+            <article className={styling}>
+                <img className="help-img" src={helpimg} alt=""/>
+                <p>{helpText}</p>
             </article>
         </>
     )

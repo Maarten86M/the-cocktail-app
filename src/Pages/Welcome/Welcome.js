@@ -1,5 +1,4 @@
-import React,{useEffect} from "react";
-import {useAuth} from "../../Context/AuthContext";
+import React, {useEffect} from "react";
 import {useCocktailContext} from "../../Context/CocktailContext";
 import MainButton from "../../Components/Buttons/MainButton/MainButton";
 import HelpButton from "../../Components/Buttons/HelpButton/HelpButton";
@@ -14,12 +13,11 @@ import '../../App.css';
 import './Welcome.css';
 
 function Welcome() {
-    const {user} = useAuth();
     const {setPageTitle} = useCocktailContext();
 
-    useEffect(() =>{
+    useEffect(() => {
         setPageTitle('Welcome');
-    },[])
+    }, [])
 
     return (
         <main className="fullpage-container">
@@ -30,9 +28,10 @@ function Welcome() {
             </div>
 
             <div className='right-section-container'>
-
                 <div className="button-container">
-                    <HelpButton content={0}/>
+                    <div>
+                        <HelpButton content={0}/>
+                    </div>
                     <MainButton
                         name="Search Cocktails"
                         icon={search}
@@ -65,7 +64,6 @@ function Welcome() {
                     />
                 </div>
             </div>
-
         </main>
     )
 }

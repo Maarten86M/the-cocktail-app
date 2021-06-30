@@ -1,10 +1,11 @@
 import React, {useEffect} from "react";
-import '../../App.css';
-import './Help.css';
 import HelpSection from "../../Components/HelpSection/HelpSection";
-import helpImg from '../../Assets/Logo/App-Logo-color.png';
 import {useCocktailContext} from "../../Context/CocktailContext";
 import MainBackButton from "../../Components/Buttons/MainBackButton/MainBackButton";
+import PageTitle from "../../Components/PageTitle/PageTitle";
+import helpImg from '../../Assets/Logo/App-Logo-color.png';
+import '../../App.css';
+import './Help.css';
 
 function Help() {
     const {setPageTitle} = useCocktailContext();
@@ -16,7 +17,7 @@ function Help() {
     return (
         <div className="fullpage-container">
             <div className="help-box">
-                <h1>Help</h1>
+                <PageTitle title="Help" />
                 <HelpSection helpimg={helpImg} styling="leftalign"
                 helpText="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi aperiam dignissimos dolorum est hic
                     maiores numquam optio quia reiciendis! Aperiam cum debitis dignissimos error expedita harum ipsum

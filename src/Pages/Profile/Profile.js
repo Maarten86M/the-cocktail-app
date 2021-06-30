@@ -1,11 +1,11 @@
 import React, {useEffect} from "react";
-import CocktailLoader from "../../Components/CocktailLoader/CocktailLoader";
 import {useAuth} from "../../Context/AuthContext";
+import {useCocktailContext} from "../../Context/CocktailContext";
 import CocktailCardLogo from "../../Components/CocktailCardLogo/CocktailCardLogo";
+import MainBackButton from "../../Components/Buttons/MainBackButton/MainBackButton";
+import PageTitle from "../../Components/PageTitle/PageTitle";
 import '../../App.css';
 import './Profile.css';
-import {useCocktailContext} from "../../Context/CocktailContext";
-import MainBackButton from "../../Components/Buttons/MainBackButton/MainBackButton";
 
 function Profile() {
 
@@ -27,7 +27,7 @@ function Profile() {
             <div className="right-section-container">
                 <div className="right-box-container">
                     <div className="profile-info">
-                        <h1>Profile</h1>
+                        <PageTitle title="Profile"/>
                         <h3>{user.email}</h3>
                         <MainBackButton/>
                     </div>

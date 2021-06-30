@@ -20,7 +20,7 @@ function Navbar() {
     const {logOut, user} = useAuth()
     const [openMenu, setOpenMenu] = useState(false);
     const [screenWidth, setScreenWidth] = useState(window.innerWidth);
-    const {pageTitle, cocktail} = useCocktailContext();
+    const {pageTitle} = useCocktailContext();
 
     function menuopener() {
         setOpenMenu(!openMenu);

@@ -2,7 +2,7 @@ import React from "react";
 import './HelpField.css';
 import helpData from '../../Data/HelpFieldInfo.json';
 
-function HelpField(props) {
+function HelpField({opener, content,helpField}) {
 
     const helpLineOne = helpData.map((help) => {
         return help.content1;
@@ -26,16 +26,16 @@ function HelpField(props) {
 
     return (
         <>
-            {props.helpField && (
-                    <div className="help-field" onClick={props.opener}>
+            {helpField && (
+                    <div className="help-field" onClick={opener}>
                         <div>
                             <p className="cross" >&#10005;</p>
                         </div>
-                        <p>{helpLineOne[props.content]}</p>
-                        <p>{helpLineTwo[props.content]}</p>
-                        <p>{helpLineThree[props.content]}</p>
-                        <p>{helpLineFour[props.content]}</p>
-                        <p>{helpLineFive[props.content]}</p>
+                        <p>{helpLineOne[content]}</p>
+                        <p>{helpLineTwo[content]}</p>
+                        <p>{helpLineThree[content]}</p>
+                        <p>{helpLineFour[content]}</p>
+                        <p>{helpLineFive[content]}</p>
                     </div>
             )}
         </>

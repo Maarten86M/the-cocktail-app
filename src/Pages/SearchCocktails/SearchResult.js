@@ -1,8 +1,8 @@
 import React, {useEffect} from "react";
 import axios from "axios";
 import {useParams, Link} from 'react-router-dom';
-import MainButton from "../../Components/Buttons/MainButton/MainButton";
 import {useCocktailContext} from "../../Context/CocktailContext";
+import MainButton from "../../Components/Buttons/MainButton/MainButton";
 import CocktailLoaderOops from "../../Components/CocktailLoader/CocktailLoaderOops";
 import CocktailCardLogo from "../../Components/CocktailCardLogo/CocktailCardLogo";
 import HelpButton from "../../Components/Buttons/HelpButton/HelpButton";
@@ -10,7 +10,6 @@ import ErrorMessage from "../../Components/ErrorMessage/ErrorMessage";
 import cocktailIcon from '../../Assets/Icons/ListIcons/cocktail-icon.png';
 import search from '../../Assets/Icons/NavIcons/search.png';
 import '../../App.css';
-
 
 function SearchResult() {
     const params = useParams();
@@ -20,7 +19,6 @@ function SearchResult() {
         setErrors,
         searchResult,
         setSearchResult
-
     } = useCocktailContext();
 
     useEffect(() => {
@@ -39,7 +37,6 @@ function SearchResult() {
 
     return (
         <div className="fullpage-container">
-
             <div className="left-section-container">
                 <div className="CocktailCard-container">
                     {searchResult === "None Found" ? (
@@ -48,21 +45,20 @@ function SearchResult() {
                 </div>
             </div>
 
-
             <div className="right-section-container">
                 <div className="right-box-container">
-                    <h1>{params.result}</h1>
+
                     <div>
-                    <HelpButton content={3}/>
+                        <HelpButton content={3}/>
                     </div>
+                    <h1>{params.result}</h1>
                     <MainButton name="Search Again" icon={search} link="/searchcocktails"
                                 onClick={setSearchText("Search Cocktails")}/>
                     <div>
                         {searchResult === "None Found" ? (
                             <div>
-                                <ErrorMessage />
+                                <ErrorMessage/>
                             </div>
-
                         ) : (<div className="cocktaillist">
                             {searchResult.map((cocktail) =>
                                 <Link to={`/cocktailpage/${cocktail.idDrink}`}>

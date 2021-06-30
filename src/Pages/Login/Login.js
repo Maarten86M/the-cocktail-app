@@ -1,13 +1,14 @@
 import React, {useEffect, useState} from "react";
 import {Link, useHistory} from "react-router-dom";
 import {useAuth} from "../../Context/AuthContext";
+import {useCocktailContext} from "../../Context/CocktailContext";
 import CocktailCardLogo from "../../Components/CocktailCardLogo/CocktailCardLogo";
 import HelpButton from "../../Components/Buttons/HelpButton/HelpButton";
 import MainButton from "../../Components/Buttons/MainButton/MainButton";
+import PageTitle from "../../Components/PageTitle/PageTitle";
+import register from "../../Assets/Icons/NavIcons/register.png";
 import './Login.css';
 import '../../App.css';
-import register from "../../Assets/Icons/NavIcons/register.png";
-import {useCocktailContext} from "../../Context/CocktailContext";
 
 function Login() {
     const {setPageTitle} = useCocktailContext();
@@ -57,12 +58,9 @@ function Login() {
 
             <div className="right-section-container">
                 <div className="right-box-container">
-
-                    <h1>Login</h1>
+                    <PageTitle title="Login" />
                     <h3>{formError}</h3>
-
                     <div className="input-container">
-
                         <form onSubmit={onSubmit}>
                             <div><HelpButton content={0}/></div>
                             <input

@@ -5,6 +5,7 @@ import HelpButton from "../../Components/Buttons/HelpButton/HelpButton";
 import {Link, useHistory} from "react-router-dom";
 import {useAuth} from "../../Context/AuthContext";
 import {useCocktailContext} from "../../Context/CocktailContext";
+import PageTitle from "../../Components/PageTitle/PageTitle";
 
 function ForgotPassword() {
     const {setPageTitle}= useCocktailContext();
@@ -39,10 +40,9 @@ function ForgotPassword() {
 
             <div className="right-section-container">
                 <div className="right-box-container">
-                    <h1>Forgot Your Password?</h1>
+                    <PageTitle title="Forgot Your Password?" />
                     <div className="input-container">
                         <div><HelpButton content={11}/></div>
-
                         <form onSubmit={onSubmit}>
                             <input
                                 type="email"

@@ -1,7 +1,7 @@
 import React, {useState, useEffect} from "react";
-import '../../App.css';
-import CocktailLoaderLong from "../../Components/CocktailLoader/CocktailLoaderLong";
 import {useHistory} from "react-router-dom";
+import CocktailLoaderLong from "../../Components/CocktailLoader/CocktailLoaderLong";
+import '../../App.css';
 import './Home.css';
 
 function Home() {
@@ -11,15 +11,14 @@ function Home() {
 
     useEffect(() => {
         setTimeout(() => {
-            history.push('./login')
+            history.push('./login');
         }, 9000);
-        setIntroLoader(true)
+        setIntroLoader(true);
     })
 
     return (
         <div className="pagina">
-
-            {introloader ? (
+            {introloader && (
                 <div className="page-container">
                     <CocktailLoaderLong/>
                     <h1>Welcome</h1>
@@ -32,8 +31,9 @@ function Home() {
                         <div className="loader-bullets b-4"/>
                     </div>
                 </div>
-            ) : (<h1>doorverwijzen naar login</h1>)}
+            )}
         </div>
     )
 }
+
 export default Home;

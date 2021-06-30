@@ -6,6 +6,7 @@ function ErrorMessage() {
     const {errorMessage, setErrorMessage, searchResult, alcohollist, ingredientlist, letter} = useCocktailContext();
 
     useEffect(() => {
+        setErrorMessage('');
         if (searchResult === "None Found") {
             setErrorMessage("Sorry,nothing found!")
         }

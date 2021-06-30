@@ -1,13 +1,14 @@
-import React, {useEffect, useState} from "react";
+import React, {useEffect} from "react";
+import {useCocktailContext} from "../../Context/CocktailContext";
 import {Link, useParams} from "react-router-dom";
 import axios from "axios";
 import MainBackButton from "../../Components/Buttons/MainBackButton/MainBackButton";
 import CocktailLoaderOops from "../../Components/CocktailLoader/CocktailLoaderOops";
-import cocktailIcon from '../../Assets/Icons/ListIcons/cocktail-icon.png';
 import CocktailCardLogo from "../../Components/CocktailCardLogo/CocktailCardLogo";
 import HelpButton from "../../Components/Buttons/HelpButton/HelpButton";
+import cocktailIcon from '../../Assets/Icons/ListIcons/cocktail-icon.png';
 import '../../App.css';
-import {useCocktailContext} from "../../Context/CocktailContext";
+
 import ErrorMessage from "../../Components/ErrorMessage/ErrorMessage";
 
 function CocktailByIngredientList() {
@@ -20,11 +21,10 @@ function CocktailByIngredientList() {
                 const ingredientResult = await axios.get(`https://www.thecocktaildb.com/api/json/v2/${process.env.REACT_APP_API_KEY}/filter.php?i=${params.result}`);
                 setIngredientlist(ingredientResult.data.drinks);
             } catch (e) {
-                console.error(e)
+                console.error(e);
             }
         }
-
-        fetchIngredientCocktail()
+        fetchIngredientCocktail();
     }, []);
 
     useEffect(() => {

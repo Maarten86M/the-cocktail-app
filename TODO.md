@@ -3,39 +3,24 @@ TO DO LIST:
 - try and catch. Stel dat de data niet opgehaald kan worden. 
 - inlog systeem (Firebase?) & misschien firestore voor de namen.
     - succesvol geregistreerd melding aanmaken.
-  - welcome pagina mobiel omhoog
-  
 - error meldingen (laden api) zie random cocktail, ook setErrors vanuit de catch.
-- loading meldingen (laden api) zie random cocktail
+- loading meldingen (laden api) zie random cocktail. 
   - zorgen dat de foutmeldingen bij het inloggen niet meegaan vanuit vorige paginas
-  - Cocktail Loader. De loading h1 ombouwen naar deze
-  
+    
 - mobile responsive (header met titel van de pagina of cocktail. Dus hier moet een setter functie voor komen.)
-- cocktail naam bij mobiele weergave nog niet correct 
-  
-- alle buttons nalopen op ze mobiel schaalbaar zijn!
+- cocktail naam bij mobiele weergave nog niet correct
 - mobiele titels nalopen op grote
-
--2de font erbij zoeken en aanpassen op de site en adobe xd
-
   - alles nalopen vanuit de edhub
   - navbar nakijken, blijft soms mobiel open staan als er vanuit desktop
 - foutmelding bij A-Z buttons verkleinen mobiel
-  
-- login en register en forgot wachtwoord uitlijnen. 
-
+- login en register en forgot wachtwoord uitlijnen.
+- required bij register zodra de firstname en lastname werken.
 -forgotpasword maken.
-
-- helpfield bij welcome aanpssen. Staat net te hoog.
-- img groote van het gebroken glass aanpassen is te klein i.v.m. de andere
-- search text error aanpssen in styling
   - Random cocktails moeten pas starten wanneer de button wordt aangeklikt
-  
+- checken of de ErrorMessages wel via een useEffect moeten. En kijken of het zonder kan.
 -diable op de buttons instellen als we aan het zoeken zijn.
   disable en foutmlding bij zoeken. Dus wanneer er bijv geen zoekresultaat is.
-
   - de cocktail (useState moet weer op 0 gezet worden. Zodat oude resultaten niet weergegeven worden)
-
   - ombouwen naar context. Dus de useStates verplaatsen.
   -consequent overal de error en loading gebruiken. Dus setError (en deze weergeven op de pagina. ) Zie voorbeeld bij search. Niets ingevuld
     - Navbar checken of hij open blijft staan.
@@ -45,20 +30,13 @@ TO DO LIST:
 - de link van het resultaat van cocktail by alcohol en cocktail bij ingredient verwijst nu naar Wiskey#20Bla dit moet nog omgebouw worde .replace(" ","+") naar een moooie link
 -  De data die binnenkomst via de api ombouwen naar { } zoals de tip uit de pokemon opdracht die is binnengekomen.
 - alle tips die ik heb gehad van het nakijkwerk erbij pakken en doorlopen.
-
   - all cocktails, de next en back button controleren.
 - 2 context maken. 1 voor user en 1 voor cocktail info. Goed bekijken waar deze omheen gezet dienen te worden. !!Zie voorbeeld rein les.
 ALLES GOED NALOPEN OF ER NOG COMPONENTEN OMGEBOUWD KUNNEN WRODEN. 
 -alle gele foutmeldingen ui developerstools doorlopen
--mobil nalopen.op basis van een iphone x
-
-FOUTMELDINGEN GEDAAN:
-  -Search
-  -randomcocktail
-
-
-setErrors mag weg?
-
+- alle html tags controleren of de juiste gebruikt zijn.
+-jest test toevoegen. 
+-buttons nalopen. Zij nog niet allemaal perfect uitgelijnt
 
 
 
@@ -80,7 +58,8 @@ Op deze manier kan ik het ook mogelijk aanpassen als er wijzingen zijn.
 - De useStates die door de app op meerdere plaatsen gebruikt worden. Zoals de cocktail info staan in de CocktailContext.
 - Bij het search gedeelte wanneer er een zoekterm is ingevoerd komt het resultaat naar boven. Hier heb ik de keuze gemaakt om een de search again button bovenaan te zetten. Dit voor extra gebruiktgemak. Daarnaast heb ik een back button toegevoegd.
 - Ik heb er voor gekozen om met 2 contexten te werken. 1 context voor de auth en 1 context voor de cocktail-informatie. Op deze manier houdt ik de info overzichtelijk gescheiden. 
-
+- Ik heb er voor gekozen om de error meldingen te verwerken in een appart component (ErrorMessages). Omdat de endpoint zelf geen foutmelding geeft heb ik ervoor gekozen om een useEffect te gebruiken die doormiddel van een if statement leest of er niets in het resultaat zit. 
+Doormiddel van een useState zet ik dan een tekst in deze melding. Hierdoor is de ErrorMessage Component herbruikbaar bij elk onderdeel(component en pagina)
 
 
 
@@ -94,7 +73,7 @@ Wat kan er nog doorontwikkeld worden?
 
 
 Adobe XD: 
-- lettertype nog aanpassen.
+- lettertype nog aanpassen in XD
 - FOUMELDINGEN IN HET DESIGN toevoegen!
 
 TO DO VOOR EINDOPDTRACHT

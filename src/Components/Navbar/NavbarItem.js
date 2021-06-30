@@ -2,12 +2,12 @@ import './Navbar.css';
 import {NavLink} from "react-router-dom";
 import React from "react";
 
-function NavBarItem(props) {
+function NavBarItem({to, onClick, icon, tittle}) {
     return (
         <li className="navitems">
-            <NavLink to={props.to} onClick={props.onClick} className="inactive"
+            <NavLink to={to} onClick={onClick} className="inactive"
                      activeClassName="active-link">
-                <img src={props.icon}/>{props.tittle}
+                <img src={icon}/>{tittle}
             </NavLink>
         </li>
     )

@@ -2,18 +2,17 @@ import React from 'react';
 import {Link, useHistory} from 'react-router-dom';
 import './CocktailList.css';
 
-function CocktailList(props) {
+function CocktailList({id,cocktailName}) {
     const history = useHistory();
-    console.log(props);
 
     function listHandle() {
-        history.push(`/cocktailpage/${props.id}`)
+        history.push(`/cocktailpage/${id}`)
     }
 
     return (
         <div>
             <Link style={{textDecoration: 'none', color: 'white'}}>
-                <button onClick={() => (listHandle)}> {props.cocktailName}</button>
+                <button onClick={() => (listHandle)}> {cocktailName}</button>
             </Link>
         </div>
     )

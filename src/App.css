@@ -2,6 +2,14 @@ h1 {
     color: var(--text-color);
 }
 
+.error{
+    font-family: var(--main-font);
+    color: var(--text-color-error);
+    font-size: 24px;
+    text-align: center;
+    font-weight: 500;
+}
+
 .fullpage-container {
     padding-top: 50px;
     width: 100%;

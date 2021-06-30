@@ -6,7 +6,7 @@ export function useCocktailContext() {
     return useContext(cocktailContext);
 }
 
-export default function CocktailContextProvider(props) {
+export default function CocktailContextProvider({children}) {
     const [cocktail, setCocktail] = useState('');
     const [cocktailList, setCocktailList] = useState([]);
     const [searchResult, setSearchResult] = useState([])
@@ -58,7 +58,7 @@ export default function CocktailContextProvider(props) {
                 setIngredientlist
             }}
         >
-            {props.children}
+            {children}
         </cocktailContext.Provider>
     );
 }

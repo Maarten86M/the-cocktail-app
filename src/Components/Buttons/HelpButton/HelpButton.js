@@ -3,13 +3,10 @@ import './HelpButton.css';
 import '../../HelpField/HelpField.css';
 import HelpField from "../../HelpField/HelpField";
 
-function HelpButton(props) {
-
+function HelpButton({content}) {
     const [helpField, setHelpField] = useState();
 
-    function helpFieldOpener() {
-            setHelpField(v => !v);
-    }
+    function helpFieldOpener() {setHelpField(v => !v);}
 
     return (
         <>
@@ -17,7 +14,7 @@ function HelpButton(props) {
             <HelpField
                 helpField={helpField}
                 setsetHelpField={setHelpField}
-                content={props.content}
+                content={content}
                 opener={helpFieldOpener}
             />
 

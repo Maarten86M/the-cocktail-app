@@ -1,9 +1,9 @@
 import React from "react";
 
-function NavBarIcon(props) {
+function NavBarIcon({onClick, className}) {
     return (
-        <div onClick={props.onClick} className="Menu-icon-click">
-            <div className={props.className}></div>
+        <div onClick={onClick} className="Menu-icon-click">
+            <div className={className}></div>
         </div>
     )
 }

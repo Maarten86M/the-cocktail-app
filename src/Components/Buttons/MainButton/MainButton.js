@@ -1,14 +1,13 @@
 import React from "react";
 import {Link} from "react-router-dom";
 import './MainButton.css';
-import {useHistory} from "react-router-dom";
 
-function MainButton(props) {
+function MainButton({link, onclick, icon, name, type, disable}) {
     return (
-            <Link to={props.link}>
-                <button className="mainbutton" disabled={props.disable} onClick={props.onclick} type={props.type}>
-                    <img src={props.icon} alt={props.name}/>
-                    {props.name}
+            <Link to={link}>
+                <button className="mainbutton" disabled={disable} onClick={onclick} type={type}>
+                    <img src={icon} alt={name}/>
+                    {name}
                 </button>
             </Link>
     )
