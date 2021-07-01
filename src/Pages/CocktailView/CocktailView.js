@@ -10,15 +10,17 @@ import CocktailName from "../../Components/CocktailName/CocktailName";
 import MainBackButton from "../../Components/Buttons/MainBackButton/MainBackButton";
 import '../../App.css';
 import './CocktailView.css';
+import ErrorMessage from "../../Components/ErrorMessage/ErrorMessage";
 
 function CocktailView() {
 
     const params = useParams();
-    const {cocktail, setCocktail, setPageTitle} = useCocktailContext();
+    const {cocktail, setCocktail, setPageTitle, setErrorMessage} = useCocktailContext();
 
     useEffect(() => {
         async function fetchCocktailView() {
             try {
+                setErrorMessage('')
                 const viewResult = await axios.get(`https://www.thecocktaildb.com/api/json/v2/${process.env.REACT_APP_API_KEY}/lookup.php?i=${params.id}`);
                 setCocktail(viewResult.data.drinks);
             } catch (e) {
@@ -46,6 +48,7 @@ function CocktailView() {
                         <HelpButton content={7}/>
                     </div>
                     <div className="cocktail-view">
+                        <ErrorMessage />
                         <CocktailName/>
                         <CocktailCard/>
                     </div>

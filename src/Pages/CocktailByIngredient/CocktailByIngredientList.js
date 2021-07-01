@@ -12,7 +12,7 @@ import '../../App.css';
 import ErrorMessage from "../../Components/ErrorMessage/ErrorMessage";
 
 function CocktailByIngredientList() {
-    const {setPageTitle,ingredientlist, setIngredientlist} = useCocktailContext();
+    const {setPageTitle,ingredientlist, setIngredientlist,setErrorMessage} = useCocktailContext();
     const params = useParams();
 
     useEffect(() => {
@@ -22,6 +22,7 @@ function CocktailByIngredientList() {
                 setIngredientlist(ingredientResult.data.drinks);
             } catch (e) {
                 console.error(e);
+                setErrorMessage("Oops, something went wrong!");
             }
         }
         fetchIngredientCocktail();

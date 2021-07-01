@@ -1,11 +1,8 @@
 
-TO DO LIST: 
-- try and catch. Stel dat de data niet opgehaald kan worden. 
+TO DO LIST:
 - inlog systeem (Firebase?) & misschien firestore voor de namen.
 
-- error meldingen (laden api) zie random cocktail, ook setErrors vanuit de catch.
-- loading meldingen (laden api) zie random cocktail. 
-  - zorgen dat de foutmeldingen bij het inloggen niet meegaan vanuit vorige paginas
+- loading meldingen (laden api) zie random cocktail.
     
 - mobile responsive (header met titel van de pagina of cocktail. Dus hier moet een setter functie voor komen.)
 - cocktail naam bij mobiele weergave nog niet correct

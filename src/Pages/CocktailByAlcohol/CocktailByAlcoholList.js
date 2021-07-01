@@ -11,7 +11,7 @@ import cocktailIcon from '../../Assets/Icons/ListIcons/cocktail-icon.png';
 import '../../App.css';
 
 function CocktailByAlcoholList() {
-    const {setPageTitle,alcohollist, setAlcohollist} = useCocktailContext();
+    const {setPageTitle,alcohollist, setAlcohollist,setErrorMessage} = useCocktailContext();
     const params = useParams();
 
     useEffect(() => {
@@ -20,7 +20,8 @@ function CocktailByAlcoholList() {
                 const alcoholResult = await axios.get(`https://www.thecocktaildb.com/api/json/v2/${process.env.REACT_APP_API_KEY}/filter.php?i=${params.result}`);
                 setAlcohollist(alcoholResult.data.drinks);
             } catch (e) {
-                console.error(e)
+                console.error(e);
+                setErrorMessage("Oops, something went wrong!");
             }
         }
 
@@ -61,7 +62,6 @@ function CocktailByAlcoholList() {
                             </div>
                         </div>
                             <MainBackButton/>
-
                     </div>
                 </div>
             </div>

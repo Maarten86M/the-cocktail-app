@@ -16,9 +16,9 @@ function SearchResult() {
     const {
         searchText,
         setSearchText,
-        setErrors,
         searchResult,
-        setSearchResult
+        setSearchResult,
+        setErrorMessage
     } = useCocktailContext();
 
     useEffect(() => {
@@ -27,8 +27,8 @@ function SearchResult() {
                 const searchResult = await axios.get(`https://www.thecocktaildb.com/api/json/v2/${process.env.REACT_APP_API_KEY}/filter.php?i=${searchText}`);
                 setSearchResult(searchResult.data.drinks);
             } catch (e) {
-                setErrors(true)
                 console.error(e);
+                setErrorMessage("Oops, something went wrong!");
             }
         }
 
