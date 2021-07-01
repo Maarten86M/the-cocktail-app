@@ -11,20 +11,18 @@ import FormSubmit from "../../Components/FormSubmit/FormSubmit";
 import FormLink from "../../Components/FormLink/FormLink";
 import '../../App.css';
 import './ForgotPassword.css';
+import CocktailLoaderOops from "../../Components/CocktailLoader/CocktailLoaderOops";
 
 
 
 function ForgotPassword() {
     const {setPageTitle} = useCocktailContext();
     const history = useHistory();
-    const {email, setEmail, setFormError, lostPassword, setSucces} = useAuth();
+    const {email, setEmail, setFormError, lostPassword, setSucces, formError} = useAuth();
 
     async function onSubmit(event) {
         event.preventDefault();
 
-        if (email === "") {
-            return setFormError("Please fill in your e-mail.");
-        }
         try {
             const lostPasswordReset = await lostPassword(email);
             setSucces("You have received a recover e-mail.");
@@ -48,7 +46,7 @@ function ForgotPassword() {
         <div className="fullpage-container">
             <div className="left-section-container">
                 <div className="CocktailCard-container">
-                    <CocktailCardLogo/>
+                    {formError ? (<CocktailLoaderOops/>):(<CocktailCardLogo/>)}
                 </div>
             </div>
             <div className="right-section-container">

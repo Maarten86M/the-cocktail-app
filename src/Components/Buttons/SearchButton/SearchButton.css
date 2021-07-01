@@ -13,7 +13,9 @@
 }
 
 .searchButton:disabled {
-    color: var(--text-color-disabled);
+    color: var(--text-color);
+    background-color: var(--text-color-disabled);
+    border: 1px solid var(--text-color-disabled);
 }
 
 .searchButton:hover {

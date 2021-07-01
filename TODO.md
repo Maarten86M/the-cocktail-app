@@ -2,7 +2,7 @@
 TO DO LIST: 
 - try and catch. Stel dat de data niet opgehaald kan worden. 
 - inlog systeem (Firebase?) & misschien firestore voor de namen.
-    - succesvol geregistreerd melding aanmaken.
+
 - error meldingen (laden api) zie random cocktail, ook setErrors vanuit de catch.
 - loading meldingen (laden api) zie random cocktail. 
   - zorgen dat de foutmeldingen bij het inloggen niet meegaan vanuit vorige paginas
@@ -13,18 +13,14 @@ TO DO LIST:
   - alles nalopen vanuit de edhub
   - navbar nakijken, blijft soms mobiel open staan als er vanuit desktop
 - foutmelding bij A-Z buttons verkleinen mobiel
-- login en register en forgot wachtwoord uitlijnen.
-- required bij register zodra de firstname en lastname werken.
--forgotpasword maken.
+
   - Random cocktails moeten pas starten wanneer de button wordt aangeklikt
 - checken of de ErrorMessages wel via een useEffect moeten. En kijken of het zonder kan.
--diable op de buttons instellen als we aan het zoeken zijn.
-  disable en foutmlding bij zoeken. Dus wanneer er bijv geen zoekresultaat is.
+
   - ombouwen naar context. Dus de useStates verplaatsen.
   -consequent overal de error en loading gebruiken. Dus setError (en deze weergeven op de pagina. ) Zie voorbeeld bij search. Niets ingevuld
     - Navbar checken of hij open blijft staan.
-- inputfield lock icon en envelop aanpassen. 
-- form en register verder afronden.
+- inputfield lock icon en envelop aanpassen.
 - alles nalopen en kijken of het nog verder omgebouwd kan worden tot een component. Bijvoorbeeld de Cocktailby Alcohollist page & Cocktail by ingredient List page!! 
 - de link van het resultaat van cocktail by alcohol en cocktail bij ingredient verwijst nu naar Wiskey#20Bla dit moet nog omgebouw worde .replace(" ","+") naar een moooie link
 -  De data die binnenkomst via de api ombouwen naar { } zoals de tip uit de pokemon opdracht die is binnengekomen.
@@ -63,8 +59,7 @@ Op deze manier kan ik het ook mogelijk aanpassen als er wijzingen zijn.
 - Ik heb er voor gekozen om met 2 contexten te werken. 1 context voor de auth en 1 context voor de cocktail-informatie. Op deze manier houdt ik de info overzichtelijk gescheiden. 
 - Ik heb er voor gekozen om de error meldingen te verwerken in een appart component (ErrorMessages). Omdat de endpoint zelf geen foutmelding geeft heb ik ervoor gekozen om een useEffect te gebruiken die doormiddel van een if statement leest of er niets in het resultaat zit. 
 Doormiddel van een useState zet ik dan een tekst in deze melding. Hierdoor is de ErrorMessage Component herbruikbaar bij elk onderdeel(component en pagina)
-
-
+- De buttons onder een inputfield heb ik ervoor gekozen om ze disabled te maken. Zodat het voor een gebruiker niet mogelijk is om een actie uit te voeren zonder er iets is ingegeven.
 
 Wat kan er nog doorontwikkeld worden?
 - delete account. 

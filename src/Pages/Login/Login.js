@@ -1,5 +1,5 @@
-import React, {useEffect, useState} from "react";
-import {Link, useHistory} from "react-router-dom";
+import React, {useEffect} from "react";
+import {useHistory} from "react-router-dom";
 import {useAuth} from "../../Context/AuthContext";
 import {useCocktailContext} from "../../Context/CocktailContext";
 import CocktailCardLogo from "../../Components/CocktailCardLogo/CocktailCardLogo";
@@ -7,12 +7,12 @@ import HelpButton from "../../Components/Buttons/HelpButton/HelpButton";
 import MainButton from "../../Components/Buttons/MainButton/MainButton";
 import PageTitle from "../../Components/PageTitle/PageTitle";
 import FormErrorMessage from "../../Components/FormErrorMessage/FormErrorMessage";
+import FormLink from "../../Components/FormLink/FormLink";
+import FormSubmit from "../../Components/FormSubmit/FormSubmit";
+import CocktailLoaderOops from "../../Components/CocktailLoader/CocktailLoaderOops";
 import register from "../../Assets/Icons/NavIcons/register.png";
 import './Login.css';
 import '../../App.css';
-import FormLink from "../../Components/FormLink/FormLink";
-import FormSubmit from "../../Components/FormSubmit/FormSubmit";
-
 
 function Login() {
     const {setPageTitle} = useCocktailContext();
@@ -24,11 +24,10 @@ function Login() {
         password,
         setPassword,
         setFormError,
+        formError,
         logIn,
-        succes,
         setSucces
     } = useAuth();
-
 
 
     async function onSubmit(event) {
@@ -41,7 +40,6 @@ function Login() {
             console.log("Logged in:", userCredential);
             setUser(userCredential.user);
             history.push('./welcome')
-
         } catch (event) {
             console.error("FireBase Fail:", event);
             setFormError(event.message);
@@ -58,10 +56,9 @@ function Login() {
         <div className="fullpage-container">
             <div className="left-section-container">
                 <div className="CocktailCard-container">
-                    <CocktailCardLogo/>
+                    {formError ? (<CocktailLoaderOops/>) : (<CocktailCardLogo/>)}
                 </div>
             </div>
-
             <div className="right-section-container">
                 <div className="right-box-container">
                     <div><HelpButton content={0}/></div>
@@ -85,8 +82,8 @@ function Login() {
                             <FormSubmit type="submit" value="Login" disabled={email === "" || password === ""}/>
 
                             <FormLink
-                            linktext="Forgot your password?"
-                            to="/forgotpassword"
+                                linktext="Forgot your password?"
+                                to="/forgotpassword"
                             />
 
                             <MainButton
@@ -95,7 +92,7 @@ function Login() {
                                 link={"/register"}
                             />
                         </form>
-                        <FormErrorMessage />
+                        <FormErrorMessage/>
                     </div>
                 </div>
             </div>

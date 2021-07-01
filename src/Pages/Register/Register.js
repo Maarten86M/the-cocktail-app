@@ -5,11 +5,12 @@ import {useCocktailContext} from "../../Context/CocktailContext";
 import CocktailCardLogo from "../../Components/CocktailCardLogo/CocktailCardLogo";
 import HelpButton from "../../Components/Buttons/HelpButton/HelpButton";
 import PageTitle from "../../Components/PageTitle/PageTitle";
-import '../../App.css';
 import FormLink from "../../Components/FormLink/FormLink";
 import FormSubmit from "../../Components/FormSubmit/FormSubmit";
 import FormErrorMessage from "../../Components/FormErrorMessage/FormErrorMessage";
 import FormSuccesMessage from "../../Components/FormSuccesMessage/FormSuccesMessage";
+import '../../App.css';
+import CocktailLoaderOops from "../../Components/CocktailLoader/CocktailLoaderOops";
 
 function Register() {
     const {setPageTitle} = useCocktailContext();
@@ -25,6 +26,7 @@ function Register() {
         password,
         setPassword,
         setFormError,
+        formError,
         signUp,
         setSucces,
     } = useAuth();
@@ -36,10 +38,10 @@ function Register() {
             const userCredential = await signUp(email, password);
             console.log("registered", userCredential);
             setUser(userCredential.user);
-            setSucces("Thank you for your registration. You are now logged in!")
+            setSucces("Thank you for your registration. You are now logged in!");
             setTimeout(() => {
                 history.push('./welcome')
-            },5000);
+            }, 5000);
 
         } catch (event) {
             console.error('Firebase Fail', event);
@@ -57,7 +59,7 @@ function Register() {
         <div className="fullpage-container">
             <div className="left-section-container">
                 <div className="CocktailCard-container">
-                    <CocktailCardLogo/>
+                    {formError ? (<CocktailLoaderOops/>) : (<CocktailCardLogo/>)}
                 </div>
             </div>
 
@@ -106,7 +108,7 @@ function Register() {
                                 to="/login"
                             />
                             <FormSubmit type="submit" value="register" disabled={email === "" || password === ""}/>
-                            <FormErrorMessage />
+                            <FormErrorMessage/>
                             <FormSuccesMessage/>
                         </form>
                     </div>

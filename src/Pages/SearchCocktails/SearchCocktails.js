@@ -12,19 +12,16 @@ import './SearchCocktails.css';
 
 function SearchCocktails() {
     const history = useHistory();
-    const {searchText, setPageTitle} = useCocktailContext();
+    const {searchText,setSearchText, setPageTitle} = useCocktailContext();
     const [searchErrors, setSearchErrors] = useState('');
 
     function searchHandle() {
-        if (searchText === "" || searchText === "Search Cocktails") {
-            setSearchErrors("Please fill in a ingredient.");
-        } else {
             history.push(`/searchresult/${searchText}`)
-        }
     }
 
     useEffect(() => {
         setPageTitle('Search Cocktails');
+        setSearchText('');
     }, [])
 
 
@@ -41,7 +38,7 @@ function SearchCocktails() {
                         <HelpButton content={3}/>
                         <PageTitle title="Search Cocktails"/>
                         <SearchInput placeholder="Search Cocktails" icon={search}/>
-                        <SearchButton name="Search" icon={search} onClick={searchHandle}/>
+                        <SearchButton name="Search" icon={search} onClick={searchHandle} disabled={searchText === ""}/>
                         <p className="error">{searchErrors}</p>
                     </div>
                 </div>

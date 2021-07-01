@@ -43,7 +43,7 @@ function CocktailView() {
             <div className="right-section-container">
                 <div className="right-box-container">
                     <div className="help-container">
-                        <HelpButton content={9}/>
+                        <HelpButton content={7}/>
                     </div>
                     <div className="cocktail-view">
                         <CocktailName/>
