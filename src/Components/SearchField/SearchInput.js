@@ -1,7 +1,7 @@
 import React from "react";
 import {useHistory} from "react-router-dom";
 import './SearchInput.css';
-import {useCocktailContext} from "../../../Context/CocktailContext";
+import {useCocktailContext} from "../../Context/CocktailContext";
 import {useForm} from "react-hook-form";
 
 function SearchInput({placeholder}) {

@@ -1,7 +1,7 @@
 import React, {useEffect, useState} from "react";
 import {useHistory} from "react-router-dom";
 import {useCocktailContext} from "../../Context/CocktailContext";
-import SearchInput from "../../Components/Inputs/SearchField/SearchInput";
+import SearchInput from "../../Components/SearchField/SearchInput";
 import SearchButton from "../../Components/Buttons/SearchButton/SearchButton";
 import CocktailCardLogo from "../../Components/CocktailCardLogo/CocktailCardLogo";
 import HelpButton from "../../Components/Buttons/HelpButton/HelpButton";

@@ -20,7 +20,6 @@ TO DO LIST:
 - checken of de ErrorMessages wel via een useEffect moeten. En kijken of het zonder kan.
 -diable op de buttons instellen als we aan het zoeken zijn.
   disable en foutmlding bij zoeken. Dus wanneer er bijv geen zoekresultaat is.
-  - de cocktail (useState moet weer op 0 gezet worden. Zodat oude resultaten niet weergegeven worden)
   - ombouwen naar context. Dus de useStates verplaatsen.
   -consequent overal de error en loading gebruiken. Dus setError (en deze weergeven op de pagina. ) Zie voorbeeld bij search. Niets ingevuld
     - Navbar checken of hij open blijft staan.
@@ -37,6 +36,10 @@ ALLES GOED NALOPEN OF ER NOG COMPONENTEN OMGEBOUWD KUNNEN WRODEN.
 - alle html tags controleren of de juiste gebruikt zijn.
 -jest test toevoegen. 
 -buttons nalopen. Zij nog niet allemaal perfect uitgelijnt
+  -alle css nalopen of het goed geschreven is en niet dubbel.
+
+componenten ombouwen
+
 
 
 
@@ -60,7 +63,6 @@ Op deze manier kan ik het ook mogelijk aanpassen als er wijzingen zijn.
 - Ik heb er voor gekozen om met 2 contexten te werken. 1 context voor de auth en 1 context voor de cocktail-informatie. Op deze manier houdt ik de info overzichtelijk gescheiden. 
 - Ik heb er voor gekozen om de error meldingen te verwerken in een appart component (ErrorMessages). Omdat de endpoint zelf geen foutmelding geeft heb ik ervoor gekozen om een useEffect te gebruiken die doormiddel van een if statement leest of er niets in het resultaat zit. 
 Doormiddel van een useState zet ik dan een tekst in deze melding. Hierdoor is de ErrorMessage Component herbruikbaar bij elk onderdeel(component en pagina)
-
 
 
 

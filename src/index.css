@@ -22,6 +22,9 @@
     --text-color-help-field: hsl(0, 0%, 0%);
     --text-color-disabled: hsl(111, 0%, 69%);
     --text-color-error: hsl(9, 89%, 59%);
+    --text-size-error: 24px;
+    --text-color-succes:hsl(156, 71%, 45%);
+    --text-size-succes: 24px;
     --text-loading-color:hsl(66, 75%, 81%);
     --icon-color: hsl(0, 0%, 100%);
     --nav-font-size: 16px;
@@ -41,6 +44,7 @@
     --logo-width-desktop: 374px;
     --logo-height-mobile: 241px;
     --logo-width-mobile: 241px;
+    --link-font-size: 20px;
 }
 
 body {

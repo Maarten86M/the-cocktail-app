@@ -1,0 +1,11 @@
+.form-link{
+    text-align: center;
+    font-family: var(--second-font);
+    padding-bottom: 30px;
+    font-size: var(--link-font-size);
+}
+
+
+Link{
+    text-decoration-colorecoration: none;
+}

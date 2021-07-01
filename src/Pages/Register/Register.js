@@ -4,9 +4,12 @@ import {useAuth} from "../../Context/AuthContext";
 import {useCocktailContext} from "../../Context/CocktailContext";
 import CocktailCardLogo from "../../Components/CocktailCardLogo/CocktailCardLogo";
 import HelpButton from "../../Components/Buttons/HelpButton/HelpButton";
-import ErrorMessage from "../../Components/ErrorMessage/ErrorMessage";
 import PageTitle from "../../Components/PageTitle/PageTitle";
 import '../../App.css';
+import FormLink from "../../Components/FormLink/FormLink";
+import FormSubmit from "../../Components/FormSubmit/FormSubmit";
+import FormErrorMessage from "../../Components/FormErrorMessage/FormErrorMessage";
+import FormSuccesMessage from "../../Components/FormSuccesMessage/FormSuccesMessage";
 
 function Register() {
     const {setPageTitle} = useCocktailContext();
@@ -21,9 +24,9 @@ function Register() {
         setEmail,
         password,
         setPassword,
-        formError,
         setFormError,
-        signUp
+        signUp,
+        setSucces,
     } = useAuth();
 
     async function onSubmit(event) {
@@ -33,7 +36,11 @@ function Register() {
             const userCredential = await signUp(email, password);
             console.log("registered", userCredential);
             setUser(userCredential.user);
-            history.push('./welcome');
+            setSucces("Thank you for your registration. You are now logged in!")
+            setTimeout(() => {
+                history.push('./welcome')
+            },5000);
+
         } catch (event) {
             console.error('Firebase Fail', event);
             setFormError(event.message);
@@ -42,6 +49,8 @@ function Register() {
 
     useEffect(() => {
         setPageTitle("Register");
+        setFormError('');
+        setSucces('');
     }, [])
 
     return (
@@ -54,15 +63,9 @@ function Register() {
 
             <div className="right-section-container">
                 <div className="right-box-container">
+                    <div><HelpButton content={1}/></div>
                     <PageTitle title="Register"/>
-                    {/*{succesMessage && (<h1> Thank you for your account.</h1>)}*/}
-                    {/*{loading && (<h1>Moment geduld</h1>)}*/}
-                    <ErrorMessage/>
-                    {/*<h2>{formError}</h2>*/}
                     <div className="input-container">
-                        <div>
-                            <HelpButton content={1}/>
-                        </div>
                         <form onSubmit={onSubmit}>
 
                             {/*REQUIREMENTS INBOUWEN!! */}
@@ -98,8 +101,13 @@ function Register() {
                                 value={password}
                                 onChange={event => setPassword(event.target.value)}
                             />
-
-                            <input type="submit" value="login"/>
+                            <FormLink
+                                linktext="Already have an account ? Click here to login."
+                                to="/login"
+                            />
+                            <FormSubmit type="submit" value="register" disabled={email === "" || password === ""}/>
+                            <FormErrorMessage />
+                            <FormSuccesMessage/>
                         </form>
                     </div>
                 </div>

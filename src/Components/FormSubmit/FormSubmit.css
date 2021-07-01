@@ -1,0 +1,29 @@
+.submit-button {
+    background-color: var(--button-color);
+    color: var(--text-color);
+    border: 1px solid var(--button-border-color);
+    border-radius: var(--button-border-radius);
+    width: var(--button-width);
+    height: var(--button-height);
+    font-size: var(--button-font-size);
+    font-weight: var(--button-font-weight);
+    font-family: var(--main-font);
+    margin-bottom: 45px;
+    box-shadow: var(--button-shadow);
+}
+
+.submit-button:disabled {
+    color: var(--text-color);
+    background-color: var(--text-color-disabled);
+    border: 1px solid var(--text-color-disabled);
+}
+
+.submit-button:hover {
+    background-color: var(--button-border-color);
+}
+
+@media screen and (max-width: 990px) {
+    .submit-button {
+        width: var(--button-width-mobile);
+    }
+}
