@@ -1,7 +1,6 @@
 
 TO DO LIST:
 - inlog systeem (Firebase?) & misschien firestore voor de namen.
-
 - loading meldingen (laden api) zie random cocktail.
     
 - mobile responsive (header met titel van de pagina of cocktail. Dus hier moet een setter functie voor komen.)
@@ -10,6 +9,7 @@ TO DO LIST:
   - alles nalopen vanuit de edhub
   - navbar nakijken, blijft soms mobiel open staan als er vanuit desktop
 - foutmelding bij A-Z buttons verkleinen mobiel
+- blijwe lijn onder link verwijderen.
 
   - Random cocktails moeten pas starten wanneer de button wordt aangeklikt
 - checken of de ErrorMessages wel via een useEffect moeten. En kijken of het zonder kan.
