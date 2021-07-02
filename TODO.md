@@ -1,13 +1,7 @@
 
 TO DO LIST:
 - inlog systeem (Firebase?) & misschien firestore voor de namen.
-  
-- mobile responsive (header met titel van de pagina of cocktail. Dus hier moet een setter functie voor komen.)
-- cocktail naam bij mobiele weergave nog niet correct
-- mobiele titels nalopen op grote
   - alles nalopen vanuit de edhub
-- foutmelding bij A-Z buttons verkleinen mobiel
-- blijwe lijn onder link verwijderen.
 - inputfield lock icon en envelop aanpassen.
 - alles nalopen en kijken of het nog verder omgebouwd kan worden tot een component. Bijvoorbeeld de Cocktailby Alcohollist page & Cocktail by ingredient List page!! 
 - de link van het resultaat van cocktail by alcohol en cocktail bij ingredient verwijst nu naar Wiskey#20Bla dit moet nog omgebouw worde .replace(" ","+") naar een moooie link
@@ -21,7 +15,7 @@ ALLES GOED NALOPEN OF ER NOG COMPONENTEN OMGEBOUWD KUNNEN WRODEN.
 -buttons nalopen. Zij nog niet allemaal perfect uitgelijnt
   -alle css nalopen of het goed geschreven is en niet dubbel.
   -vaste hoogte bij all cocktail. Dus als de list kleiner is de button niet omhoog laten gaan.
-
+- help field kruisje zit nog niet perfect
 
 
 

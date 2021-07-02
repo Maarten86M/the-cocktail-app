@@ -61,7 +61,7 @@ function SearchResult() {
                             </div>
                         ) : (<div className="cocktaillist">
                             {searchResult.map((cocktail) =>
-                                <Link to={`/cocktailpage/${cocktail.idDrink}`}>
+                                <Link to={`/cocktailpage/${cocktail.idDrink}`} className="link">
                                     <p><img src={cocktailIcon} alt="Cocktail Icon"/>{cocktail.strDrink}</p></Link>)}
                         </div>)}
                     </div>

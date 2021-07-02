@@ -23,10 +23,10 @@ function CocktailView() {
                 setErrorMessage('')
                 const viewResult = await axios.get(`https://www.thecocktaildb.com/api/json/v2/${process.env.REACT_APP_API_KEY}/lookup.php?i=${params.id}`);
                 setCocktail(viewResult.data.drinks);
+                setPageTitle(viewResult.data.drinks[0].strDrink);
             } catch (e) {
                 console.error(e);
             }
-            setPageTitle('cocktailname');
         }
 
         fetchCocktailView();

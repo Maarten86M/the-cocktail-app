@@ -17,7 +17,7 @@ function ErrorMessage() {
             setErrorMessage("Sorry, nothing found with that ingredient!")
         }
         if (letter === undefined) {
-            setErrorMessage("Sorry, something went wrong! Click again on the next of back button");
+            setErrorMessage("Sorry, something went wrong! Click again on the next or back button");
         }
     }, [searchResult])
 

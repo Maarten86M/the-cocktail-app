@@ -10,6 +10,7 @@
     font-family: var(--second-font);
     font-weight: 500;
     font-size: var(--help-field-text-size);
+
 }
 
 .help-field p {
@@ -23,7 +24,7 @@
     right: 10px;
 }
 
-@media screen and (max-width: 990px){
+@media screen and (max-width: 990px) {
     .help-field {
         margin-left: -10px;
         width: 300px;

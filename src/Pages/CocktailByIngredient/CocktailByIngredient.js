@@ -30,7 +30,7 @@ function CocktailByIngredient() {
                     <HelpButton content={10}/>
                     <PageTitle title="Cocktail By Ingredient"/>
                     <div className="scrollbar">
-                        {ingredientData.map(item => <Link to={`/cocktailbyingredientlist/${item.strIngredient1}`}>
+                        {ingredientData.map(item => <Link to={`/cocktailbyingredientlist/${item.strIngredient1}`} className="link">
                             <p><img src={ingredientIcon} alt="Ingredient Icon"/>{item.strIngredient1}</p></Link>)}
                     </div>
                     <MainBackButton/>

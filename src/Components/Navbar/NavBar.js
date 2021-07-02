@@ -1,6 +1,6 @@
 import React, {useState, useEffect} from "react";
 import {useAuth} from "../../Context/AuthContext";
-import {useCocktailContext} from "../../Context/CocktailContext";
+import NavPageTitle from "../NavPageTitle/NavPageTitle";
 import NavBarItem from "./NavbarItem";
 import NavBarIcon from "./NavBarIcon";
 import search from '../../Assets/Icons/NavIcons/search.png';
@@ -16,11 +16,11 @@ import signout from '../../Assets/Icons/NavIcons/signout.png';
 import './Navbar.css';
 import './icons/NavbarIcon.css';
 
+
 function Navbar() {
     const {logOut, user} = useAuth()
     const [openMenu, setOpenMenu] = useState(false);
     const [screenWidth, setScreenWidth] = useState(window.innerWidth);
-    const {pageTitle} = useCocktailContext();
 
     function menuopener() {
         setOpenMenu(!openMenu);
@@ -45,7 +45,7 @@ function Navbar() {
     return (
         <nav>
             <div className="mobile-title-container">
-                {!openMenu && (<h1 className="mobile-title">{pageTitle}</h1>)}
+                {!openMenu && (<NavPageTitle/>)}
             </div>
             {(openMenu || screenWidth > 990) && (
                 <ul className="navlist">

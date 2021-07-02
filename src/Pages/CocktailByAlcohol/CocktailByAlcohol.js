@@ -29,7 +29,8 @@ function CocktailByAlcohol() {
                     <HelpButton content={8}/>
                     <PageTitle title="Cocktail By Alcohol"/>
                     <div className="scrollbar">
-                        {alcoholData.map(item => <Link to={`/cocktailbyalcohollist/${item.strIngredient1}`}>
+                        {alcoholData.map(item => <Link to={`/cocktailbyalcohollist/${item.strIngredient1}`}
+                                                       className="link">
                             <p><img
                                 src={alcoholIcon}
                                 alt="alcoholicon"/>

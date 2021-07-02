@@ -29,6 +29,7 @@ function CocktailByIngredientList() {
             try {
                 const ingredientResult = await axios.get(`https://www.thecocktaildb.com/api/json/v2/${process.env.REACT_APP_API_KEY}/filter.php?i=${params.result}`);
                 setIngredientlist(ingredientResult.data.drinks);
+                setPageTitle(params.result + ' Cocktails');
             } catch (e) {
                 console.error(e);
                 setErrorMessage("Oops, something went wrong!");
@@ -38,10 +39,6 @@ function CocktailByIngredientList() {
 
         fetchIngredientCocktail();
     }, []);
-
-    useEffect(() => {
-        setPageTitle(params.result + ' Cocktails');
-    }, [])
 
     return (
         <>
@@ -66,7 +63,7 @@ function CocktailByIngredientList() {
                                 {loading && (<CocktailLoaderText />)}
                                 {ingredientlist === "None Found" ? (<ErrorMessage/>) : (
                                     <div className="scrollbar">
-                                        {ingredientlist.map(cocktail => <Link to={`/cocktailpage/${cocktail.idDrink}`}>
+                                        {ingredientlist.map(cocktail => <Link to={`/cocktailpage/${cocktail.idDrink}`} className="link">
                                             <p><img src={cocktailIcon} alt="Cocktail Icon"/>{cocktail.strDrink}</p>
                                         </Link>)}
                                     </div>)}

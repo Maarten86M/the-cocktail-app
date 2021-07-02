@@ -16,11 +16,14 @@ import './RandomCocktails.css';
 function RandomCocktails() {
     const {
         setCocktail,
+        cocktail,
         setErrorMessage,
         errorMessage,
         randomizeButton,
         loading,
         setLoading,
+        setPageTitle,
+        pageTitle
     } = useCocktailContext();
 
     useEffect(() => {
@@ -31,6 +34,7 @@ function RandomCocktails() {
                 const response = await axios.get(`https://www.thecocktaildb.com/api/json/v2/${process.env.REACT_APP_API_KEY}/random.php`
                 );
                 setCocktail(response.data.drinks);
+                setPageTitle(response.data.drinks[0].strDrink)
             } catch (e) {
                 console.error(e);
                 setErrorMessage("Oops! Something went Wrong");

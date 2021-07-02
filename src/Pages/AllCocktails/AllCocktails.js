@@ -33,6 +33,7 @@ function AllCocktails() {
                 const result = await axios.get(`https://www.thecocktaildb.com/api/json/v2/${process.env.REACT_APP_API_KEY}/search.php?f=${letter}`);
                 console.log(result, "wat is result?")
                 setCocktail(result.data.drinks);
+                setPageTitle("All Cocktails");
             } catch (e) {
                 console.error(e);
                 setErrorMessage("Oops, something went wrong!")
@@ -41,10 +42,6 @@ function AllCocktails() {
         }
         fetchData()
     }, [letter]);
-
-    useEffect(() => {
-        setPageTitle('All Cocktails');
-    }, [])
 
     return (
         <div className="fullpage-container">
@@ -65,7 +62,7 @@ function AllCocktails() {
                     {cocktail ? (
                         <div className="scrollbar-all">
                             {loading && (<CocktailLoaderText/>)}
-                            {cocktail.map(cocktail => <Link to={`/cocktailpage/${cocktail.idDrink}`}>
+                            {cocktail.map(cocktail => <Link to={`/cocktailpage/${cocktail.idDrink}`} className="link">
                                 <p><img src={cocktailIcon} alt="Cocktail Icon"/>{cocktail.strDrink}</p></Link>)}
                         </div>
                     ) : (<ErrorMessage/>)}
