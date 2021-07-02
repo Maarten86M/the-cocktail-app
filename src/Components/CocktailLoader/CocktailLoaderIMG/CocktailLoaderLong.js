@@ -1,6 +1,6 @@
 import React from "react";
 import './CocktailLoader.css';
-import longLoader from '../../Assets/Loader/Long-loader.gif';
+import longLoader from '../../../Assets/Loader/Long-loader.gif';
 import './CocktailLoader.css';
 
 function CocktailLoaderLong() {

@@ -5,12 +5,12 @@ import {useParams} from 'react-router-dom';
 import CocktailCard from "../../Components/CocktailCard/CocktailCard";
 import CocktailCardHeader from "../../Components/CocktailCardHeader/CocktailCardHeader";
 import HelpButton from "../../Components/Buttons/HelpButton/HelpButton";
-import CocktailLoaderOops from "../../Components/CocktailLoader/CocktailLoaderOops";
+import CocktailLoaderOops from "../../Components/CocktailLoader/CocktailLoaderIMG/CocktailLoaderOops";
 import CocktailName from "../../Components/CocktailName/CocktailName";
 import MainBackButton from "../../Components/Buttons/MainBackButton/MainBackButton";
+import ErrorMessage from "../../Components/ErrorMessage/ErrorMessage";
 import '../../App.css';
 import './CocktailView.css';
-import ErrorMessage from "../../Components/ErrorMessage/ErrorMessage";
 
 function CocktailView() {
 

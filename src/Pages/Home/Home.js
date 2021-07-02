@@ -1,6 +1,8 @@
 import React, {useState, useEffect} from "react";
 import {useHistory} from "react-router-dom";
-import CocktailLoaderLong from "../../Components/CocktailLoader/CocktailLoaderLong";
+import CocktailLoaderLong from "../../Components/CocktailLoader/CocktailLoaderIMG/CocktailLoaderLong";
+import PageTitle from "../../Components/PageTitle/PageTitle";
+import FrontLoader from "../../Components/FrontLoader/FrontLoader";
 import '../../App.css';
 import './Home.css';
 
@@ -21,15 +23,9 @@ function Home() {
             {introloader && (
                 <div className="page-container">
                     <CocktailLoaderLong/>
-                    <h1>Welcome</h1>
-                    <h1>The Cocktail App </h1>
-                    <div className="move-container">
-                        <p className="loading-text"/>
-                        <div className="loader-bullets b-1"/>
-                        <div className="loader-bullets b-2"/>
-                        <div className="loader-bullets b-3"/>
-                        <div className="loader-bullets b-4"/>
-                    </div>
+                    <PageTitle title="Welcome"/>
+                    <PageTitle title="The Cocktail App"/>
+                    <FrontLoader />
                 </div>
             )}
         </div>

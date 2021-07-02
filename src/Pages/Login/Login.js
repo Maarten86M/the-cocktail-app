@@ -9,7 +9,7 @@ import PageTitle from "../../Components/PageTitle/PageTitle";
 import FormErrorMessage from "../../Components/FormErrorMessage/FormErrorMessage";
 import FormLink from "../../Components/FormLink/FormLink";
 import FormSubmit from "../../Components/FormSubmit/FormSubmit";
-import CocktailLoaderOops from "../../Components/CocktailLoader/CocktailLoaderOops";
+import CocktailLoaderOops from "../../Components/CocktailLoader/CocktailLoaderIMG/CocktailLoaderOops";
 import register from "../../Assets/Icons/NavIcons/register.png";
 import './Login.css';
 import '../../App.css';

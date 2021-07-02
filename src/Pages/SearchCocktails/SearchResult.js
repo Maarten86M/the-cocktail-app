@@ -3,7 +3,7 @@ import axios from "axios";
 import {useParams, Link} from 'react-router-dom';
 import {useCocktailContext} from "../../Context/CocktailContext";
 import MainButton from "../../Components/Buttons/MainButton/MainButton";
-import CocktailLoaderOops from "../../Components/CocktailLoader/CocktailLoaderOops";
+import CocktailLoaderOops from "../../Components/CocktailLoader/CocktailLoaderIMG/CocktailLoaderOops";
 import CocktailCardLogo from "../../Components/CocktailCardLogo/CocktailCardLogo";
 import HelpButton from "../../Components/Buttons/HelpButton/HelpButton";
 import ErrorMessage from "../../Components/ErrorMessage/ErrorMessage";

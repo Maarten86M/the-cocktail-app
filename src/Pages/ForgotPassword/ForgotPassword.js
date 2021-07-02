@@ -11,7 +11,7 @@ import FormSubmit from "../../Components/FormSubmit/FormSubmit";
 import FormLink from "../../Components/FormLink/FormLink";
 import '../../App.css';
 import './ForgotPassword.css';
-import CocktailLoaderOops from "../../Components/CocktailLoader/CocktailLoaderOops";
+import CocktailLoaderOops from "../../Components/CocktailLoader/CocktailLoaderIMG/CocktailLoaderOops";
 
 
 
@@ -55,7 +55,6 @@ function ForgotPassword() {
                         <div><HelpButton content={11}/></div>
                         <PageTitle title="Forgot Your Password ?"/>
                         <div className="input-container">
-
                             <form onSubmit={onSubmit}>
                                 <input
                                     type="email"
@@ -71,7 +70,6 @@ function ForgotPassword() {
                                 to="/login"
                             />
                         </div>
-
                         <FormSuccesMessage/>
                         <FormErrorMessage/>
                     </div>

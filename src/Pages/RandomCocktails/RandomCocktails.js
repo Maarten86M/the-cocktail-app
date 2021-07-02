@@ -4,12 +4,13 @@ import CocktailCard from "../../Components/CocktailCard/CocktailCard";
 import CocktailCardHeader from "../../Components/CocktailCardHeader/CocktailCardHeader";
 import RandomizeButton from "../../Components/Buttons/RandomizeButton/RandomizeButton";
 import {useCocktailContext} from "../../Context/CocktailContext";
-import CocktailLoader from "../../Components/CocktailLoader/CocktailLoader";
-import CocktailLoaderOops from "../../Components/CocktailLoader/CocktailLoaderOops";
+import CocktailLoader from "../../Components/CocktailLoader/CocktailLoaderIMG/CocktailLoader";
+import CocktailLoaderOops from "../../Components/CocktailLoader/CocktailLoaderIMG/CocktailLoaderOops";
 import HelpButton from "../../Components/Buttons/HelpButton/HelpButton";
 import CocktailName from "../../Components/CocktailName/CocktailName";
 import MainBackButton from "../../Components/Buttons/MainBackButton/MainBackButton";
 import ErrorMessage from "../../Components/ErrorMessage/ErrorMessage";
+import CocktailLoaderText from "../../Components/CocktailLoader/CocktailLoaderText/CocktailLoaderText";
 import '../../App.css';
 import './RandomCocktails.css';
 
@@ -17,7 +18,7 @@ function RandomCocktails() {
     const {
         setCocktail,
         setErrorMessage,
-        errors,
+        errorMessage,
         randomizeButton,
         loading,
         setLoading,
@@ -38,29 +39,26 @@ function RandomCocktails() {
             setLoading(false);
         }
         fetchRandomCocktail()
-
     }, [randomizeButton]);
-
 
     return (
         <div className="fullpage-container">
             <div className="left-section-container">
                 <div className="CocktailCard-container">
-                    {errors && (<CocktailLoaderOops/>)}
+                    {errorMessage && (<CocktailLoaderOops/>)}
                     {loading ? (
                         <CocktailLoader/>
                     ) : (<CocktailCardHeader/>)}
                 </div>
             </div>
-
             <div className="right-section-container">
                 <div className="right-box-container">
                     <div className="help-container">
                         <HelpButton content={6}/>
                     </div>
                     <RandomizeButton/>
-                    <ErrorMessage />
                     <div className="name-and-ingredient-container">
+                        {errorMessage && (<ErrorMessage/>)}
                         <CocktailName/>
                         <CocktailCard/>
                     </div>

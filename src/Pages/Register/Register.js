@@ -10,7 +10,7 @@ import FormSubmit from "../../Components/FormSubmit/FormSubmit";
 import FormErrorMessage from "../../Components/FormErrorMessage/FormErrorMessage";
 import FormSuccesMessage from "../../Components/FormSuccesMessage/FormSuccesMessage";
 import '../../App.css';
-import CocktailLoaderOops from "../../Components/CocktailLoader/CocktailLoaderOops";
+import CocktailLoaderOops from "../../Components/CocktailLoader/CocktailLoaderIMG/CocktailLoaderOops";
 
 function Register() {
     const {setPageTitle} = useCocktailContext();

@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from "react";
+import React, {useEffect} from "react";
 import {useHistory} from "react-router-dom";
 import {useCocktailContext} from "../../Context/CocktailContext";
 import SearchInput from "../../Components/SearchField/SearchInput";
@@ -12,11 +12,10 @@ import './SearchCocktails.css';
 
 function SearchCocktails() {
     const history = useHistory();
-    const {searchText,setSearchText, setPageTitle} = useCocktailContext();
-    const [searchErrors, setSearchErrors] = useState('');
+    const {searchText, setSearchText, setPageTitle} = useCocktailContext();
 
     function searchHandle() {
-            history.push(`/searchresult/${searchText}`)
+        history.push(`/searchresult/${searchText}`)
     }
 
     useEffect(() => {
@@ -39,7 +38,6 @@ function SearchCocktails() {
                         <PageTitle title="Search Cocktails"/>
                         <SearchInput placeholder="Search Cocktails" icon={search}/>
                         <SearchButton name="Search" icon={search} onClick={searchHandle} disabled={searchText === ""}/>
-                        <p className="error">{searchErrors}</p>
                     </div>
                 </div>
             </div>

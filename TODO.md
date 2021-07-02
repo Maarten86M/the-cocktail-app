@@ -1,7 +1,6 @@
 
 TO DO LIST:
 - inlog systeem (Firebase?) & misschien firestore voor de namen.
-- loading meldingen (laden api) zie random cocktail.
     
 - mobile responsive (header met titel van de pagina of cocktail. Dus hier moet een setter functie voor komen.)
 - cocktail naam bij mobiele weergave nog niet correct
@@ -11,11 +10,7 @@ TO DO LIST:
 - foutmelding bij A-Z buttons verkleinen mobiel
 - blijwe lijn onder link verwijderen.
 
-  - Random cocktails moeten pas starten wanneer de button wordt aangeklikt
-- checken of de ErrorMessages wel via een useEffect moeten. En kijken of het zonder kan.
-
   - ombouwen naar context. Dus de useStates verplaatsen.
-  -consequent overal de error en loading gebruiken. Dus setError (en deze weergeven op de pagina. ) Zie voorbeeld bij search. Niets ingevuld
     - Navbar checken of hij open blijft staan.
 - inputfield lock icon en envelop aanpassen.
 - alles nalopen en kijken of het nog verder omgebouwd kan worden tot een component. Bijvoorbeeld de Cocktailby Alcohollist page & Cocktail by ingredient List page!! 
@@ -30,6 +25,7 @@ ALLES GOED NALOPEN OF ER NOG COMPONENTEN OMGEBOUWD KUNNEN WRODEN.
 -jest test toevoegen. 
 -buttons nalopen. Zij nog niet allemaal perfect uitgelijnt
   -alle css nalopen of het goed geschreven is en niet dubbel.
+  -vaste hoogte bij all cocktail. Dus als de list kleiner is de button niet omhoog laten gaan.
 
 componenten ombouwen
 

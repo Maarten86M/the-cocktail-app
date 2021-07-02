@@ -60,8 +60,7 @@ function Welcome() {
                     <MainButton
                         name="Your Profile"
                         icon={profile}
-                        link={"/profile"}
-                    />
+                        link={"/profile"}/>
                 </div>
             </div>
         </main>
