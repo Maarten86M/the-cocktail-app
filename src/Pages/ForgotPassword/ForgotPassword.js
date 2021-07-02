@@ -9,11 +9,9 @@ import FormErrorMessage from "../../Components/FormErrorMessage/FormErrorMessage
 import FormSuccesMessage from "../../Components/FormSuccesMessage/FormSuccesMessage";
 import FormSubmit from "../../Components/FormSubmit/FormSubmit";
 import FormLink from "../../Components/FormLink/FormLink";
+import CocktailLoaderOops from "../../Components/CocktailLoader/CocktailLoaderIMG/CocktailLoaderOops";
 import '../../App.css';
 import './ForgotPassword.css';
-import CocktailLoaderOops from "../../Components/CocktailLoader/CocktailLoaderIMG/CocktailLoaderOops";
-
-
 
 function ForgotPassword() {
     const {setPageTitle} = useCocktailContext();

@@ -1,7 +1,6 @@
-import React from "react";
+import {useCocktailContext} from "../../../../Context/CocktailContext";
 import '../NextBackButton.css';
 import backIcon from '../../../../Assets/Icons/ButtonIcons/Back.png';
-import {useCocktailContext} from "../../../../Context/CocktailContext";
 
 function BackButton() {
 

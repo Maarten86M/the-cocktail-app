@@ -36,27 +36,22 @@ function Welcome() {
                         name="Search Cocktails"
                         icon={search}
                         link={"/searchcocktails"}/>
-
                     <MainButton
                         name="Random Cocktails"
                         icon={random}
                         link={"/randomcocktails"}/>
-
                     <MainButton
                         name="Cocktails By Alcohol"
                         icon={alcohol}
                         link={"/cocktailbyalcohol"}/>
-
                     <MainButton
                         name="Cocktails By Ingredient"
                         icon={fruit}
                         link={"/cocktailbyingredient"}/>
-
                     <MainButton
                         name="All Cocktails"
                         icon={cocktail}
                         link={"/allcocktails"}/>
-
                     <MainButton
                         name="Your Profile"
                         icon={profile}

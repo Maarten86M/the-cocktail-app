@@ -1,12 +1,11 @@
-import React from "react";
 import {useAuth} from "../../Context/AuthContext";
 import './FormErrorMessage.css';
 
 function FormErrorMessage() {
 
-    const {formError}=useAuth();
+    const {formError} = useAuth();
 
-    return(
+    return (
         <div className="form-error-container">
             <p className="form-error-message">{formError}</p>
         </div>

@@ -1,6 +1,5 @@
-import React from "react";
-import './CocktailCardHeader.css';
 import {useCocktailContext} from "../../Context/CocktailContext";
+import './CocktailCardHeader.css';
 
 function CocktailCardHeader() {
     const {cocktail} = useCocktailContext();
@@ -8,9 +7,10 @@ function CocktailCardHeader() {
     return (
         <div className="header-container">
             {cocktail ? (
-            <img className="cocktailIMG" src={id.strDrinkThumb} alt={id.strDrink}/>
-            ):(<h1>Loading</h1>)}
+                <img className="cocktailIMG" src={id.strDrinkThumb} alt={id.strDrink}/>
+            ) : (<h1>Loading</h1>)}
         </div>
     )
 }
+
 export default CocktailCardHeader;

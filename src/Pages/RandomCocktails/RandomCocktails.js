@@ -10,7 +10,6 @@ import HelpButton from "../../Components/Buttons/HelpButton/HelpButton";
 import CocktailName from "../../Components/CocktailName/CocktailName";
 import MainBackButton from "../../Components/Buttons/MainBackButton/MainBackButton";
 import ErrorMessage from "../../Components/ErrorMessage/ErrorMessage";
-import CocktailLoaderText from "../../Components/CocktailLoader/CocktailLoaderText/CocktailLoaderText";
 import '../../App.css';
 import './RandomCocktails.css';
 
@@ -38,6 +37,7 @@ function RandomCocktails() {
             }
             setLoading(false);
         }
+
         fetchRandomCocktail()
     }, [randomizeButton]);
 

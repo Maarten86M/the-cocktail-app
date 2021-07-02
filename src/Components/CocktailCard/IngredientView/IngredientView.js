@@ -1,4 +1,3 @@
-import React from "react";
 import './IngredientView.css';
 
 function IngredientView({IngredientName}) {

@@ -70,27 +70,22 @@ function Login() {
                                 name="email"
                                 placeholder="Email adress"
                                 value={email}
-                                onChange={event => setEmail(event.target.value)}
-                            />
+                                onChange={event => setEmail(event.target.value)}/>
                             <input
                                 type="password"
                                 name="password"
                                 placeholder="Password"
                                 value={password}
-                                onChange={event => setPassword(event.target.value)}
-                            />
+                                onChange={event => setPassword(event.target.value)}/>
                             <FormSubmit type="submit" value="Login" disabled={email === "" || password === ""}/>
-
                             <FormLink
                                 linktext="Forgot your password?"
-                                to="/forgotpassword"
-                            />
+                                to="/forgotpassword"/>
 
                             <MainButton
                                 name="Register Now"
                                 icon={register}
-                                link={"/register"}
-                            />
+                                link={"/register"}/>
                         </form>
                         <FormErrorMessage/>
                     </div>

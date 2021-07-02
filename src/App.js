@@ -1,9 +1,6 @@
 import React from "react";
 import Navbar from "./Components/Navbar/NavBar";
-import {
-    Switch,
-    Route,
-} from 'react-router-dom';
+import {Switch, Route,} from 'react-router-dom';
 import RandomCocktails from "./Pages/RandomCocktails/RandomCocktails";
 import SearchCocktails from "./Pages/SearchCocktails/SearchCocktails";
 import CocktailByAlcohol from "./Pages/CocktailByAlcohol/CocktailByAlcohol";
@@ -31,71 +28,55 @@ function App() {
         <>
             <Navbar/>
             <Switch>
-
                 <PublicRoute
                     path="/"
                     exact={true}
                     component={<Home/>}/>
-
                 <PublicRoute
                     path="/login"
                     component={<Login/>}/>
-
                 <PublicRoute
                     path="/register"
                     component={<Register/>}/>
-
                 <PublicRoute
                     path="/forgotpassword"
                     component={<ForgotPassword/>}/>
-
                 <PrivateRoute
                     path="/welcome"
                     component={<Welcome/>}/>
-
                 <PrivateRoute
                     path="/searchcocktails"
                     component={<SearchCocktails/>}/>
-
                 <PrivateRoute
                     path="/searchresult/:result"
                     component={<SearchResult/>}/>
-
                 <PrivateRoute
                     path="/cocktailpage/:id"
                     component={<CocktailView/>}/>
-
                 <PrivateRoute
                     path="/randomcocktails"
                     component={<RandomCocktails/>}/>
-
                 <PrivateRoute
                     path="/cocktailbyalcohol"
                     component={<CocktailByAlcohol/>}/>
-
                 <PrivateRoute
                     path="/cocktailbyalcohollist/:result"
                     component={<CocktailByAlcoholList/>}/>
-
                 <PrivateRoute
                     path="/cocktailbyingredient"
                     component={<CocktailByIngredient/>}/>
-
                 <PrivateRoute
                     path="/cocktailbyingredientlist/:result"
                     component={<CocktailByIngredientList/>}/>
-
                 <PrivateRoute
                     path="/allcocktails"
                     component={<AllCocktails/>}/>
-
                 <PrivateRoute
                     path="/profile"
                     component={<Profile/>}/>
                 <PrivateRoute
                     path="/help"
                     component={<Help/>}/>
-
                 <Route path="/">
                     <FourZeroFour/>
                 </Route>

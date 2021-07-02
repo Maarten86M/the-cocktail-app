@@ -1,8 +1,7 @@
-import React from 'react';
 import {Link, useHistory} from 'react-router-dom';
 import './CocktailList.css';
 
-function CocktailList({id,cocktailName}) {
+function CocktailList({id, cocktailName}) {
     const history = useHistory();
 
     function listHandle() {

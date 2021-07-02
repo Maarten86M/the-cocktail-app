@@ -15,8 +15,8 @@ function AuthContextProvider({children}) {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const [formError, setFormError] = useState('');
-    const [pageLoading, setPageLoading]= useState(true)
-    const [succes, setSucces]= useState('');
+    const [pageLoading, setPageLoading] = useState(true)
+    const [succes, setSucces] = useState('');
 
     function signUp(email, password) {
         return app.auth().createUserWithEmailAndPassword(email, password)

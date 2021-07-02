@@ -17,8 +17,8 @@ export default function CocktailContextProvider({children}) {
     const [randomizeButton, setRandomizeButton] = useState(false);
     const [searchText, setSearchText] = useState('');
     const [errorMessage, setErrorMessage] = useState('');
-
     const [loading, setLoading] = useState(false);
+
     const [pageTitle, setPageTitle] = useState('')
 
     const [letter, setLetter] = useState('A');

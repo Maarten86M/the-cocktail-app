@@ -1,24 +1,19 @@
 
 TO DO LIST:
 - inlog systeem (Firebase?) & misschien firestore voor de namen.
-    
+  
 - mobile responsive (header met titel van de pagina of cocktail. Dus hier moet een setter functie voor komen.)
 - cocktail naam bij mobiele weergave nog niet correct
 - mobiele titels nalopen op grote
   - alles nalopen vanuit de edhub
-  - navbar nakijken, blijft soms mobiel open staan als er vanuit desktop
 - foutmelding bij A-Z buttons verkleinen mobiel
 - blijwe lijn onder link verwijderen.
-
-  - ombouwen naar context. Dus de useStates verplaatsen.
-    - Navbar checken of hij open blijft staan.
 - inputfield lock icon en envelop aanpassen.
 - alles nalopen en kijken of het nog verder omgebouwd kan worden tot een component. Bijvoorbeeld de Cocktailby Alcohollist page & Cocktail by ingredient List page!! 
 - de link van het resultaat van cocktail by alcohol en cocktail bij ingredient verwijst nu naar Wiskey#20Bla dit moet nog omgebouw worde .replace(" ","+") naar een moooie link
 -  De data die binnenkomst via de api ombouwen naar { } zoals de tip uit de pokemon opdracht die is binnengekomen.
 - alle tips die ik heb gehad van het nakijkwerk erbij pakken en doorlopen.
   - all cocktails, de next en back button controleren.
-- 2 context maken. 1 voor user en 1 voor cocktail info. Goed bekijken waar deze omheen gezet dienen te worden. !!Zie voorbeeld rein les.
 ALLES GOED NALOPEN OF ER NOG COMPONENTEN OMGEBOUWD KUNNEN WRODEN. 
 -alle gele foutmeldingen ui developerstools doorlopen
 - alle html tags controleren of de juiste gebruikt zijn.
@@ -26,8 +21,6 @@ ALLES GOED NALOPEN OF ER NOG COMPONENTEN OMGEBOUWD KUNNEN WRODEN.
 -buttons nalopen. Zij nog niet allemaal perfect uitgelijnt
   -alle css nalopen of het goed geschreven is en niet dubbel.
   -vaste hoogte bij all cocktail. Dus als de list kleiner is de button niet omhoog laten gaan.
-
-componenten ombouwen
 
 
 

@@ -1,8 +1,7 @@
-import React from "react";
-import './CocktailCard.css';
 import {useCocktailContext} from "../../Context/CocktailContext";
 import IngredientView from "./IngredientView/IngredientView";
 import InstructionView from "./InstructionView/InstructionView";
+import './CocktailCard.css';
 
 function CocktailCard() {
     const {cocktail} = useCocktailContext();

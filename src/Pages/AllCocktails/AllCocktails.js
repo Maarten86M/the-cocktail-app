@@ -16,14 +16,14 @@ import '../../App.css';
 import './AllCocktails.css';
 
 function AllCocktails() {
-    const {letter,
+    const {
+        letter,
         cocktail,
         setCocktail,
         setPageTitle,
         setErrorMessage,
         loading,
         setLoading,
-
     } = useCocktailContext();
 
     useEffect(() => {
@@ -39,7 +39,6 @@ function AllCocktails() {
             }
             setLoading(false);
         }
-
         fetchData()
     }, [letter]);
 
@@ -65,7 +64,7 @@ function AllCocktails() {
                     </div>
                     {cocktail ? (
                         <div className="scrollbar-all">
-                            {loading && (<CocktailLoaderText />)}
+                            {loading && (<CocktailLoaderText/>)}
                             {cocktail.map(cocktail => <Link to={`/cocktailpage/${cocktail.idDrink}`}>
                                 <p><img src={cocktailIcon} alt="Cocktail Icon"/>{cocktail.strDrink}</p></Link>)}
                         </div>

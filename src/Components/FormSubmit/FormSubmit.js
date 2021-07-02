@@ -1,8 +1,9 @@
 import './FormSubmit.css';
 
-function FormSubmit(props) {
-    return(
-            <input className="submit-button" value={props.value} type={props.type} disabled={props.disabled} />
+function FormSubmit({value, type, disabled}) {
+    return (
+        <input className="submit-button" value={value} type={type} disabled={disabled}/>
     )
 }
+
 export default FormSubmit;

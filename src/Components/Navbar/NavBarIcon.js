@@ -1,5 +1,3 @@
-import React from "react";
-
 function NavBarIcon({onClick, className}) {
     return (
         <div onClick={onClick} className="Menu-icon-click">

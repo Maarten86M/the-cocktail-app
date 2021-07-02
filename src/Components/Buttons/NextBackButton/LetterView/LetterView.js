@@ -1,4 +1,3 @@
-import React from "react";
 import {useCocktailContext} from "../../../../Context/CocktailContext";
 import './LetterView.css';
 
@@ -6,7 +5,7 @@ function LetterView() {
 
     const {letter} = useCocktailContext();
 
-    return(
+    return (
         <>
             <div className="letterViewContainer">
                 <p>{letter}</p>
@@ -14,4 +13,5 @@ function LetterView() {
         </>
     )
 }
+
 export default LetterView;

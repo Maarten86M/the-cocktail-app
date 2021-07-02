@@ -48,7 +48,7 @@ function CocktailView() {
                         <HelpButton content={7}/>
                     </div>
                     <div className="cocktail-view">
-                        <ErrorMessage />
+                        <ErrorMessage/>
                         <CocktailName/>
                         <CocktailCard/>
                     </div>

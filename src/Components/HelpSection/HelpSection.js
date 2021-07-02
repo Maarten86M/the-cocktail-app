@@ -1,6 +1,6 @@
 import './HelpSection.css';
 
-function HelpSection({styling,helpimg,helpText}) {
+function HelpSection({styling, helpimg, helpText}) {
     return (
         <>
             <article className={styling}>

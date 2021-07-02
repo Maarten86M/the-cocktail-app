@@ -10,16 +10,16 @@ import './Help.css';
 function Help() {
     const {setPageTitle} = useCocktailContext();
 
-    useEffect(() =>{
+    useEffect(() => {
         setPageTitle("Help");
-    },[])
+    }, [])
 
     return (
         <div className="fullpage-container">
             <div className="help-box">
-                <PageTitle title="Help" />
+                <PageTitle title="Help"/>
                 <HelpSection helpimg={helpImg} styling="leftalign"
-                helpText="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi aperiam dignissimos dolorum est hic
+                             helpText="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi aperiam dignissimos dolorum est hic
                     maiores numquam optio quia reiciendis! Aperiam cum debitis dignissimos error expedita harum ipsum
                     laborum minima molestiae nesciunt nostrum, officia quia reprehenderit, saepe sed sit sunt totam
                     veniam! Accusantium, aliquid amet architecto assumenda blanditiis consectetur culpa, delectus dolor
@@ -90,7 +90,7 @@ function Help() {
                     quis reiciendis repellat veniam, veritatis! Alias dolorum molestias perferendis vel!"/>
 
                 <div className="help-footer-button">
-                <MainBackButton />
+                    <MainBackButton/>
                 </div>
             </div>
         </div>

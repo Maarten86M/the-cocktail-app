@@ -1,7 +1,6 @@
-import React from "react";
-import './RandomizeButton.css';
-import random from '../../../Assets/Icons/NavIcons/dice.png'
 import {useCocktailContext} from "../../../Context/CocktailContext";
+import random from '../../../Assets/Icons/NavIcons/dice.png'
+import './RandomizeButton.css';
 
 function RandomizeButton() {
     const {loading, setRandomizeButton, randomizeButton} = useCocktailContext()

@@ -25,7 +25,7 @@ function Home() {
                     <CocktailLoaderLong/>
                     <PageTitle title="Welcome"/>
                     <PageTitle title="The Cocktail App"/>
-                    <FrontLoader />
+                    <FrontLoader/>
                 </div>
             )}
         </div>
