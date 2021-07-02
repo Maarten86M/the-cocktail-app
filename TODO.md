@@ -1,4 +1,3 @@
-
 TO DO LIST:
 - inlog systeem (Firebase?) & misschien firestore voor de namen.
   - alles nalopen vanuit de edhub
@@ -17,23 +16,18 @@ ALLES GOED NALOPEN OF ER NOG COMPONENTEN OMGEBOUWD KUNNEN WRODEN.
   -vaste hoogte bij all cocktail. Dus als de list kleiner is de button niet omhoog laten gaan.
 - help field kruisje zit nog niet perfect
 
-
-
 Code beslissingen:
 - de info voor het help field in een json bestand gezet zodat mijn code niet vervuild met infomatie. 
 Op deze manier kan ik het ook mogelijk aanpassen als er wijzingen zijn.
   - De Api zelft heeft niet de juiste endpoints om een sortering te maken in een categorie op basis van alcohol(vadka, wiskey, rum etc), en op basis van inredienten(appel, banaan , aardbei etc). In de Api zelf staat alles door elkaar. 
     Zoals in mijn ontwerp heb ik besloten om dit uit te specificeren. Voor beide categorien heb ik een lijst(json array) samengesteld in data. Vanuit hier kunnen we mappen naar de juiste cocktail. Ik heb dit express in een json bestand gedaan zodat we dit ook makkelijk weer kunnen toevoegen op een later tijdstip als er veranderingen zijn. 
     Ook kan ik het vanuit hier makkelijk op alfabetische volgorge zetten.
-  
 - de Api heeft alleen een endpoint voor alle cocktails per letter. Daarom heb ik ervoor gekozen om in het design een Selectbox en next/back button toe te voegen. 
     Die naar de uiteindelijke endpoint verwijst met een ${}. Ik heb een array aangemaakt op basis van letters. De U is niet weergegeven. Omdat er geen cocktails zijn met een U. 
       Doormiddel van de positie in de array verwijs ik naar de juiste endpoint.
 - doormiddel van params de gegevens opgehaald om ze te verwerken in axios.
-  
 - Bij de cocktail bij ingredient list & alcoholby ingredient list een errormelding ingebouw "Nothing Fount" omdat er in het database oook lege ingredienten staan.
 - De keuze gemaakt om de paginas door te verwijzen met useparams. Dit zodat de gebruiker makkelijk naar de vorige pagina kan gaan.
-
 - De useStates die door de app op meerdere plaatsen gebruikt worden. Zoals de cocktail info staan in de CocktailContext.
 - Bij het search gedeelte wanneer er een zoekterm is ingevoerd komt het resultaat naar boven. Hier heb ik de keuze gemaakt om een de search again button bovenaan te zetten. Dit voor extra gebruiktgemak. Daarnaast heb ik een back button toegevoegd.
 - Ik heb er voor gekozen om met 2 contexten te werken. 1 context voor de auth en 1 context voor de cocktail-informatie. Op deze manier houdt ik de info overzichtelijk gescheiden. 
