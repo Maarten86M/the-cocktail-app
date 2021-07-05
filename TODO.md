@@ -1,7 +1,6 @@
 TO DO LIST:
 - inlog systeem (Firebase?) & misschien firestore voor de namen.
   - alles nalopen vanuit de edhub
-- alles nalopen en kijken of het nog verder omgebouwd kan worden tot een component. Bijvoorbeeld de Cocktailby Alcohollist page & Cocktail by ingredient List page!! 
 - de link van het resultaat van cocktail by alcohol en cocktail bij ingredient verwijst nu naar Wiskey#20Bla dit moet nog omgebouw worde .replace(" ","+") naar een moooie link
 -  De data die binnenkomst via de api ombouwen naar { } zoals de tip uit de pokemon opdracht die is binnengekomen.
 - alle tips die ik heb gehad van het nakijkwerk erbij pakken en doorlopen.
@@ -11,7 +10,6 @@ ALLES GOED NALOPEN OF ER NOG COMPONENTEN OMGEBOUWD KUNNEN WRODEN.
 - alle html tags controleren of de juiste gebruikt zijn.
 -jest test toevoegen. (user, next back button)
 -buttons nalopen. Zij nog niet allemaal perfect uitgelijnt
-  -alle css nalopen of het goed geschreven is en niet dubbel.
 
 
 
