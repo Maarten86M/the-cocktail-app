@@ -25,6 +25,12 @@ function CocktailCard() {
                                 {id.strIngredient8 && (<IngredientView IngredientName={id.strIngredient8}/>)}
                                 {id.strIngredient9 && (<IngredientView IngredientName={id.strIngredient9}/>)}
                                 {id.strIngredient10 && (<IngredientView IngredientName={id.strIngredient10}/>)}
+                                {id.strIngredient11 && (<IngredientView IngredientName={id.strIngredient11}/>)}
+                                {id.strIngredient12 && (<IngredientView IngredientName={id.strIngredient12}/>)}
+                                {id.strIngredient13 && (<IngredientView IngredientName={id.strIngredient13}/>)}
+                                {id.strIngredient14 && (<IngredientView IngredientName={id.strIngredient14}/>)}
+                                {id.strIngredient15 && (<IngredientView IngredientName={id.strIngredient15}/>)}
+                                {id.strIngredient16 && (<IngredientView IngredientName={id.strIngredient16}/>)}
                             </section>
                             <InstructionView Instruction={id.strInstructions}/>
                         </div>

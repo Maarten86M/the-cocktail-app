@@ -3,7 +3,7 @@
     color: var(--text-color-error);
     font-size: var(--text-size-error);
     text-align: center;
-    font-weight: 500;
+    font-weight: var(--text-weight-error);
 }
 
 .form-error-container {

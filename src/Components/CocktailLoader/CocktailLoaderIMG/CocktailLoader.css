@@ -1,5 +1,5 @@
 .loader-border {
-    border-radius: 50% ;
+    border-radius: var(--border-radius-round);
     border: 2px solid var(--background-color);
     width: var(--logo-width-desktop);
     height: var(--logo-height-desktop);
@@ -11,9 +11,9 @@
 }
 
 .loader-img {
-    max-width: var(--logo-width-desktop);;
+    max-width: var(--logo-width-desktop);
     max-height: var(--logo-height-desktop);
-    border-radius: 50%;
+    border-radius: var(--border-radius-round);
 }
 
 @media screen and (max-width: 990px){

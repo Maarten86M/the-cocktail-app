@@ -9,8 +9,9 @@ import FormLink from "../../Components/FormLink/FormLink";
 import FormSubmit from "../../Components/FormSubmit/FormSubmit";
 import FormErrorMessage from "../../Components/FormErrorMessage/FormErrorMessage";
 import FormSuccesMessage from "../../Components/FormSuccesMessage/FormSuccesMessage";
-import '../../App.css';
 import CocktailLoaderOops from "../../Components/CocktailLoader/CocktailLoaderIMG/CocktailLoaderOops";
+import '../../App.css';
+
 
 function Register() {
     const {setPageTitle} = useCocktailContext();

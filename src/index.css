@@ -23,6 +23,7 @@
     --text-color-disabled: hsl(111, 0%, 69%);
     --text-color-error: hsl(9, 89%, 59%);
     --text-size-error: 24px;
+    --text-weight-error: 500;
     --text-color-succes:hsl(156, 71%, 45%);
     --text-size-succes: 24px;
     --text-loading-color:hsl(66, 75%, 81%);
@@ -31,6 +32,7 @@
     --nav-font-weight: 500;
     --button-color: hsl(161, 77%, 41%);
     --button-border-color: hsl(170, 77%, 34%);
+    --button-border-pixel-color: 1px solid var(--button-border-color);
     --button-font-size: 16px;
     --button-font-weight: 500;
     --button-width: 400px;
@@ -38,6 +40,7 @@
     --button-width-mobile: 325px;
     --button-border-radius:10px;
     --button-shadow: 2px 2px 3px 1px var(--background-color);
+    --button-margin-bottom: 45px;
     --logo-background: hsl(190, 78%, 68%);
     --logo-color: hsl(0, 0%, 0%);
     --logo-height-desktop: 374px;
@@ -45,6 +48,7 @@
     --logo-height-mobile: 241px;
     --logo-width-mobile: 241px;
     --link-font-size: 20px;
+    --border-radius-round: 50%;
 }
 
 body {

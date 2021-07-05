@@ -1,5 +1,5 @@
 .cocktailcardLogo{
-    border-radius: 50% ;
+    border-radius: var(--border-radius-round); ;
     border: 2px solid var(--background-color);
     max-width: var(--logo-width-desktop);
     max-height: var(--logo-height-desktop);

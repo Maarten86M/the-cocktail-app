@@ -21,11 +21,11 @@ nav {
 }
 
 .navitems {
-    margin-right: 20px;
     font-size: var(--nav-font-size);
     font-weight: var(--nav-font-weight);
+    font-family: var(--main-font);
     color: var(--text-color);
-    font-family: 'Quicksand', sans-serif;
+    margin-right: 20px;
 }
 
 .inactive {

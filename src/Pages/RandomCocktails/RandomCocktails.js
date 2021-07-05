@@ -16,14 +16,12 @@ import './RandomCocktails.css';
 function RandomCocktails() {
     const {
         setCocktail,
-        cocktail,
         setErrorMessage,
         errorMessage,
         randomizeButton,
         loading,
         setLoading,
         setPageTitle,
-        pageTitle
     } = useCocktailContext();
 
     useEffect(() => {

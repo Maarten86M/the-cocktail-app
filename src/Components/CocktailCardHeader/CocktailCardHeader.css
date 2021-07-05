@@ -6,7 +6,7 @@
 }
 
 .cocktailIMG {
-    border-radius: 50% ;
+    border-radius: var(--border-radius-round);
     border: 2px solid var(--background-color);
     max-width: 374px;
     max-height: 374px;

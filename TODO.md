@@ -13,6 +13,8 @@ ALLES GOED NALOPEN OF ER NOG COMPONENTEN OMGEBOUWD KUNNEN WRODEN.
 -buttons nalopen. Zij nog niet allemaal perfect uitgelijnt
   -alle css nalopen of het goed geschreven is en niet dubbel.
 
+
+
 Code beslissingen:
 - de info voor het help field in een json bestand gezet zodat mijn code niet vervuild met infomatie. 
 Op deze manier kan ik het ook mogelijk aanpassen als er wijzingen zijn.

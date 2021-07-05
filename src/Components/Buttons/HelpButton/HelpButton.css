@@ -1,7 +1,7 @@
 .helpbutton {
     height: 38px;
     width: 38px;
-    border-radius: 50%;
+    border-radius: var(--border-radius-round);
     border: none;
     background-color: var(--help-field-color);
     box-shadow: 2px 2px 3px 1px var(--background-color);
@@ -14,11 +14,11 @@
     top: -10px;
 }
 
-.helpbutton:hover{
+.helpbutton:hover {
     background-color: var(--help-field-border-color);
 }
 
-@media screen and (max-width: 990px){
+@media screen and (max-width: 990px) {
     .helpbutton {
         left: 300px;
     }

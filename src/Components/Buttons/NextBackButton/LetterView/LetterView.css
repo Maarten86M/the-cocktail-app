@@ -6,7 +6,7 @@
     border-radius: var(--button-border-radius);
     width: 43px;
     height: 43px;
-    margin-bottom: 45px;
+    margin-bottom: var(--button-margin-bottom);
     box-shadow: var(--button-shadow);
     display: flex;
     align-items: center;

@@ -1,9 +1,9 @@
 .error-message {
     font-family: var(--main-font);
     color: var(--text-color-error);
-    font-size: 24px;
+    font-size: var(--text-size-error);
     text-align: center;
-    font-weight: 500;
+    font-weight: var(--text-weight-error);
 }
 
 .error-container {
