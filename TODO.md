@@ -1,7 +1,6 @@
 TO DO LIST:
 - inlog systeem (Firebase?) & misschien firestore voor de namen.
   - alles nalopen vanuit de edhub
-- inputfield lock icon en envelop aanpassen.
 - alles nalopen en kijken of het nog verder omgebouwd kan worden tot een component. Bijvoorbeeld de Cocktailby Alcohollist page & Cocktail by ingredient List page!! 
 - de link van het resultaat van cocktail by alcohol en cocktail bij ingredient verwijst nu naar Wiskey#20Bla dit moet nog omgebouw worde .replace(" ","+") naar een moooie link
 -  De data die binnenkomst via de api ombouwen naar { } zoals de tip uit de pokemon opdracht die is binnengekomen.
@@ -10,11 +9,9 @@ TO DO LIST:
 ALLES GOED NALOPEN OF ER NOG COMPONENTEN OMGEBOUWD KUNNEN WRODEN. 
 -alle gele foutmeldingen ui developerstools doorlopen
 - alle html tags controleren of de juiste gebruikt zijn.
--jest test toevoegen. 
+-jest test toevoegen. (user, next back button)
 -buttons nalopen. Zij nog niet allemaal perfect uitgelijnt
   -alle css nalopen of het goed geschreven is en niet dubbel.
-  -vaste hoogte bij all cocktail. Dus als de list kleiner is de button niet omhoog laten gaan.
-- help field kruisje zit nog niet perfect
 
 Code beslissingen:
 - de info voor het help field in een json bestand gezet zodat mijn code niet vervuild met infomatie. 
@@ -34,6 +31,8 @@ Op deze manier kan ik het ook mogelijk aanpassen als er wijzingen zijn.
 - Ik heb er voor gekozen om de error meldingen te verwerken in een appart component (ErrorMessages). Omdat de endpoint zelf geen foutmelding geeft heb ik ervoor gekozen om een useEffect te gebruiken die doormiddel van een if statement leest of er niets in het resultaat zit. 
 Doormiddel van een useState zet ik dan een tekst in deze melding. Hierdoor is de ErrorMessage Component herbruikbaar bij elk onderdeel(component en pagina)
 - De buttons onder een inputfield heb ik ervoor gekozen om ze disabled te maken. Zodat het voor een gebruiker niet mogelijk is om een actie uit te voeren zonder er iets is ingegeven.
+- Gekozen voor een firebase database. 
+
 
 Wat kan er nog doorontwikkeld worden?
 - delete account. 
