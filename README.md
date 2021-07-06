@@ -14,7 +14,6 @@ De belangrijkste functies zijn:
 ![alt text](https://github.com/Maarten86M/the-cocktail-app/blob/master/src/Assets/Screenshots/screenshots.png "Random Cocktails Mobile & Desktop");
 
 
-
 ### Installatie handleiding: 
 1.   **Clone** het project doormiddel van de groene (Code) knop en klik op link kopieren. 
 2.   Installeer de **node_modules** door het volgende commando in de terminal te runnen:

@@ -1,13 +1,12 @@
 TO DO LIST:
 - inlog systeem (Firebase?) & misschien firestore voor de namen.
   - alles nalopen vanuit de edhub
-- de link van het resultaat van cocktail by alcohol en cocktail bij ingredient verwijst nu naar Wiskey#20Bla dit moet nog omgebouw worde .replace(" ","+") naar een moooie link
 - alle tips die ik heb gehad van het nakijkwerk erbij pakken en doorlopen.
   - all cocktails, de next en back button controleren.
 ALLES GOED NALOPEN OF ER NOG COMPONENTEN OMGEBOUWD KUNNEN WRODEN. 
 -alle gele foutmeldingen ui developerstools doorlopen
 - alle html tags controleren of de juiste gebruikt zijn.
--jest test toevoegen. (user, next back button)
+-test met Steef bekijken
 -buttons nalopen. Zij nog niet allemaal perfect uitgelijnt
 
 

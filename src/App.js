@@ -22,7 +22,6 @@ import CocktailByAlcoholList from "./Pages/CocktailByAlcohol/CocktailByAlcoholLi
 import CocktailByIngredientList from "./Pages/CocktailByIngredient/CocktailByIngredientList";
 import './App.css';
 
-
 function App() {
     return (
         <>

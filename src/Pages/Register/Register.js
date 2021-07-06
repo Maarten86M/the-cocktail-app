@@ -34,6 +34,7 @@ function Register() {
 
     async function onSubmit(event) {
         event.preventDefault();
+
         try {
             const userCredential = await signUp(email, password);
             console.log("registered", userCredential);

@@ -8,6 +8,6 @@ function FourZeroFour() {
             <h1 className="oops-text">Oops! Sorry we can't find that page! </h1>
         </div>
     )
-};
+}
 
 export default FourZeroFour;
