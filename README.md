@@ -1,3 +1,4 @@
+## The Cocktail App
 ### inleiding 
 Welkom bij The Cocktail App. Deze uitgebreide application heeft een aantal erg handige functies voor de cocktail liefhebber. 
 De belangrijkste functies zijn: 
@@ -7,6 +8,11 @@ De belangrijkste functies zijn:
 -   Cocktail by ingredient. Deze functie zorgt ervoor dat alle cocktails worden weergegeven met een bepaalde categorie. Bijvoorbeeld Apple of Chocolate.
 -   All Cocktails: Deze functie zorgt ervoor dat alle cocktails uit het database worden weergeven op alfabetische volgorde. Je kunt makkelijk doormiddel van de pijlen naar een andere letter.
 -   Help-velden: Alle pagina's zijn voorzien van help velden. Mocht het onduidelijk zijn wat je dient te doen. Klik je makkelijk op het vraagteken waarna een hulp veld tevoorschijn komt. 
+
+## screenshots:
+
+![alt text](https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png "Logo Title Text 1")
+
 
 ### Installatie handleiding: 
 1.   **Clone** het project doormiddel van de groene (Code) knop en klik op link kopieren. 
