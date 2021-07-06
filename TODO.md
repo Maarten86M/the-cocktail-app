@@ -3,9 +3,7 @@ TO DO LIST:
   - alles nalopen vanuit de edhub
 - alle tips die ik heb gehad van het nakijkwerk erbij pakken en doorlopen.
   - all cocktails, de next en back button controleren.
-ALLES GOED NALOPEN OF ER NOG COMPONENTEN OMGEBOUWD KUNNEN WRODEN. 
 -alle gele foutmeldingen ui developerstools doorlopen
-- alle html tags controleren of de juiste gebruikt zijn.
 -test met Steef bekijken
 -buttons nalopen. Zij nog niet allemaal perfect uitgelijnt
 
