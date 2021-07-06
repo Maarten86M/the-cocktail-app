@@ -11,7 +11,8 @@ De belangrijkste functies zijn:
 
 ## screenshots:
 
-![alt text](https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png "Logo Title Text 1")
+![alt text](https://github.com/Maarten86M/the-cocktail-app/blob/master/src/Assets/Printscreens/Random-cocktails-mobile.png "Random Cocktails Mobile");
+
 
 
 ### Installatie handleiding: 
