@@ -2,7 +2,6 @@ TO DO LIST:
 - inlog systeem (Firebase?) & misschien firestore voor de namen.
   - alles nalopen vanuit de edhub
 - de link van het resultaat van cocktail by alcohol en cocktail bij ingredient verwijst nu naar Wiskey#20Bla dit moet nog omgebouw worde .replace(" ","+") naar een moooie link
--  De data die binnenkomst via de api ombouwen naar { } zoals de tip uit de pokemon opdracht die is binnengekomen.
 - alle tips die ik heb gehad van het nakijkwerk erbij pakken en doorlopen.
   - all cocktails, de next en back button controleren.
 ALLES GOED NALOPEN OF ER NOG COMPONENTEN OMGEBOUWD KUNNEN WRODEN. 
