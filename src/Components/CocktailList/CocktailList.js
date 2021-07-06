@@ -9,11 +9,9 @@ function CocktailList({id, cocktailName}) {
     }
 
     return (
-        <div>
             <Link style={{textDecoration: 'none', color: 'white'}}>
                 <button onClick={() => (listHandle)}> {cocktailName}</button>
             </Link>
-        </div>
     )
 }
 

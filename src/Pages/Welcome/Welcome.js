@@ -21,14 +21,14 @@ function Welcome() {
 
     return (
         <main className="fullpage-container">
-            <div className='left-section-container'>
-                <div className="CocktailCard-container">
+            <section className='left-section-container'>
+                <figure className="CocktailCard-container">
                     <CocktailCardLogo/>
-                </div>
-            </div>
+                </figure>
+            </section>
 
-            <div className='right-section-container'>
-                <div className="button-container">
+            <section className='right-section-container'>
+                <article className="button-container">
                     <div>
                         <HelpButton content={0}/>
                     </div>
@@ -56,8 +56,8 @@ function Welcome() {
                         name="Your Profile"
                         icon={profile}
                         link={"/profile"}/>
-                </div>
-            </div>
+                </article>
+            </section>
         </main>
     )
 }

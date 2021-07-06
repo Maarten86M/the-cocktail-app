@@ -27,6 +27,7 @@ function ForgotPassword() {
             setTimeout(() => {
                 history.push('./login')
             }, 3000);
+            console.log(lostPasswordReset);
 
         } catch (event) {
             console.error("FireBase Fail:", event);
@@ -41,14 +42,14 @@ function ForgotPassword() {
     }, [])
 
     return (
-        <div className="fullpage-container">
-            <div className="left-section-container">
-                <div className="CocktailCard-container">
+        <main className="fullpage-container">
+            <section className="left-section-container">
+                <figure className="CocktailCard-container">
                     {formError ? (<CocktailLoaderOops/>):(<CocktailCardLogo/>)}
-                </div>
-            </div>
-            <div className="right-section-container">
-                <div className="right-box-container">
+                </figure>
+            </section>
+            <section className="right-section-container">
+                <article className="right-box-container">
                     <div className="forgot-container">
                         <div><HelpButton content={11}/></div>
                         <PageTitle title="Forgot Your Password ?"/>
@@ -71,9 +72,9 @@ function ForgotPassword() {
                         <FormSuccesMessage/>
                         <FormErrorMessage/>
                     </div>
-                </div>
-            </div>
-        </div>
+                </article>
+            </section>
+        </main>
     )
 }
 

@@ -3,11 +3,11 @@ import './CocktailLoader.css';
 
 function CocktailLoaderOops() {
     return (
-            <div className="loader-border">
+            <figure className="loader-border">
                 <div className="logo-container">
                     <img className="loader-img" src={failed} alt="loader"/>
                 </div>
-            </div>
+            </figure>
     )
 }
 

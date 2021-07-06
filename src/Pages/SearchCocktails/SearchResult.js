@@ -36,18 +36,17 @@ function SearchResult() {
     }, []);
 
     return (
-        <div className="fullpage-container">
-            <div className="left-section-container">
-                <div className="CocktailCard-container">
+        <main className="fullpage-container">
+            <section className="left-section-container">
+                <figure className="CocktailCard-container">
                     {searchResult === "None Found" ? (
                         <CocktailLoaderOops/>
                     ) : (<CocktailCardLogo/>)}
-                </div>
-            </div>
+                </figure>
+            </section>
 
-            <div className="right-section-container">
-                <div className="right-box-container">
-
+            <section className="right-section-container">
+                <article className="right-box-container">
                     <div>
                         <HelpButton content={3}/>
                     </div>
@@ -65,9 +64,9 @@ function SearchResult() {
                                     <p><img src={cocktailIcon} alt="Cocktail Icon"/>{cocktail.strDrink}</p></Link>)}
                         </div>)}
                     </div>
-                </div>
-            </div>
-        </div>
+                </article>
+            </section>
+        </main>
     )
 }
 

@@ -17,15 +17,15 @@ function CocktailByAlcohol() {
     }, [])
 
     return (
-        <div className="fullpage-container">
-            <div className="left-section-container">
-                <div className="CocktailCard-container">
+        <main className="fullpage-container">
+            <section className="left-section-container">
+                <figure className="CocktailCard-container">
                     <CocktailCardLogo/>
-                </div>
-            </div>
+                </figure>
+            </section>
 
-            <div className="right-section-container">
-                <div className="right-box-container">
+            <section className="right-section-container">
+                <article className="right-box-container">
                     <HelpButton content={8}/>
                     <PageTitle title="Cocktail By Alcohol"/>
                     <div className="scrollbar">
@@ -38,9 +38,9 @@ function CocktailByAlcohol() {
                             </p></Link>)}
                     </div>
                     <MainBackButton/>
-                </div>
-            </div>
-        </div>
+                </article>
+            </section>
+        </main>
     )
 }
 

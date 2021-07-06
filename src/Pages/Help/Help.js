@@ -15,8 +15,8 @@ function Help() {
     }, [])
 
     return (
-        <div className="fullpage-container">
-            <div className="help-box">
+        <main className="fullpage-container">
+            <article className="help-box">
                 <PageTitle title="Help"/>
                 <HelpSection helpimg={helpImg} styling="leftalign"
                              helpText="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi aperiam dignissimos dolorum est hic
@@ -92,8 +92,8 @@ function Help() {
                 <div className="help-footer-button">
                     <MainBackButton/>
                 </div>
-            </div>
-        </div>
+            </article>
+        </main>
     )
 }
 

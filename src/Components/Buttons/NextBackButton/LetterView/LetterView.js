@@ -6,11 +6,9 @@ function LetterView() {
     const {letter} = useCocktailContext();
 
     return (
-        <>
             <div className="letterViewContainer">
                 <p>{letter}</p>
             </div>
-        </>
     )
 }
 

@@ -44,14 +44,14 @@ function AllCocktails() {
     }, [letter]);
 
     return (
-        <div className="fullpage-container">
-            <div className="left-section-container">
-                <div className="CocktailCard-container">
+        <main className="fullpage-container">
+            <section className="left-section-container">
+                <figure className="CocktailCard-container">
                     <CocktailCardLogo/>
-                </div>
-            </div>
-            <div className="right-section-container">
-                <div className="right-box-container">
+                </figure>
+            </section>
+            <section className="right-section-container">
+                <article className="right-box-container">
                     <HelpButton content={9}/>
                     <PageTitle title="All Cocktails"/>
                     <div className="button-header">
@@ -67,9 +67,9 @@ function AllCocktails() {
                         </div>
                     ) : (<ErrorMessage/>)}
                     <MainBackButton/>
-                </div>
-            </div>
-        </div>
+                </article>
+            </section>
+        </main>
     )
 }
 

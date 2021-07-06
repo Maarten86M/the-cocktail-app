@@ -19,16 +19,16 @@ function Home() {
     })
 
     return (
-        <div className="pagina">
+        <main className="pagina">
             {introloader && (
-                <div className="page-container">
+                <section className="page-container">
                     <CocktailLoaderLong/>
                     <PageTitle title="Welcome"/>
                     <PageTitle title="The Cocktail App"/>
                     <FrontLoader/>
-                </div>
+                </section>
             )}
-        </div>
+        </main>
     )
 }
 

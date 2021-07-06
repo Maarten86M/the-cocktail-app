@@ -44,17 +44,17 @@ function RandomCocktails() {
     }, [randomizeButton]);
 
     return (
-        <div className="fullpage-container">
-            <div className="left-section-container">
-                <div className="CocktailCard-container">
+        <main className="fullpage-container">
+            <section className="left-section-container">
+                <figure className="CocktailCard-container">
                     {errorMessage && (<CocktailLoaderOops/>)}
                     {loading ? (
                         <CocktailLoader/>
                     ) : (<CocktailCardHeader/>)}
-                </div>
-            </div>
-            <div className="right-section-container">
-                <div className="right-box-container">
+                </figure>
+            </section>
+            <section className="right-section-container">
+                <article className="right-box-container">
                     <div className="help-container">
                         <HelpButton content={6}/>
                     </div>
@@ -64,10 +64,10 @@ function RandomCocktails() {
                         <CocktailName/>
                         <CocktailCard/>
                     </div>
-                </div>
+                </article>
                 <MainBackButton/>
-            </div>
-        </div>
+            </section>
+        </main>
     )
 }
 

@@ -11,7 +11,6 @@ function CocktailCard() {
         <div>
             <div className="cocktailcard-container">
                 {cocktail ? (
-                    <div>
                         <div className="ingredient-scrollbar">
                             <b className="header">Ingredients</b>
                             <section className="ingredient-container">
@@ -34,7 +33,6 @@ function CocktailCard() {
                             </section>
                             <InstructionView Instruction={id.strInstructions}/>
                         </div>
-                    </div>
                 ) : (<h1> Loading </h1>)}
             </div>
         </div>

@@ -1,7 +1,7 @@
 import React, {useState} from "react";
+import HelpField from "../../HelpField/HelpField";
 import './HelpButton.css';
 import '../../HelpField/HelpField.css';
-import HelpField from "../../HelpField/HelpField";
 
 function HelpButton({content}) {
     const [helpField, setHelpField] = useState();
@@ -17,7 +17,6 @@ function HelpButton({content}) {
                 content={content}
                 opener={helpFieldOpener}
             />
-
         </>
     )
 }

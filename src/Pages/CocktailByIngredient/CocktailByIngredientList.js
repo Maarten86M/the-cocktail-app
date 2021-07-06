@@ -42,18 +42,17 @@ function CocktailByIngredientList() {
 
     return (
         <>
-            <div className="fullpage-container">
-
-                <div className="left-section-container">
-                    <div className="CocktailCard-container">
+            <main className="fullpage-container">
+                <section className="left-section-container">
+                    <figure className="CocktailCard-container">
                         {ingredientlist === "None Found" ? (
                             <CocktailLoaderOops/>
                         ) : (<CocktailCardLogo/>)}
-                    </div>
-                </div>
+                    </figure>
+                </section>
 
-                <div className="right-section-container">
-                    <div className="right-box-container">
+                <section className="right-section-container">
+                    <article className="right-box-container">
                         <div className="cocktaillist">
                             <div>
                                 <HelpButton content={9}/>
@@ -70,9 +69,9 @@ function CocktailByIngredientList() {
                             </div>
                         </div>
                         <MainBackButton/>
-                    </div>
-                </div>
-            </div>
+                    </article>
+                </section>
+            </main>
         </>
     )
 }

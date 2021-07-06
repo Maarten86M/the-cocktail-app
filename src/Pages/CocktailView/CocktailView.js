@@ -33,17 +33,17 @@ function CocktailView() {
     }, []);
 
     return (
-        <div className="fullpage-container">
-            <div className="left-section-container">
-                <div className="CocktailCard-container">
+        <main className="fullpage-container">
+            <section className="left-section-container">
+                <figure className="CocktailCard-container">
                     {cocktail ? (
                         <CocktailCardHeader/>
                     ) : (<CocktailLoaderOops/>)}
-                </div>
-            </div>
+                </figure>
+            </section>
 
-            <div className="right-section-container">
-                <div className="right-box-container">
+            <section className="right-section-container">
+                <article className="right-box-container">
                     <div className="help-container">
                         <HelpButton content={7}/>
                     </div>
@@ -52,10 +52,10 @@ function CocktailView() {
                         <CocktailName/>
                         <CocktailCard/>
                     </div>
-                </div>
+                </article>
                 <MainBackButton/>
-            </div>
-        </div>
+            </section>
+        </main>
     )
 }
 
