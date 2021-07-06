@@ -7,6 +7,8 @@ TO DO LIST:
 -test met Steef bekijken
 -buttons nalopen. Zij nog niet allemaal perfect uitgelijnt
     
+
+
 Code beslissingen:
 - de info voor het help field in een json bestand gezet zodat mijn code niet vervuild met infomatie. 
 Op deze manier kan ik het ook mogelijk aanpassen als er wijzingen zijn.

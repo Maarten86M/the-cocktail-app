@@ -62,7 +62,7 @@ function AuthContextProvider({children}) {
         signUp,
         logIn,
         logOut,
-        lostPassword
+        lostPassword,
     };
 
     return (

@@ -12,8 +12,8 @@ import FormSuccesMessage from "../../Components/FormSuccesMessage/FormSuccesMess
 import CocktailLoaderOops from "../../Components/CocktailLoader/CocktailLoaderIMG/CocktailLoaderOops";
 import '../../App.css';
 
-
 function Register() {
+
     const {setPageTitle} = useCocktailContext();
     const history = useHistory();
     const {
@@ -29,7 +29,7 @@ function Register() {
         setFormError,
         formError,
         signUp,
-        setSucces,
+        setSucces
     } = useAuth();
 
     async function onSubmit(event) {
@@ -37,6 +37,7 @@ function Register() {
 
         try {
             const userCredential = await signUp(email, password);
+
             console.log("registered", userCredential);
             setUser(userCredential.user);
             setSucces("Thank you for your registration. You are now logged in!");
@@ -48,6 +49,7 @@ function Register() {
             console.error('Firebase Fail', event);
             setFormError(event.message);
         }
+
     }
 
     useEffect(() => {
