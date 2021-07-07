@@ -9,10 +9,9 @@ export function useAuth() {
 
 function AuthContextProvider({children}) {
     const [user, setUser] = useState()
-    const [firstname, setFirstname] = useState('');
-    const [lastname, setLastname] = useState('');
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
+    const [passwordConfirm, setPasswordConfirm] = useState('');
     const [formError, setFormError] = useState('');
     const [pageLoading, setPageLoading] = useState(true)
     const [succes, setSucces] = useState('');
@@ -44,10 +43,6 @@ function AuthContextProvider({children}) {
     const data = {
         user,
         setUser,
-        firstname,
-        setFirstname,
-        lastname,
-        setLastname,
         email,
         setEmail,
         password,
@@ -56,6 +51,8 @@ function AuthContextProvider({children}) {
         setFormError,
         succes,
         setSucces,
+        passwordConfirm,
+        setPasswordConfirm,
         signUp,
         logIn,
         logOut,

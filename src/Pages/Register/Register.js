@@ -18,14 +18,12 @@ function Register() {
     const history = useHistory();
     const {
         setUser,
-        firstname,
-        lastname,
-        setFirstname,
-        setLastname,
         email,
         setEmail,
         password,
         setPassword,
+        passwordConfirm,
+        setPasswordConfirm,
         setFormError,
         formError,
         signUp,
@@ -34,6 +32,11 @@ function Register() {
 
     async function onSubmit(event) {
         event.preventDefault();
+
+        if (password !== passwordConfirm){
+            return setFormError("Passwords do not match");
+        }
+
         try {
             const userCredential = await signUp(email, password);
             console.log("registered", userCredential);
@@ -70,24 +73,6 @@ function Register() {
                     <div className="input-container">
                         <form onSubmit={onSubmit}>
 
-                            {/*REQUIREMENTS INBOUWEN!! */}
-                            {/*firstname & lastname werkend maken met databadse*/}
-                            <input
-                                type="text"
-                                name='firstname'
-                                placeholder='Firstname'
-                                value={firstname}
-                                onChange={event => setFirstname(event.target.value)}
-                            />
-
-                            <input
-                                type="text"
-                                name='lastname'
-                                placeholder='Lastname'
-                                value={lastname}
-                                onChange={event => setLastname(event.target.value)}
-                            />
-
                             <input
                                 type="email"
                                 name="email"
@@ -103,6 +88,15 @@ function Register() {
                                 value={password}
                                 onChange={event => setPassword(event.target.value)}
                             />
+
+                            <input
+                                type="password"
+                                name="passwordConfirm"
+                                placeholder="Password Confirmation"
+                                value={passwordConfirm}
+                                onChange={event => setPasswordConfirm(event.target.value)}
+                            />
+
                             <FormLink
                                 linktext="Already have an account ? Click here to login."
                                 to="/login"

@@ -9,11 +9,10 @@
   },
   {
     "helpId": "2",
-    "content1": "1.Fill in your firstname.",
-    "content2": "2.Fill in your lastname.",
-    "content3": "3.Fill in your emailadress.",
-    "content4": "4.Fill in a valid password.",
-    "content5": "5.Click on Register Now."
+    "content1": "1.Fill in your emailadress.",
+    "content2": "2.Fill in a valid password.",
+    "content3": "3.Fill in again your password.",
+    "content4": "4.Click on the Register Button"
   },
   {
     "helpId": "3",
@@ -21,8 +20,8 @@
   },
   {
     "helpId": "4",
-    "content1": "Search to the cocktail by entering the ingredient or type of alcohol.",
-    "content2": "Click on the Search Button"
+    "content1": "1.Search to the cocktail by entering the ingredient or type of alcohol.",
+    "content2": "2.Click on the Search Button"
   },
   {
     "helpId": "5",
@@ -35,8 +34,8 @@
   },
   {
     "helpId": "7",
-    "content1": "Click on the button to generate a Random cocktail.",
-    "content2": "Is it not the right one? Click again on the Generate button."
+    "content1": "1.Click on the button to generate a Random cocktail.",
+    "content2": "2.Is it not the right one? Click again on the Generate button."
   },
   {
     "helpId": "8",
@@ -56,8 +55,8 @@
   },
   {
     "helpId": "12",
-    "content1": "1. Fill in your emailadress.",
-    "content2": "2. Click on the send button.",
-    "content3": "3. You received a recover e-mail."
+    "content1": "1.Fill in your emailadress.",
+    "content2": "2.Click on the send button.",
+    "content3": "3.You received a recover e-mail."
   }
 ]
