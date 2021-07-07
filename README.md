@@ -1,6 +1,6 @@
 # The Cocktail App :cocktail:
 
-![alt text](https://github.com/Maarten86M/the-cocktail-app/blob/master/src/Assets/Screenshots/screenshots.png "Random Cocktails Mobile & Desktop")
+![alt text](https://github.com/Maarten86M/the-cocktail-app/blob/master/src/Assets/Screenshots/logo.png "The Cocktail App Logo")
 
 
 ### Inleiding 
