@@ -1,8 +1,5 @@
 # The Cocktail App :cocktail:
 
-![alt text](https://github.com/Maarten86M/the-cocktail-app/blob/master/src/Assets/Screenshots/logo.png "The Cocktail App Logo")
-
-
 ### Inleiding 
 Welkom bij The Cocktail App:tropical_drink:. Deze uitgebreide application heeft een aantal erg handige functies voor de cocktail liefhebber. 
 De belangrijkste functies zijn: 
