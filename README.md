@@ -16,6 +16,7 @@ De belangrijkste functies zijn:
 
 ### Installatie handleiding: 
 **1.**   **Clone** het project doormiddel van de groene (Code) knop en klik op link kopiëren. 
+
 **2.**   Installeer de **node_modules** door het volgende commando in de terminal te runnen:
 - **npm install**
     
