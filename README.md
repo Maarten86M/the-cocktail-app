@@ -20,8 +20,8 @@ De belangrijkste functies zijn:
 **2.**   Installeer de **node_modules** door het volgende commando in de terminal te runnen:
 - **npm install**
     
-**3.**  Voeg een **.env** bestand toe boven de .env.dis en vul de onderstaande variabele aan. De codes zijn vertrouwelijk en daarom vermeld in mijn eindopdracht bestand.
-    genaamd: **Eindopdracht Frontend Maarten Moelands.pdf**. Deze codes vindt je bij hoofdstuk 9 (Benodigde wachtwoorden / .env ). Daarnaast heb ik ze bijgevoegd in de .zip bestand.
+**3.**  Voeg een **.env** bestand toe boven de .env.dist en vul de onderstaande variabele aan. De codes zijn vertrouwelijk en daarom vermeld in mijn eindopdracht bestand.
+    genaamd: **Eindopdracht Frontend Maarten Moelands.pdf**. Deze codes vindt je bij hoofdstuk 9 (Benodigde wachtwoorden / .env ). Daarnaast heb ik ze bijgevoegd in het .zip bestand.
     
 ```javascript
     REACT_APP_API_KEY=
@@ -36,15 +36,15 @@ De belangrijkste functies zijn:
 - **npm start**
     
 **5.**  De application kent een openbaar en een beveiligd gedeelte. Je kan doormiddel van het volgende account inloggen:
-- **gebruikersnaam**: test@novi.nl
-- **wachtwoord**: Novi1234
+- **Gebruikersnaam**: test@novi.nl
+- **Wachtwoord**: Novi1234
     
 **6.**  Ook is het mogelijk om zelf een account aan te maken. Klik dan op de **Register Now** knop. 
 
 **7.** Mocht je het wachtwoord vergeten zijn, kan je deze makkelijk opvragen doormiddel van de **Forgot Your Password** knop.
    Dan wordt er een e-mail verstuurd met een activatie-link. 
 
-**8.** De Application bevat ook testen. Deze kunnen worden gestart doormiddel van het commando: 
+**8.** De Application bevat ook een test. Deze kunnen worden gestart doormiddel van het commando: 
 - **npm test**
 
 **9.** Veel plezier met The Cocktail App! En denk eraan :warning:**"Don't drive and drink!"**:warning:
