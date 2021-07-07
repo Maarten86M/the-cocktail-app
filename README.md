@@ -50,6 +50,6 @@ De belangrijkste functies zijn:
 **9.** Veel plezier met The Cocktail App! En denk eraan :warning:**"Don't drive and drink!"**:warning:
 
 
-### contact info: :incoming_envelope: 
-[LinkedIn]: https://www.linkedin.com/in/maartenmoelands/
+### Contact & Info: :incoming_envelope: 
+[LinkedIn](https://www.linkedin.com/in/maartenmoelands/)
     
