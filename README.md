@@ -1,21 +1,21 @@
-## The Cocktail App :tropical_drink:
-### inleiding 
-Welkom bij The Cocktail App. Deze uitgebreide application heeft een aantal erg handige functies voor de cocktail liefhebber. 
+# The Cocktail App :cocktail:
+### Inleiding 
+Welkom bij The Cocktail App:tropical_drink:. Deze uitgebreide application heeft een aantal erg handige functies voor de cocktail liefhebber. 
 De belangrijkste functies zijn: 
--   Search Cocktails: Zoeken naar een cocktail op basis van ingredienten (Engelstalig). bijvoorbeeld de zoekterm "banana".
--   Random Cocktail: het random genereren van een cocktail. Hier vindt je een voorbeeld, ingredienten en een beschrijving hoe de cocktail bereid dient te worden. 
+-   Search Cocktails: Zoeken naar een cocktail op basis van ingrediënten (Engelstalig). bijvoorbeeld de zoekterm "banana".
+-   Random Cocktail: het random genereren van een cocktail. Hier vindt je een voorbeeld, ingrediënten en een beschrijving hoe de cocktail bereid dient te worden. 
 -   Cocktail by Alcohol: als je zin hebt in een bepaalde alcohol-soort kan je makkelijk via Cocktails by alcohol een specifieke cocktail vinden. 
 -   Cocktail by ingredient: Deze functie zorgt ervoor dat alle cocktails worden weergegeven met een bepaalde categorie. Bijvoorbeeld Apple of Chocolate.
 -   All Cocktails: Deze functie zorgt ervoor dat alle cocktails uit het database worden weergeven op alfabetische volgorde. Je kunt makkelijk doormiddel van de pijlen naar een andere letter.
 -   Help-velden: Alle pagina's zijn voorzien van help velden. Mocht het onduidelijk zijn wat je dient te doen. Klik je makkelijk op het vraagteken waarna een hulp veld tevoorschijn komt. 
 
-### screenshots:
+### Screenshots:
 
 ![alt text](https://github.com/Maarten86M/the-cocktail-app/blob/master/src/Assets/Screenshots/screenshots.png "Random Cocktails Mobile & Desktop");
 
 
 ### Installatie handleiding: 
-1.   **Clone** het project doormiddel van de groene (Code) knop en klik op link kopieren. 
+1.   **Clone** het project doormiddel van de groene (Code) knop en klik op link kopiëren. 
 2.   Installeer de **node_modules** door het volgende commando in de terminal te runnen:
 - **npm install**
     
@@ -46,5 +46,5 @@ De belangrijkste functies zijn:
 8. De Application bevat ook testen. Deze kunnen worden gestart doormiddel van het commando: 
 - **npm test**
 
-8. Veel plezier met The Cocktail Appl! En denk eraan **"Don't drive and drink!"**
+8. Veel plezier met The Cocktail App! En denk eraan **"Don't drive and drink!"**
 
