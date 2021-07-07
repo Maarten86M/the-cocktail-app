@@ -8,7 +8,7 @@ function SearchInput({placeholder}) {
 
     function keyPressCheck(e) {
         if (e.keyCode === 13) {
-            history.push(`/searchresult/${searchText}`)
+            history.push(`/searchresult/${searchText}`);
         }
     }
 

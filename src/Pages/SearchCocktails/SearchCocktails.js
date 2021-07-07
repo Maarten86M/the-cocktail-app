@@ -15,13 +15,13 @@ function SearchCocktails() {
     const {searchText, setSearchText, setPageTitle} = useCocktailContext();
 
     function searchHandle() {
-        history.push(`/searchresult/${searchText}`)
+        history.push(`/searchresult/${searchText}`);
     }
 
     useEffect(() => {
         setPageTitle('Search Cocktails');
         setSearchText('');
-    }, [])
+    }, []);
 
 
     return (

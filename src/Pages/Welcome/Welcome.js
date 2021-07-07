@@ -17,7 +17,7 @@ function Welcome() {
 
     useEffect(() => {
         setPageTitle('Welcome');
-    }, [])
+    }, []);
 
     return (
         <main className="fullpage-container">

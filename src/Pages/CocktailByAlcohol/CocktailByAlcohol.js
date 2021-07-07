@@ -2,11 +2,11 @@ import React, {useEffect} from "react";
 import {useCocktailContext} from "../../Context/CocktailContext";
 import {Link} from "react-router-dom";
 import alcoholData from '../../Data/SortByAlcohol.json';
-import alcoholIcon from '../../Assets/Icons/ListIcons/alcohol-icon.png';
 import MainBackButton from "../../Components/Buttons/MainBackButton/MainBackButton";
 import CocktailCardLogo from "../../Components/CocktailCardLogo/CocktailCardLogo";
 import HelpButton from "../../Components/Buttons/HelpButton/HelpButton";
 import PageTitle from "../../Components/PageTitle/PageTitle";
+import alcoholIcon from '../../Assets/Icons/ListIcons/alcohol-icon.png';
 import '../../App.css';
 
 function CocktailByAlcohol() {

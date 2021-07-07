@@ -1,14 +1,14 @@
 import {useCocktailContext} from "../../../../Context/CocktailContext";
-import '../NextBackButton.css';
 import backIcon from '../../../../Assets/Icons/ButtonIcons/Back.png';
+import '../NextBackButton.css';
 
 function BackButton() {
 
     const {numberToLetter, setNumberToLetter, setLetter, numberToLetterArray, letter} = useCocktailContext();
 
     function BackButtonFunction() {
-        setNumberToLetter(numberToLetter - 1)
-        setLetter(numberToLetterArray[numberToLetter])
+        setNumberToLetter(numberToLetter - 1);
+        setLetter(numberToLetterArray[numberToLetter]);
     }
 
     return (

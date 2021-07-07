@@ -26,13 +26,13 @@ function RandomCocktails() {
 
     useEffect(() => {
         async function fetchRandomCocktail() {
-            setErrorMessage("")
+            setErrorMessage("");
             setLoading(true);
             try {
                 const response = await axios.get(`https://www.thecocktaildb.com/api/json/v2/${process.env.REACT_APP_API_KEY}/random.php`
                 );
                 setCocktail(response.data.drinks);
-                setPageTitle(response.data.drinks[0].strDrink)
+                setPageTitle(response.data.drinks[0].strDrink);
             } catch (e) {
                 console.error(e);
                 setErrorMessage("Oops! Something went Wrong");
@@ -40,7 +40,7 @@ function RandomCocktails() {
             setLoading(false);
         }
 
-        fetchRandomCocktail()
+        fetchRandomCocktail();
     }, [randomizeButton]);
 
     return (

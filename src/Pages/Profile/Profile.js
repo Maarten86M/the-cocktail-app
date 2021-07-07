@@ -14,7 +14,7 @@ function Profile() {
 
     useEffect(() => {
         setPageTitle("Your Profile");
-    }, [])
+    }, []);
 
 
     return (

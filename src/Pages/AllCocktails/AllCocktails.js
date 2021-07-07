@@ -31,12 +31,12 @@ function AllCocktails() {
             setLoading(true);
             try {
                 const result = await axios.get(`https://www.thecocktaildb.com/api/json/v2/${process.env.REACT_APP_API_KEY}/search.php?f=${letter}`);
-                console.log(result, "wat is result?")
+                console.log(result, "wat is result?");
                 setCocktail(result.data.drinks);
                 setPageTitle("All Cocktails");
             } catch (e) {
                 console.error(e);
-                setErrorMessage("Oops, something went wrong!")
+                setErrorMessage("Oops, something went wrong!");
             }
             setLoading(false);
         }

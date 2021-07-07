@@ -6,8 +6,8 @@ function NextButton() {
     const {numberToLetter, setNumberToLetter, setLetter, numberToLetterArray, letter} = useCocktailContext();
 
     function NextButtonFunction() {
-        setNumberToLetter(numberToLetter + 1)
-        setLetter(numberToLetterArray[numberToLetter])
+        setNumberToLetter(numberToLetter + 1);
+        setLetter(numberToLetterArray[numberToLetter]);
     }
 
     return (

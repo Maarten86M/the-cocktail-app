@@ -2,11 +2,11 @@ import React, {useEffect} from "react";
 import {useCocktailContext} from "../../Context/CocktailContext";
 import {Link} from "react-router-dom";
 import ingredientData from "../../Data/SortByIngredient.json";
-import ingredientIcon from '../../Assets/Icons/ListIcons/ingredient-icon.png';
 import MainBackButton from "../../Components/Buttons/MainBackButton/MainBackButton";
 import CocktailCardLogo from "../../Components/CocktailCardLogo/CocktailCardLogo";
 import HelpButton from "../../Components/Buttons/HelpButton/HelpButton";
 import PageTitle from "../../Components/PageTitle/PageTitle";
+import ingredientIcon from '../../Assets/Icons/ListIcons/ingredient-icon.png';
 import '../../App.css';
 
 function CocktailByIngredient() {
@@ -15,7 +15,7 @@ function CocktailByIngredient() {
 
     useEffect(() => {
         setPageTitle('Cocktail By Ingredient');
-    }, [])
+    }, []);
 
     return (
         <main className="fullpage-container">

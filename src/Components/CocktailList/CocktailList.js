@@ -5,7 +5,7 @@ function CocktailList({id, cocktailName}) {
     const history = useHistory();
 
     function listHandle() {
-        history.push(`/cocktailpage/${id}`)
+        history.push(`/cocktailpage/${id}`);
     }
 
     return (

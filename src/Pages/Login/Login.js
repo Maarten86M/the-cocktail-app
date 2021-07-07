@@ -39,7 +39,7 @@ function Login() {
             const userCredential = await logIn(email, password);
             console.log("Logged in:", userCredential);
             setUser(userCredential.user);
-            history.push('./welcome')
+            history.push('./welcome');
         } catch (event) {
             console.error("FireBase Fail:", event);
             setFormError(event.message);
@@ -48,7 +48,7 @@ function Login() {
 
     useEffect(() => {
         setPageTitle("Login");
-        setFormError('')
+        setFormError('');
     }, [])
 
 

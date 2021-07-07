@@ -1,4 +1,4 @@
-import React, {useContext, createContext, useState, useEffect} from "react"
+import React, {useContext, createContext, useState, useEffect} from "react";
 import app from "../Modules/Firebase";
 
 export const authContext = createContext({});
@@ -8,7 +8,6 @@ export function useAuth() {
 }
 
 function AuthContextProvider({children}) {
-
     const [user, setUser] = useState()
     const [firstname, setFirstname] = useState('');
     const [lastname, setLastname] = useState('');
@@ -19,7 +18,7 @@ function AuthContextProvider({children}) {
     const [succes, setSucces] = useState('');
 
     function signUp(email, password) {
-        return app.auth().createUserWithEmailAndPassword(email, password)
+        app.auth().createUserWithEmailAndPassword(email, password);
     }
 
     function logIn(email, password) {
@@ -34,7 +33,6 @@ function AuthContextProvider({children}) {
         return app.auth().sendPasswordResetEmail(email);
     }
 
-
     useEffect(() => {
         const unsubscribe = app.auth().onAuthStateChanged(user => {
             setUser(user);
@@ -42,7 +40,6 @@ function AuthContextProvider({children}) {
         })
         return unsubscribe;
     }, []);
-
 
     const data = {
         user,
@@ -62,7 +59,7 @@ function AuthContextProvider({children}) {
         signUp,
         logIn,
         logOut,
-        lostPassword,
+        lostPassword
     };
 
     return (

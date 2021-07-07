@@ -6,11 +6,10 @@ import MainBackButton from "../../Components/Buttons/MainBackButton/MainBackButt
 import CocktailLoaderOops from "../../Components/CocktailLoader/CocktailLoaderIMG/CocktailLoaderOops";
 import CocktailCardLogo from "../../Components/CocktailCardLogo/CocktailCardLogo";
 import HelpButton from "../../Components/Buttons/HelpButton/HelpButton";
-import cocktailIcon from '../../Assets/Icons/ListIcons/cocktail-icon.png';
-import '../../App.css';
-
 import ErrorMessage from "../../Components/ErrorMessage/ErrorMessage";
 import CocktailLoaderText from "../../Components/CocktailLoader/CocktailLoaderText/CocktailLoaderText";
+import cocktailIcon from '../../Assets/Icons/ListIcons/cocktail-icon.png';
+import '../../App.css';
 
 function CocktailByIngredientList() {
     const {

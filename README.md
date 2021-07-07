@@ -2,14 +2,14 @@
 ### inleiding 
 Welkom bij The Cocktail App. Deze uitgebreide application heeft een aantal erg handige functies voor de cocktail liefhebber. 
 De belangrijkste functies zijn: 
--   Zoeken naar een cocktail op basis van ingredienten (engelse benaming). bijvoorbeeld de zoekterm "banana".
--   het random genereren van een cocktail. Hier vindt je een voorbeeld, ingredienten en een beschrijving hoe de cocktail bereid dient te worden. 
--   Cocktail by Alcohol, als je zin hebt in een bepaalde alcoholsoort kan je makkelijk via Cocktails by alcohol een specifieke cocktail vinden. 
--   Cocktail by ingredient. Deze functie zorgt ervoor dat alle cocktails worden weergegeven met een bepaalde categorie. Bijvoorbeeld Apple of Chocolate.
+-   Search Cocktails: Zoeken naar een cocktail op basis van ingredienten (Engelstalig). bijvoorbeeld de zoekterm "banana".
+-   Random Cocktail: het random genereren van een cocktail. Hier vindt je een voorbeeld, ingredienten en een beschrijving hoe de cocktail bereid dient te worden. 
+-   Cocktail by Alcohol: als je zin hebt in een bepaalde alcohol-soort kan je makkelijk via Cocktails by alcohol een specifieke cocktail vinden. 
+-   Cocktail by ingredient: Deze functie zorgt ervoor dat alle cocktails worden weergegeven met een bepaalde categorie. Bijvoorbeeld Apple of Chocolate.
 -   All Cocktails: Deze functie zorgt ervoor dat alle cocktails uit het database worden weergeven op alfabetische volgorde. Je kunt makkelijk doormiddel van de pijlen naar een andere letter.
 -   Help-velden: Alle pagina's zijn voorzien van help velden. Mocht het onduidelijk zijn wat je dient te doen. Klik je makkelijk op het vraagteken waarna een hulp veld tevoorschijn komt. 
 
-## screenshots:
+### screenshots:
 
 ![alt text](https://github.com/Maarten86M/the-cocktail-app/blob/master/src/Assets/Screenshots/screenshots.png "Random Cocktails Mobile & Desktop");
 
@@ -20,7 +20,7 @@ De belangrijkste functies zijn:
 - **npm install**
     
 3.  Voeg een **.env** bestand toe boven de .env.dis en vul de onderstaande variabele aan. De codes zijn vertrouwelijk en daarom vermeld in mijn eindopdracht bestand.
-    genaamd: **Eindopdracht Frontend Maarten Moelands.pdf**. Deze codes vindt je bij hoofdstuk 8 (Benodigde wachtwoorden / .env ).
+    genaamd: **Eindopdracht Frontend Maarten Moelands.pdf**. Deze codes vindt je bij hoofdstuk 9 (Benodigde wachtwoorden / .env ). Daarnaast heb ik ze bijgevoegd in de .zip bestand.
     
 ```javascript
     REACT_APP_API_KEY=
@@ -41,9 +41,10 @@ De belangrijkste functies zijn:
 6.  Ook is het mogelijk om zelf een account aan te maken. Klik dan op de **Register Now** knop. 
 
 7. Mocht je het wachtwoord vergeten zijn, kan je deze makkelijk opvragen doormiddel van de **Forgot Your Password** knop.
+   Dan wordt er een e-mail verstuurd met een activatie-link. 
 
 8. De Application bevat ook testen. Deze kunnen worden gestart doormiddel van het commando: 
 - **npm test**
 
-8. Veel plezier met The Cocktail Application! En denk eraan **"Don't drive and drink!"**
+8. Veel plezier met The Cocktail Appl! En denk eraan **"Don't drive and drink!"**
 

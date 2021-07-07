@@ -18,7 +18,7 @@ import './icons/NavbarIcon.css';
 
 
 function Navbar() {
-    const {logOut, user} = useAuth()
+    const {logOut, user} = useAuth();
     const [openMenu, setOpenMenu] = useState(false);
     const [screenWidth, setScreenWidth] = useState(window.innerWidth);
 
@@ -38,7 +38,7 @@ function Navbar() {
         window.addEventListener('resize', changeWidth);
 
         return () => {
-            window.removeEventListener('resize', changeWidth)
+            window.removeEventListener('resize', changeWidth);
         }
     }, []);
 

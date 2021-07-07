@@ -25,7 +25,7 @@ function ForgotPassword() {
             const lostPasswordReset = await lostPassword(email);
             setSucces("You have received a recover e-mail.");
             setTimeout(() => {
-                history.push('./login')
+                history.push('./login');
             }, 3000);
             console.log(lostPasswordReset);
 
@@ -39,7 +39,7 @@ function ForgotPassword() {
         setPageTitle("Forgot Your Password ?");
         setFormError('');
         setSucces('')
-    }, [])
+    }, []);
 
     return (
         <main className="fullpage-container">

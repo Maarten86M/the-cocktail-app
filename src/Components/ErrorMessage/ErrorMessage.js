@@ -8,18 +8,18 @@ function ErrorMessage() {
     useEffect(() => {
         setErrorMessage('');
         if (searchResult === "None Found") {
-            setErrorMessage("Sorry,nothing found!")
+            setErrorMessage("Sorry,nothing found!");
         }
         if (alcohollist === "None Found") {
-            setErrorMessage("Sorry, nothing found with that Alcohol Type!")
+            setErrorMessage("Sorry, nothing found with that Alcohol Type!");
         }
         if (ingredientlist === "None Found") {
-            setErrorMessage("Sorry, nothing found with that ingredient!")
+            setErrorMessage("Sorry, nothing found with that ingredient!");
         }
         if (letter === undefined) {
             setErrorMessage("Sorry, something went wrong! Click again on the next or back button");
         }
-    }, [searchResult])
+    }, [searchResult]);
 
     return (
         <div className="error-container">

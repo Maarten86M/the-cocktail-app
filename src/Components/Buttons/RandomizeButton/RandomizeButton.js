@@ -3,7 +3,7 @@ import random from '../../../Assets/Icons/NavIcons/dice.png'
 import './RandomizeButton.css';
 
 function RandomizeButton() {
-    const {loading, setRandomizeButton, randomizeButton} = useCocktailContext()
+    const {loading, setRandomizeButton, randomizeButton} = useCocktailContext();
     return (
         <button
             className="randomizebutton"

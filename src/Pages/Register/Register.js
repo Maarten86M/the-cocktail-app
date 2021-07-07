@@ -34,29 +34,26 @@ function Register() {
 
     async function onSubmit(event) {
         event.preventDefault();
-
         try {
             const userCredential = await signUp(email, password);
-
             console.log("registered", userCredential);
             setUser(userCredential.user);
             setSucces("Thank you for your registration. You are now logged in!");
             setTimeout(() => {
-                history.push('./welcome')
+                history.push('./welcome');
             }, 5000);
 
         } catch (event) {
             console.error('Firebase Fail', event);
             setFormError(event.message);
         }
-
     }
 
     useEffect(() => {
         setPageTitle("Register");
         setFormError('');
         setSucces('');
-    }, [])
+    }, []);
 
     return (
         <main className="fullpage-container">

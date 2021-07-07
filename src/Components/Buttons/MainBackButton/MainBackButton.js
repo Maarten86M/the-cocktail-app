@@ -8,8 +8,7 @@ function MainBackButton() {
         <button
             className="backbutton"
             onClick={() => history.goBack()}
-        >
-         Back
+        >Back
         </button>
     )
 }
