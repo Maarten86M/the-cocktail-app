@@ -11,7 +11,7 @@ De belangrijkste functies zijn:
 
 ### Screenshots:
 
-![alt text](https://github.com/Maarten86M/the-cocktail-app/blob/master/src/Assets/Screenshots/screenshots.png "Random Cocktails Mobile & Desktop");
+![alt text](https://github.com/Maarten86M/the-cocktail-app/blob/master/src/Assets/Screenshots/screenshots.png "Random Cocktails Mobile & Desktop")
 
 
 ### Installatie handleiding: 
@@ -49,3 +49,8 @@ De belangrijkste functies zijn:
 
 **9.** Veel plezier met The Cocktail App! En denk eraan :warning:**"Don't drive and drink!"**:warning:
 
+
+### contact info: :incoming_envelope: 
+Maarten Moelands
+maartenmoelands@gmail.com
+https://www.linkedin.com/in/maartenmoelands/
