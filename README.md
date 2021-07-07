@@ -51,6 +51,5 @@ De belangrijkste functies zijn:
 
 
 ### contact info: :incoming_envelope: 
-Maarten Moelands
-maartenmoelands@gmail.com
-https://www.linkedin.com/in/maartenmoelands/
+[LinkedIn]: https://www.linkedin.com/in/maartenmoelands/
+    
