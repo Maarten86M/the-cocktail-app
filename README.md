@@ -1,4 +1,4 @@
-## The Cocktail App
+## The Cocktail App :tropical_drink:
 ### inleiding 
 Welkom bij The Cocktail App. Deze uitgebreide application heeft een aantal erg handige functies voor de cocktail liefhebber. 
 De belangrijkste functies zijn: 
