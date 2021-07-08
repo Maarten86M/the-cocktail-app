@@ -1,12 +1,12 @@
 .helpbutton {
-    height: 38px;
-    width: 38px;
+    height: var(--help-button-width);
+    width: var(--help-button-height);
     border-radius: var(--border-radius-round);
     border: none;
     background-color: var(--help-field-color);
     box-shadow: 2px 2px 3px 1px var(--background-color);
     color: var(--text-color-second);
-    font-size: 28px;
+    font-size: var(--help-button-font-size);
     font-family: var(--main-font);
     font-weight: var(--button-font-weight);
     position: relative;

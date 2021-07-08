@@ -1,5 +1,5 @@
 .cocktail-view{
-    width: 400px;
+    width: var(--desktop-container-width);
     height: 590px;
 }
 

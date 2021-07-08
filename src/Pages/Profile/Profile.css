@@ -1,10 +1,16 @@
 .profile-info {
-    height: 500px;
-    width: 400px;
+    height: 640px;
+    width: var(--desktop-container-width);
 }
 
 @media screen and (max-width: 990px){
     .profile-info {
-        width: 325px;
+        width: var(--mobile-container-width-big);
+        height: 420px;
     }
+}
+
+h3{
+    font-family: var(--main-font);
+    color: var(--text-color);
 }

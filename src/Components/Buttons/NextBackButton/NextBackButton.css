@@ -3,8 +3,8 @@
     color: var(--text-color);
     border: var(--button-border-pixel-color);
     border-radius: var(--button-border-radius);
-    width: 45px;
-    height: 45px;
+    width: var(--next-back-button-width);
+    height: var(--next-back-button-height);
     font-size: var(--button-font-size);
     font-weight: var(--button-font-weight);
     font-family: var(--main-font);

@@ -7,8 +7,7 @@
 .instruction-view {
     font-family: var(--second-font);
     line-height: var(--second-font-line-height);
-    margin-top: 10px;
-    margin-bottom: 40px;
+    margin: 10px 0 40px 0;
     width: 250px;
     text-align: center;
 }
@@ -20,6 +19,6 @@
 
 .header {
     font-family: var(--main-font);
-    font-weight: 500;
+    font-weight: var(--main-text-weight);
     text-decoration: underline;
 }

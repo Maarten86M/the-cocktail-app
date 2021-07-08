@@ -3,15 +3,15 @@
     color: var(--text-color-succes);
     font-size: var(--text-size-succes);
     text-align: center;
-    font-weight: 500;
+    font-weight: var(--main-text-weight);
 }
 
 .form-succes-container {
-    width: 400px;
+    width: var(--desktop-container-width);
 }
 
 @media screen and (max-width: 990px) {
     .form-succes-container {
-        width: 300px;
+        width: var(--mobile-container-width);
     }
 }

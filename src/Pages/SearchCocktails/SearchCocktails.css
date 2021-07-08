@@ -1,9 +1,9 @@
 .search-container {
-    width: 400px;
+    width: var(--desktop-container-width);
 }
 
 @media screen and (max-width: 990px){
     .search-container{
-        width: 325px;
+        width: var(--mobile-container-width-big);
     }
 }

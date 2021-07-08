@@ -3,7 +3,7 @@
     align-items: center;
     justify-content: space-between;
     padding-top: 20px;
-    width: 400px;
+    width: var(--desktop-container-width);
 }
 
 .scrollbar-all {

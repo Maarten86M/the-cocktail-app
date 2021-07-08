@@ -1,13 +1,13 @@
 .loader-border {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     border-radius: var(--border-radius-round);
     border: 2px solid var(--background-color);
     width: var(--logo-width-desktop);
     height: var(--logo-height-desktop);
     box-shadow: 1px 1px 2px 1px var(--background-color);
     background-color: var(--logo-background);
-    display: flex;
-    align-items: center;
-    justify-content: center;
 }
 
 .loader-img {
@@ -24,7 +24,7 @@
     }
 
     .loader-img{
-        max-width: 241px;
-        max-height: 241px;
+        max-width: var(--logo-width-mobile);
+        max-height: var(--logo-height-mobile);
     }
 }

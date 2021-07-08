@@ -1,6 +1,6 @@
 
 .name-and-ingredient-container {
-    width: 400px;
+    width: var(--desktop-container-width);
     height: 500px;
 }
 

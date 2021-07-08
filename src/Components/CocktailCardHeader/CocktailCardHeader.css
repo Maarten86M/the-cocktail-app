@@ -1,8 +1,8 @@
-.header-container{
+.header-container {
     display: flex;
-    padding-bottom: 20px;
     justify-content: center;
-    width: 400px;
+    width: var(--desktop-container-width);
+    padding-bottom: 20px;
 }
 
 .cocktailIMG {
@@ -13,7 +13,7 @@
     box-shadow: 5px 4px 9px 2px var(--background-color);
 }
 
-@media screen and (max-width: 990px){
+@media screen and (max-width: 990px) {
     .cocktailIMG {
         max-width: 241px;
         max-height: 241px;

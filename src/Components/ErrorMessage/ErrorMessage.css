@@ -7,11 +7,11 @@
 }
 
 .error-container {
-    width: 400px;
+    width: var(--desktop-container-width);
 }
 
 @media screen and (max-width: 990px) {
     .error-container {
-        width: 300px;
+        width: var(--mobile-container-width);
     }
 }

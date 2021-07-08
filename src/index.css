@@ -11,12 +11,18 @@
     --nav-line: hsl(216, 36%, 41%);
     --background-color: hsl(189, 79%, 28%);
     --main-font: Quicksand;
+    --main-text-weight: 500;
     --second-font:'Mukta', sans-serif;
     --second-font-line-height: 20px;
+    --help-button-width: 38px;
+    --help-button-height: 38px;
+    --help-button-font-size: 28px;
     --help-field-color: hsl(66, 75%, 81%);
     --help-field-border-color: hsl(56, 48%, 59%);
     --help-field-text-size: 16px;
     --help-field-text-weight: 700;
+    --next-back-button-width: 45px;
+    --next-back-button-height: 45px;
     --text-color: hsl(0, 0%, 100%);
     --text-color-second: hsl(0, 0%, 0%);
     --text-color-help-field: hsl(0, 0%, 0%);
@@ -49,6 +55,10 @@
     --logo-width-mobile: 241px;
     --link-font-size: 20px;
     --border-radius-round: 50%;
+    --title-mobile-size: 20px;
+    --desktop-container-width: 400px;
+    --mobile-container-width: 300px;
+    --mobile-container-width-big: 325px;
 }
 
 body {

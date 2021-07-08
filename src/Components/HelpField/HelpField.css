@@ -1,14 +1,14 @@
 .help-field {
     margin-left: -20px;
     position: fixed;
-    width: 400px;
+    width: var(--desktop-container-width);
     height: 258px;
     background-color: var(--help-field-color);
     border-radius: 10px;
-    box-shadow: 2px 2px 3px 1px var(--background-color);
+    box-shadow: var(--button-shadow);
     padding: 20px;
     font-family: var(--second-font);
-    font-weight: 500;
+    font-weight: var(var(--main-text-weight));
     font-size: var(--help-field-text-size);
 }
 
@@ -18,7 +18,7 @@
 
 .cross {
     position: absolute;
-    font-weight: bold;
+    font-weight: var(--help-field-text-weight);
     top: 10px;
     right: 10px;
 }
@@ -26,6 +26,6 @@
 @media screen and (max-width: 990px) {
     .help-field {
         margin-left: -10px;
-        width: 300px;
+        width: var(--mobile-container-width);
     }
 }

@@ -29,8 +29,8 @@ function Profile() {
                     <div className="profile-info">
                         <PageTitle title="Profile"/>
                         <h3>{user.email}</h3>
-                        <MainBackButton/>
                     </div>
+                    <MainBackButton/>
                 </article>
             </section>
         </main>

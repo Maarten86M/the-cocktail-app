@@ -3,7 +3,7 @@
     flex-direction: column;
     align-items: center;
     text-align: center;
-    width: 400px;
+    width: var(--desktop-container-width);
 }
 
 .ingredient-container {
@@ -14,7 +14,7 @@
 
 .ingredient-scrollbar {
     max-height: 380px;
-    max-width: 400px;
+    max-width: var(--desktop-container-width);
     overflow: auto;
     border: none;
 }
@@ -35,7 +35,7 @@
 
 .header {
     font-family: var(--main-font);
-    font-weight: 500;
+    font-weight: var(--main-text-weight);
     text-decoration: underline;
 }
 
