@@ -52,6 +52,7 @@ function Register() {
         }
     }
 
+
     useEffect(() => {
         setPageTitle("Register");
         setFormError('');
