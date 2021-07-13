@@ -23,8 +23,6 @@ export default function CocktailContextProvider({children}) {
 
     const [letter, setLetter] = useState('A');
     const [numberToLetter, setNumberToLetter] = useState(1);
-    const numberToLetterArray = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "V", "W", "Y", "Z",];
-    const convertNumberToLetter = numberToLetterArray[numberToLetter];
 
 const data = {
     cocktail,
@@ -43,8 +41,6 @@ const data = {
     setCocktailList,
     numberToLetter,
     setNumberToLetter,
-    numberToLetterArray,
-    convertNumberToLetter,
     searchResult,
     setSearchResult,
     pageTitle,

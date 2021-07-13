@@ -1,17 +1,13 @@
 import {useCocktailContext} from "../../../../Context/CocktailContext";
 import nextIcon from '../../../../Assets/Icons/ButtonIcons/Next.png';
 import '../NextBackButton.css';
+import {getNextLetter} from '../NextBackButtonLogic';
 
 function NextButton() {
-    const {numberToLetter, setNumberToLetter, setLetter, numberToLetterArray, letter} = useCocktailContext();
-
-    function NextButtonFunction() {
-        setNumberToLetter(numberToLetter + 1);
-        setLetter(numberToLetterArray[numberToLetter]);
-    }
+    const {letter,setLetter} = useCocktailContext();
 
     return (
-        <button className="nextbackbutton" onClick={NextButtonFunction} disabled={letter === "Z"}>
+        <button className="nextbackbutton" onClick={() => setLetter(getNextLetter(letter))} disabled={letter === "Z"}>
             <img src={nextIcon} alt="Next Button"/>
         </button>
     )

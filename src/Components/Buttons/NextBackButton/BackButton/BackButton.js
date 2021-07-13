@@ -1,18 +1,14 @@
 import {useCocktailContext} from "../../../../Context/CocktailContext";
 import backIcon from '../../../../Assets/Icons/ButtonIcons/Back.png';
 import '../NextBackButton.css';
+import {getPreviousLetter} from '../NextBackButtonLogic';
 
 function BackButton() {
 
-    const {numberToLetter, setNumberToLetter, setLetter, numberToLetterArray, letter} = useCocktailContext();
-
-    function BackButtonFunction() {
-        setNumberToLetter(numberToLetter - 1);
-        setLetter(numberToLetterArray[numberToLetter]);
-    }
+    const {letter,setLetter} = useCocktailContext();
 
     return (
-        <button className="nextbackbutton" onClick={BackButtonFunction} disabled={letter === "A"}>
+        <button className="nextbackbutton" onClick={() => setLetter(getPreviousLetter(letter))} disabled={letter === "A"}>
             <img src={backIcon} alt="Back button"/>
         </button>
     )
