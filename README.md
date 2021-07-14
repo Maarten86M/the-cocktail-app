@@ -47,6 +47,7 @@ De belangrijkste functies zijn:
 
 **8.** De Application bevat ook een test. Deze kunnen worden gestart doormiddel van het commando: 
 - **npm test**
+- **toets a om alle testen te runnen.**
 
 **9.** Veel plezier met The Cocktail App! En denk eraan :warning:**"Don't drive and drink!"**:warning:
 

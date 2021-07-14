@@ -16,7 +16,6 @@ import signout from '../../Assets/Icons/NavIcons/signout.png';
 import './Navbar.css';
 import './icons/NavbarIcon.css';
 
-
 function Navbar() {
     const {logOut, user} = useAuth();
     const [openMenu, setOpenMenu] = useState(false);

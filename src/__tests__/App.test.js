@@ -28,7 +28,7 @@ test('Given current letter is A when getting next letter Then letter becomes B',
 });
 
 
-test('B naar A', function () {
+test('Given current letter is B when getting previous letter then becomes A', function () {
 
     //Arange
     const currentLetter = "B"
@@ -42,7 +42,7 @@ test('B naar A', function () {
 });
 
 
-test('Z blijft Z ', function () {
+test('Given current Letter is Z when next letter then stays Z ', function () {
 
     //Arange
     const currentLetter = "Z"
